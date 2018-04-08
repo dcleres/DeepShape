@@ -1,0 +1,9 @@
+/Users/davidcleres/DeepShape/libigl-example-project/build/CMakeFiles/Polycubes_bin.dir
+/Users/davidcleres/DeepShape/libigl-example-project/build/CMakeFiles/ALL_BUILD.dir
+/Users/davidcleres/DeepShape/libigl-example-project/build/CMakeFiles/ZERO_CHECK.dir
+/Users/davidcleres/DeepShape/libigl-example-project/build/glad/CMakeFiles/glad.dir
+/Users/davidcleres/DeepShape/libigl-example-project/build/glad/CMakeFiles/ALL_BUILD.dir
+/Users/davidcleres/DeepShape/libigl-example-project/build/glad/CMakeFiles/ZERO_CHECK.dir
+/Users/davidcleres/DeepShape/libigl-example-project/build/glfw/CMakeFiles/ALL_BUILD.dir
+/Users/davidcleres/DeepShape/libigl-example-project/build/glfw/CMakeFiles/ZERO_CHECK.dir
+/Users/davidcleres/DeepShape/libigl-example-project/build/glfw/src/CMakeFiles/glfw.dir
