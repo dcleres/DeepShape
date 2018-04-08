@@ -8,7 +8,7 @@ default:
 # link.  This forces Xcode to relink the targets from scratch.  It
 # does not seem to check these dependencies itself.
 PostBuild.voxelizer.Debug:
-/Users/davidcleres/DeepShape/voxelizer/build/bin/Debug/voxelizer:\
+/Users/davidcleres/DeepShape/voxels/build/bin/Debug/voxelizer:\
 	/usr/local/lib/libboost_atomic-mt.dylib\
 	/usr/local/lib/libboost_system-mt.dylib\
 	/usr/local/lib/libboost_thread-mt.dylib\
@@ -58,11 +58,11 @@ PostBuild.voxelizer.Debug:
 	/usr/local/lib/libopencv_objdetect.3.4.1.dylib\
 	/usr/local/lib/libopencv_imgproc.3.4.1.dylib\
 	/usr/local/lib/libopencv_core.3.4.1.dylib
-	/bin/rm -f /Users/davidcleres/DeepShape/voxelizer/build/bin/Debug/voxelizer
+	/bin/rm -f /Users/davidcleres/DeepShape/voxels/build/bin/Debug/voxelizer
 
 
 PostBuild.collisionChecker.Debug:
-/Users/davidcleres/DeepShape/voxelizer/build/test/Debug/collisionChecker:\
+/Users/davidcleres/DeepShape/voxels/build/test/Debug/collisionChecker:\
 	/usr/local/lib/libboost_atomic-mt.dylib\
 	/usr/local/lib/libboost_system-mt.dylib\
 	/usr/local/lib/libboost_thread-mt.dylib\
@@ -112,11 +112,11 @@ PostBuild.collisionChecker.Debug:
 	/usr/local/lib/libopencv_objdetect.3.4.1.dylib\
 	/usr/local/lib/libopencv_imgproc.3.4.1.dylib\
 	/usr/local/lib/libopencv_core.3.4.1.dylib
-	/bin/rm -f /Users/davidcleres/DeepShape/voxelizer/build/test/Debug/collisionChecker
+	/bin/rm -f /Users/davidcleres/DeepShape/voxels/build/test/Debug/collisionChecker
 
 
 PostBuild.voxelizer.Release:
-/Users/davidcleres/DeepShape/voxelizer/build/bin/Release/voxelizer:\
+/Users/davidcleres/DeepShape/voxels/build/bin/Release/voxelizer:\
 	/usr/local/lib/libboost_atomic-mt.dylib\
 	/usr/local/lib/libboost_system-mt.dylib\
 	/usr/local/lib/libboost_thread-mt.dylib\
@@ -166,11 +166,11 @@ PostBuild.voxelizer.Release:
 	/usr/local/lib/libopencv_objdetect.3.4.1.dylib\
 	/usr/local/lib/libopencv_imgproc.3.4.1.dylib\
 	/usr/local/lib/libopencv_core.3.4.1.dylib
-	/bin/rm -f /Users/davidcleres/DeepShape/voxelizer/build/bin/Release/voxelizer
+	/bin/rm -f /Users/davidcleres/DeepShape/voxels/build/bin/Release/voxelizer
 
 
 PostBuild.collisionChecker.Release:
-/Users/davidcleres/DeepShape/voxelizer/build/test/Release/collisionChecker:\
+/Users/davidcleres/DeepShape/voxels/build/test/Release/collisionChecker:\
 	/usr/local/lib/libboost_atomic-mt.dylib\
 	/usr/local/lib/libboost_system-mt.dylib\
 	/usr/local/lib/libboost_thread-mt.dylib\
@@ -220,11 +220,11 @@ PostBuild.collisionChecker.Release:
 	/usr/local/lib/libopencv_objdetect.3.4.1.dylib\
 	/usr/local/lib/libopencv_imgproc.3.4.1.dylib\
 	/usr/local/lib/libopencv_core.3.4.1.dylib
-	/bin/rm -f /Users/davidcleres/DeepShape/voxelizer/build/test/Release/collisionChecker
+	/bin/rm -f /Users/davidcleres/DeepShape/voxels/build/test/Release/collisionChecker
 
 
 PostBuild.voxelizer.MinSizeRel:
-/Users/davidcleres/DeepShape/voxelizer/build/bin/MinSizeRel/voxelizer:\
+/Users/davidcleres/DeepShape/voxels/build/bin/MinSizeRel/voxelizer:\
 	/usr/local/lib/libboost_atomic-mt.dylib\
 	/usr/local/lib/libboost_system-mt.dylib\
 	/usr/local/lib/libboost_thread-mt.dylib\
@@ -274,11 +274,11 @@ PostBuild.voxelizer.MinSizeRel:
 	/usr/local/lib/libopencv_objdetect.3.4.1.dylib\
 	/usr/local/lib/libopencv_imgproc.3.4.1.dylib\
 	/usr/local/lib/libopencv_core.3.4.1.dylib
-	/bin/rm -f /Users/davidcleres/DeepShape/voxelizer/build/bin/MinSizeRel/voxelizer
+	/bin/rm -f /Users/davidcleres/DeepShape/voxels/build/bin/MinSizeRel/voxelizer
 
 
 PostBuild.collisionChecker.MinSizeRel:
-/Users/davidcleres/DeepShape/voxelizer/build/test/MinSizeRel/collisionChecker:\
+/Users/davidcleres/DeepShape/voxels/build/test/MinSizeRel/collisionChecker:\
 	/usr/local/lib/libboost_atomic-mt.dylib\
 	/usr/local/lib/libboost_system-mt.dylib\
 	/usr/local/lib/libboost_thread-mt.dylib\
@@ -328,11 +328,11 @@ PostBuild.collisionChecker.MinSizeRel:
 	/usr/local/lib/libopencv_objdetect.3.4.1.dylib\
 	/usr/local/lib/libopencv_imgproc.3.4.1.dylib\
 	/usr/local/lib/libopencv_core.3.4.1.dylib
-	/bin/rm -f /Users/davidcleres/DeepShape/voxelizer/build/test/MinSizeRel/collisionChecker
+	/bin/rm -f /Users/davidcleres/DeepShape/voxels/build/test/MinSizeRel/collisionChecker
 
 
 PostBuild.voxelizer.RelWithDebInfo:
-/Users/davidcleres/DeepShape/voxelizer/build/bin/RelWithDebInfo/voxelizer:\
+/Users/davidcleres/DeepShape/voxels/build/bin/RelWithDebInfo/voxelizer:\
 	/usr/local/lib/libboost_atomic-mt.dylib\
 	/usr/local/lib/libboost_system-mt.dylib\
 	/usr/local/lib/libboost_thread-mt.dylib\
@@ -382,11 +382,11 @@ PostBuild.voxelizer.RelWithDebInfo:
 	/usr/local/lib/libopencv_objdetect.3.4.1.dylib\
 	/usr/local/lib/libopencv_imgproc.3.4.1.dylib\
 	/usr/local/lib/libopencv_core.3.4.1.dylib
-	/bin/rm -f /Users/davidcleres/DeepShape/voxelizer/build/bin/RelWithDebInfo/voxelizer
+	/bin/rm -f /Users/davidcleres/DeepShape/voxels/build/bin/RelWithDebInfo/voxelizer
 
 
 PostBuild.collisionChecker.RelWithDebInfo:
-/Users/davidcleres/DeepShape/voxelizer/build/test/RelWithDebInfo/collisionChecker:\
+/Users/davidcleres/DeepShape/voxels/build/test/RelWithDebInfo/collisionChecker:\
 	/usr/local/lib/libboost_atomic-mt.dylib\
 	/usr/local/lib/libboost_system-mt.dylib\
 	/usr/local/lib/libboost_thread-mt.dylib\
@@ -436,7 +436,7 @@ PostBuild.collisionChecker.RelWithDebInfo:
 	/usr/local/lib/libopencv_objdetect.3.4.1.dylib\
 	/usr/local/lib/libopencv_imgproc.3.4.1.dylib\
 	/usr/local/lib/libopencv_core.3.4.1.dylib
-	/bin/rm -f /Users/davidcleres/DeepShape/voxelizer/build/test/RelWithDebInfo/collisionChecker
+	/bin/rm -f /Users/davidcleres/DeepShape/voxels/build/test/RelWithDebInfo/collisionChecker
 
 
 

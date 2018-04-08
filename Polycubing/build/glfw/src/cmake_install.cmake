@@ -1,4 +1,4 @@
-# Install script for directory: /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src
+# Install script for directory: /Users/davidcleres/DeepShape/libigl/external/glfw/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

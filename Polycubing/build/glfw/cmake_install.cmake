@@ -1,4 +1,4 @@
-# Install script for directory: /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw
+# Install script for directory: /Users/davidcleres/DeepShape/libigl/external/glfw
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/davidcleres/DeepShape/libigl-example-project/build/glfw/src/cmake_install.cmake")
+  include("/Users/davidcleres/DeepShape/Polycubing/build/glfw/src/cmake_install.cmake")
 
 endif()
 

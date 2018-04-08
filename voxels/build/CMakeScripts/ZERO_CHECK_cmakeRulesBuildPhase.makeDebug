@@ -2,9 +2,9 @@
 # Custom rules for ZERO_CHECK
 .SUFFIXES: 
 all: \
-	/Users/davidcleres/DeepShape/voxelizer/build/CMakeFiles/ZERO_CHECK
+	/Users/davidcleres/DeepShape/voxels/build/CMakeFiles/ZERO_CHECK
 
 
-/Users/davidcleres/DeepShape/voxelizer/build/CMakeFiles/ZERO_CHECK: 
+/Users/davidcleres/DeepShape/voxels/build/CMakeFiles/ZERO_CHECK: 
 	echo ""
-	make -f /Users/davidcleres/DeepShape/voxelizer/build/CMakeScripts/ReRunCMake.make
+	make -f /Users/davidcleres/DeepShape/voxels/build/CMakeScripts/ReRunCMake.make

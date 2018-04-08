@@ -2,9 +2,9 @@
 # Custom rules for ALL_BUILD
 .SUFFIXES: 
 all: \
-	/Users/davidcleres/DeepShape/voxelizer/build/CMakeFiles/ALL_BUILD
+	/Users/davidcleres/DeepShape/voxels/build/CMakeFiles/ALL_BUILD
 
 
-/Users/davidcleres/DeepShape/voxelizer/build/CMakeFiles/ALL_BUILD: 
+/Users/davidcleres/DeepShape/voxels/build/CMakeFiles/ALL_BUILD: 
 	echo ""
 	echo Build\ all\ projects

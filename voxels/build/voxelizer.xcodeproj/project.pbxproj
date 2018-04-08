@@ -7,36 +7,36 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		B99A6C146FB3474BBE9DB235 /* ALL_BUILD */ = {
+		21C99635E8654096918686A9 /* ZERO_CHECK */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 06DB61C89D294FFA87E4BF9B /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildConfigurationList = F32D9CF4DB094A3D837F8421 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
 			buildPhases = (
-				1BAAE9E6BD7E4E9988A668EA /* CMake Rules */,
-			);
-			dependencies = (
-				245A2C238BDE4DB2AB3EB511 /* PBXTargetDependency */,
-				7C72A1D25FF34E69A0158DF5 /* PBXTargetDependency */,
-				9DAF9C42BA6B49BBB1533E94 /* PBXTargetDependency */,
-			);
-			name = ALL_BUILD;
-			productName = ALL_BUILD;
-		};
-		C9E8B433F9F0410089219182 /* ZERO_CHECK */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = A3E351107B41441CA49491A7 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
-			buildPhases = (
-				AA93E0D79AAD4E5B824B5797 /* CMake Rules */,
+				DDA0668755994DF7BE37FA12 /* CMake Rules */,
 			);
 			dependencies = (
 			);
 			name = ZERO_CHECK;
 			productName = ZERO_CHECK;
 		};
-		F0B6C44F2F794DB495DFB839 /* RUN_TESTS */ = {
+		761F0B55007A40828E5F65BE /* ALL_BUILD */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 173281D980A740CAAB9AB16E /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */;
+			buildConfigurationList = 97ABF2E3DDAB4B33B965DCF1 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
 			buildPhases = (
-				01BAF46092F14158AD38E7F8 /* CMake PostBuild Rules */,
+				35157ED3D2834299BFDD4C23 /* CMake Rules */,
+			);
+			dependencies = (
+				ADDAB0865BD044ACA4FAE56F /* PBXTargetDependency */,
+				E723E3C8EE3548DBB792F73D /* PBXTargetDependency */,
+				B446F5ED5D064E7293CB7BA8 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		D341B50AFB1C41CC90DCC843 /* RUN_TESTS */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = FE71C26A4DEF4EFBA58A4122 /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */;
+			buildPhases = (
+				B7A78D85841B496FB2342A90 /* CMake PostBuild Rules */,
 			);
 			dependencies = (
 			);
@@ -46,264 +46,366 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		09E23B34651D465D93EEABB2 /* voxelizerMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F6A953429E204F14BE986D10 /* voxelizerMain.cpp */; };
-		0FDB03ABB1BD4AF0BAE02823 /* collisionChecker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 67209495A5934BBBBE826AE0 /* collisionChecker.cpp */; };
-		1866B6873ABB4BE49A51DA34 /* threadPool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9B73D8E2F17449028AF6F620 /* threadPool.cpp */; };
-		2172069730714B3285515F93 /* timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C1188CB0C64E4356A738B3D2 /* timer.cpp */; };
-		4FB890FDFEE74A7FAC5D7CB7 /* timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D039AC075EDB495AB29701B6 /* timer.cpp */; };
-		8D94AA96B3354A68B2B431A3 /* voxelizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ACA30AB0E529464D93FDD469 /* voxelizer.cpp */; };
-		ADEECBE651FE46A6A478A681 /* triBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C663B3C418EC48478B92AE49 /* triBox.cpp */; };
-		AFDC63AB44E040E885832AE3 /* commons.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 55F55CA98FC7492C94DBA7E3 /* commons.cpp */; };
-		E11024AB6ADE4C8EBB58C3F6 /* commons.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F9005FDEB31F489F893D7940 /* commons.cpp */; };
-		E4106278535849709AECE1C9 /* voxelizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C897295C226E4732A18FD48C /* voxelizer.cpp */; };
-		F56D5402F03F43D78E3A08DD /* threadPool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B829E37F1FEC48B6A4A193E8 /* threadPool.cpp */; };
-		FF7C70D57BBC4FCEA696313C /* triBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 635FE959410F46859B28AD91 /* triBox.cpp */; };
+		04CA0C3109164A34A96393F1 /* /Users/davidcleres/DeepShape/voxels/src/threadPool.cpp */ = {isa = PBXBuildFile; fileRef = FB64FECE9722424BB03745E2 /* /Users/davidcleres/DeepShape/voxels/src/threadPool.cpp */; };
+		160DC3750F2043CDA9796604 /* /Users/davidcleres/DeepShape/voxels/src/timer.h */ = {isa = PBXBuildFile; fileRef = 970B34E38E464592AD3F6EDE /* /Users/davidcleres/DeepShape/voxels/src/timer.h */; };
+		1BCAD6E66CC544A0A593CCC4 /* /Users/davidcleres/DeepShape/voxels/test/collisionChecker.h */ = {isa = PBXBuildFile; fileRef = 8CFB976EF6A148FDB39BFD47 /* /Users/davidcleres/DeepShape/voxels/test/collisionChecker.h */; };
+		200B725C5B9D479CA7351EC6 /* /Users/davidcleres/DeepShape/voxels/src/threadPool.h */ = {isa = PBXBuildFile; fileRef = 784F0BFA1217409AA5B5DCDC /* /Users/davidcleres/DeepShape/voxels/src/threadPool.h */; };
+		232BDA055BED4DC3A28816EC /* /Users/davidcleres/DeepShape/voxels/src/voxelizer.cpp */ = {isa = PBXBuildFile; fileRef = 7567AD4A32D24E4D83EB696A /* /Users/davidcleres/DeepShape/voxels/src/voxelizer.cpp */; };
+		28BD47DE28BE4D8FB9437F72 /* /Users/davidcleres/DeepShape/voxels/src/voxelizer.cpp */ = {isa = PBXBuildFile; fileRef = 19B6B4AB024E424DA04196A8 /* /Users/davidcleres/DeepShape/voxels/src/voxelizer.cpp */; };
+		44F3791826194971B7D220F9 /* /Users/davidcleres/DeepShape/voxels/src/commons.h */ = {isa = PBXBuildFile; fileRef = 150C55B806BE418598768EB9 /* /Users/davidcleres/DeepShape/voxels/src/commons.h */; };
+		4DF96CC8E9614AE4AA318CDA /* /Users/davidcleres/DeepShape/voxels/test/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 45B4E4D462D744CDAEE9A762 /* /Users/davidcleres/DeepShape/voxels/test/CMakeLists.txt */; };
+		51B02DF3102D46A99448E925 /* /Users/davidcleres/DeepShape/voxels/test/collisionChecker.cpp */ = {isa = PBXBuildFile; fileRef = DAAF4E426552423BAD497C2C /* /Users/davidcleres/DeepShape/voxels/test/collisionChecker.cpp */; };
+		639C995BD03048F98249810E /* /Users/davidcleres/DeepShape/voxels/src/timer.cpp */ = {isa = PBXBuildFile; fileRef = C853B442F8C64F06B740F7AF /* /Users/davidcleres/DeepShape/voxels/src/timer.cpp */; };
+		6E624788F1DB4B358C5939CC /* /Users/davidcleres/DeepShape/voxels/src/threadPool.cpp */ = {isa = PBXBuildFile; fileRef = 9593659DAAF443AAABCBB4EF /* /Users/davidcleres/DeepShape/voxels/src/threadPool.cpp */; };
+		82AF6242E70043259F9D6F57 /* /Users/davidcleres/DeepShape/voxels/src/triBox.h */ = {isa = PBXBuildFile; fileRef = BBF4721FB6EA47DE8CECF3FF /* /Users/davidcleres/DeepShape/voxels/src/triBox.h */; };
+		878CE56D8CFB451E97A7F085 /* /Users/davidcleres/DeepShape/voxels/src/commons.cpp */ = {isa = PBXBuildFile; fileRef = 7B8BCFE5BCE94A778E031B23 /* /Users/davidcleres/DeepShape/voxels/src/commons.cpp */; };
+		92AE8E72571E47B98612E23B /* /Users/davidcleres/DeepShape/voxels/src/voxelizerMain.cpp */ = {isa = PBXBuildFile; fileRef = B4C29282274D4247A6566CDB /* /Users/davidcleres/DeepShape/voxels/src/voxelizerMain.cpp */; };
+		99F597E92FC14444BFF88DB9 /* /Users/davidcleres/DeepShape/voxels/src/triBox.h */ = {isa = PBXBuildFile; fileRef = FD931DA1D0AF404BA1C8A7F8 /* /Users/davidcleres/DeepShape/voxels/src/triBox.h */; };
+		A22ECF4273D84A899EE2A3C2 /* /Users/davidcleres/DeepShape/voxels/src/triBox.cpp */ = {isa = PBXBuildFile; fileRef = A2E6B6C4D787485C89928D07 /* /Users/davidcleres/DeepShape/voxels/src/triBox.cpp */; };
+		A6CAD57A0DB64291BCF53B0B /* /Users/davidcleres/DeepShape/voxels/src/voxelizer.h */ = {isa = PBXBuildFile; fileRef = FA2413140A6744F3AF98DC2B /* /Users/davidcleres/DeepShape/voxels/src/voxelizer.h */; };
+		AD628FB4FAC941D3BCD771BD /* /Users/davidcleres/DeepShape/voxels/src/commons.h */ = {isa = PBXBuildFile; fileRef = 2E8C983185BE4939AA45E8DD /* /Users/davidcleres/DeepShape/voxels/src/commons.h */; };
+		B463E3A0BAF2406E97192998 /* /Users/davidcleres/DeepShape/voxels/src/threadPool.h */ = {isa = PBXBuildFile; fileRef = DDCCE0F42D2B4E4CA5581DA1 /* /Users/davidcleres/DeepShape/voxels/src/threadPool.h */; };
+		C43DB6FE798A4CE99EDCAE68 /* /Users/davidcleres/DeepShape/voxels/src/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = F36B479CE4C74B20A33A7C32 /* /Users/davidcleres/DeepShape/voxels/src/CMakeLists.txt */; };
+		CF7352A39D0043249CC798BF /* /Users/davidcleres/DeepShape/voxels/src/voxelizer.h */ = {isa = PBXBuildFile; fileRef = 67F77F014667491FB593904C /* /Users/davidcleres/DeepShape/voxels/src/voxelizer.h */; };
+		D9748A820BDC489799FCBE79 /* /Users/davidcleres/DeepShape/voxels/src/commons.cpp */ = {isa = PBXBuildFile; fileRef = 7850DA4A4B7A406FA7AAD958 /* /Users/davidcleres/DeepShape/voxels/src/commons.cpp */; };
+		E2A1DC48D61B41C9B5E4BDC3 /* /Users/davidcleres/DeepShape/voxels/src/triBox.cpp */ = {isa = PBXBuildFile; fileRef = 8974496A4C3544798BF70F44 /* /Users/davidcleres/DeepShape/voxels/src/triBox.cpp */; };
+		E9FEA01235CE46FB932ADFB3 /* /Users/davidcleres/DeepShape/voxels/src/timer.cpp */ = {isa = PBXBuildFile; fileRef = 7BB53F367ABC49F880DEDD41 /* /Users/davidcleres/DeepShape/voxels/src/timer.cpp */; };
+		F9380E6C6A8E4EAE84667DDB /* /Users/davidcleres/DeepShape/voxels/src/timer.h */ = {isa = PBXBuildFile; fileRef = 73F01DBF75E945FE83CDFE84 /* /Users/davidcleres/DeepShape/voxels/src/timer.h */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXBuildStyle section */
+		153B99F4E9014E83A9AA807A /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		806212A96DCB4E7FA71B5A7C /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		860F89C521714CD885D17278 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		FC33C5D4F1CB4484A930697F /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+/* End PBXBuildStyle section */
+
 /* Begin PBXContainerItemProxy section */
-		21DF52B36EA2491CA49D504B /* PBXContainerItemProxy */ = {
+		542B3852962C4FE699BA9181 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 81FCC296FB1C4DE3B6E8F3B5 /* Project object */;
+			containerPortal = 3C42D38481674D7BB09B1A26 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C9E8B433F9F0410089219182;
-			remoteInfo = ZERO_CHECK;
-		};
-		829DE50F9F9544439247540A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 81FCC296FB1C4DE3B6E8F3B5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C9E8B433F9F0410089219182;
-			remoteInfo = ZERO_CHECK;
-		};
-		9AE927DF90894FD99BB4D9B7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 81FCC296FB1C4DE3B6E8F3B5 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FF23E937BB8E40DEA9BFD5FF;
+			remoteGlobalIDString = 3B50F8E919024B7EA38A153E;
 			remoteInfo = collisionChecker;
 		};
-		A70CDA5E6AAF4B93B598A8A4 /* PBXContainerItemProxy */ = {
+		5F5A0C77392042DCBB6388BE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 81FCC296FB1C4DE3B6E8F3B5 /* Project object */;
+			containerPortal = 3C42D38481674D7BB09B1A26 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9AEC396BF10D4348ABE81896;
+			remoteGlobalIDString = F34CE25328DA40C09BEEBA1D;
 			remoteInfo = voxelizer;
 		};
-		AF6A49E58EE446EBB3A94127 /* PBXContainerItemProxy */ = {
+		6D4BB43EE6F74BFD93CE59F4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 81FCC296FB1C4DE3B6E8F3B5 /* Project object */;
+			containerPortal = 3C42D38481674D7BB09B1A26 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C9E8B433F9F0410089219182;
+			remoteGlobalIDString = 21C99635E8654096918686A9;
+			remoteInfo = ZERO_CHECK;
+		};
+		BC0686AC17074795A44D32E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C42D38481674D7BB09B1A26 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 21C99635E8654096918686A9;
+			remoteInfo = ZERO_CHECK;
+		};
+		DB5C9BC6605B432DBCA4CEE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3C42D38481674D7BB09B1A26 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 21C99635E8654096918686A9;
 			remoteInfo = ZERO_CHECK;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0773DF47D1BF4BCC94AF882F /* collisionChecker */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = collisionChecker; sourceTree = BUILT_PRODUCTS_DIR; };
-		0877730764064F6486697FA0 /* commons.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = commons.h; path = src/commons.h; sourceTree = SOURCE_ROOT; };
-		1D4E9C5A3C144742A53003C0 /* collisionChecker.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = collisionChecker.h; path = test/collisionChecker.h; sourceTree = SOURCE_ROOT; };
-		431B9EB5FBE14C22AC14E773 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		4780660A82D7434080D31E50 /* voxelizer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = voxelizer; sourceTree = BUILT_PRODUCTS_DIR; };
-		499B4D069B7B4BBCB646021C /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = src/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		4B31AEFFBACD45A1B6650778 /* triBox.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = triBox.h; path = src/triBox.h; sourceTree = SOURCE_ROOT; };
-		55F55CA98FC7492C94DBA7E3 /* commons.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = commons.cpp; path = src/commons.cpp; sourceTree = SOURCE_ROOT; };
-		58FCDAF56D5F451797488126 /* threadPool.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = threadPool.h; path = src/threadPool.h; sourceTree = SOURCE_ROOT; };
-		5C2B98222076C769002F2BDD /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = data; path = ../../../data; sourceTree = BUILT_PRODUCTS_DIR; };
-		635FE959410F46859B28AD91 /* triBox.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = triBox.cpp; path = src/triBox.cpp; sourceTree = SOURCE_ROOT; };
-		67209495A5934BBBBE826AE0 /* collisionChecker.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = collisionChecker.cpp; path = test/collisionChecker.cpp; sourceTree = SOURCE_ROOT; };
-		9B73D8E2F17449028AF6F620 /* threadPool.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = threadPool.cpp; path = src/threadPool.cpp; sourceTree = SOURCE_ROOT; };
-		A8A478A3D4564C7589252398 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = test/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		ACA30AB0E529464D93FDD469 /* voxelizer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = voxelizer.cpp; path = src/voxelizer.cpp; sourceTree = SOURCE_ROOT; };
-		B1CEF4BF124A4B5495E04D1D /* voxelizer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = voxelizer.h; path = src/voxelizer.h; sourceTree = SOURCE_ROOT; };
-		B829E37F1FEC48B6A4A193E8 /* threadPool.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = threadPool.cpp; path = src/threadPool.cpp; sourceTree = SOURCE_ROOT; };
-		B93FAE8A5A714023A6E66DA7 /* voxelizer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = voxelizer.h; path = src/voxelizer.h; sourceTree = SOURCE_ROOT; };
-		C1188CB0C64E4356A738B3D2 /* timer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = timer.cpp; path = src/timer.cpp; sourceTree = SOURCE_ROOT; };
-		C663B3C418EC48478B92AE49 /* triBox.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = triBox.cpp; path = src/triBox.cpp; sourceTree = SOURCE_ROOT; };
-		C897295C226E4732A18FD48C /* voxelizer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = voxelizer.cpp; path = src/voxelizer.cpp; sourceTree = SOURCE_ROOT; };
-		CB0985960E4945079A4BDD97 /* commons.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = commons.h; path = src/commons.h; sourceTree = SOURCE_ROOT; };
-		D039AC075EDB495AB29701B6 /* timer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = timer.cpp; path = src/timer.cpp; sourceTree = SOURCE_ROOT; };
-		D05E94A055F747F69A4EBC21 /* triBox.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = triBox.h; path = src/triBox.h; sourceTree = SOURCE_ROOT; };
-		D0FAA5D8C8AB40EF9EB92F05 /* timer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = timer.h; path = src/timer.h; sourceTree = SOURCE_ROOT; };
-		D487A12E25854978BFE398CC /* timer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = timer.h; path = src/timer.h; sourceTree = SOURCE_ROOT; };
-		D88643A0E795495AA6CF28A5 /* threadPool.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = threadPool.h; path = src/threadPool.h; sourceTree = SOURCE_ROOT; };
-		F6A953429E204F14BE986D10 /* voxelizerMain.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = voxelizerMain.cpp; path = src/voxelizerMain.cpp; sourceTree = SOURCE_ROOT; };
-		F9005FDEB31F489F893D7940 /* commons.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = commons.cpp; path = src/commons.cpp; sourceTree = SOURCE_ROOT; };
+		0D8E5B36AD1C41D3B0D474E7 /* collisionChecker */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = collisionChecker; sourceTree = BUILT_PRODUCTS_DIR; };
+		150C55B806BE418598768EB9 /* /Users/davidcleres/DeepShape/voxels/src/commons.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = commons.h; path = src/commons.h; sourceTree = SOURCE_ROOT; };
+		19B6B4AB024E424DA04196A8 /* /Users/davidcleres/DeepShape/voxels/src/voxelizer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = voxelizer.cpp; path = src/voxelizer.cpp; sourceTree = SOURCE_ROOT; };
+		2E8C983185BE4939AA45E8DD /* /Users/davidcleres/DeepShape/voxels/src/commons.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = commons.h; path = src/commons.h; sourceTree = SOURCE_ROOT; };
+		45B4E4D462D744CDAEE9A762 /* /Users/davidcleres/DeepShape/voxels/test/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = test/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		64515C4AFCCC4521B26B8A2F /* voxelizer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = voxelizer; sourceTree = BUILT_PRODUCTS_DIR; };
+		67F77F014667491FB593904C /* /Users/davidcleres/DeepShape/voxels/src/voxelizer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = voxelizer.h; path = src/voxelizer.h; sourceTree = SOURCE_ROOT; };
+		73F01DBF75E945FE83CDFE84 /* /Users/davidcleres/DeepShape/voxels/src/timer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = timer.h; path = src/timer.h; sourceTree = SOURCE_ROOT; };
+		7567AD4A32D24E4D83EB696A /* /Users/davidcleres/DeepShape/voxels/src/voxelizer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = voxelizer.cpp; path = src/voxelizer.cpp; sourceTree = SOURCE_ROOT; };
+		784F0BFA1217409AA5B5DCDC /* /Users/davidcleres/DeepShape/voxels/src/threadPool.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = threadPool.h; path = src/threadPool.h; sourceTree = SOURCE_ROOT; };
+		7850DA4A4B7A406FA7AAD958 /* /Users/davidcleres/DeepShape/voxels/src/commons.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = commons.cpp; path = src/commons.cpp; sourceTree = SOURCE_ROOT; };
+		7B8BCFE5BCE94A778E031B23 /* /Users/davidcleres/DeepShape/voxels/src/commons.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = commons.cpp; path = src/commons.cpp; sourceTree = SOURCE_ROOT; };
+		7BB53F367ABC49F880DEDD41 /* /Users/davidcleres/DeepShape/voxels/src/timer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = timer.cpp; path = src/timer.cpp; sourceTree = SOURCE_ROOT; };
+		8974496A4C3544798BF70F44 /* /Users/davidcleres/DeepShape/voxels/src/triBox.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = triBox.cpp; path = src/triBox.cpp; sourceTree = SOURCE_ROOT; };
+		8CFB976EF6A148FDB39BFD47 /* /Users/davidcleres/DeepShape/voxels/test/collisionChecker.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = collisionChecker.h; path = test/collisionChecker.h; sourceTree = SOURCE_ROOT; };
+		9593659DAAF443AAABCBB4EF /* /Users/davidcleres/DeepShape/voxels/src/threadPool.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = threadPool.cpp; path = src/threadPool.cpp; sourceTree = SOURCE_ROOT; };
+		970B34E38E464592AD3F6EDE /* /Users/davidcleres/DeepShape/voxels/src/timer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = timer.h; path = src/timer.h; sourceTree = SOURCE_ROOT; };
+		A2E6B6C4D787485C89928D07 /* /Users/davidcleres/DeepShape/voxels/src/triBox.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = triBox.cpp; path = src/triBox.cpp; sourceTree = SOURCE_ROOT; };
+		B4C29282274D4247A6566CDB /* /Users/davidcleres/DeepShape/voxels/src/voxelizerMain.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = voxelizerMain.cpp; path = src/voxelizerMain.cpp; sourceTree = SOURCE_ROOT; };
+		BBF4721FB6EA47DE8CECF3FF /* /Users/davidcleres/DeepShape/voxels/src/triBox.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = triBox.h; path = src/triBox.h; sourceTree = SOURCE_ROOT; };
+		BD5839A1A76449969612044C /* /Users/davidcleres/DeepShape/voxels/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		C853B442F8C64F06B740F7AF /* /Users/davidcleres/DeepShape/voxels/src/timer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = timer.cpp; path = src/timer.cpp; sourceTree = SOURCE_ROOT; };
+		DAAF4E426552423BAD497C2C /* /Users/davidcleres/DeepShape/voxels/test/collisionChecker.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = collisionChecker.cpp; path = test/collisionChecker.cpp; sourceTree = SOURCE_ROOT; };
+		DDCCE0F42D2B4E4CA5581DA1 /* /Users/davidcleres/DeepShape/voxels/src/threadPool.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = threadPool.h; path = src/threadPool.h; sourceTree = SOURCE_ROOT; };
+		F36B479CE4C74B20A33A7C32 /* /Users/davidcleres/DeepShape/voxels/src/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = src/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		FA2413140A6744F3AF98DC2B /* /Users/davidcleres/DeepShape/voxels/src/voxelizer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = voxelizer.h; path = src/voxelizer.h; sourceTree = SOURCE_ROOT; };
+		FB64FECE9722424BB03745E2 /* /Users/davidcleres/DeepShape/voxels/src/threadPool.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = threadPool.cpp; path = src/threadPool.cpp; sourceTree = SOURCE_ROOT; };
+		FD931DA1D0AF404BA1C8A7F8 /* /Users/davidcleres/DeepShape/voxels/src/triBox.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = triBox.h; path = src/triBox.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		3DA9314B64B54FD4B3FCA197 /* Source Files */ = {
+		04FD888867584DCEA14A649A /* Source Files */ = {
 			isa = PBXGroup;
 			children = (
-				F9005FDEB31F489F893D7940 /* commons.cpp */,
-				9B73D8E2F17449028AF6F620 /* threadPool.cpp */,
-				C1188CB0C64E4356A738B3D2 /* timer.cpp */,
-				635FE959410F46859B28AD91 /* triBox.cpp */,
-				C897295C226E4732A18FD48C /* voxelizer.cpp */,
-				67209495A5934BBBBE826AE0 /* collisionChecker.cpp */,
+				7850DA4A4B7A406FA7AAD958 /* /Users/davidcleres/DeepShape/voxels/src/commons.cpp */,
+				9593659DAAF443AAABCBB4EF /* /Users/davidcleres/DeepShape/voxels/src/threadPool.cpp */,
+				7BB53F367ABC49F880DEDD41 /* /Users/davidcleres/DeepShape/voxels/src/timer.cpp */,
+				A2E6B6C4D787485C89928D07 /* /Users/davidcleres/DeepShape/voxels/src/triBox.cpp */,
+				19B6B4AB024E424DA04196A8 /* /Users/davidcleres/DeepShape/voxels/src/voxelizer.cpp */,
+				B4C29282274D4247A6566CDB /* /Users/davidcleres/DeepShape/voxels/src/voxelizerMain.cpp */,
 			);
 			name = "Source Files";
 			sourceTree = "<group>";
 		};
-		59126D53D4CF4B94B090B57C /* Products */ = {
+		1FBE1539855F4315B4BC6FCA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4780660A82D7434080D31E50 /* voxelizer */,
-				0773DF47D1BF4BCC94AF882F /* collisionChecker */,
+				64515C4AFCCC4521B26B8A2F /* voxelizer */,
+				0D8E5B36AD1C41D3B0D474E7 /* collisionChecker */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5BB130659E024DCE9A1C4171 /* Source Files */ = {
+		21F8BB571C114B859CB5A23F /* Source Files */ = {
 			isa = PBXGroup;
 			children = (
-				55F55CA98FC7492C94DBA7E3 /* commons.cpp */,
-				B829E37F1FEC48B6A4A193E8 /* threadPool.cpp */,
-				D039AC075EDB495AB29701B6 /* timer.cpp */,
-				C663B3C418EC48478B92AE49 /* triBox.cpp */,
-				ACA30AB0E529464D93FDD469 /* voxelizer.cpp */,
-				F6A953429E204F14BE986D10 /* voxelizerMain.cpp */,
+				7B8BCFE5BCE94A778E031B23 /* /Users/davidcleres/DeepShape/voxels/src/commons.cpp */,
+				FB64FECE9722424BB03745E2 /* /Users/davidcleres/DeepShape/voxels/src/threadPool.cpp */,
+				C853B442F8C64F06B740F7AF /* /Users/davidcleres/DeepShape/voxels/src/timer.cpp */,
+				8974496A4C3544798BF70F44 /* /Users/davidcleres/DeepShape/voxels/src/triBox.cpp */,
+				7567AD4A32D24E4D83EB696A /* /Users/davidcleres/DeepShape/voxels/src/voxelizer.cpp */,
+				DAAF4E426552423BAD497C2C /* /Users/davidcleres/DeepShape/voxels/test/collisionChecker.cpp */,
 			);
 			name = "Source Files";
 			sourceTree = "<group>";
 		};
-		73E8C61CBFF64709B70285C4 /* ALL_BUILD */ = {
+		643CF982DFEE48BF83985ABD /* voxelizer */ = {
 			isa = PBXGroup;
 			children = (
-				752FCDC55A6C44B2977273D4 /* CMake Rules */,
-				431B9EB5FBE14C22AC14E773 /* CMakeLists.txt */,
+				04FD888867584DCEA14A649A /* Source Files */,
+				CDF5FD56F66E48CB88EF3D87 /* Header Files */,
+				F36B479CE4C74B20A33A7C32 /* /Users/davidcleres/DeepShape/voxels/src/CMakeLists.txt */,
+			);
+			name = voxelizer;
+			sourceTree = "<group>";
+		};
+		87572BFFC3434792BC0AD627 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				EB8B6E7E2D4C4E31A8EA2982 /* CMake Rules */,
+				BD5839A1A76449969612044C /* /Users/davidcleres/DeepShape/voxels/CMakeLists.txt */,
 			);
 			name = ALL_BUILD;
 			sourceTree = "<group>";
 		};
-		752FCDC55A6C44B2977273D4 /* CMake Rules */ = {
+		A756436FE67B4DF48C209916 /* collisionChecker */ = {
+			isa = PBXGroup;
+			children = (
+				21F8BB571C114B859CB5A23F /* Source Files */,
+				AB71CF69565742758F8DF00E /* Header Files */,
+				45B4E4D462D744CDAEE9A762 /* /Users/davidcleres/DeepShape/voxels/test/CMakeLists.txt */,
+			);
+			name = collisionChecker;
+			sourceTree = "<group>";
+		};
+		AB71CF69565742758F8DF00E /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				2E8C983185BE4939AA45E8DD /* /Users/davidcleres/DeepShape/voxels/src/commons.h */,
+				784F0BFA1217409AA5B5DCDC /* /Users/davidcleres/DeepShape/voxels/src/threadPool.h */,
+				970B34E38E464592AD3F6EDE /* /Users/davidcleres/DeepShape/voxels/src/timer.h */,
+				FD931DA1D0AF404BA1C8A7F8 /* /Users/davidcleres/DeepShape/voxels/src/triBox.h */,
+				67F77F014667491FB593904C /* /Users/davidcleres/DeepShape/voxels/src/voxelizer.h */,
+				8CFB976EF6A148FDB39BFD47 /* /Users/davidcleres/DeepShape/voxels/test/collisionChecker.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		C64F50E9E4D44A26AAF682AC = {
+			isa = PBXGroup;
+			children = (
+				87572BFFC3434792BC0AD627 /* ALL_BUILD */,
+				643CF982DFEE48BF83985ABD /* voxelizer */,
+				A756436FE67B4DF48C209916 /* collisionChecker */,
+				1FBE1539855F4315B4BC6FCA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CDF5FD56F66E48CB88EF3D87 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				150C55B806BE418598768EB9 /* /Users/davidcleres/DeepShape/voxels/src/commons.h */,
+				DDCCE0F42D2B4E4CA5581DA1 /* /Users/davidcleres/DeepShape/voxels/src/threadPool.h */,
+				73F01DBF75E945FE83CDFE84 /* /Users/davidcleres/DeepShape/voxels/src/timer.h */,
+				BBF4721FB6EA47DE8CECF3FF /* /Users/davidcleres/DeepShape/voxels/src/triBox.h */,
+				FA2413140A6744F3AF98DC2B /* /Users/davidcleres/DeepShape/voxels/src/voxelizer.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		EB8B6E7E2D4C4E31A8EA2982 /* CMake Rules */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = "CMake Rules";
 			sourceTree = "<group>";
 		};
-		8297379AAD304C44AA558B51 /* Header Files */ = {
-			isa = PBXGroup;
-			children = (
-				0877730764064F6486697FA0 /* commons.h */,
-				58FCDAF56D5F451797488126 /* threadPool.h */,
-				D0FAA5D8C8AB40EF9EB92F05 /* timer.h */,
-				4B31AEFFBACD45A1B6650778 /* triBox.h */,
-				B93FAE8A5A714023A6E66DA7 /* voxelizer.h */,
-				1D4E9C5A3C144742A53003C0 /* collisionChecker.h */,
-			);
-			name = "Header Files";
-			sourceTree = "<group>";
-		};
-		9106F0765BC844069C759A0A /* Header Files */ = {
-			isa = PBXGroup;
-			children = (
-				CB0985960E4945079A4BDD97 /* commons.h */,
-				D88643A0E795495AA6CF28A5 /* threadPool.h */,
-				D487A12E25854978BFE398CC /* timer.h */,
-				D05E94A055F747F69A4EBC21 /* triBox.h */,
-				B1CEF4BF124A4B5495E04D1D /* voxelizer.h */,
-			);
-			name = "Header Files";
-			sourceTree = "<group>";
-		};
-		9A8E9D31076E4648B9C6FCC8 /* collisionChecker */ = {
-			isa = PBXGroup;
-			children = (
-				3DA9314B64B54FD4B3FCA197 /* Source Files */,
-				8297379AAD304C44AA558B51 /* Header Files */,
-				A8A478A3D4564C7589252398 /* CMakeLists.txt */,
-			);
-			name = collisionChecker;
-			sourceTree = "<group>";
-		};
-		A82E889C9F424627B23A6562 /* voxelizer */ = {
-			isa = PBXGroup;
-			children = (
-				5C2B98222076C769002F2BDD /* data */,
-				5BB130659E024DCE9A1C4171 /* Source Files */,
-				9106F0765BC844069C759A0A /* Header Files */,
-				499B4D069B7B4BBCB646021C /* CMakeLists.txt */,
-			);
-			name = voxelizer;
-			sourceTree = "<group>";
-		};
-		DA4019EF32D8462F83A22D72 = {
-			isa = PBXGroup;
-			children = (
-				73E8C61CBFF64709B70285C4 /* ALL_BUILD */,
-				A82E889C9F424627B23A6562 /* voxelizer */,
-				9A8E9D31076E4648B9C6FCC8 /* collisionChecker */,
-				59126D53D4CF4B94B090B57C /* Products */,
-			);
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9AEC396BF10D4348ABE81896 /* voxelizer */ = {
+		3B50F8E919024B7EA38A153E /* collisionChecker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 70578A4333B04DB5A385BF9C /* Build configuration list for PBXNativeTarget "voxelizer" */;
+			buildConfigurationList = AA49FAC4062C4A5F93635E37 /* Build configuration list for PBXNativeTarget "collisionChecker" */;
 			buildPhases = (
-				A450448F0631463EB1EF0DB8 /* Sources */,
+				E6DD406769CA442DB3A1381E /* Sources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				21C57A8E57B64DF5ADA4C243 /* PBXTargetDependency */,
-			);
-			name = voxelizer;
-			productName = voxelizer;
-			productReference = 4780660A82D7434080D31E50 /* voxelizer */;
-			productType = "com.apple.product-type.tool";
-		};
-		FF23E937BB8E40DEA9BFD5FF /* collisionChecker */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FDBABBC773724FD7913009CB /* Build configuration list for PBXNativeTarget "collisionChecker" */;
-			buildPhases = (
-				5E6782F2DADC44BAA59951AE /* Sources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CC3037C96FD3497EAD223976 /* PBXTargetDependency */,
+				4987568FA49541D9B6A181F9 /* PBXTargetDependency */,
 			);
 			name = collisionChecker;
 			productName = collisionChecker;
-			productReference = 0773DF47D1BF4BCC94AF882F /* collisionChecker */;
+			productReference = 0D8E5B36AD1C41D3B0D474E7 /* collisionChecker */;
+			productType = "com.apple.product-type.tool";
+		};
+		F34CE25328DA40C09BEEBA1D /* voxelizer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 855F0EC3C5A94C77AFDA0AD3 /* Build configuration list for PBXNativeTarget "voxelizer" */;
+			buildPhases = (
+				3D564CFE85A84E84B30D3228 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AB86EBA474B24FBB9C742AA3 /* PBXTargetDependency */,
+			);
+			name = voxelizer;
+			productName = voxelizer;
+			productReference = 64515C4AFCCC4521B26B8A2F /* voxelizer */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		81FCC296FB1C4DE3B6E8F3B5 /* Project object */ = {
+		3C42D38481674D7BB09B1A26 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 0930;
 			};
-			buildConfigurationList = 924974AB74AD4F32AAF640E6 /* Build configuration list for PBXProject "voxelizer" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = en;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
+			buildConfigurationList = 86541F8E46B2402F9B4450EF /* Build configuration list for PBXProject "voxelizer" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				FC33C5D4F1CB4484A930697F /* Debug */,
+				153B99F4E9014E83A9AA807A /* Release */,
+				860F89C521714CD885D17278 /* MinSizeRel */,
+				806212A96DCB4E7FA71B5A7C /* RelWithDebInfo */,
 			);
-			mainGroup = DA4019EF32D8462F83A22D72;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = C64F50E9E4D44A26AAF682AC;
 			projectDirPath = ../;
 			projectRoot = "";
 			targets = (
-				B99A6C146FB3474BBE9DB235 /* ALL_BUILD */,
-				F0B6C44F2F794DB495DFB839 /* RUN_TESTS */,
-				C9E8B433F9F0410089219182 /* ZERO_CHECK */,
-				9AEC396BF10D4348ABE81896 /* voxelizer */,
-				FF23E937BB8E40DEA9BFD5FF /* collisionChecker */,
+				761F0B55007A40828E5F65BE /* ALL_BUILD */,
+				D341B50AFB1C41CC90DCC843 /* RUN_TESTS */,
+				21C99635E8654096918686A9 /* ZERO_CHECK */,
+				F34CE25328DA40C09BEEBA1D /* voxelizer */,
+				3B50F8E919024B7EA38A153E /* collisionChecker */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		01BAF46092F14158AD38E7F8 /* CMake PostBuild Rules */ = {
+		35157ED3D2834299BFDD4C23 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/davidcleres/DeepShape/voxels/build -f /Users/davidcleres/DeepShape/voxels/build/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		5820D6F7B64C469486E98DB7 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		6A90AE90AF044B12BBFE8A53 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		8E090004E4AB4059B12F7668 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		B7A78D85841B496FB2342A90 /* CMake PostBuild Rules */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -311,10 +413,10 @@
 			name = "CMake PostBuild Rules";
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "make -C /Users/davidcleres/DeepShape/voxelizer/build -f /Users/davidcleres/DeepShape/voxelizer/build/CMakeScripts/RUN_TESTS_postBuildPhase.make$CONFIGURATION all";
+			shellScript = "make -C /Users/davidcleres/DeepShape/voxels/build -f /Users/davidcleres/DeepShape/voxels/build/CMakeScripts/RUN_TESTS_postBuildPhase.make$CONFIGURATION all";
 			showEnvVarsInLog = 0;
 		};
-		1BAAE9E6BD7E4E9988A668EA /* CMake Rules */ = {
+		DDA0668755994DF7BE37FA12 /* CMake Rules */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -322,106 +424,128 @@
 			name = "CMake Rules";
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "make -C /Users/davidcleres/DeepShape/voxelizer/build -f /Users/davidcleres/DeepShape/voxelizer/build/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
-			showEnvVarsInLog = 0;
-		};
-		AA93E0D79AAD4E5B824B5797 /* CMake Rules */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			name = "CMake Rules";
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "make -C /Users/davidcleres/DeepShape/voxelizer/build -f /Users/davidcleres/DeepShape/voxelizer/build/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			shellScript = "make -C /Users/davidcleres/DeepShape/voxels/build -f /Users/davidcleres/DeepShape/voxels/build/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		5E6782F2DADC44BAA59951AE /* Sources */ = {
+		3D564CFE85A84E84B30D3228 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E11024AB6ADE4C8EBB58C3F6 /* commons.cpp in Sources */,
-				1866B6873ABB4BE49A51DA34 /* threadPool.cpp in Sources */,
-				2172069730714B3285515F93 /* timer.cpp in Sources */,
-				FF7C70D57BBC4FCEA696313C /* triBox.cpp in Sources */,
-				E4106278535849709AECE1C9 /* voxelizer.cpp in Sources */,
-				0FDB03ABB1BD4AF0BAE02823 /* collisionChecker.cpp in Sources */,
+				D9748A820BDC489799FCBE79 /* /Users/davidcleres/DeepShape/voxels/src/commons.cpp */,
+				6E624788F1DB4B358C5939CC /* /Users/davidcleres/DeepShape/voxels/src/threadPool.cpp */,
+				E9FEA01235CE46FB932ADFB3 /* /Users/davidcleres/DeepShape/voxels/src/timer.cpp */,
+				A22ECF4273D84A899EE2A3C2 /* /Users/davidcleres/DeepShape/voxels/src/triBox.cpp */,
+				28BD47DE28BE4D8FB9437F72 /* /Users/davidcleres/DeepShape/voxels/src/voxelizer.cpp */,
+				92AE8E72571E47B98612E23B /* /Users/davidcleres/DeepShape/voxels/src/voxelizerMain.cpp */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A450448F0631463EB1EF0DB8 /* Sources */ = {
+		E6DD406769CA442DB3A1381E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFDC63AB44E040E885832AE3 /* commons.cpp in Sources */,
-				F56D5402F03F43D78E3A08DD /* threadPool.cpp in Sources */,
-				4FB890FDFEE74A7FAC5D7CB7 /* timer.cpp in Sources */,
-				ADEECBE651FE46A6A478A681 /* triBox.cpp in Sources */,
-				8D94AA96B3354A68B2B431A3 /* voxelizer.cpp in Sources */,
-				09E23B34651D465D93EEABB2 /* voxelizerMain.cpp in Sources */,
+				878CE56D8CFB451E97A7F085 /* /Users/davidcleres/DeepShape/voxels/src/commons.cpp */,
+				04CA0C3109164A34A96393F1 /* /Users/davidcleres/DeepShape/voxels/src/threadPool.cpp */,
+				639C995BD03048F98249810E /* /Users/davidcleres/DeepShape/voxels/src/timer.cpp */,
+				E2A1DC48D61B41C9B5E4BDC3 /* /Users/davidcleres/DeepShape/voxels/src/triBox.cpp */,
+				232BDA055BED4DC3A28816EC /* /Users/davidcleres/DeepShape/voxels/src/voxelizer.cpp */,
+				51B02DF3102D46A99448E925 /* /Users/davidcleres/DeepShape/voxels/test/collisionChecker.cpp */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		21C57A8E57B64DF5ADA4C243 /* PBXTargetDependency */ = {
+		4987568FA49541D9B6A181F9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C9E8B433F9F0410089219182 /* ZERO_CHECK */;
-			targetProxy = 21DF52B36EA2491CA49D504B /* PBXContainerItemProxy */;
+			target = 21C99635E8654096918686A9 /* ZERO_CHECK */;
+			targetProxy = BC0686AC17074795A44D32E8 /* PBXContainerItemProxy */;
 		};
-		245A2C238BDE4DB2AB3EB511 /* PBXTargetDependency */ = {
+		AB86EBA474B24FBB9C742AA3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C9E8B433F9F0410089219182 /* ZERO_CHECK */;
-			targetProxy = AF6A49E58EE446EBB3A94127 /* PBXContainerItemProxy */;
+			target = 21C99635E8654096918686A9 /* ZERO_CHECK */;
+			targetProxy = 6D4BB43EE6F74BFD93CE59F4 /* PBXContainerItemProxy */;
 		};
-		7C72A1D25FF34E69A0158DF5 /* PBXTargetDependency */ = {
+		ADDAB0865BD044ACA4FAE56F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9AEC396BF10D4348ABE81896 /* voxelizer */;
-			targetProxy = A70CDA5E6AAF4B93B598A8A4 /* PBXContainerItemProxy */;
+			target = 21C99635E8654096918686A9 /* ZERO_CHECK */;
+			targetProxy = DB5C9BC6605B432DBCA4CEE5 /* PBXContainerItemProxy */;
 		};
-		9DAF9C42BA6B49BBB1533E94 /* PBXTargetDependency */ = {
+		B446F5ED5D064E7293CB7BA8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = FF23E937BB8E40DEA9BFD5FF /* collisionChecker */;
-			targetProxy = 9AE927DF90894FD99BB4D9B7 /* PBXContainerItemProxy */;
+			target = 3B50F8E919024B7EA38A153E /* collisionChecker */;
+			targetProxy = 542B3852962C4FE699BA9181 /* PBXContainerItemProxy */;
 		};
-		CC3037C96FD3497EAD223976 /* PBXTargetDependency */ = {
+		E723E3C8EE3548DBB792F73D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C9E8B433F9F0410089219182 /* ZERO_CHECK */;
-			targetProxy = 829DE50F9F9544439247540A /* PBXContainerItemProxy */;
+			target = F34CE25328DA40C09BEEBA1D /* voxelizer */;
+			targetProxy = 5F5A0C77392042DCBB6388BE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0FF1F199D6CD49C1BFC6A65C /* Debug */ = {
+		0035E526A5CD40A39AF363BB /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ZERO_CHECK;
 				SECTORDER_FLAGS = "";
-				SYMROOT = /Users/davidcleres/DeepShape/voxelizer/build;
+				SYMROOT = /Users/davidcleres/DeepShape/voxels/build;
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-					"$(inherited)",
-				);
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		0DF9FC9A99774F0A9550D68D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/davidcleres/DeepShape/voxels/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
 			};
 			name = Debug;
 		};
-		116B3967C20D4040A89893F2 /* MinSizeRel */ = {
+		176543DF83FC4242816BA528 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
+				SYMROOT = /Users/davidcleres/DeepShape/voxels/build/build;
+			};
+			name = Release;
+		};
+		2EA6F0AD0A944E799FC194E6 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
+				SYMROOT = /Users/davidcleres/DeepShape/voxels/build/build;
+			};
+			name = MinSizeRel;
+		};
+		3E7A5A865BEE4E258CFD73C6 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -430,98 +554,25 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = s;
-				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/davidcleres/DeepShape/voxels/src);
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = /usr/local/lib;
-				LIBRARY_SEARCH_PATHS = (
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
-					/usr/local/lib,
-				);
-				OTHER_CPLUSPLUSFLAGS = (
-					"-DNDEBUG",
-					"'-std=gnu++11'",
-				);
-				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"-lassimp",
-					"-lfcl",
-					"/usr/local/lib/libboost_atomic-mt.dylib",
-					"/usr/local/lib/libboost_system-mt.dylib",
-					"/usr/local/lib/libboost_thread-mt.dylib",
-					"/usr/local/lib/libboost_date_time-mt.dylib",
-					"/usr/local/lib/libboost_unit_test_framework-mt.dylib",
-					/usr/local/lib/libopencv_stitching.3.4.1.dylib,
-					/usr/local/lib/libopencv_superres.3.4.1.dylib,
-					/usr/local/lib/libopencv_videostab.3.4.1.dylib,
-					/usr/local/lib/libopencv_aruco.3.4.1.dylib,
-					/usr/local/lib/libopencv_bgsegm.3.4.1.dylib,
-					/usr/local/lib/libopencv_bioinspired.3.4.1.dylib,
-					/usr/local/lib/libopencv_ccalib.3.4.1.dylib,
-					/usr/local/lib/libopencv_dnn_objdetect.3.4.1.dylib,
-					/usr/local/lib/libopencv_dpm.3.4.1.dylib,
-					/usr/local/lib/libopencv_face.3.4.1.dylib,
-					/usr/local/lib/libopencv_fuzzy.3.4.1.dylib,
-					/usr/local/lib/libopencv_hfs.3.4.1.dylib,
-					/usr/local/lib/libopencv_img_hash.3.4.1.dylib,
-					/usr/local/lib/libopencv_line_descriptor.3.4.1.dylib,
-					/usr/local/lib/libopencv_optflow.3.4.1.dylib,
-					/usr/local/lib/libopencv_reg.3.4.1.dylib,
-					/usr/local/lib/libopencv_rgbd.3.4.1.dylib,
-					/usr/local/lib/libopencv_saliency.3.4.1.dylib,
-					/usr/local/lib/libopencv_stereo.3.4.1.dylib,
-					/usr/local/lib/libopencv_structured_light.3.4.1.dylib,
-					/usr/local/lib/libopencv_surface_matching.3.4.1.dylib,
-					/usr/local/lib/libopencv_tracking.3.4.1.dylib,
-					/usr/local/lib/libopencv_xfeatures2d.3.4.1.dylib,
-					/usr/local/lib/libopencv_ximgproc.3.4.1.dylib,
-					/usr/local/lib/libopencv_xobjdetect.3.4.1.dylib,
-					/usr/local/lib/libopencv_xphoto.3.4.1.dylib,
-					/usr/local/lib/libopencv_shape.3.4.1.dylib,
-					/usr/local/lib/libopencv_photo.3.4.1.dylib,
-					/usr/local/lib/libopencv_datasets.3.4.1.dylib,
-					/usr/local/lib/libopencv_plot.3.4.1.dylib,
-					/usr/local/lib/libopencv_text.3.4.1.dylib,
-					/usr/local/lib/libopencv_dnn.3.4.1.dylib,
-					/usr/local/lib/libopencv_ml.3.4.1.dylib,
-					/usr/local/lib/libopencv_video.3.4.1.dylib,
-					/usr/local/lib/libopencv_calib3d.3.4.1.dylib,
-					/usr/local/lib/libopencv_features2d.3.4.1.dylib,
-					/usr/local/lib/libopencv_highgui.3.4.1.dylib,
-					/usr/local/lib/libopencv_videoio.3.4.1.dylib,
-					/usr/local/lib/libopencv_phase_unwrapping.3.4.1.dylib,
-					/usr/local/lib/libopencv_flann.3.4.1.dylib,
-					/usr/local/lib/libopencv_imgcodecs.3.4.1.dylib,
-					/usr/local/lib/libopencv_objdetect.3.4.1.dylib,
-					/usr/local/lib/libopencv_imgproc.3.4.1.dylib,
-					/usr/local/lib/libopencv_core.3.4.1.dylib,
-				);
+				LIBRARY_SEARCH_PATHS = " /usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/lib";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++11'  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -lassimp -lfcl /usr/local/lib/libboost_atomic-mt.dylib /usr/local/lib/libboost_system-mt.dylib /usr/local/lib/libboost_thread-mt.dylib /usr/local/lib/libboost_date_time-mt.dylib /usr/local/lib/libboost_unit_test_framework-mt.dylib /usr/local/lib/libopencv_stitching.3.4.1.dylib /usr/local/lib/libopencv_superres.3.4.1.dylib /usr/local/lib/libopencv_videostab.3.4.1.dylib /usr/local/lib/libopencv_aruco.3.4.1.dylib /usr/local/lib/libopencv_bgsegm.3.4.1.dylib /usr/local/lib/libopencv_bioinspired.3.4.1.dylib /usr/local/lib/libopencv_ccalib.3.4.1.dylib /usr/local/lib/libopencv_dnn_objdetect.3.4.1.dylib /usr/local/lib/libopencv_dpm.3.4.1.dylib /usr/local/lib/libopencv_face.3.4.1.dylib /usr/local/lib/libopencv_fuzzy.3.4.1.dylib /usr/local/lib/libopencv_hfs.3.4.1.dylib /usr/local/lib/libopencv_img_hash.3.4.1.dylib /usr/local/lib/libopencv_line_descriptor.3.4.1.dylib /usr/local/lib/libopencv_optflow.3.4.1.dylib /usr/local/lib/libopencv_reg.3.4.1.dylib /usr/local/lib/libopencv_rgbd.3.4.1.dylib /usr/local/lib/libopencv_saliency.3.4.1.dylib /usr/local/lib/libopencv_stereo.3.4.1.dylib /usr/local/lib/libopencv_structured_light.3.4.1.dylib /usr/local/lib/libopencv_surface_matching.3.4.1.dylib /usr/local/lib/libopencv_tracking.3.4.1.dylib /usr/local/lib/libopencv_xfeatures2d.3.4.1.dylib /usr/local/lib/libopencv_ximgproc.3.4.1.dylib /usr/local/lib/libopencv_xobjdetect.3.4.1.dylib /usr/local/lib/libopencv_xphoto.3.4.1.dylib /usr/local/lib/libopencv_shape.3.4.1.dylib /usr/local/lib/libopencv_photo.3.4.1.dylib /usr/local/lib/libopencv_datasets.3.4.1.dylib /usr/local/lib/libopencv_plot.3.4.1.dylib /usr/local/lib/libopencv_text.3.4.1.dylib /usr/local/lib/libopencv_dnn.3.4.1.dylib /usr/local/lib/libopencv_ml.3.4.1.dylib /usr/local/lib/libopencv_video.3.4.1.dylib /usr/local/lib/libopencv_calib3d.3.4.1.dylib /usr/local/lib/libopencv_features2d.3.4.1.dylib /usr/local/lib/libopencv_highgui.3.4.1.dylib /usr/local/lib/libopencv_videoio.3.4.1.dylib /usr/local/lib/libopencv_phase_unwrapping.3.4.1.dylib /usr/local/lib/libopencv_flann.3.4.1.dylib /usr/local/lib/libopencv_imgcodecs.3.4.1.dylib /usr/local/lib/libopencv_objdetect.3.4.1.dylib /usr/local/lib/libopencv_imgproc.3.4.1.dylib /usr/local/lib/libopencv_core.3.4.1.dylib";
 				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = voxelizer;
+				PRODUCT_NAME = collisionChecker;
 				SECTORDER_FLAGS = "";
-				SYMROOT = /Users/davidcleres/DeepShape/voxelizer/build/bin;
-				SYSTEM_HEADER_SEARCH_PATHS = "/usr/local/include /usr/local/include/opencv";
+				SYMROOT = /Users/davidcleres/DeepShape/voxels/build/test;
+				SYSTEM_HEADER_SEARCH_PATHS = (/usr/local/include,/usr/local/include/opencv);
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-					"$(inherited)",
-				);
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
 			};
 			name = MinSizeRel;
 		};
-		1DBFE506610A41B5856DBC74 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
-				SYMROOT = /Users/davidcleres/DeepShape/voxelizer/build/build;
-			};
-			name = Debug;
-		};
-		25D9142405514C6BA65CB226 /* RelWithDebInfo */ = {
+		3FE6AF0204A94020A156CA69 /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -530,726 +581,120 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = /Users/davidcleres/DeepShape/voxelizer/src;
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = /usr/local/lib;
-				LIBRARY_SEARCH_PATHS = (
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
-					/usr/local/lib,
-				);
-				OTHER_CPLUSPLUSFLAGS = (
-					"-DNDEBUG",
-					"'-std=gnu++11'",
-				);
-				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"-lassimp",
-					"-lfcl",
-					"/usr/local/lib/libboost_atomic-mt.dylib",
-					"/usr/local/lib/libboost_system-mt.dylib",
-					"/usr/local/lib/libboost_thread-mt.dylib",
-					"/usr/local/lib/libboost_date_time-mt.dylib",
-					"/usr/local/lib/libboost_unit_test_framework-mt.dylib",
-					/usr/local/lib/libopencv_stitching.3.4.1.dylib,
-					/usr/local/lib/libopencv_superres.3.4.1.dylib,
-					/usr/local/lib/libopencv_videostab.3.4.1.dylib,
-					/usr/local/lib/libopencv_aruco.3.4.1.dylib,
-					/usr/local/lib/libopencv_bgsegm.3.4.1.dylib,
-					/usr/local/lib/libopencv_bioinspired.3.4.1.dylib,
-					/usr/local/lib/libopencv_ccalib.3.4.1.dylib,
-					/usr/local/lib/libopencv_dnn_objdetect.3.4.1.dylib,
-					/usr/local/lib/libopencv_dpm.3.4.1.dylib,
-					/usr/local/lib/libopencv_face.3.4.1.dylib,
-					/usr/local/lib/libopencv_fuzzy.3.4.1.dylib,
-					/usr/local/lib/libopencv_hfs.3.4.1.dylib,
-					/usr/local/lib/libopencv_img_hash.3.4.1.dylib,
-					/usr/local/lib/libopencv_line_descriptor.3.4.1.dylib,
-					/usr/local/lib/libopencv_optflow.3.4.1.dylib,
-					/usr/local/lib/libopencv_reg.3.4.1.dylib,
-					/usr/local/lib/libopencv_rgbd.3.4.1.dylib,
-					/usr/local/lib/libopencv_saliency.3.4.1.dylib,
-					/usr/local/lib/libopencv_stereo.3.4.1.dylib,
-					/usr/local/lib/libopencv_structured_light.3.4.1.dylib,
-					/usr/local/lib/libopencv_surface_matching.3.4.1.dylib,
-					/usr/local/lib/libopencv_tracking.3.4.1.dylib,
-					/usr/local/lib/libopencv_xfeatures2d.3.4.1.dylib,
-					/usr/local/lib/libopencv_ximgproc.3.4.1.dylib,
-					/usr/local/lib/libopencv_xobjdetect.3.4.1.dylib,
-					/usr/local/lib/libopencv_xphoto.3.4.1.dylib,
-					/usr/local/lib/libopencv_shape.3.4.1.dylib,
-					/usr/local/lib/libopencv_photo.3.4.1.dylib,
-					/usr/local/lib/libopencv_datasets.3.4.1.dylib,
-					/usr/local/lib/libopencv_plot.3.4.1.dylib,
-					/usr/local/lib/libopencv_text.3.4.1.dylib,
-					/usr/local/lib/libopencv_dnn.3.4.1.dylib,
-					/usr/local/lib/libopencv_ml.3.4.1.dylib,
-					/usr/local/lib/libopencv_video.3.4.1.dylib,
-					/usr/local/lib/libopencv_calib3d.3.4.1.dylib,
-					/usr/local/lib/libopencv_features2d.3.4.1.dylib,
-					/usr/local/lib/libopencv_highgui.3.4.1.dylib,
-					/usr/local/lib/libopencv_videoio.3.4.1.dylib,
-					/usr/local/lib/libopencv_phase_unwrapping.3.4.1.dylib,
-					/usr/local/lib/libopencv_flann.3.4.1.dylib,
-					/usr/local/lib/libopencv_imgcodecs.3.4.1.dylib,
-					/usr/local/lib/libopencv_objdetect.3.4.1.dylib,
-					/usr/local/lib/libopencv_imgproc.3.4.1.dylib,
-					/usr/local/lib/libopencv_core.3.4.1.dylib,
-				);
+				LIBRARY_SEARCH_PATHS = " /usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/lib";
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=gnu++11'  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -lassimp -lfcl /usr/local/lib/libboost_atomic-mt.dylib /usr/local/lib/libboost_system-mt.dylib /usr/local/lib/libboost_thread-mt.dylib /usr/local/lib/libboost_date_time-mt.dylib /usr/local/lib/libboost_unit_test_framework-mt.dylib /usr/local/lib/libopencv_stitching.3.4.1.dylib /usr/local/lib/libopencv_superres.3.4.1.dylib /usr/local/lib/libopencv_videostab.3.4.1.dylib /usr/local/lib/libopencv_aruco.3.4.1.dylib /usr/local/lib/libopencv_bgsegm.3.4.1.dylib /usr/local/lib/libopencv_bioinspired.3.4.1.dylib /usr/local/lib/libopencv_ccalib.3.4.1.dylib /usr/local/lib/libopencv_dnn_objdetect.3.4.1.dylib /usr/local/lib/libopencv_dpm.3.4.1.dylib /usr/local/lib/libopencv_face.3.4.1.dylib /usr/local/lib/libopencv_fuzzy.3.4.1.dylib /usr/local/lib/libopencv_hfs.3.4.1.dylib /usr/local/lib/libopencv_img_hash.3.4.1.dylib /usr/local/lib/libopencv_line_descriptor.3.4.1.dylib /usr/local/lib/libopencv_optflow.3.4.1.dylib /usr/local/lib/libopencv_reg.3.4.1.dylib /usr/local/lib/libopencv_rgbd.3.4.1.dylib /usr/local/lib/libopencv_saliency.3.4.1.dylib /usr/local/lib/libopencv_stereo.3.4.1.dylib /usr/local/lib/libopencv_structured_light.3.4.1.dylib /usr/local/lib/libopencv_surface_matching.3.4.1.dylib /usr/local/lib/libopencv_tracking.3.4.1.dylib /usr/local/lib/libopencv_xfeatures2d.3.4.1.dylib /usr/local/lib/libopencv_ximgproc.3.4.1.dylib /usr/local/lib/libopencv_xobjdetect.3.4.1.dylib /usr/local/lib/libopencv_xphoto.3.4.1.dylib /usr/local/lib/libopencv_shape.3.4.1.dylib /usr/local/lib/libopencv_photo.3.4.1.dylib /usr/local/lib/libopencv_datasets.3.4.1.dylib /usr/local/lib/libopencv_plot.3.4.1.dylib /usr/local/lib/libopencv_text.3.4.1.dylib /usr/local/lib/libopencv_dnn.3.4.1.dylib /usr/local/lib/libopencv_ml.3.4.1.dylib /usr/local/lib/libopencv_video.3.4.1.dylib /usr/local/lib/libopencv_calib3d.3.4.1.dylib /usr/local/lib/libopencv_features2d.3.4.1.dylib /usr/local/lib/libopencv_highgui.3.4.1.dylib /usr/local/lib/libopencv_videoio.3.4.1.dylib /usr/local/lib/libopencv_phase_unwrapping.3.4.1.dylib /usr/local/lib/libopencv_flann.3.4.1.dylib /usr/local/lib/libopencv_imgcodecs.3.4.1.dylib /usr/local/lib/libopencv_objdetect.3.4.1.dylib /usr/local/lib/libopencv_imgproc.3.4.1.dylib /usr/local/lib/libopencv_core.3.4.1.dylib";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = voxelizer;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/davidcleres/DeepShape/voxels/build/bin;
+				SYSTEM_HEADER_SEARCH_PATHS = (/usr/local/include,/usr/local/include/opencv);
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		4618355BCECA4B3EB1D89065 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/davidcleres/DeepShape/voxels/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		498618A7ED43457CA6A4B5BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/davidcleres/DeepShape/voxels/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		5D4BAE6D98E240149A821A70 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
+				SYMROOT = /Users/davidcleres/DeepShape/voxels/build/build;
+			};
+			name = Debug;
+		};
+		666512767A484D3F98E05E95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/davidcleres/DeepShape/voxels/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		6C7386DBC66546E086CF6876 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/davidcleres/DeepShape/voxels/src);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = " /usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/lib";
+				OTHER_CPLUSPLUSFLAGS = "   '-std=gnu++11'  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -lassimp -lfcl /usr/local/lib/libboost_atomic-mt.dylib /usr/local/lib/libboost_system-mt.dylib /usr/local/lib/libboost_thread-mt.dylib /usr/local/lib/libboost_date_time-mt.dylib /usr/local/lib/libboost_unit_test_framework-mt.dylib /usr/local/lib/libopencv_stitching.3.4.1.dylib /usr/local/lib/libopencv_superres.3.4.1.dylib /usr/local/lib/libopencv_videostab.3.4.1.dylib /usr/local/lib/libopencv_aruco.3.4.1.dylib /usr/local/lib/libopencv_bgsegm.3.4.1.dylib /usr/local/lib/libopencv_bioinspired.3.4.1.dylib /usr/local/lib/libopencv_ccalib.3.4.1.dylib /usr/local/lib/libopencv_dnn_objdetect.3.4.1.dylib /usr/local/lib/libopencv_dpm.3.4.1.dylib /usr/local/lib/libopencv_face.3.4.1.dylib /usr/local/lib/libopencv_fuzzy.3.4.1.dylib /usr/local/lib/libopencv_hfs.3.4.1.dylib /usr/local/lib/libopencv_img_hash.3.4.1.dylib /usr/local/lib/libopencv_line_descriptor.3.4.1.dylib /usr/local/lib/libopencv_optflow.3.4.1.dylib /usr/local/lib/libopencv_reg.3.4.1.dylib /usr/local/lib/libopencv_rgbd.3.4.1.dylib /usr/local/lib/libopencv_saliency.3.4.1.dylib /usr/local/lib/libopencv_stereo.3.4.1.dylib /usr/local/lib/libopencv_structured_light.3.4.1.dylib /usr/local/lib/libopencv_surface_matching.3.4.1.dylib /usr/local/lib/libopencv_tracking.3.4.1.dylib /usr/local/lib/libopencv_xfeatures2d.3.4.1.dylib /usr/local/lib/libopencv_ximgproc.3.4.1.dylib /usr/local/lib/libopencv_xobjdetect.3.4.1.dylib /usr/local/lib/libopencv_xphoto.3.4.1.dylib /usr/local/lib/libopencv_shape.3.4.1.dylib /usr/local/lib/libopencv_photo.3.4.1.dylib /usr/local/lib/libopencv_datasets.3.4.1.dylib /usr/local/lib/libopencv_plot.3.4.1.dylib /usr/local/lib/libopencv_text.3.4.1.dylib /usr/local/lib/libopencv_dnn.3.4.1.dylib /usr/local/lib/libopencv_ml.3.4.1.dylib /usr/local/lib/libopencv_video.3.4.1.dylib /usr/local/lib/libopencv_calib3d.3.4.1.dylib /usr/local/lib/libopencv_features2d.3.4.1.dylib /usr/local/lib/libopencv_highgui.3.4.1.dylib /usr/local/lib/libopencv_videoio.3.4.1.dylib /usr/local/lib/libopencv_phase_unwrapping.3.4.1.dylib /usr/local/lib/libopencv_flann.3.4.1.dylib /usr/local/lib/libopencv_imgcodecs.3.4.1.dylib /usr/local/lib/libopencv_objdetect.3.4.1.dylib /usr/local/lib/libopencv_imgproc.3.4.1.dylib /usr/local/lib/libopencv_core.3.4.1.dylib";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = collisionChecker;
 				SECTORDER_FLAGS = "";
-				SYMROOT = /Users/davidcleres/DeepShape/voxelizer/build/test;
-				SYSTEM_HEADER_SEARCH_PATHS = "/usr/local/include /usr/local/include/opencv";
+				SYMROOT = /Users/davidcleres/DeepShape/voxels/build/test;
+				SYSTEM_HEADER_SEARCH_PATHS = (/usr/local/include,/usr/local/include/opencv);
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-					"$(inherited)",
-				);
-			};
-			name = RelWithDebInfo;
-		};
-		2B27AD5323104DC7B28504B7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = "";
-				EXECUTABLE_SUFFIX = "";
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				LD_RUNPATH_SEARCH_PATHS = /usr/local/lib;
-				LIBRARY_SEARCH_PATHS = (
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
-					/usr/local/lib,
-				);
-				OTHER_CPLUSPLUSFLAGS = (
-					"-DNDEBUG",
-					"'-std=gnu++11'",
-				);
-				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"-lassimp",
-					"-lfcl",
-					"/usr/local/lib/libboost_atomic-mt.dylib",
-					"/usr/local/lib/libboost_system-mt.dylib",
-					"/usr/local/lib/libboost_thread-mt.dylib",
-					"/usr/local/lib/libboost_date_time-mt.dylib",
-					"/usr/local/lib/libboost_unit_test_framework-mt.dylib",
-					/usr/local/lib/libopencv_stitching.3.4.1.dylib,
-					/usr/local/lib/libopencv_superres.3.4.1.dylib,
-					/usr/local/lib/libopencv_videostab.3.4.1.dylib,
-					/usr/local/lib/libopencv_aruco.3.4.1.dylib,
-					/usr/local/lib/libopencv_bgsegm.3.4.1.dylib,
-					/usr/local/lib/libopencv_bioinspired.3.4.1.dylib,
-					/usr/local/lib/libopencv_ccalib.3.4.1.dylib,
-					/usr/local/lib/libopencv_dnn_objdetect.3.4.1.dylib,
-					/usr/local/lib/libopencv_dpm.3.4.1.dylib,
-					/usr/local/lib/libopencv_face.3.4.1.dylib,
-					/usr/local/lib/libopencv_fuzzy.3.4.1.dylib,
-					/usr/local/lib/libopencv_hfs.3.4.1.dylib,
-					/usr/local/lib/libopencv_img_hash.3.4.1.dylib,
-					/usr/local/lib/libopencv_line_descriptor.3.4.1.dylib,
-					/usr/local/lib/libopencv_optflow.3.4.1.dylib,
-					/usr/local/lib/libopencv_reg.3.4.1.dylib,
-					/usr/local/lib/libopencv_rgbd.3.4.1.dylib,
-					/usr/local/lib/libopencv_saliency.3.4.1.dylib,
-					/usr/local/lib/libopencv_stereo.3.4.1.dylib,
-					/usr/local/lib/libopencv_structured_light.3.4.1.dylib,
-					/usr/local/lib/libopencv_surface_matching.3.4.1.dylib,
-					/usr/local/lib/libopencv_tracking.3.4.1.dylib,
-					/usr/local/lib/libopencv_xfeatures2d.3.4.1.dylib,
-					/usr/local/lib/libopencv_ximgproc.3.4.1.dylib,
-					/usr/local/lib/libopencv_xobjdetect.3.4.1.dylib,
-					/usr/local/lib/libopencv_xphoto.3.4.1.dylib,
-					/usr/local/lib/libopencv_shape.3.4.1.dylib,
-					/usr/local/lib/libopencv_photo.3.4.1.dylib,
-					/usr/local/lib/libopencv_datasets.3.4.1.dylib,
-					/usr/local/lib/libopencv_plot.3.4.1.dylib,
-					/usr/local/lib/libopencv_text.3.4.1.dylib,
-					/usr/local/lib/libopencv_dnn.3.4.1.dylib,
-					/usr/local/lib/libopencv_ml.3.4.1.dylib,
-					/usr/local/lib/libopencv_video.3.4.1.dylib,
-					/usr/local/lib/libopencv_calib3d.3.4.1.dylib,
-					/usr/local/lib/libopencv_features2d.3.4.1.dylib,
-					/usr/local/lib/libopencv_highgui.3.4.1.dylib,
-					/usr/local/lib/libopencv_videoio.3.4.1.dylib,
-					/usr/local/lib/libopencv_phase_unwrapping.3.4.1.dylib,
-					/usr/local/lib/libopencv_flann.3.4.1.dylib,
-					/usr/local/lib/libopencv_imgcodecs.3.4.1.dylib,
-					/usr/local/lib/libopencv_objdetect.3.4.1.dylib,
-					/usr/local/lib/libopencv_imgproc.3.4.1.dylib,
-					/usr/local/lib/libopencv_core.3.4.1.dylib,
-				);
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = voxelizer;
-				SECTORDER_FLAGS = "";
-				SYMROOT = /Users/davidcleres/DeepShape/voxelizer/build/bin;
-				SYSTEM_HEADER_SEARCH_PATHS = "/usr/local/include /usr/local/include/opencv";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-					"$(inherited)",
-				);
-			};
-			name = Release;
-		};
-		41FA5D9D0CF34352AE69C3BC /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = RUN_TESTS;
-				SECTORDER_FLAGS = "";
-				SYMROOT = /Users/davidcleres/DeepShape/voxelizer/build;
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-					"$(inherited)",
-				);
-			};
-			name = RelWithDebInfo;
-		};
-		4303AB55DB4D4EB7A0235217 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
-				SYMROOT = /Users/davidcleres/DeepShape/voxelizer/build/build;
-			};
-			name = MinSizeRel;
-		};
-		49839719BECD40BE86D81993 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = "";
-				EXECUTABLE_SUFFIX = "";
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				LD_RUNPATH_SEARCH_PATHS = /usr/local/lib;
-				LIBRARY_SEARCH_PATHS = (
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
-					/usr/local/lib,
-				);
-				OTHER_CPLUSPLUSFLAGS = (
-					"-DNDEBUG",
-					"'-std=gnu++11'",
-				);
-				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"-lassimp",
-					"-lfcl",
-					"/usr/local/lib/libboost_atomic-mt.dylib",
-					"/usr/local/lib/libboost_system-mt.dylib",
-					"/usr/local/lib/libboost_thread-mt.dylib",
-					"/usr/local/lib/libboost_date_time-mt.dylib",
-					"/usr/local/lib/libboost_unit_test_framework-mt.dylib",
-					/usr/local/lib/libopencv_stitching.3.4.1.dylib,
-					/usr/local/lib/libopencv_superres.3.4.1.dylib,
-					/usr/local/lib/libopencv_videostab.3.4.1.dylib,
-					/usr/local/lib/libopencv_aruco.3.4.1.dylib,
-					/usr/local/lib/libopencv_bgsegm.3.4.1.dylib,
-					/usr/local/lib/libopencv_bioinspired.3.4.1.dylib,
-					/usr/local/lib/libopencv_ccalib.3.4.1.dylib,
-					/usr/local/lib/libopencv_dnn_objdetect.3.4.1.dylib,
-					/usr/local/lib/libopencv_dpm.3.4.1.dylib,
-					/usr/local/lib/libopencv_face.3.4.1.dylib,
-					/usr/local/lib/libopencv_fuzzy.3.4.1.dylib,
-					/usr/local/lib/libopencv_hfs.3.4.1.dylib,
-					/usr/local/lib/libopencv_img_hash.3.4.1.dylib,
-					/usr/local/lib/libopencv_line_descriptor.3.4.1.dylib,
-					/usr/local/lib/libopencv_optflow.3.4.1.dylib,
-					/usr/local/lib/libopencv_reg.3.4.1.dylib,
-					/usr/local/lib/libopencv_rgbd.3.4.1.dylib,
-					/usr/local/lib/libopencv_saliency.3.4.1.dylib,
-					/usr/local/lib/libopencv_stereo.3.4.1.dylib,
-					/usr/local/lib/libopencv_structured_light.3.4.1.dylib,
-					/usr/local/lib/libopencv_surface_matching.3.4.1.dylib,
-					/usr/local/lib/libopencv_tracking.3.4.1.dylib,
-					/usr/local/lib/libopencv_xfeatures2d.3.4.1.dylib,
-					/usr/local/lib/libopencv_ximgproc.3.4.1.dylib,
-					/usr/local/lib/libopencv_xobjdetect.3.4.1.dylib,
-					/usr/local/lib/libopencv_xphoto.3.4.1.dylib,
-					/usr/local/lib/libopencv_shape.3.4.1.dylib,
-					/usr/local/lib/libopencv_photo.3.4.1.dylib,
-					/usr/local/lib/libopencv_datasets.3.4.1.dylib,
-					/usr/local/lib/libopencv_plot.3.4.1.dylib,
-					/usr/local/lib/libopencv_text.3.4.1.dylib,
-					/usr/local/lib/libopencv_dnn.3.4.1.dylib,
-					/usr/local/lib/libopencv_ml.3.4.1.dylib,
-					/usr/local/lib/libopencv_video.3.4.1.dylib,
-					/usr/local/lib/libopencv_calib3d.3.4.1.dylib,
-					/usr/local/lib/libopencv_features2d.3.4.1.dylib,
-					/usr/local/lib/libopencv_highgui.3.4.1.dylib,
-					/usr/local/lib/libopencv_videoio.3.4.1.dylib,
-					/usr/local/lib/libopencv_phase_unwrapping.3.4.1.dylib,
-					/usr/local/lib/libopencv_flann.3.4.1.dylib,
-					/usr/local/lib/libopencv_imgcodecs.3.4.1.dylib,
-					/usr/local/lib/libopencv_objdetect.3.4.1.dylib,
-					/usr/local/lib/libopencv_imgproc.3.4.1.dylib,
-					/usr/local/lib/libopencv_core.3.4.1.dylib,
-				);
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = voxelizer;
-				SECTORDER_FLAGS = "";
-				SYMROOT = /Users/davidcleres/DeepShape/voxelizer/build/bin;
-				SYSTEM_HEADER_SEARCH_PATHS = "/usr/local/include /usr/local/include/opencv";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-					"$(inherited)",
-				);
-			};
-			name = RelWithDebInfo;
-		};
-		49E4A7E603B04EE28097DD22 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = RUN_TESTS;
-				SECTORDER_FLAGS = "";
-				SYMROOT = /Users/davidcleres/DeepShape/voxelizer/build;
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-					"$(inherited)",
-				);
-			};
-			name = MinSizeRel;
-		};
-		5FF3B021F21346B79DC627A4 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = /Users/davidcleres/DeepShape/voxelizer/build;
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-					"$(inherited)",
-				);
-			};
-			name = MinSizeRel;
-		};
-		7097F4E1AA3C4AA1A492F0AA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = "";
-				EXECUTABLE_SUFFIX = "";
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				LD_RUNPATH_SEARCH_PATHS = /usr/local/lib;
-				LIBRARY_SEARCH_PATHS = (
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
-					/usr/local/lib,
-				);
-				OTHER_CPLUSPLUSFLAGS = "   '-std=gnu++11'  ";
-				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"-lassimp",
-					"-lfcl",
-					"/usr/local/lib/libboost_atomic-mt.dylib",
-					"/usr/local/lib/libboost_system-mt.dylib",
-					"/usr/local/lib/libboost_thread-mt.dylib",
-					"/usr/local/lib/libboost_date_time-mt.dylib",
-					"/usr/local/lib/libboost_unit_test_framework-mt.dylib",
-					/usr/local/lib/libopencv_stitching.3.4.1.dylib,
-					/usr/local/lib/libopencv_superres.3.4.1.dylib,
-					/usr/local/lib/libopencv_videostab.3.4.1.dylib,
-					/usr/local/lib/libopencv_aruco.3.4.1.dylib,
-					/usr/local/lib/libopencv_bgsegm.3.4.1.dylib,
-					/usr/local/lib/libopencv_bioinspired.3.4.1.dylib,
-					/usr/local/lib/libopencv_ccalib.3.4.1.dylib,
-					/usr/local/lib/libopencv_dnn_objdetect.3.4.1.dylib,
-					/usr/local/lib/libopencv_dpm.3.4.1.dylib,
-					/usr/local/lib/libopencv_face.3.4.1.dylib,
-					/usr/local/lib/libopencv_fuzzy.3.4.1.dylib,
-					/usr/local/lib/libopencv_hfs.3.4.1.dylib,
-					/usr/local/lib/libopencv_img_hash.3.4.1.dylib,
-					/usr/local/lib/libopencv_line_descriptor.3.4.1.dylib,
-					/usr/local/lib/libopencv_optflow.3.4.1.dylib,
-					/usr/local/lib/libopencv_reg.3.4.1.dylib,
-					/usr/local/lib/libopencv_rgbd.3.4.1.dylib,
-					/usr/local/lib/libopencv_saliency.3.4.1.dylib,
-					/usr/local/lib/libopencv_stereo.3.4.1.dylib,
-					/usr/local/lib/libopencv_structured_light.3.4.1.dylib,
-					/usr/local/lib/libopencv_surface_matching.3.4.1.dylib,
-					/usr/local/lib/libopencv_tracking.3.4.1.dylib,
-					/usr/local/lib/libopencv_xfeatures2d.3.4.1.dylib,
-					/usr/local/lib/libopencv_ximgproc.3.4.1.dylib,
-					/usr/local/lib/libopencv_xobjdetect.3.4.1.dylib,
-					/usr/local/lib/libopencv_xphoto.3.4.1.dylib,
-					/usr/local/lib/libopencv_shape.3.4.1.dylib,
-					/usr/local/lib/libopencv_photo.3.4.1.dylib,
-					/usr/local/lib/libopencv_datasets.3.4.1.dylib,
-					/usr/local/lib/libopencv_plot.3.4.1.dylib,
-					/usr/local/lib/libopencv_text.3.4.1.dylib,
-					/usr/local/lib/libopencv_dnn.3.4.1.dylib,
-					/usr/local/lib/libopencv_ml.3.4.1.dylib,
-					/usr/local/lib/libopencv_video.3.4.1.dylib,
-					/usr/local/lib/libopencv_calib3d.3.4.1.dylib,
-					/usr/local/lib/libopencv_features2d.3.4.1.dylib,
-					/usr/local/lib/libopencv_highgui.3.4.1.dylib,
-					/usr/local/lib/libopencv_videoio.3.4.1.dylib,
-					/usr/local/lib/libopencv_phase_unwrapping.3.4.1.dylib,
-					/usr/local/lib/libopencv_flann.3.4.1.dylib,
-					/usr/local/lib/libopencv_imgcodecs.3.4.1.dylib,
-					/usr/local/lib/libopencv_objdetect.3.4.1.dylib,
-					/usr/local/lib/libopencv_imgproc.3.4.1.dylib,
-					/usr/local/lib/libopencv_core.3.4.1.dylib,
-				);
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = voxelizer;
-				SECTORDER_FLAGS = "";
-				SYMROOT = /Users/davidcleres/DeepShape/voxelizer/build/bin;
-				SYSTEM_HEADER_SEARCH_PATHS = "/usr/local/include /usr/local/include/opencv";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-					"$(inherited)",
-				);
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
 			};
 			name = Debug;
 		};
-		74F320E0E6EC4B729355859D /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = /Users/davidcleres/DeepShape/voxelizer/build;
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-					"$(inherited)",
-				);
-			};
-			name = RelWithDebInfo;
-		};
-		85B5181F569140CD80B6AB45 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
-				SYMROOT = /Users/davidcleres/DeepShape/voxelizer/build/build;
-			};
-			name = Release;
-		};
-		8809B8F6A9EF45AD8BAB785A /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
-				SYMROOT = /Users/davidcleres/DeepShape/voxelizer/build/build;
-			};
-			name = RelWithDebInfo;
-		};
-		A018790D1D6A40D9B2DEA0B2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = /Users/davidcleres/DeepShape/voxelizer/build;
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-					"$(inherited)",
-				);
-			};
-			name = Debug;
-		};
-		AA1E50987BDF4D348310B6D7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = /Users/davidcleres/DeepShape/voxelizer/build;
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-					"$(inherited)",
-				);
-			};
-			name = Release;
-		};
-		B0DDBFDCF8E64AC9B54B5378 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = "";
-				EXECUTABLE_SUFFIX = "";
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = /Users/davidcleres/DeepShape/voxelizer/src;
-				INSTALL_PATH = "";
-				LD_RUNPATH_SEARCH_PATHS = /usr/local/lib;
-				LIBRARY_SEARCH_PATHS = (
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
-					/usr/local/lib,
-				);
-				OTHER_CPLUSPLUSFLAGS = "   '-std=gnu++11'  ";
-				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"-lassimp",
-					"-lfcl",
-					"/usr/local/lib/libboost_atomic-mt.dylib",
-					"/usr/local/lib/libboost_system-mt.dylib",
-					"/usr/local/lib/libboost_thread-mt.dylib",
-					"/usr/local/lib/libboost_date_time-mt.dylib",
-					"/usr/local/lib/libboost_unit_test_framework-mt.dylib",
-					/usr/local/lib/libopencv_stitching.3.4.1.dylib,
-					/usr/local/lib/libopencv_superres.3.4.1.dylib,
-					/usr/local/lib/libopencv_videostab.3.4.1.dylib,
-					/usr/local/lib/libopencv_aruco.3.4.1.dylib,
-					/usr/local/lib/libopencv_bgsegm.3.4.1.dylib,
-					/usr/local/lib/libopencv_bioinspired.3.4.1.dylib,
-					/usr/local/lib/libopencv_ccalib.3.4.1.dylib,
-					/usr/local/lib/libopencv_dnn_objdetect.3.4.1.dylib,
-					/usr/local/lib/libopencv_dpm.3.4.1.dylib,
-					/usr/local/lib/libopencv_face.3.4.1.dylib,
-					/usr/local/lib/libopencv_fuzzy.3.4.1.dylib,
-					/usr/local/lib/libopencv_hfs.3.4.1.dylib,
-					/usr/local/lib/libopencv_img_hash.3.4.1.dylib,
-					/usr/local/lib/libopencv_line_descriptor.3.4.1.dylib,
-					/usr/local/lib/libopencv_optflow.3.4.1.dylib,
-					/usr/local/lib/libopencv_reg.3.4.1.dylib,
-					/usr/local/lib/libopencv_rgbd.3.4.1.dylib,
-					/usr/local/lib/libopencv_saliency.3.4.1.dylib,
-					/usr/local/lib/libopencv_stereo.3.4.1.dylib,
-					/usr/local/lib/libopencv_structured_light.3.4.1.dylib,
-					/usr/local/lib/libopencv_surface_matching.3.4.1.dylib,
-					/usr/local/lib/libopencv_tracking.3.4.1.dylib,
-					/usr/local/lib/libopencv_xfeatures2d.3.4.1.dylib,
-					/usr/local/lib/libopencv_ximgproc.3.4.1.dylib,
-					/usr/local/lib/libopencv_xobjdetect.3.4.1.dylib,
-					/usr/local/lib/libopencv_xphoto.3.4.1.dylib,
-					/usr/local/lib/libopencv_shape.3.4.1.dylib,
-					/usr/local/lib/libopencv_photo.3.4.1.dylib,
-					/usr/local/lib/libopencv_datasets.3.4.1.dylib,
-					/usr/local/lib/libopencv_plot.3.4.1.dylib,
-					/usr/local/lib/libopencv_text.3.4.1.dylib,
-					/usr/local/lib/libopencv_dnn.3.4.1.dylib,
-					/usr/local/lib/libopencv_ml.3.4.1.dylib,
-					/usr/local/lib/libopencv_video.3.4.1.dylib,
-					/usr/local/lib/libopencv_calib3d.3.4.1.dylib,
-					/usr/local/lib/libopencv_features2d.3.4.1.dylib,
-					/usr/local/lib/libopencv_highgui.3.4.1.dylib,
-					/usr/local/lib/libopencv_videoio.3.4.1.dylib,
-					/usr/local/lib/libopencv_phase_unwrapping.3.4.1.dylib,
-					/usr/local/lib/libopencv_flann.3.4.1.dylib,
-					/usr/local/lib/libopencv_imgcodecs.3.4.1.dylib,
-					/usr/local/lib/libopencv_objdetect.3.4.1.dylib,
-					/usr/local/lib/libopencv_imgproc.3.4.1.dylib,
-					/usr/local/lib/libopencv_core.3.4.1.dylib,
-				);
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = collisionChecker;
-				SECTORDER_FLAGS = "";
-				SYMROOT = /Users/davidcleres/DeepShape/voxelizer/build/test;
-				SYSTEM_HEADER_SEARCH_PATHS = "/usr/local/include /usr/local/include/opencv";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-					"$(inherited)",
-				);
-			};
-			name = Debug;
-		};
-		BFD9B55EBE2542789C125B5C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = /Users/davidcleres/DeepShape/voxelizer/build;
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-					"$(inherited)",
-				);
-			};
-			name = Release;
-		};
-		D113463024D64AE4BF58BC25 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = /Users/davidcleres/DeepShape/voxelizer/build;
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-					"$(inherited)",
-				);
-			};
-			name = MinSizeRel;
-		};
-		DD959EB5283443EE898A0C3A /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = /Users/davidcleres/DeepShape/voxelizer/build;
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-					"$(inherited)",
-				);
-			};
-			name = RelWithDebInfo;
-		};
-		E508D325F6C743CD9EC3FBD7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = RUN_TESTS;
-				SECTORDER_FLAGS = "";
-				SYMROOT = /Users/davidcleres/DeepShape/voxelizer/build;
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-					"$(inherited)",
-				);
-			};
-			name = Release;
-		};
-		F75A8EF55DC04A6398C857FD /* MinSizeRel */ = {
+		840B452AB47540749F8A9955 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1258,115 +703,166 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = s;
-				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = /Users/davidcleres/DeepShape/voxelizer/src;
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = /usr/local/lib;
-				LIBRARY_SEARCH_PATHS = (
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
-					/usr/local/lib,
-				);
-				OTHER_CPLUSPLUSFLAGS = (
-					"-DNDEBUG",
-					"'-std=gnu++11'",
-				);
-				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"-lassimp",
-					"-lfcl",
-					"/usr/local/lib/libboost_atomic-mt.dylib",
-					"/usr/local/lib/libboost_system-mt.dylib",
-					"/usr/local/lib/libboost_thread-mt.dylib",
-					"/usr/local/lib/libboost_date_time-mt.dylib",
-					"/usr/local/lib/libboost_unit_test_framework-mt.dylib",
-					/usr/local/lib/libopencv_stitching.3.4.1.dylib,
-					/usr/local/lib/libopencv_superres.3.4.1.dylib,
-					/usr/local/lib/libopencv_videostab.3.4.1.dylib,
-					/usr/local/lib/libopencv_aruco.3.4.1.dylib,
-					/usr/local/lib/libopencv_bgsegm.3.4.1.dylib,
-					/usr/local/lib/libopencv_bioinspired.3.4.1.dylib,
-					/usr/local/lib/libopencv_ccalib.3.4.1.dylib,
-					/usr/local/lib/libopencv_dnn_objdetect.3.4.1.dylib,
-					/usr/local/lib/libopencv_dpm.3.4.1.dylib,
-					/usr/local/lib/libopencv_face.3.4.1.dylib,
-					/usr/local/lib/libopencv_fuzzy.3.4.1.dylib,
-					/usr/local/lib/libopencv_hfs.3.4.1.dylib,
-					/usr/local/lib/libopencv_img_hash.3.4.1.dylib,
-					/usr/local/lib/libopencv_line_descriptor.3.4.1.dylib,
-					/usr/local/lib/libopencv_optflow.3.4.1.dylib,
-					/usr/local/lib/libopencv_reg.3.4.1.dylib,
-					/usr/local/lib/libopencv_rgbd.3.4.1.dylib,
-					/usr/local/lib/libopencv_saliency.3.4.1.dylib,
-					/usr/local/lib/libopencv_stereo.3.4.1.dylib,
-					/usr/local/lib/libopencv_structured_light.3.4.1.dylib,
-					/usr/local/lib/libopencv_surface_matching.3.4.1.dylib,
-					/usr/local/lib/libopencv_tracking.3.4.1.dylib,
-					/usr/local/lib/libopencv_xfeatures2d.3.4.1.dylib,
-					/usr/local/lib/libopencv_ximgproc.3.4.1.dylib,
-					/usr/local/lib/libopencv_xobjdetect.3.4.1.dylib,
-					/usr/local/lib/libopencv_xphoto.3.4.1.dylib,
-					/usr/local/lib/libopencv_shape.3.4.1.dylib,
-					/usr/local/lib/libopencv_photo.3.4.1.dylib,
-					/usr/local/lib/libopencv_datasets.3.4.1.dylib,
-					/usr/local/lib/libopencv_plot.3.4.1.dylib,
-					/usr/local/lib/libopencv_text.3.4.1.dylib,
-					/usr/local/lib/libopencv_dnn.3.4.1.dylib,
-					/usr/local/lib/libopencv_ml.3.4.1.dylib,
-					/usr/local/lib/libopencv_video.3.4.1.dylib,
-					/usr/local/lib/libopencv_calib3d.3.4.1.dylib,
-					/usr/local/lib/libopencv_features2d.3.4.1.dylib,
-					/usr/local/lib/libopencv_highgui.3.4.1.dylib,
-					/usr/local/lib/libopencv_videoio.3.4.1.dylib,
-					/usr/local/lib/libopencv_phase_unwrapping.3.4.1.dylib,
-					/usr/local/lib/libopencv_flann.3.4.1.dylib,
-					/usr/local/lib/libopencv_imgcodecs.3.4.1.dylib,
-					/usr/local/lib/libopencv_objdetect.3.4.1.dylib,
-					/usr/local/lib/libopencv_imgproc.3.4.1.dylib,
-					/usr/local/lib/libopencv_core.3.4.1.dylib,
-				);
+				LIBRARY_SEARCH_PATHS = " /usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/lib";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++11'  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -lassimp -lfcl /usr/local/lib/libboost_atomic-mt.dylib /usr/local/lib/libboost_system-mt.dylib /usr/local/lib/libboost_thread-mt.dylib /usr/local/lib/libboost_date_time-mt.dylib /usr/local/lib/libboost_unit_test_framework-mt.dylib /usr/local/lib/libopencv_stitching.3.4.1.dylib /usr/local/lib/libopencv_superres.3.4.1.dylib /usr/local/lib/libopencv_videostab.3.4.1.dylib /usr/local/lib/libopencv_aruco.3.4.1.dylib /usr/local/lib/libopencv_bgsegm.3.4.1.dylib /usr/local/lib/libopencv_bioinspired.3.4.1.dylib /usr/local/lib/libopencv_ccalib.3.4.1.dylib /usr/local/lib/libopencv_dnn_objdetect.3.4.1.dylib /usr/local/lib/libopencv_dpm.3.4.1.dylib /usr/local/lib/libopencv_face.3.4.1.dylib /usr/local/lib/libopencv_fuzzy.3.4.1.dylib /usr/local/lib/libopencv_hfs.3.4.1.dylib /usr/local/lib/libopencv_img_hash.3.4.1.dylib /usr/local/lib/libopencv_line_descriptor.3.4.1.dylib /usr/local/lib/libopencv_optflow.3.4.1.dylib /usr/local/lib/libopencv_reg.3.4.1.dylib /usr/local/lib/libopencv_rgbd.3.4.1.dylib /usr/local/lib/libopencv_saliency.3.4.1.dylib /usr/local/lib/libopencv_stereo.3.4.1.dylib /usr/local/lib/libopencv_structured_light.3.4.1.dylib /usr/local/lib/libopencv_surface_matching.3.4.1.dylib /usr/local/lib/libopencv_tracking.3.4.1.dylib /usr/local/lib/libopencv_xfeatures2d.3.4.1.dylib /usr/local/lib/libopencv_ximgproc.3.4.1.dylib /usr/local/lib/libopencv_xobjdetect.3.4.1.dylib /usr/local/lib/libopencv_xphoto.3.4.1.dylib /usr/local/lib/libopencv_shape.3.4.1.dylib /usr/local/lib/libopencv_photo.3.4.1.dylib /usr/local/lib/libopencv_datasets.3.4.1.dylib /usr/local/lib/libopencv_plot.3.4.1.dylib /usr/local/lib/libopencv_text.3.4.1.dylib /usr/local/lib/libopencv_dnn.3.4.1.dylib /usr/local/lib/libopencv_ml.3.4.1.dylib /usr/local/lib/libopencv_video.3.4.1.dylib /usr/local/lib/libopencv_calib3d.3.4.1.dylib /usr/local/lib/libopencv_features2d.3.4.1.dylib /usr/local/lib/libopencv_highgui.3.4.1.dylib /usr/local/lib/libopencv_videoio.3.4.1.dylib /usr/local/lib/libopencv_phase_unwrapping.3.4.1.dylib /usr/local/lib/libopencv_flann.3.4.1.dylib /usr/local/lib/libopencv_imgcodecs.3.4.1.dylib /usr/local/lib/libopencv_objdetect.3.4.1.dylib /usr/local/lib/libopencv_imgproc.3.4.1.dylib /usr/local/lib/libopencv_core.3.4.1.dylib";
 				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = collisionChecker;
+				PRODUCT_NAME = voxelizer;
 				SECTORDER_FLAGS = "";
-				SYMROOT = /Users/davidcleres/DeepShape/voxelizer/build/test;
-				SYSTEM_HEADER_SEARCH_PATHS = "/usr/local/include /usr/local/include/opencv";
+				SYMROOT = /Users/davidcleres/DeepShape/voxels/build/bin;
+				SYSTEM_HEADER_SEARCH_PATHS = (/usr/local/include,/usr/local/include/opencv);
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-					"$(inherited)",
-				);
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
 			};
 			name = MinSizeRel;
 		};
-		F7ADD61486C748208644C474 /* Debug */ = {
+		8417A710620E4FA084873F9C /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
+				SYMROOT = /Users/davidcleres/DeepShape/voxels/build/build;
+			};
+			name = RelWithDebInfo;
+		};
+		88E16189986C4AC4B14F8278 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = RUN_TESTS;
 				SECTORDER_FLAGS = "";
-				SYMROOT = /Users/davidcleres/DeepShape/voxelizer/build;
+				SYMROOT = /Users/davidcleres/DeepShape/voxels/build;
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-					"$(inherited)",
-				);
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
 			};
 			name = Debug;
 		};
-		FD42A1A4422F44A2A32B1999 /* Release */ = {
+		9801D573AF724A14960A9C18 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/davidcleres/DeepShape/voxels/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		B6B36F74FAE74F12A08D976E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = " /usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/lib";
+				OTHER_CPLUSPLUSFLAGS = "   '-std=gnu++11'  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -lassimp -lfcl /usr/local/lib/libboost_atomic-mt.dylib /usr/local/lib/libboost_system-mt.dylib /usr/local/lib/libboost_thread-mt.dylib /usr/local/lib/libboost_date_time-mt.dylib /usr/local/lib/libboost_unit_test_framework-mt.dylib /usr/local/lib/libopencv_stitching.3.4.1.dylib /usr/local/lib/libopencv_superres.3.4.1.dylib /usr/local/lib/libopencv_videostab.3.4.1.dylib /usr/local/lib/libopencv_aruco.3.4.1.dylib /usr/local/lib/libopencv_bgsegm.3.4.1.dylib /usr/local/lib/libopencv_bioinspired.3.4.1.dylib /usr/local/lib/libopencv_ccalib.3.4.1.dylib /usr/local/lib/libopencv_dnn_objdetect.3.4.1.dylib /usr/local/lib/libopencv_dpm.3.4.1.dylib /usr/local/lib/libopencv_face.3.4.1.dylib /usr/local/lib/libopencv_fuzzy.3.4.1.dylib /usr/local/lib/libopencv_hfs.3.4.1.dylib /usr/local/lib/libopencv_img_hash.3.4.1.dylib /usr/local/lib/libopencv_line_descriptor.3.4.1.dylib /usr/local/lib/libopencv_optflow.3.4.1.dylib /usr/local/lib/libopencv_reg.3.4.1.dylib /usr/local/lib/libopencv_rgbd.3.4.1.dylib /usr/local/lib/libopencv_saliency.3.4.1.dylib /usr/local/lib/libopencv_stereo.3.4.1.dylib /usr/local/lib/libopencv_structured_light.3.4.1.dylib /usr/local/lib/libopencv_surface_matching.3.4.1.dylib /usr/local/lib/libopencv_tracking.3.4.1.dylib /usr/local/lib/libopencv_xfeatures2d.3.4.1.dylib /usr/local/lib/libopencv_ximgproc.3.4.1.dylib /usr/local/lib/libopencv_xobjdetect.3.4.1.dylib /usr/local/lib/libopencv_xphoto.3.4.1.dylib /usr/local/lib/libopencv_shape.3.4.1.dylib /usr/local/lib/libopencv_photo.3.4.1.dylib /usr/local/lib/libopencv_datasets.3.4.1.dylib /usr/local/lib/libopencv_plot.3.4.1.dylib /usr/local/lib/libopencv_text.3.4.1.dylib /usr/local/lib/libopencv_dnn.3.4.1.dylib /usr/local/lib/libopencv_ml.3.4.1.dylib /usr/local/lib/libopencv_video.3.4.1.dylib /usr/local/lib/libopencv_calib3d.3.4.1.dylib /usr/local/lib/libopencv_features2d.3.4.1.dylib /usr/local/lib/libopencv_highgui.3.4.1.dylib /usr/local/lib/libopencv_videoio.3.4.1.dylib /usr/local/lib/libopencv_phase_unwrapping.3.4.1.dylib /usr/local/lib/libopencv_flann.3.4.1.dylib /usr/local/lib/libopencv_imgcodecs.3.4.1.dylib /usr/local/lib/libopencv_objdetect.3.4.1.dylib /usr/local/lib/libopencv_imgproc.3.4.1.dylib /usr/local/lib/libopencv_core.3.4.1.dylib";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = voxelizer;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/davidcleres/DeepShape/voxels/build/bin;
+				SYSTEM_HEADER_SEARCH_PATHS = (/usr/local/include,/usr/local/include/opencv);
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		C876F85E60F6464A988F8CF6 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/davidcleres/DeepShape/voxels/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		D55DD54F5A8948459258DD6D /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/davidcleres/DeepShape/voxels/src);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = " /usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/lib";
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=gnu++11'  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -lassimp -lfcl /usr/local/lib/libboost_atomic-mt.dylib /usr/local/lib/libboost_system-mt.dylib /usr/local/lib/libboost_thread-mt.dylib /usr/local/lib/libboost_date_time-mt.dylib /usr/local/lib/libboost_unit_test_framework-mt.dylib /usr/local/lib/libopencv_stitching.3.4.1.dylib /usr/local/lib/libopencv_superres.3.4.1.dylib /usr/local/lib/libopencv_videostab.3.4.1.dylib /usr/local/lib/libopencv_aruco.3.4.1.dylib /usr/local/lib/libopencv_bgsegm.3.4.1.dylib /usr/local/lib/libopencv_bioinspired.3.4.1.dylib /usr/local/lib/libopencv_ccalib.3.4.1.dylib /usr/local/lib/libopencv_dnn_objdetect.3.4.1.dylib /usr/local/lib/libopencv_dpm.3.4.1.dylib /usr/local/lib/libopencv_face.3.4.1.dylib /usr/local/lib/libopencv_fuzzy.3.4.1.dylib /usr/local/lib/libopencv_hfs.3.4.1.dylib /usr/local/lib/libopencv_img_hash.3.4.1.dylib /usr/local/lib/libopencv_line_descriptor.3.4.1.dylib /usr/local/lib/libopencv_optflow.3.4.1.dylib /usr/local/lib/libopencv_reg.3.4.1.dylib /usr/local/lib/libopencv_rgbd.3.4.1.dylib /usr/local/lib/libopencv_saliency.3.4.1.dylib /usr/local/lib/libopencv_stereo.3.4.1.dylib /usr/local/lib/libopencv_structured_light.3.4.1.dylib /usr/local/lib/libopencv_surface_matching.3.4.1.dylib /usr/local/lib/libopencv_tracking.3.4.1.dylib /usr/local/lib/libopencv_xfeatures2d.3.4.1.dylib /usr/local/lib/libopencv_ximgproc.3.4.1.dylib /usr/local/lib/libopencv_xobjdetect.3.4.1.dylib /usr/local/lib/libopencv_xphoto.3.4.1.dylib /usr/local/lib/libopencv_shape.3.4.1.dylib /usr/local/lib/libopencv_photo.3.4.1.dylib /usr/local/lib/libopencv_datasets.3.4.1.dylib /usr/local/lib/libopencv_plot.3.4.1.dylib /usr/local/lib/libopencv_text.3.4.1.dylib /usr/local/lib/libopencv_dnn.3.4.1.dylib /usr/local/lib/libopencv_ml.3.4.1.dylib /usr/local/lib/libopencv_video.3.4.1.dylib /usr/local/lib/libopencv_calib3d.3.4.1.dylib /usr/local/lib/libopencv_features2d.3.4.1.dylib /usr/local/lib/libopencv_highgui.3.4.1.dylib /usr/local/lib/libopencv_videoio.3.4.1.dylib /usr/local/lib/libopencv_phase_unwrapping.3.4.1.dylib /usr/local/lib/libopencv_flann.3.4.1.dylib /usr/local/lib/libopencv_imgcodecs.3.4.1.dylib /usr/local/lib/libopencv_objdetect.3.4.1.dylib /usr/local/lib/libopencv_imgproc.3.4.1.dylib /usr/local/lib/libopencv_core.3.4.1.dylib";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = collisionChecker;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/davidcleres/DeepShape/voxels/build/test;
+				SYSTEM_HEADER_SEARCH_PATHS = (/usr/local/include,/usr/local/include/opencv);
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		E0AC2676116F4EB59C9E6499 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/davidcleres/DeepShape/voxels/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		E0BD1C5BA5DD44D8A91B3AB1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -1375,159 +871,180 @@
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = /Users/davidcleres/DeepShape/voxelizer/src;
 				INSTALL_PATH = "";
 				LD_RUNPATH_SEARCH_PATHS = /usr/local/lib;
-				LIBRARY_SEARCH_PATHS = (
-					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
-					/usr/local/lib,
-				);
-				OTHER_CPLUSPLUSFLAGS = (
-					"-DNDEBUG",
-					"'-std=gnu++11'",
-				);
-				OTHER_LDFLAGS = (
-					"-Wl,-search_paths_first",
-					"-Wl,-headerpad_max_install_names",
-					"-lassimp",
-					"-lfcl",
-					"/usr/local/lib/libboost_atomic-mt.dylib",
-					"/usr/local/lib/libboost_system-mt.dylib",
-					"/usr/local/lib/libboost_thread-mt.dylib",
-					"/usr/local/lib/libboost_date_time-mt.dylib",
-					"/usr/local/lib/libboost_unit_test_framework-mt.dylib",
-					/usr/local/lib/libopencv_stitching.3.4.1.dylib,
-					/usr/local/lib/libopencv_superres.3.4.1.dylib,
-					/usr/local/lib/libopencv_videostab.3.4.1.dylib,
-					/usr/local/lib/libopencv_aruco.3.4.1.dylib,
-					/usr/local/lib/libopencv_bgsegm.3.4.1.dylib,
-					/usr/local/lib/libopencv_bioinspired.3.4.1.dylib,
-					/usr/local/lib/libopencv_ccalib.3.4.1.dylib,
-					/usr/local/lib/libopencv_dnn_objdetect.3.4.1.dylib,
-					/usr/local/lib/libopencv_dpm.3.4.1.dylib,
-					/usr/local/lib/libopencv_face.3.4.1.dylib,
-					/usr/local/lib/libopencv_fuzzy.3.4.1.dylib,
-					/usr/local/lib/libopencv_hfs.3.4.1.dylib,
-					/usr/local/lib/libopencv_img_hash.3.4.1.dylib,
-					/usr/local/lib/libopencv_line_descriptor.3.4.1.dylib,
-					/usr/local/lib/libopencv_optflow.3.4.1.dylib,
-					/usr/local/lib/libopencv_reg.3.4.1.dylib,
-					/usr/local/lib/libopencv_rgbd.3.4.1.dylib,
-					/usr/local/lib/libopencv_saliency.3.4.1.dylib,
-					/usr/local/lib/libopencv_stereo.3.4.1.dylib,
-					/usr/local/lib/libopencv_structured_light.3.4.1.dylib,
-					/usr/local/lib/libopencv_surface_matching.3.4.1.dylib,
-					/usr/local/lib/libopencv_tracking.3.4.1.dylib,
-					/usr/local/lib/libopencv_xfeatures2d.3.4.1.dylib,
-					/usr/local/lib/libopencv_ximgproc.3.4.1.dylib,
-					/usr/local/lib/libopencv_xobjdetect.3.4.1.dylib,
-					/usr/local/lib/libopencv_xphoto.3.4.1.dylib,
-					/usr/local/lib/libopencv_shape.3.4.1.dylib,
-					/usr/local/lib/libopencv_photo.3.4.1.dylib,
-					/usr/local/lib/libopencv_datasets.3.4.1.dylib,
-					/usr/local/lib/libopencv_plot.3.4.1.dylib,
-					/usr/local/lib/libopencv_text.3.4.1.dylib,
-					/usr/local/lib/libopencv_dnn.3.4.1.dylib,
-					/usr/local/lib/libopencv_ml.3.4.1.dylib,
-					/usr/local/lib/libopencv_video.3.4.1.dylib,
-					/usr/local/lib/libopencv_calib3d.3.4.1.dylib,
-					/usr/local/lib/libopencv_features2d.3.4.1.dylib,
-					/usr/local/lib/libopencv_highgui.3.4.1.dylib,
-					/usr/local/lib/libopencv_videoio.3.4.1.dylib,
-					/usr/local/lib/libopencv_phase_unwrapping.3.4.1.dylib,
-					/usr/local/lib/libopencv_flann.3.4.1.dylib,
-					/usr/local/lib/libopencv_imgcodecs.3.4.1.dylib,
-					/usr/local/lib/libopencv_objdetect.3.4.1.dylib,
-					/usr/local/lib/libopencv_imgproc.3.4.1.dylib,
-					/usr/local/lib/libopencv_core.3.4.1.dylib,
-				);
+				LIBRARY_SEARCH_PATHS = " /usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/lib";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++11'  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -lassimp -lfcl /usr/local/lib/libboost_atomic-mt.dylib /usr/local/lib/libboost_system-mt.dylib /usr/local/lib/libboost_thread-mt.dylib /usr/local/lib/libboost_date_time-mt.dylib /usr/local/lib/libboost_unit_test_framework-mt.dylib /usr/local/lib/libopencv_stitching.3.4.1.dylib /usr/local/lib/libopencv_superres.3.4.1.dylib /usr/local/lib/libopencv_videostab.3.4.1.dylib /usr/local/lib/libopencv_aruco.3.4.1.dylib /usr/local/lib/libopencv_bgsegm.3.4.1.dylib /usr/local/lib/libopencv_bioinspired.3.4.1.dylib /usr/local/lib/libopencv_ccalib.3.4.1.dylib /usr/local/lib/libopencv_dnn_objdetect.3.4.1.dylib /usr/local/lib/libopencv_dpm.3.4.1.dylib /usr/local/lib/libopencv_face.3.4.1.dylib /usr/local/lib/libopencv_fuzzy.3.4.1.dylib /usr/local/lib/libopencv_hfs.3.4.1.dylib /usr/local/lib/libopencv_img_hash.3.4.1.dylib /usr/local/lib/libopencv_line_descriptor.3.4.1.dylib /usr/local/lib/libopencv_optflow.3.4.1.dylib /usr/local/lib/libopencv_reg.3.4.1.dylib /usr/local/lib/libopencv_rgbd.3.4.1.dylib /usr/local/lib/libopencv_saliency.3.4.1.dylib /usr/local/lib/libopencv_stereo.3.4.1.dylib /usr/local/lib/libopencv_structured_light.3.4.1.dylib /usr/local/lib/libopencv_surface_matching.3.4.1.dylib /usr/local/lib/libopencv_tracking.3.4.1.dylib /usr/local/lib/libopencv_xfeatures2d.3.4.1.dylib /usr/local/lib/libopencv_ximgproc.3.4.1.dylib /usr/local/lib/libopencv_xobjdetect.3.4.1.dylib /usr/local/lib/libopencv_xphoto.3.4.1.dylib /usr/local/lib/libopencv_shape.3.4.1.dylib /usr/local/lib/libopencv_photo.3.4.1.dylib /usr/local/lib/libopencv_datasets.3.4.1.dylib /usr/local/lib/libopencv_plot.3.4.1.dylib /usr/local/lib/libopencv_text.3.4.1.dylib /usr/local/lib/libopencv_dnn.3.4.1.dylib /usr/local/lib/libopencv_ml.3.4.1.dylib /usr/local/lib/libopencv_video.3.4.1.dylib /usr/local/lib/libopencv_calib3d.3.4.1.dylib /usr/local/lib/libopencv_features2d.3.4.1.dylib /usr/local/lib/libopencv_highgui.3.4.1.dylib /usr/local/lib/libopencv_videoio.3.4.1.dylib /usr/local/lib/libopencv_phase_unwrapping.3.4.1.dylib /usr/local/lib/libopencv_flann.3.4.1.dylib /usr/local/lib/libopencv_imgcodecs.3.4.1.dylib /usr/local/lib/libopencv_objdetect.3.4.1.dylib /usr/local/lib/libopencv_imgproc.3.4.1.dylib /usr/local/lib/libopencv_core.3.4.1.dylib";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = voxelizer;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/davidcleres/DeepShape/voxels/build/bin;
+				SYSTEM_HEADER_SEARCH_PATHS = (/usr/local/include,/usr/local/include/opencv);
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		E28301FCB89D4079BE1ED709 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/davidcleres/DeepShape/voxels/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		E7EB473CDB904BA9A0A397ED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/davidcleres/DeepShape/voxels/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Release;
+		};
+		F4B44D437E344226A998DB2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/davidcleres/DeepShape/voxels/src);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = " /usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME) /usr/local/lib";
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++11'  ";
+				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -lassimp -lfcl /usr/local/lib/libboost_atomic-mt.dylib /usr/local/lib/libboost_system-mt.dylib /usr/local/lib/libboost_thread-mt.dylib /usr/local/lib/libboost_date_time-mt.dylib /usr/local/lib/libboost_unit_test_framework-mt.dylib /usr/local/lib/libopencv_stitching.3.4.1.dylib /usr/local/lib/libopencv_superres.3.4.1.dylib /usr/local/lib/libopencv_videostab.3.4.1.dylib /usr/local/lib/libopencv_aruco.3.4.1.dylib /usr/local/lib/libopencv_bgsegm.3.4.1.dylib /usr/local/lib/libopencv_bioinspired.3.4.1.dylib /usr/local/lib/libopencv_ccalib.3.4.1.dylib /usr/local/lib/libopencv_dnn_objdetect.3.4.1.dylib /usr/local/lib/libopencv_dpm.3.4.1.dylib /usr/local/lib/libopencv_face.3.4.1.dylib /usr/local/lib/libopencv_fuzzy.3.4.1.dylib /usr/local/lib/libopencv_hfs.3.4.1.dylib /usr/local/lib/libopencv_img_hash.3.4.1.dylib /usr/local/lib/libopencv_line_descriptor.3.4.1.dylib /usr/local/lib/libopencv_optflow.3.4.1.dylib /usr/local/lib/libopencv_reg.3.4.1.dylib /usr/local/lib/libopencv_rgbd.3.4.1.dylib /usr/local/lib/libopencv_saliency.3.4.1.dylib /usr/local/lib/libopencv_stereo.3.4.1.dylib /usr/local/lib/libopencv_structured_light.3.4.1.dylib /usr/local/lib/libopencv_surface_matching.3.4.1.dylib /usr/local/lib/libopencv_tracking.3.4.1.dylib /usr/local/lib/libopencv_xfeatures2d.3.4.1.dylib /usr/local/lib/libopencv_ximgproc.3.4.1.dylib /usr/local/lib/libopencv_xobjdetect.3.4.1.dylib /usr/local/lib/libopencv_xphoto.3.4.1.dylib /usr/local/lib/libopencv_shape.3.4.1.dylib /usr/local/lib/libopencv_photo.3.4.1.dylib /usr/local/lib/libopencv_datasets.3.4.1.dylib /usr/local/lib/libopencv_plot.3.4.1.dylib /usr/local/lib/libopencv_text.3.4.1.dylib /usr/local/lib/libopencv_dnn.3.4.1.dylib /usr/local/lib/libopencv_ml.3.4.1.dylib /usr/local/lib/libopencv_video.3.4.1.dylib /usr/local/lib/libopencv_calib3d.3.4.1.dylib /usr/local/lib/libopencv_features2d.3.4.1.dylib /usr/local/lib/libopencv_highgui.3.4.1.dylib /usr/local/lib/libopencv_videoio.3.4.1.dylib /usr/local/lib/libopencv_phase_unwrapping.3.4.1.dylib /usr/local/lib/libopencv_flann.3.4.1.dylib /usr/local/lib/libopencv_imgcodecs.3.4.1.dylib /usr/local/lib/libopencv_objdetect.3.4.1.dylib /usr/local/lib/libopencv_imgproc.3.4.1.dylib /usr/local/lib/libopencv_core.3.4.1.dylib";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = collisionChecker;
 				SECTORDER_FLAGS = "";
-				SYMROOT = /Users/davidcleres/DeepShape/voxelizer/build/test;
-				SYSTEM_HEADER_SEARCH_PATHS = "/usr/local/include /usr/local/include/opencv";
+				SYMROOT = /Users/davidcleres/DeepShape/voxels/build/test;
+				SYSTEM_HEADER_SEARCH_PATHS = (/usr/local/include,/usr/local/include/opencv);
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = (
-					"-Wmost",
-					"-Wno-four-char-constants",
-					"-Wno-unknown-pragmas",
-					"$(inherited)",
-				);
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
 			};
 			name = Release;
+		};
+		FFEC5CC2244D4DB890E3166B /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/davidcleres/DeepShape/voxels/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		06DB61C89D294FFA87E4BF9B /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+		855F0EC3C5A94C77AFDA0AD3 /* Build configuration list for PBXNativeTarget "voxelizer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A018790D1D6A40D9B2DEA0B2 /* Debug */,
-				AA1E50987BDF4D348310B6D7 /* Release */,
-				5FF3B021F21346B79DC627A4 /* MinSizeRel */,
-				74F320E0E6EC4B729355859D /* RelWithDebInfo */,
+				B6B36F74FAE74F12A08D976E /* Debug */,
+				E0BD1C5BA5DD44D8A91B3AB1 /* Release */,
+				840B452AB47540749F8A9955 /* MinSizeRel */,
+				3FE6AF0204A94020A156CA69 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		173281D980A740CAAB9AB16E /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */ = {
+		86541F8E46B2402F9B4450EF /* Build configuration list for PBXProject "voxelizer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F7ADD61486C748208644C474 /* Debug */,
-				E508D325F6C743CD9EC3FBD7 /* Release */,
-				49E4A7E603B04EE28097DD22 /* MinSizeRel */,
-				41FA5D9D0CF34352AE69C3BC /* RelWithDebInfo */,
+				5D4BAE6D98E240149A821A70 /* Debug */,
+				176543DF83FC4242816BA528 /* Release */,
+				2EA6F0AD0A944E799FC194E6 /* MinSizeRel */,
+				8417A710620E4FA084873F9C /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		70578A4333B04DB5A385BF9C /* Build configuration list for PBXNativeTarget "voxelizer" */ = {
+		97ABF2E3DDAB4B33B965DCF1 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7097F4E1AA3C4AA1A492F0AA /* Debug */,
-				2B27AD5323104DC7B28504B7 /* Release */,
-				116B3967C20D4040A89893F2 /* MinSizeRel */,
-				49839719BECD40BE86D81993 /* RelWithDebInfo */,
+				0DF9FC9A99774F0A9550D68D /* Debug */,
+				498618A7ED43457CA6A4B5BE /* Release */,
+				C876F85E60F6464A988F8CF6 /* MinSizeRel */,
+				E28301FCB89D4079BE1ED709 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		924974AB74AD4F32AAF640E6 /* Build configuration list for PBXProject "voxelizer" */ = {
+		AA49FAC4062C4A5F93635E37 /* Build configuration list for PBXNativeTarget "collisionChecker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1DBFE506610A41B5856DBC74 /* Debug */,
-				85B5181F569140CD80B6AB45 /* Release */,
-				4303AB55DB4D4EB7A0235217 /* MinSizeRel */,
-				8809B8F6A9EF45AD8BAB785A /* RelWithDebInfo */,
+				6C7386DBC66546E086CF6876 /* Debug */,
+				F4B44D437E344226A998DB2E /* Release */,
+				3E7A5A865BEE4E258CFD73C6 /* MinSizeRel */,
+				D55DD54F5A8948459258DD6D /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		A3E351107B41441CA49491A7 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+		F32D9CF4DB094A3D837F8421 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0FF1F199D6CD49C1BFC6A65C /* Debug */,
-				BFD9B55EBE2542789C125B5C /* Release */,
-				D113463024D64AE4BF58BC25 /* MinSizeRel */,
-				DD959EB5283443EE898A0C3A /* RelWithDebInfo */,
+				9801D573AF724A14960A9C18 /* Debug */,
+				666512767A484D3F98E05E95 /* Release */,
+				0035E526A5CD40A39AF363BB /* MinSizeRel */,
+				4618355BCECA4B3EB1D89065 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		FDBABBC773724FD7913009CB /* Build configuration list for PBXNativeTarget "collisionChecker" */ = {
+		FE71C26A4DEF4EFBA58A4122 /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B0DDBFDCF8E64AC9B54B5378 /* Debug */,
-				FD42A1A4422F44A2A32B1999 /* Release */,
-				F75A8EF55DC04A6398C857FD /* MinSizeRel */,
-				25D9142405514C6BA65CB226 /* RelWithDebInfo */,
+				88E16189986C4AC4B14F8278 /* Debug */,
+				E7EB473CDB904BA9A0A397ED /* Release */,
+				FFEC5CC2244D4DB890E3166B /* MinSizeRel */,
+				E0AC2676116F4EB59C9E6499 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 81FCC296FB1C4DE3B6E8F3B5 /* Project object */;
+	rootObject = 3C42D38481674D7BB09B1A26 /* Project object */;
 }

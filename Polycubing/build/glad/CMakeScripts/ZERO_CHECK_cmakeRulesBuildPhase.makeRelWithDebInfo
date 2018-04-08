@@ -2,9 +2,9 @@
 # Custom rules for ZERO_CHECK
 .SUFFIXES: 
 all: \
-	/Users/davidcleres/DeepShape/libigl-example-project/build/glad/CMakeFiles/ZERO_CHECK
+	/Users/davidcleres/DeepShape/Polycubing/build/glad/CMakeFiles/ZERO_CHECK
 
 
-/Users/davidcleres/DeepShape/libigl-example-project/build/glad/CMakeFiles/ZERO_CHECK: 
+/Users/davidcleres/DeepShape/Polycubing/build/glad/CMakeFiles/ZERO_CHECK: 
 	echo ""
-	make -f /Users/davidcleres/DeepShape/libigl-example-project/build/glad/CMakeScripts/ReRunCMake.make
+	make -f /Users/davidcleres/DeepShape/Polycubing/build/glad/CMakeScripts/ReRunCMake.make

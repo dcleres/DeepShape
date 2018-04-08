@@ -1,4 +1,4 @@
-# Install script for directory: /Users/davidcleres/DeepShape/voxelizer
+# Install script for directory: /Users/davidcleres/DeepShape/voxels
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,8 +34,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/Users/davidcleres/DeepShape/voxelizer/build/bin/cmake_install.cmake")
-  include("/Users/davidcleres/DeepShape/voxelizer/build/test/cmake_install.cmake")
+  include("/Users/davidcleres/DeepShape/voxels/build/bin/cmake_install.cmake")
+  include("/Users/davidcleres/DeepShape/voxels/build/test/cmake_install.cmake")
 
 endif()
 
@@ -47,5 +47,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/davidcleres/DeepShape/voxelizer/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/davidcleres/DeepShape/voxels/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

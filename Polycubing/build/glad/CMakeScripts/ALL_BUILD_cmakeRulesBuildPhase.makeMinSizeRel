@@ -2,9 +2,9 @@
 # Custom rules for ALL_BUILD
 .SUFFIXES: 
 all: \
-	/Users/davidcleres/DeepShape/libigl-example-project/build/glad/CMakeFiles/ALL_BUILD
+	/Users/davidcleres/DeepShape/Polycubing/build/glad/CMakeFiles/ALL_BUILD
 
 
-/Users/davidcleres/DeepShape/libigl-example-project/build/glad/CMakeFiles/ALL_BUILD: 
+/Users/davidcleres/DeepShape/Polycubing/build/glad/CMakeFiles/ALL_BUILD: 
 	echo ""
 	echo Build\ all\ projects

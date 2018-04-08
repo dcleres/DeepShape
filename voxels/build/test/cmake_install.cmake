@@ -1,4 +1,4 @@
-# Install script for directory: /Users/davidcleres/DeepShape/voxelizer/test
+# Install script for directory: /Users/davidcleres/DeepShape/voxels/test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

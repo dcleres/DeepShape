@@ -1,4 +1,4 @@
-# Install script for directory: /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glad
+# Install script for directory: /Users/davidcleres/DeepShape/libigl/external/glad
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

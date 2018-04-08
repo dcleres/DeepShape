@@ -7,345 +7,414 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		0D251FBAE37143FD95DAEB9B /* ALL_BUILD */ = {
+		B5625670954F4B16A9E60B47 /* RUN_TESTS */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = AFA19C44D75D41F7A4B49028 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildConfigurationList = C581961F71E943F9BFF9C08B /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */;
 			buildPhases = (
-				0D5090999C544E1FB4444F53 /* CMake Rules */,
+				065D7DF92D6B459897AEDEE4 /* CMake PostBuild Rules */,
 			);
 			dependencies = (
-				C0E2F1C1024543C6AF4ABD97 /* PBXTargetDependency */,
-				55950D5B7A734A16BED8BC46 /* PBXTargetDependency */,
-				3EB324BCECCF40BDA15B0AE6 /* PBXTargetDependency */,
-				AB4FC3CC8C304682839FF8D2 /* PBXTargetDependency */,
 			);
-			name = ALL_BUILD;
-			productName = ALL_BUILD;
+			name = RUN_TESTS;
+			productName = RUN_TESTS;
 		};
-		A5299D7A49244EECAF74FB1E /* ZERO_CHECK */ = {
+		C1CC5F9FA2A5408F8987B8B9 /* ZERO_CHECK */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 07279D71217741B19928653D /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildConfigurationList = 1FBE28A2A3174A619ECEE9E2 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
 			buildPhases = (
-				E763264EDE674683A40FA213 /* CMake Rules */,
+				E0E7563C71004B6084405612 /* CMake Rules */,
 			);
 			dependencies = (
 			);
 			name = ZERO_CHECK;
 			productName = ZERO_CHECK;
 		};
+		ED9128F7CC6441D7AC34B46E /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 16E013AF662A4880A4CE0427 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				5EC6348A151A4215AEA82785 /* CMake Rules */,
+			);
+			dependencies = (
+				451D79B903A04845BE9336F0 /* PBXTargetDependency */,
+				8EB4E68A974C4ECF98EC4D5E /* PBXTargetDependency */,
+				48686F55467B4599AA456EBE /* PBXTargetDependency */,
+				0E863B5765AB4A9E9937F35D /* PBXTargetDependency */,
+				098F884217C94668B917A5BB /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		058A9FE828204F5D95F61761 /* /Users/davidcleres/DeepShape/libigl-example-project/main.cpp */ = {isa = PBXBuildFile; fileRef = 3027D0A0DD5147DEBD3B9C3A /* /Users/davidcleres/DeepShape/libigl-example-project/main.cpp */; };
-		0F31513603EB47AA9ACA8C2B /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/egl_context.h */ = {isa = PBXBuildFile; fileRef = F128F116CDB740469C639498 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/egl_context.h */; };
-		13259BC99E1E4496A46B72B7 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/monitor.c */ = {isa = PBXBuildFile; fileRef = B3E0883111AD4AB18DB9089C /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/monitor.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
-		13A220F67FA74789B2067D5C /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/mappings.h */ = {isa = PBXBuildFile; fileRef = 7F68836A85564D7EA2857FE9 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/mappings.h */; };
-		16037BC26AD24B90A9386886 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glad/src/glad.c */ = {isa = PBXBuildFile; fileRef = 088411FBA7FB49DAB996133D /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glad/src/glad.c */; };
-		1624EC8158E94B3F82FA9492 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/window.c */ = {isa = PBXBuildFile; fileRef = C703028445DD45FFBA7F5198 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/window.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
-		3276488F89F04C3BB1C8BC47 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/input.c */ = {isa = PBXBuildFile; fileRef = F31CD37B013D40B6B4386745 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/input.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
-		36DFE45A2A52482B8A2ABB10 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/posix_thread.c */ = {isa = PBXBuildFile; fileRef = 81516D53BBDF478A8961F0A5 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/posix_thread.c */; };
-		387631A2A17A4AA990C9F1A0 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/init.c */ = {isa = PBXBuildFile; fileRef = 88438F08FFDF46B79C23FD86 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/init.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
-		38EAB666CDB74F80829B74BD /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/vulkan.c */ = {isa = PBXBuildFile; fileRef = EC2724CDA1574EB4B7E72601 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/vulkan.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
-		43E53E83ADAA4B43AAF60C26 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_joystick.h */ = {isa = PBXBuildFile; fileRef = 575381EC17E143DE995315CF /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_joystick.h */; };
-		44D217B40BE74293A268774D /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glad/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = A8CB39CB4AC74D2C982E861F /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glad/CMakeLists.txt */; };
-		4540C3FD0CB848DA9B9CCCC3 /* /Users/davidcleres/DeepShape/libigl-example-project/build/glfw/src/glfw_config.h */ = {isa = PBXBuildFile; fileRef = 084EA98236054F2C9FDC1CD5 /* /Users/davidcleres/DeepShape/libigl-example-project/build/glfw/src/glfw_config.h */; };
-		4D5DD5DBC0264F97B6453145 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_platform.h */ = {isa = PBXBuildFile; fileRef = 7A5F09098D5F4E7DA85E6BFC /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_platform.h */; };
-		7DE5202D1C2744E5AC563DC5 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/include/GLFW/glfw3native.h */ = {isa = PBXBuildFile; fileRef = A02DB7B4086F4B449A092A2F /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/include/GLFW/glfw3native.h */; };
-		89F1DC5539684C2493E77EC1 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/internal.h */ = {isa = PBXBuildFile; fileRef = 1829C9F32EA141769B0CF0F3 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/internal.h */; };
-		8E83C99806F846839B56B048 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/context.c */ = {isa = PBXBuildFile; fileRef = 6C7F02185D174B2C9FABB9F3 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/context.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
-		9D2C38FBB66747C7A2B32340 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_joystick.m */ = {isa = PBXBuildFile; fileRef = C4961373B02847009F2BBD80 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_joystick.m */; };
-		9D4A2605F87A48D691CFA221 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/osmesa_context.c */ = {isa = PBXBuildFile; fileRef = 1E6037D37DC74A74AD8B65FE /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/osmesa_context.c */; };
-		9DBBE00D32D34BA99F83DE87 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = C68506339B9149B79923FA27 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/CMakeLists.txt */; };
-		9EA203615E98460BAF5B6C33 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/osmesa_context.h */ = {isa = PBXBuildFile; fileRef = 1A6A03B6B1904D689FEE4AC8 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/osmesa_context.h */; };
-		A6C42D55B7DC44118372E8EB /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/nsgl_context.m */ = {isa = PBXBuildFile; fileRef = AE616CD262794D4398DF5E37 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/nsgl_context.m */; };
-		AC9DFACF42E84ADDB0C3F245 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/nsgl_context.h */ = {isa = PBXBuildFile; fileRef = 0D85912155E5460B838CBEFB /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/nsgl_context.h */; };
-		ADEBA6194C114042B9C8F336 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_monitor.m */ = {isa = PBXBuildFile; fileRef = 1570CA2016574A3CAD9EF362 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_monitor.m */; };
-		C5CB45D488DF400986937391 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/egl_context.c */ = {isa = PBXBuildFile; fileRef = 43A4C1CD6A4949F7B243B32B /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/egl_context.c */; };
-		CCDD3862D5B94DEE858779FA /* /Users/davidcleres/DeepShape/libigl-example-project/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = D6263704F3E843DBB5529740 /* /Users/davidcleres/DeepShape/libigl-example-project/CMakeLists.txt */; };
-		D98178400F4141CDA26FAFEF /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_window.m */ = {isa = PBXBuildFile; fileRef = 1177678A4BCE461FAE8211E1 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_window.m */; };
-		DD61DA23C56B47A2A14E2935 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_init.m */ = {isa = PBXBuildFile; fileRef = AC7C7DBECAFF41DB8ABA34A3 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_init.m */; };
-		DFD520279FC34897829DC9D1 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/include/GLFW/glfw3.h */ = {isa = PBXBuildFile; fileRef = 51AE66E392B04199B638B4A1 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/include/GLFW/glfw3.h */; };
-		E7D7AE782BC945B08520C617 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_time.c */ = {isa = PBXBuildFile; fileRef = 230DCE2C2F8F432AAD91836D /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_time.c */; };
-		FD42FDDA1060455181C023D1 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/posix_thread.h */ = {isa = PBXBuildFile; fileRef = A7D7AFAF27A540C3BBB9206C /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/posix_thread.h */; };
+		170C03D9D93E4B67AF16465D /* commons.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 60C8CF0F7B914DFF8B7D0032 /* commons.cpp */; };
+		1FF01166B39D46E8BD2A61F4 /* posix_thread.c in Sources */ = {isa = PBXBuildFile; fileRef = 51628C14235A4F2EAAC557E7 /* posix_thread.c */; };
+		203226BAD34C41F1983887CE /* threadPool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 022698B8B03E43B0BF61A8EA /* threadPool.cpp */; };
+		30A9DB9F3446457AB5D8C3E1 /* cocoa_time.c in Sources */ = {isa = PBXBuildFile; fileRef = 1AE5899763374467BE3DAFF6 /* cocoa_time.c */; };
+		370E66CD9E33487486286BB7 /* timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E82300F5E30412CB9389D2B /* timer.cpp */; };
+		3A07B000B3D24584A1FCE225 /* init.c in Sources */ = {isa = PBXBuildFile; fileRef = 542B8521397F41C7925D45AA /* init.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
+		3AADEDD3443E4D629EC4DBCD /* timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3A3D41535AE94D35AA5AE69D /* timer.cpp */; };
+		43E6A2998486469590621A2D /* nsgl_context.m in Sources */ = {isa = PBXBuildFile; fileRef = E140536AD44C4CEA9E55A58D /* nsgl_context.m */; };
+		5940A2A1BF7D43139604EE32 /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 7572A67943E840D0A2AA186F /* glad.c */; };
+		6863CB27FD554557B3FAD0B9 /* cocoa_window.m in Sources */ = {isa = PBXBuildFile; fileRef = F70FCDBD3FD24561B34337BC /* cocoa_window.m */; };
+		6B4187DD33B3416598029738 /* vulkan.c in Sources */ = {isa = PBXBuildFile; fileRef = E012DFA054BD4C958E703890 /* vulkan.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
+		71E05945ED8F4267921F882F /* osmesa_context.c in Sources */ = {isa = PBXBuildFile; fileRef = B8B45C1DF31B4FF9BAF2E2B6 /* osmesa_context.c */; };
+		72587C48FA364E50BFFAE0C4 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 042FE8378EE14DAF9BB7A93B /* main.cpp */; };
+		74F88F2C35C9411C8D55095A /* egl_context.c in Sources */ = {isa = PBXBuildFile; fileRef = 253FB70DEB0648E29E23751B /* egl_context.c */; };
+		7B07E2C5C5CE4DEF9095BEB0 /* monitor.c in Sources */ = {isa = PBXBuildFile; fileRef = A6D2ACD16BD4458B809B4962 /* monitor.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
+		7C7FDA25E3DC42FA8017D16D /* triBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5A4F569896814308A59ECEB4 /* triBox.cpp */; };
+		85034629F5C24F01A28D61FF /* cocoa_joystick.m in Sources */ = {isa = PBXBuildFile; fileRef = 38667B4D49724D89B5662361 /* cocoa_joystick.m */; };
+		8EAABC370071431BAB367B96 /* voxelizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 371A4CD8497047C5BF44C457 /* voxelizer.cpp */; };
+		95AE1CE3A8334CCFAA0C1D17 /* commons.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 715813C7EF5E44E78561AFB5 /* commons.cpp */; };
+		9998963956794922A37DCE2E /* threadPool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 01632F5EFB4C419794E57F9B /* threadPool.cpp */; };
+		BE8019D4E7C44D5097F8FB4B /* context.c in Sources */ = {isa = PBXBuildFile; fileRef = 2C20264122C44334B4E6A978 /* context.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
+		C6F03DBBCA05426CB852E60F /* collisionChecker.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D7FC8AF0737437E9064C9DB /* collisionChecker.cpp */; };
+		D1A9E0D0117B45D79193A7CE /* cocoa_monitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 789E4385FBDD49FCAFC0A650 /* cocoa_monitor.m */; };
+		D9796DD4EBB04DA4B4747933 /* input.c in Sources */ = {isa = PBXBuildFile; fileRef = 38019715D69641559BB26D1F /* input.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
+		E6DD4A0E5D044C78ACFFD2FF /* triBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0023301F7CAA40D485AAA4FA /* triBox.cpp */; };
+		F3DD263C9456495F98AEB2D7 /* window.c in Sources */ = {isa = PBXBuildFile; fileRef = 708DBC0C21CB4D489FC335DD /* window.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
+		F9D8B22D9F7A4A4E805670A9 /* cocoa_init.m in Sources */ = {isa = PBXBuildFile; fileRef = 868769F03D0E420F8089C62F /* cocoa_init.m */; };
+		FF832AA8F0FC482D802347A3 /* voxelizer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF81604D257341F4A08164C1 /* voxelizer.cpp */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXBuildStyle section */
-		4E62DA8CC0DC4AC59FB5FF07 /* RelWithDebInfo */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = RelWithDebInfo;
-		};
-		55612FF7E6304D9182A04536 /* Release */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = Release;
-		};
-		66469881B64A43A88E9F1317 /* MinSizeRel */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = MinSizeRel;
-		};
-		AE383279D723404799A6A79F /* Debug */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = Debug;
-		};
-/* End PBXBuildStyle section */
-
 /* Begin PBXContainerItemProxy section */
-		9077D29859B843A28A2D341C /* PBXContainerItemProxy */ = {
+		07328160B5E44E65A2094680 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 996A262903FB4C339445F32A /* Project object */;
+			containerPortal = 18D4D855F0924D4C9D3B484C /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 72834D78836D436C92FD360A;
-			remoteInfo = glad;
-		};
-		AF4FE8E9DBC04F0BA1E91576 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 996A262903FB4C339445F32A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A5299D7A49244EECAF74FB1E;
+			remoteGlobalIDString = C1CC5F9FA2A5408F8987B8B9;
 			remoteInfo = ZERO_CHECK;
 		};
-		E159B4D971BF4A0D9B3B8E14 /* PBXContainerItemProxy */ = {
+		1E872CDC289A45D88F073630 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 996A262903FB4C339445F32A /* Project object */;
+			containerPortal = 18D4D855F0924D4C9D3B484C /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 40CCB2A9C6DB4DBA9D548536;
+			remoteGlobalIDString = ED6DD6E7F62A4D49BE4AEFA8;
+			remoteInfo = collisionChecker;
+		};
+		36F8EE9DF67F44EE9C8BA107 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18D4D855F0924D4C9D3B484C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 361DACFCCC30496990D09446;
 			remoteInfo = glfw;
 		};
-		EB6BA1A54B7A4CAD972C8BCC /* PBXContainerItemProxy */ = {
+		74B919C4D09840F584FE79B0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 996A262903FB4C339445F32A /* Project object */;
+			containerPortal = 18D4D855F0924D4C9D3B484C /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C0B619201727417C91975915;
-			remoteInfo = Polycubes_bin;
-		};
-		F70AB74B193D4D0F8A31B5C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 996A262903FB4C339445F32A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 40CCB2A9C6DB4DBA9D548536;
+			remoteGlobalIDString = 361DACFCCC30496990D09446;
 			remoteInfo = glfw;
 		};
-		F740C958376E449B8A62FD36 /* PBXContainerItemProxy */ = {
+		A32C93525D61454CA18E5D25 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 996A262903FB4C339445F32A /* Project object */;
+			containerPortal = 18D4D855F0924D4C9D3B484C /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 72834D78836D436C92FD360A;
+			remoteGlobalIDString = 93AB7BD137D04A7E99417EF0;
 			remoteInfo = glad;
 		};
-		F93338434DFB43F69F490453 /* PBXContainerItemProxy */ = {
+		BF0FC34F852F497493CB2079 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 996A262903FB4C339445F32A /* Project object */;
+			containerPortal = 18D4D855F0924D4C9D3B484C /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A5299D7A49244EECAF74FB1E;
+			remoteGlobalIDString = 3487F4CA70A84FB3A1E93399;
+			remoteInfo = voxelizer;
+		};
+		E39F4FF388AC4CFEAC19CBA2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18D4D855F0924D4C9D3B484C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C1CC5F9FA2A5408F8987B8B9;
 			remoteInfo = ZERO_CHECK;
+		};
+		F891C5C1795A4FB0860AA4F6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18D4D855F0924D4C9D3B484C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93AB7BD137D04A7E99417EF0;
+			remoteInfo = glad;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		084EA98236054F2C9FDC1CD5 /* /Users/davidcleres/DeepShape/libigl-example-project/build/glfw/src/glfw_config.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw_config.h; path = build/glfw/src/glfw_config.h; sourceTree = SOURCE_ROOT; };
-		088411FBA7FB49DAB996133D /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glad/src/glad.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = glad.c; path = libigl/external/glad/src/glad.c; sourceTree = SOURCE_ROOT; };
-		0D379A27B70148DF96453906 /* /Users/davidcleres/DeepShape/libigl-example-project/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		0D85912155E5460B838CBEFB /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/nsgl_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = nsgl_context.h; path = libigl/external/glfw/src/nsgl_context.h; sourceTree = SOURCE_ROOT; };
-		1177678A4BCE461FAE8211E1 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_window.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_window.m; path = libigl/external/glfw/src/cocoa_window.m; sourceTree = SOURCE_ROOT; };
-		1570CA2016574A3CAD9EF362 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_monitor.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_monitor.m; path = libigl/external/glfw/src/cocoa_monitor.m; sourceTree = SOURCE_ROOT; };
-		1829C9F32EA141769B0CF0F3 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = internal.h; path = libigl/external/glfw/src/internal.h; sourceTree = SOURCE_ROOT; };
-		1A6A03B6B1904D689FEE4AC8 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/osmesa_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = osmesa_context.h; path = libigl/external/glfw/src/osmesa_context.h; sourceTree = SOURCE_ROOT; };
-		1E6037D37DC74A74AD8B65FE /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/osmesa_context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = osmesa_context.c; path = libigl/external/glfw/src/osmesa_context.c; sourceTree = SOURCE_ROOT; };
-		230DCE2C2F8F432AAD91836D /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_time.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = cocoa_time.c; path = libigl/external/glfw/src/cocoa_time.c; sourceTree = SOURCE_ROOT; };
-		3027D0A0DD5147DEBD3B9C3A /* /Users/davidcleres/DeepShape/libigl-example-project/main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = main.cpp; path = main.cpp; sourceTree = SOURCE_ROOT; };
-		43A4C1CD6A4949F7B243B32B /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/egl_context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = egl_context.c; path = libigl/external/glfw/src/egl_context.c; sourceTree = SOURCE_ROOT; };
-		51AE66E392B04199B638B4A1 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/include/GLFW/glfw3.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3.h; path = libigl/external/glfw/include/GLFW/glfw3.h; sourceTree = SOURCE_ROOT; };
-		575381EC17E143DE995315CF /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_joystick.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_joystick.h; path = libigl/external/glfw/src/cocoa_joystick.h; sourceTree = SOURCE_ROOT; };
-		6C7F02185D174B2C9FABB9F3 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = context.c; path = libigl/external/glfw/src/context.c; sourceTree = SOURCE_ROOT; };
-		6C948C53FC0C4A60A49C8FFE /* Polycubes_bin */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = Polycubes_bin; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A5F09098D5F4E7DA85E6BFC /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_platform.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_platform.h; path = libigl/external/glfw/src/cocoa_platform.h; sourceTree = SOURCE_ROOT; };
-		7F68836A85564D7EA2857FE9 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/mappings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = mappings.h; path = libigl/external/glfw/src/mappings.h; sourceTree = SOURCE_ROOT; };
-		81516D53BBDF478A8961F0A5 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/posix_thread.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = posix_thread.c; path = libigl/external/glfw/src/posix_thread.c; sourceTree = SOURCE_ROOT; };
-		821A2151D8664C8CAA983E6D /* /Users/davidcleres/DeepShape/libigl-example-project/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		88438F08FFDF46B79C23FD86 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/init.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = init.c; path = libigl/external/glfw/src/init.c; sourceTree = SOURCE_ROOT; };
-		9DEC01AC9DE446A9AC1A5464 /* glad */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglad.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		A02DB7B4086F4B449A092A2F /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/include/GLFW/glfw3native.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3native.h; path = libigl/external/glfw/include/GLFW/glfw3native.h; sourceTree = SOURCE_ROOT; };
-		A7D7AFAF27A540C3BBB9206C /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/posix_thread.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = posix_thread.h; path = libigl/external/glfw/src/posix_thread.h; sourceTree = SOURCE_ROOT; };
-		A8CB39CB4AC74D2C982E861F /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glad/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = libigl/external/glad/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		AC7C7DBECAFF41DB8ABA34A3 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_init.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_init.m; path = libigl/external/glfw/src/cocoa_init.m; sourceTree = SOURCE_ROOT; };
-		AE616CD262794D4398DF5E37 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/nsgl_context.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = nsgl_context.m; path = libigl/external/glfw/src/nsgl_context.m; sourceTree = SOURCE_ROOT; };
-		B3E0883111AD4AB18DB9089C /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/monitor.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = monitor.c; path = libigl/external/glfw/src/monitor.c; sourceTree = SOURCE_ROOT; };
-		C4961373B02847009F2BBD80 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_joystick.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_joystick.m; path = libigl/external/glfw/src/cocoa_joystick.m; sourceTree = SOURCE_ROOT; };
-		C68506339B9149B79923FA27 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = libigl/external/glfw/src/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		C703028445DD45FFBA7F5198 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/window.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = window.c; path = libigl/external/glfw/src/window.c; sourceTree = SOURCE_ROOT; };
-		D6263704F3E843DBB5529740 /* /Users/davidcleres/DeepShape/libigl-example-project/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		DA70FBE7FC584299B3FD65EE /* glfw */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglfw3.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC2724CDA1574EB4B7E72601 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/vulkan.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = vulkan.c; path = libigl/external/glfw/src/vulkan.c; sourceTree = SOURCE_ROOT; };
-		F128F116CDB740469C639498 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/egl_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = egl_context.h; path = libigl/external/glfw/src/egl_context.h; sourceTree = SOURCE_ROOT; };
-		F31CD37B013D40B6B4386745 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/input.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = input.c; path = libigl/external/glfw/src/input.c; sourceTree = SOURCE_ROOT; };
+		0023301F7CAA40D485AAA4FA /* triBox.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = triBox.cpp; path = src/triBox.cpp; sourceTree = SOURCE_ROOT; };
+		01632F5EFB4C419794E57F9B /* threadPool.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = threadPool.cpp; path = src/threadPool.cpp; sourceTree = SOURCE_ROOT; };
+		022698B8B03E43B0BF61A8EA /* threadPool.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = threadPool.cpp; path = src/threadPool.cpp; sourceTree = SOURCE_ROOT; };
+		042FE8378EE14DAF9BB7A93B /* main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
+		066B3C90C580407EB64990C6 /* commons.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = commons.h; path = src/commons.h; sourceTree = SOURCE_ROOT; };
+		1796B4CE52AD4690A8D6BA68 /* libglfw3.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglfw3.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A176731818C499F95D36E3D /* triBox.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = triBox.h; path = src/triBox.h; sourceTree = SOURCE_ROOT; };
+		1AE5899763374467BE3DAFF6 /* cocoa_time.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = cocoa_time.c; path = ../libigl/external/glfw/src/cocoa_time.c; sourceTree = SOURCE_ROOT; };
+		2055BACD82414681B7264751 /* collisionChecker.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = collisionChecker.h; path = test/collisionChecker.h; sourceTree = SOURCE_ROOT; };
+		2088367FAC0747BDBA3FDDA8 /* timer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = timer.h; path = src/timer.h; sourceTree = SOURCE_ROOT; };
+		253FB70DEB0648E29E23751B /* egl_context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = egl_context.c; path = ../libigl/external/glfw/src/egl_context.c; sourceTree = SOURCE_ROOT; };
+		2B9FE0CD3597474880AAC101 /* voxelizer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = voxelizer.h; path = src/voxelizer.h; sourceTree = SOURCE_ROOT; };
+		2C20264122C44334B4E6A978 /* context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = context.c; path = ../libigl/external/glfw/src/context.c; sourceTree = SOURCE_ROOT; };
+		371A4CD8497047C5BF44C457 /* voxelizer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = voxelizer.cpp; path = src/voxelizer.cpp; sourceTree = SOURCE_ROOT; };
+		37DC61DDCE2845209C4925C7 /* internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = internal.h; path = ../libigl/external/glfw/src/internal.h; sourceTree = SOURCE_ROOT; };
+		37FB4F7B97BC4A3493B85884 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = src/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		38019715D69641559BB26D1F /* input.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = input.c; path = ../libigl/external/glfw/src/input.c; sourceTree = SOURCE_ROOT; };
+		386383500CB141039FABBBEF /* glfw_config.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw_config.h; path = build/glfw/src/glfw_config.h; sourceTree = SOURCE_ROOT; };
+		38667B4D49724D89B5662361 /* cocoa_joystick.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_joystick.m; path = ../libigl/external/glfw/src/cocoa_joystick.m; sourceTree = SOURCE_ROOT; };
+		3A3D41535AE94D35AA5AE69D /* timer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = timer.cpp; path = src/timer.cpp; sourceTree = SOURCE_ROOT; };
+		3B0D25AA32B040CABCA8931B /* collisionChecker */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = collisionChecker; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C1B673AE7E141B8AA046192 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = ../libigl/external/glfw/src/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		3FAD489FD6B04B6C94C702F3 /* voxelizer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = voxelizer.h; path = src/voxelizer.h; sourceTree = SOURCE_ROOT; };
+		42383E5DFF374513AE5D565D /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = ../libigl/external/glad/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		51628C14235A4F2EAAC557E7 /* posix_thread.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = posix_thread.c; path = ../libigl/external/glfw/src/posix_thread.c; sourceTree = SOURCE_ROOT; };
+		535C7AB0ED61446193191243 /* timer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = timer.h; path = src/timer.h; sourceTree = SOURCE_ROOT; };
+		542B8521397F41C7925D45AA /* init.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = init.c; path = ../libigl/external/glfw/src/init.c; sourceTree = SOURCE_ROOT; };
+		5A4F569896814308A59ECEB4 /* triBox.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = triBox.cpp; path = src/triBox.cpp; sourceTree = SOURCE_ROOT; };
+		5CCFE668D6254DF78A2EA40D /* commons.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = commons.h; path = src/commons.h; sourceTree = SOURCE_ROOT; };
+		5CEB5B5A207AC508001D9591 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = data; sourceTree = SOURCE_ROOT; };
+		5CEB5B5B207AC522001D9591 /* models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = models; sourceTree = "<group>"; };
+		60C8CF0F7B914DFF8B7D0032 /* commons.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = commons.cpp; path = src/commons.cpp; sourceTree = SOURCE_ROOT; };
+		6EA5C0DF565741B5BA24B6C0 /* triBox.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = triBox.h; path = src/triBox.h; sourceTree = SOURCE_ROOT; };
+		6F4444C2488D415FB5CE2A44 /* osmesa_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = osmesa_context.h; path = ../libigl/external/glfw/src/osmesa_context.h; sourceTree = SOURCE_ROOT; };
+		708DBC0C21CB4D489FC335DD /* window.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = window.c; path = ../libigl/external/glfw/src/window.c; sourceTree = SOURCE_ROOT; };
+		715813C7EF5E44E78561AFB5 /* commons.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = commons.cpp; path = src/commons.cpp; sourceTree = SOURCE_ROOT; };
+		7572A67943E840D0A2AA186F /* glad.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = glad.c; path = ../libigl/external/glad/src/glad.c; sourceTree = SOURCE_ROOT; };
+		789E4385FBDD49FCAFC0A650 /* cocoa_monitor.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_monitor.m; path = ../libigl/external/glfw/src/cocoa_monitor.m; sourceTree = SOURCE_ROOT; };
+		7DAB948B7FB34EF59C9092F3 /* threadPool.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = threadPool.h; path = src/threadPool.h; sourceTree = SOURCE_ROOT; };
+		868769F03D0E420F8089C62F /* cocoa_init.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_init.m; path = ../libigl/external/glfw/src/cocoa_init.m; sourceTree = SOURCE_ROOT; };
+		8A3186B580204AB29FB84728 /* glfw3native.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3native.h; path = ../libigl/external/glfw/include/GLFW/glfw3native.h; sourceTree = SOURCE_ROOT; };
+		8D7FC8AF0737437E9064C9DB /* collisionChecker.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = collisionChecker.cpp; path = test/collisionChecker.cpp; sourceTree = SOURCE_ROOT; };
+		953EAF6699BE44329482BC66 /* glfw3.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3.h; path = ../libigl/external/glfw/include/GLFW/glfw3.h; sourceTree = SOURCE_ROOT; };
+		9E64FCC2D37A4F668E462151 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		9E82300F5E30412CB9389D2B /* timer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = timer.cpp; path = src/timer.cpp; sourceTree = SOURCE_ROOT; };
+		A6D2ACD16BD4458B809B4962 /* monitor.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = monitor.c; path = ../libigl/external/glfw/src/monitor.c; sourceTree = SOURCE_ROOT; };
+		B8B45C1DF31B4FF9BAF2E2B6 /* osmesa_context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = osmesa_context.c; path = ../libigl/external/glfw/src/osmesa_context.c; sourceTree = SOURCE_ROOT; };
+		C81F0DCAFC2740388BF98EC4 /* threadPool.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = threadPool.h; path = src/threadPool.h; sourceTree = SOURCE_ROOT; };
+		CB12D0E44CEF4BCE97B9FD66 /* posix_thread.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = posix_thread.h; path = ../libigl/external/glfw/src/posix_thread.h; sourceTree = SOURCE_ROOT; };
+		D06ED78734E7476891C66894 /* nsgl_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = nsgl_context.h; path = ../libigl/external/glfw/src/nsgl_context.h; sourceTree = SOURCE_ROOT; };
+		D0BB3DE48D064B4F9F1F9DB6 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = test/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		DF81604D257341F4A08164C1 /* voxelizer.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = voxelizer.cpp; path = src/voxelizer.cpp; sourceTree = SOURCE_ROOT; };
+		E012DFA054BD4C958E703890 /* vulkan.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = vulkan.c; path = ../libigl/external/glfw/src/vulkan.c; sourceTree = SOURCE_ROOT; };
+		E140536AD44C4CEA9E55A58D /* nsgl_context.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = nsgl_context.m; path = ../libigl/external/glfw/src/nsgl_context.m; sourceTree = SOURCE_ROOT; };
+		E66F27D00613497AB95A7F34 /* cocoa_platform.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_platform.h; path = ../libigl/external/glfw/src/cocoa_platform.h; sourceTree = SOURCE_ROOT; };
+		F2B788175A7F4AE196028905 /* egl_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = egl_context.h; path = ../libigl/external/glfw/src/egl_context.h; sourceTree = SOURCE_ROOT; };
+		F4C4880D64F340E597E33C85 /* voxelizer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = voxelizer; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4D67D014B084B04969D8FFB /* mappings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = mappings.h; path = ../libigl/external/glfw/src/mappings.h; sourceTree = SOURCE_ROOT; };
+		F70FCDBD3FD24561B34337BC /* cocoa_window.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_window.m; path = ../libigl/external/glfw/src/cocoa_window.m; sourceTree = SOURCE_ROOT; };
+		FC783E4B6ED546F09B972ABA /* cocoa_joystick.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_joystick.h; path = ../libigl/external/glfw/src/cocoa_joystick.h; sourceTree = SOURCE_ROOT; };
+		FCB45B7A13E34C0D8AEBF41D /* libglad.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglad.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		01BFA7A8F18A467097AB189D /* Source Files */ = {
+		11C54CEC6C6E479FB5CBED34 /* Header Files */ = {
 			isa = PBXGroup;
 			children = (
-				3027D0A0DD5147DEBD3B9C3A /* /Users/davidcleres/DeepShape/libigl-example-project/main.cpp */,
-			);
-			name = "Source Files";
-			sourceTree = "<group>";
-		};
-		03BC5878AB2F499DA64BB3B2 /* glfw */ = {
-			isa = PBXGroup;
-			children = (
-				8ED80145F2E8485BA910BD07 /* Source Files */,
-				EBBA732496564981927B20A7 /* Header Files */,
-				C68506339B9149B79923FA27 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/CMakeLists.txt */,
-			);
-			name = glfw;
-			sourceTree = "<group>";
-		};
-		31E0C5E0542549C7BC1AA98F /* glad */ = {
-			isa = PBXGroup;
-			children = (
-				4BFA9B3B7C0C42CF8276E600 /* Source Files */,
-				A8CB39CB4AC74D2C982E861F /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glad/CMakeLists.txt */,
-			);
-			name = glad;
-			sourceTree = "<group>";
-		};
-		3FF86461986C48A5B1BA4CEF /* Polycubes_bin */ = {
-			isa = PBXGroup;
-			children = (
-				01BFA7A8F18A467097AB189D /* Source Files */,
-				D6263704F3E843DBB5529740 /* /Users/davidcleres/DeepShape/libigl-example-project/CMakeLists.txt */,
-			);
-			name = Polycubes_bin;
-			sourceTree = "<group>";
-		};
-		4BFA9B3B7C0C42CF8276E600 /* Source Files */ = {
-			isa = PBXGroup;
-			children = (
-				088411FBA7FB49DAB996133D /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glad/src/glad.c */,
-			);
-			name = "Source Files";
-			sourceTree = "<group>";
-		};
-		6F337E85821B433081346F58 = {
-			isa = PBXGroup;
-			children = (
-				3FF86461986C48A5B1BA4CEF /* Polycubes_bin */,
-				89158A93C5644D6B982EBA44 /* ALL_BUILD */,
-				FECF791BA6D34DA29E066933 /* ZERO_CHECK */,
-				31E0C5E0542549C7BC1AA98F /* glad */,
-				EE6963FF17E542D89DB205DA /* GLFW3 */,
-				E8AC85DF785F4F788972CDAC /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		89158A93C5644D6B982EBA44 /* ALL_BUILD */ = {
-			isa = PBXGroup;
-			children = (
-				CC70554720E447F4864E3A64 /* CMake Rules */,
-				821A2151D8664C8CAA983E6D /* /Users/davidcleres/DeepShape/libigl-example-project/CMakeLists.txt */,
-			);
-			name = ALL_BUILD;
-			sourceTree = "<group>";
-		};
-		8ED80145F2E8485BA910BD07 /* Source Files */ = {
-			isa = PBXGroup;
-			children = (
-				AC7C7DBECAFF41DB8ABA34A3 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_init.m */,
-				C4961373B02847009F2BBD80 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_joystick.m */,
-				1570CA2016574A3CAD9EF362 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_monitor.m */,
-				230DCE2C2F8F432AAD91836D /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_time.c */,
-				1177678A4BCE461FAE8211E1 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_window.m */,
-				6C7F02185D174B2C9FABB9F3 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/context.c */,
-				43A4C1CD6A4949F7B243B32B /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/egl_context.c */,
-				88438F08FFDF46B79C23FD86 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/init.c */,
-				F31CD37B013D40B6B4386745 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/input.c */,
-				B3E0883111AD4AB18DB9089C /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/monitor.c */,
-				AE616CD262794D4398DF5E37 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/nsgl_context.m */,
-				1E6037D37DC74A74AD8B65FE /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/osmesa_context.c */,
-				81516D53BBDF478A8961F0A5 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/posix_thread.c */,
-				EC2724CDA1574EB4B7E72601 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/vulkan.c */,
-				C703028445DD45FFBA7F5198 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/window.c */,
-			);
-			name = "Source Files";
-			sourceTree = "<group>";
-		};
-		BCDE0729E0B5442E8A44B90A /* CMake Rules */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "CMake Rules";
-			sourceTree = "<group>";
-		};
-		CC70554720E447F4864E3A64 /* CMake Rules */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "CMake Rules";
-			sourceTree = "<group>";
-		};
-		E8AC85DF785F4F788972CDAC /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6C948C53FC0C4A60A49C8FFE /* Polycubes_bin */,
-				9DEC01AC9DE446A9AC1A5464 /* glad */,
-				DA70FBE7FC584299B3FD65EE /* glfw */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		EBBA732496564981927B20A7 /* Header Files */ = {
-			isa = PBXGroup;
-			children = (
-				084EA98236054F2C9FDC1CD5 /* /Users/davidcleres/DeepShape/libigl-example-project/build/glfw/src/glfw_config.h */,
-				51AE66E392B04199B638B4A1 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/include/GLFW/glfw3.h */,
-				A02DB7B4086F4B449A092A2F /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/include/GLFW/glfw3native.h */,
-				575381EC17E143DE995315CF /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_joystick.h */,
-				7A5F09098D5F4E7DA85E6BFC /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_platform.h */,
-				F128F116CDB740469C639498 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/egl_context.h */,
-				1829C9F32EA141769B0CF0F3 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/internal.h */,
-				7F68836A85564D7EA2857FE9 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/mappings.h */,
-				0D85912155E5460B838CBEFB /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/nsgl_context.h */,
-				1A6A03B6B1904D689FEE4AC8 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/osmesa_context.h */,
-				A7D7AFAF27A540C3BBB9206C /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/posix_thread.h */,
+				386383500CB141039FABBBEF /* glfw_config.h */,
+				953EAF6699BE44329482BC66 /* glfw3.h */,
+				8A3186B580204AB29FB84728 /* glfw3native.h */,
+				FC783E4B6ED546F09B972ABA /* cocoa_joystick.h */,
+				E66F27D00613497AB95A7F34 /* cocoa_platform.h */,
+				F2B788175A7F4AE196028905 /* egl_context.h */,
+				37DC61DDCE2845209C4925C7 /* internal.h */,
+				F4D67D014B084B04969D8FFB /* mappings.h */,
+				D06ED78734E7476891C66894 /* nsgl_context.h */,
+				6F4444C2488D415FB5CE2A44 /* osmesa_context.h */,
+				CB12D0E44CEF4BCE97B9FD66 /* posix_thread.h */,
 			);
 			name = "Header Files";
 			sourceTree = "<group>";
 		};
-		EE6963FF17E542D89DB205DA /* GLFW3 */ = {
+		199DD20709014299A3E9E0DE /* glad */ = {
 			isa = PBXGroup;
 			children = (
-				03BC5878AB2F499DA64BB3B2 /* glfw */,
+				BB40E7F451E54A18ADD88C7C /* Source Files */,
+				42383E5DFF374513AE5D565D /* CMakeLists.txt */,
+			);
+			name = glad;
+			sourceTree = "<group>";
+		};
+		1F387DB6CAEC4144BB1DF46B /* voxelizer */ = {
+			isa = PBXGroup;
+			children = (
+				5CEB5B5B207AC522001D9591 /* models */,
+				5CEB5B5A207AC508001D9591 /* data */,
+				C113F802718049A1922E2C35 /* Source Files */,
+				7DDCB47E1E1D4D33B1B84547 /* Header Files */,
+				37FB4F7B97BC4A3493B85884 /* CMakeLists.txt */,
+			);
+			name = voxelizer;
+			sourceTree = "<group>";
+		};
+		387341A377A041A384130DE9 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				60C8CF0F7B914DFF8B7D0032 /* commons.cpp */,
+				01632F5EFB4C419794E57F9B /* threadPool.cpp */,
+				3A3D41535AE94D35AA5AE69D /* timer.cpp */,
+				5A4F569896814308A59ECEB4 /* triBox.cpp */,
+				371A4CD8497047C5BF44C457 /* voxelizer.cpp */,
+				8D7FC8AF0737437E9064C9DB /* collisionChecker.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		737479AB3F2248889F220A49 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				A6D3A308D3B54339AA6AE384 /* CMake Rules */,
+				9E64FCC2D37A4F668E462151 /* CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		761CD56486A44B37BEF36116 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FCB45B7A13E34C0D8AEBF41D /* libglad.a */,
+				1796B4CE52AD4690A8D6BA68 /* libglfw3.a */,
+				F4C4880D64F340E597E33C85 /* voxelizer */,
+				3B0D25AA32B040CABCA8931B /* collisionChecker */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7C482A5CBB744897AD1AF39E /* glfw */ = {
+			isa = PBXGroup;
+			children = (
+				A352D906F8AC494586F750A1 /* Source Files */,
+				11C54CEC6C6E479FB5CBED34 /* Header Files */,
+				3C1B673AE7E141B8AA046192 /* CMakeLists.txt */,
+			);
+			name = glfw;
+			sourceTree = "<group>";
+		};
+		7DDCB47E1E1D4D33B1B84547 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				066B3C90C580407EB64990C6 /* commons.h */,
+				C81F0DCAFC2740388BF98EC4 /* threadPool.h */,
+				535C7AB0ED61446193191243 /* timer.h */,
+				1A176731818C499F95D36E3D /* triBox.h */,
+				2B9FE0CD3597474880AAC101 /* voxelizer.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		96CB2F4C30AE400C895B5F94 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				5CCFE668D6254DF78A2EA40D /* commons.h */,
+				7DAB948B7FB34EF59C9092F3 /* threadPool.h */,
+				2088367FAC0747BDBA3FDDA8 /* timer.h */,
+				6EA5C0DF565741B5BA24B6C0 /* triBox.h */,
+				3FAD489FD6B04B6C94C702F3 /* voxelizer.h */,
+				2055BACD82414681B7264751 /* collisionChecker.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		A352D906F8AC494586F750A1 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				868769F03D0E420F8089C62F /* cocoa_init.m */,
+				38667B4D49724D89B5662361 /* cocoa_joystick.m */,
+				789E4385FBDD49FCAFC0A650 /* cocoa_monitor.m */,
+				1AE5899763374467BE3DAFF6 /* cocoa_time.c */,
+				F70FCDBD3FD24561B34337BC /* cocoa_window.m */,
+				2C20264122C44334B4E6A978 /* context.c */,
+				253FB70DEB0648E29E23751B /* egl_context.c */,
+				542B8521397F41C7925D45AA /* init.c */,
+				38019715D69641559BB26D1F /* input.c */,
+				A6D2ACD16BD4458B809B4962 /* monitor.c */,
+				E140536AD44C4CEA9E55A58D /* nsgl_context.m */,
+				B8B45C1DF31B4FF9BAF2E2B6 /* osmesa_context.c */,
+				51628C14235A4F2EAAC557E7 /* posix_thread.c */,
+				E012DFA054BD4C958E703890 /* vulkan.c */,
+				708DBC0C21CB4D489FC335DD /* window.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		A6D3A308D3B54339AA6AE384 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		AC7FA7E972B146208C0796CD /* collisionChecker */ = {
+			isa = PBXGroup;
+			children = (
+				387341A377A041A384130DE9 /* Source Files */,
+				96CB2F4C30AE400C895B5F94 /* Header Files */,
+				D0BB3DE48D064B4F9F1F9DB6 /* CMakeLists.txt */,
+			);
+			name = collisionChecker;
+			sourceTree = "<group>";
+		};
+		BB40E7F451E54A18ADD88C7C /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				7572A67943E840D0A2AA186F /* glad.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		C113F802718049A1922E2C35 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				715813C7EF5E44E78561AFB5 /* commons.cpp */,
+				042FE8378EE14DAF9BB7A93B /* main.cpp */,
+				022698B8B03E43B0BF61A8EA /* threadPool.cpp */,
+				9E82300F5E30412CB9389D2B /* timer.cpp */,
+				0023301F7CAA40D485AAA4FA /* triBox.cpp */,
+				DF81604D257341F4A08164C1 /* voxelizer.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		D6F4E51558854034A9BCBC32 /* GLFW3 */ = {
+			isa = PBXGroup;
+			children = (
+				7C482A5CBB744897AD1AF39E /* glfw */,
 			);
 			name = GLFW3;
 			sourceTree = "<group>";
 		};
-		FECF791BA6D34DA29E066933 /* ZERO_CHECK */ = {
+		FE7EF0414A844AA888233E13 = {
 			isa = PBXGroup;
 			children = (
-				BCDE0729E0B5442E8A44B90A /* CMake Rules */,
-				0D379A27B70148DF96453906 /* /Users/davidcleres/DeepShape/libigl-example-project/CMakeLists.txt */,
+				737479AB3F2248889F220A49 /* ALL_BUILD */,
+				199DD20709014299A3E9E0DE /* glad */,
+				D6F4E51558854034A9BCBC32 /* GLFW3 */,
+				1F387DB6CAEC4144BB1DF46B /* voxelizer */,
+				AC7FA7E972B146208C0796CD /* collisionChecker */,
+				761CD56486A44B37BEF36116 /* Products */,
 			);
-			name = ZERO_CHECK;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		40CCB2A9C6DB4DBA9D548536 /* glfw */ = {
+		3487F4CA70A84FB3A1E93399 /* voxelizer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EC141A1770EA49CB98DF8CEF /* Build configuration list for PBXNativeTarget "glfw" */;
+			buildConfigurationList = 717E3D28907A4945BFC9AB5B /* Build configuration list for PBXNativeTarget "voxelizer" */;
 			buildPhases = (
-				A37F9953499A42B28A293B58 /* Sources */,
+				33DE77F7D58A4FCC845D4345 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6D1B18820CEE4EC1B586BB69 /* PBXTargetDependency */,
+				87058A20E4FF42009A8519EC /* PBXTargetDependency */,
+				7FD1EA5572EF455296000461 /* PBXTargetDependency */,
+			);
+			name = voxelizer;
+			productName = voxelizer;
+			productReference = F4C4880D64F340E597E33C85 /* voxelizer */;
+			productType = "com.apple.product-type.tool";
+		};
+		361DACFCCC30496990D09446 /* glfw */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C2662F2B651443AAD6DA62C /* Build configuration list for PBXNativeTarget "glfw" */;
+			buildPhases = (
+				440083061F8347C19E932AAE /* Sources */,
 			);
 			buildRules = (
 			);
@@ -353,14 +422,14 @@
 			);
 			name = glfw;
 			productName = glfw;
-			productReference = DA70FBE7FC584299B3FD65EE /* glfw */;
+			productReference = 1796B4CE52AD4690A8D6BA68 /* libglfw3.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		72834D78836D436C92FD360A /* glad */ = {
+		93AB7BD137D04A7E99417EF0 /* glad */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 010A42618E46434A90E85349 /* Build configuration list for PBXNativeTarget "glad" */;
+			buildConfigurationList = 91C68E36397644AC8BDFA2AE /* Build configuration list for PBXNativeTarget "glad" */;
 			buildPhases = (
-				9A54A925C76941F4AB4C2679 /* Sources */,
+				52D9C964BE254347B62263A3 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -368,62 +437,68 @@
 			);
 			name = glad;
 			productName = glad;
-			productReference = 9DEC01AC9DE446A9AC1A5464 /* glad */;
+			productReference = FCB45B7A13E34C0D8AEBF41D /* libglad.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		C0B619201727417C91975915 /* Polycubes_bin */ = {
+		ED6DD6E7F62A4D49BE4AEFA8 /* collisionChecker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F0E126DB5D50418AB4FE70CB /* Build configuration list for PBXNativeTarget "Polycubes_bin" */;
+			buildConfigurationList = 0C4743071B144093B28A81C6 /* Build configuration list for PBXNativeTarget "collisionChecker" */;
 			buildPhases = (
-				2E343192D76943CFA5CDC13A /* Sources */,
+				102B01D636F34E52A0672B3F /* Sources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				01131CADA2654E91A8ACD850 /* PBXTargetDependency */,
-				58A2346AF2D44052B95DDC94 /* PBXTargetDependency */,
-				28413F2135A3488191CE11D8 /* PBXTargetDependency */,
 			);
-			name = Polycubes_bin;
-			productName = Polycubes_bin;
-			productReference = 6C948C53FC0C4A60A49C8FFE /* Polycubes_bin */;
+			name = collisionChecker;
+			productName = collisionChecker;
+			productReference = 3B0D25AA32B040CABCA8931B /* collisionChecker */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		996A262903FB4C339445F32A /* Project object */ = {
+		18D4D855F0924D4C9D3B484C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 0930;
 			};
-			buildConfigurationList = 76AF14C19CDA462CA1E05FEE /* Build configuration list for PBXProject "Polycubes" */;
-			buildSettings = {
-			};
-			buildStyles = (
-				AE383279D723404799A6A79F /* Debug */,
-				55612FF7E6304D9182A04536 /* Release */,
-				66469881B64A43A88E9F1317 /* MinSizeRel */,
-				4E62DA8CC0DC4AC59FB5FF07 /* RelWithDebInfo */,
-			);
+			buildConfigurationList = 08821CD577FE4197B9A08854 /* Build configuration list for PBXProject "Polycubes" */;
 			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
-			mainGroup = 6F337E85821B433081346F58;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FE7EF0414A844AA888233E13;
 			projectDirPath = ../;
 			projectRoot = "";
 			targets = (
-				0D251FBAE37143FD95DAEB9B /* ALL_BUILD */,
-				C0B619201727417C91975915 /* Polycubes_bin */,
-				A5299D7A49244EECAF74FB1E /* ZERO_CHECK */,
-				72834D78836D436C92FD360A /* glad */,
-				40CCB2A9C6DB4DBA9D548536 /* glfw */,
+				ED9128F7CC6441D7AC34B46E /* ALL_BUILD */,
+				B5625670954F4B16A9E60B47 /* RUN_TESTS */,
+				C1CC5F9FA2A5408F8987B8B9 /* ZERO_CHECK */,
+				93AB7BD137D04A7E99417EF0 /* glad */,
+				361DACFCCC30496990D09446 /* glfw */,
+				3487F4CA70A84FB3A1E93399 /* voxelizer */,
+				ED6DD6E7F62A4D49BE4AEFA8 /* collisionChecker */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0D5090999C544E1FB4444F53 /* CMake Rules */ = {
+		065D7DF92D6B459897AEDEE4 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/davidcleres/DeepShape/Polycubing/build -f /Users/davidcleres/DeepShape/Polycubing/build/CMakeScripts/RUN_TESTS_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		5EC6348A151A4215AEA82785 /* CMake Rules */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -431,40 +506,10 @@
 			name = "CMake Rules";
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "make -C /Users/davidcleres/DeepShape/libigl-example-project/build -f /Users/davidcleres/DeepShape/libigl-example-project/build/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			shellScript = "make -C /Users/davidcleres/DeepShape/Polycubing/build -f /Users/davidcleres/DeepShape/Polycubing/build/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
 			showEnvVarsInLog = 0;
 		};
-		53EA798DB712442D837E1ABE = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# shell script goes here
-exit 0";
-			showEnvVarsInLog = 0;
-		};
-		B0E4C26FE50642078E0CCFD4 = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# shell script goes here
-exit 0";
-			showEnvVarsInLog = 0;
-		};
-		E763264EDE674683A40FA213 /* CMake Rules */ = {
+		E0E7563C71004B6084405612 /* CMake Rules */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -472,121 +517,181 @@ exit 0";
 			name = "CMake Rules";
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "make -C /Users/davidcleres/DeepShape/libigl-example-project/build -f /Users/davidcleres/DeepShape/libigl-example-project/build/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			shellScript = "make -C /Users/davidcleres/DeepShape/Polycubing/build -f /Users/davidcleres/DeepShape/Polycubing/build/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2E343192D76943CFA5CDC13A /* Sources */ = {
+		102B01D636F34E52A0672B3F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				058A9FE828204F5D95F61761 /* /Users/davidcleres/DeepShape/libigl-example-project/main.cpp */,
+				170C03D9D93E4B67AF16465D /* commons.cpp in Sources */,
+				9998963956794922A37DCE2E /* threadPool.cpp in Sources */,
+				3AADEDD3443E4D629EC4DBCD /* timer.cpp in Sources */,
+				7C7FDA25E3DC42FA8017D16D /* triBox.cpp in Sources */,
+				8EAABC370071431BAB367B96 /* voxelizer.cpp in Sources */,
+				C6F03DBBCA05426CB852E60F /* collisionChecker.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9A54A925C76941F4AB4C2679 /* Sources */ = {
+		33DE77F7D58A4FCC845D4345 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				16037BC26AD24B90A9386886 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glad/src/glad.c */,
+				95AE1CE3A8334CCFAA0C1D17 /* commons.cpp in Sources */,
+				72587C48FA364E50BFFAE0C4 /* main.cpp in Sources */,
+				203226BAD34C41F1983887CE /* threadPool.cpp in Sources */,
+				370E66CD9E33487486286BB7 /* timer.cpp in Sources */,
+				E6DD4A0E5D044C78ACFFD2FF /* triBox.cpp in Sources */,
+				FF832AA8F0FC482D802347A3 /* voxelizer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A37F9953499A42B28A293B58 /* Sources */ = {
+		440083061F8347C19E932AAE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD61DA23C56B47A2A14E2935 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_init.m */,
-				9D2C38FBB66747C7A2B32340 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_joystick.m */,
-				ADEBA6194C114042B9C8F336 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_monitor.m */,
-				E7D7AE782BC945B08520C617 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_time.c */,
-				D98178400F4141CDA26FAFEF /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_window.m */,
-				8E83C99806F846839B56B048 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/context.c */,
-				C5CB45D488DF400986937391 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/egl_context.c */,
-				387631A2A17A4AA990C9F1A0 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/init.c */,
-				3276488F89F04C3BB1C8BC47 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/input.c */,
-				13259BC99E1E4496A46B72B7 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/monitor.c */,
-				A6C42D55B7DC44118372E8EB /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/nsgl_context.m */,
-				9D4A2605F87A48D691CFA221 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/osmesa_context.c */,
-				36DFE45A2A52482B8A2ABB10 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/posix_thread.c */,
-				38EAB666CDB74F80829B74BD /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/vulkan.c */,
-				1624EC8158E94B3F82FA9492 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/window.c */,
+				F9D8B22D9F7A4A4E805670A9 /* cocoa_init.m in Sources */,
+				85034629F5C24F01A28D61FF /* cocoa_joystick.m in Sources */,
+				D1A9E0D0117B45D79193A7CE /* cocoa_monitor.m in Sources */,
+				30A9DB9F3446457AB5D8C3E1 /* cocoa_time.c in Sources */,
+				6863CB27FD554557B3FAD0B9 /* cocoa_window.m in Sources */,
+				BE8019D4E7C44D5097F8FB4B /* context.c in Sources */,
+				74F88F2C35C9411C8D55095A /* egl_context.c in Sources */,
+				3A07B000B3D24584A1FCE225 /* init.c in Sources */,
+				D9796DD4EBB04DA4B4747933 /* input.c in Sources */,
+				7B07E2C5C5CE4DEF9095BEB0 /* monitor.c in Sources */,
+				43E6A2998486469590621A2D /* nsgl_context.m in Sources */,
+				71E05945ED8F4267921F882F /* osmesa_context.c in Sources */,
+				1FF01166B39D46E8BD2A61F4 /* posix_thread.c in Sources */,
+				6B4187DD33B3416598029738 /* vulkan.c in Sources */,
+				F3DD263C9456495F98AEB2D7 /* window.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		52D9C964BE254347B62263A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5940A2A1BF7D43139604EE32 /* glad.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		01131CADA2654E91A8ACD850 /* PBXTargetDependency */ = {
+		098F884217C94668B917A5BB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 72834D78836D436C92FD360A /* glad */;
-			targetProxy = F740C958376E449B8A62FD36 /* PBXContainerItemProxy */;
+			target = ED6DD6E7F62A4D49BE4AEFA8 /* collisionChecker */;
+			targetProxy = 1E872CDC289A45D88F073630 /* PBXContainerItemProxy */;
 		};
-		28413F2135A3488191CE11D8 /* PBXTargetDependency */ = {
+		0E863B5765AB4A9E9937F35D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A5299D7A49244EECAF74FB1E /* ZERO_CHECK */;
-			targetProxy = AF4FE8E9DBC04F0BA1E91576 /* PBXContainerItemProxy */;
+			target = 3487F4CA70A84FB3A1E93399 /* voxelizer */;
+			targetProxy = BF0FC34F852F497493CB2079 /* PBXContainerItemProxy */;
 		};
-		3EB324BCECCF40BDA15B0AE6 /* PBXTargetDependency */ = {
+		451D79B903A04845BE9336F0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 40CCB2A9C6DB4DBA9D548536 /* glfw */;
-			targetProxy = F70AB74B193D4D0F8A31B5C2 /* PBXContainerItemProxy */;
+			target = C1CC5F9FA2A5408F8987B8B9 /* ZERO_CHECK */;
+			targetProxy = 07328160B5E44E65A2094680 /* PBXContainerItemProxy */;
 		};
-		55950D5B7A734A16BED8BC46 /* PBXTargetDependency */ = {
+		48686F55467B4599AA456EBE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 72834D78836D436C92FD360A /* glad */;
-			targetProxy = 9077D29859B843A28A2D341C /* PBXContainerItemProxy */;
+			target = 361DACFCCC30496990D09446 /* glfw */;
+			targetProxy = 36F8EE9DF67F44EE9C8BA107 /* PBXContainerItemProxy */;
 		};
-		58A2346AF2D44052B95DDC94 /* PBXTargetDependency */ = {
+		6D1B18820CEE4EC1B586BB69 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 40CCB2A9C6DB4DBA9D548536 /* glfw */;
-			targetProxy = E159B4D971BF4A0D9B3B8E14 /* PBXContainerItemProxy */;
+			target = C1CC5F9FA2A5408F8987B8B9 /* ZERO_CHECK */;
+			targetProxy = E39F4FF388AC4CFEAC19CBA2 /* PBXContainerItemProxy */;
 		};
-		AB4FC3CC8C304682839FF8D2 /* PBXTargetDependency */ = {
+		7FD1EA5572EF455296000461 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A5299D7A49244EECAF74FB1E /* ZERO_CHECK */;
-			targetProxy = F93338434DFB43F69F490453 /* PBXContainerItemProxy */;
+			target = 361DACFCCC30496990D09446 /* glfw */;
+			targetProxy = 74B919C4D09840F584FE79B0 /* PBXContainerItemProxy */;
 		};
-		C0E2F1C1024543C6AF4ABD97 /* PBXTargetDependency */ = {
+		87058A20E4FF42009A8519EC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = C0B619201727417C91975915 /* Polycubes_bin */;
-			targetProxy = EB6BA1A54B7A4CAD972C8BCC /* PBXContainerItemProxy */;
+			target = 93AB7BD137D04A7E99417EF0 /* glad */;
+			targetProxy = F891C5C1795A4FB0860AA4F6 /* PBXContainerItemProxy */;
+		};
+		8EB4E68A974C4ECF98EC4D5E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 93AB7BD137D04A7E99417EF0 /* glad */;
+			targetProxy = A32C93525D61454CA18E5D25 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		01893E49636A40AF9BD5906D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
-				SYMROOT = "/Users/davidcleres/DeepShape/libigl-example-project/build/build";
-			};
-			name = Release;
-		};
-		0B98BFD37E7D4A52B47B7BCF /* RelWithDebInfo */ = {
+		034D354461D34DC1BDFFAFBC /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ALL_BUILD;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/davidcleres/DeepShape/libigl-example-project/build";
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build;
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = RelWithDebInfo;
 		};
-		1358951290334608B7479375 /* RelWithDebInfo */ = {
+		06CE8DB23E8C426A8C1D015A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					_GLFW_USE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/davidcleres/DeepShape/libigl/external/glfw/include,
+					/Users/davidcleres/DeepShape/libigl/external/glfw/src,
+					/Users/davidcleres/DeepShape/Polycubing/build/glfw/src,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-Wall",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build/glfw/src;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		0AB06C5465734AAB9DE14C8E /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -595,9 +700,9 @@ exit 0";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glad/include");
+				HEADER_SEARCH_PATHS = /Users/davidcleres/DeepShape/libigl/external/glad/include;
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
 				OTHER_CFLAGS = "       -DNDEBUG  ";
@@ -605,325 +710,677 @@ exit 0";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = glad;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/davidcleres/DeepShape/libigl-example-project/build/glad";
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build/glad;
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = RelWithDebInfo;
 		};
-		1C20CFB595594A8FA8D81C11 /* RelWithDebInfo */ = {
+		0E112CAF63D94EE6A67178EA /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		1D36E0C69B114F8D840A0DB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/davidcleres/DeepShape/Polycubing/src;
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+				);
+				OTHER_CPLUSPLUSFLAGS = "    ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lassimp",
+					"-lfcl",
+					"/usr/local/lib/libboost_atomic-mt.dylib",
+					"/usr/local/lib/libboost_system-mt.dylib",
+					"/usr/local/lib/libboost_thread-mt.dylib",
+					"/usr/local/lib/libboost_date_time-mt.dylib",
+					"/usr/local/lib/libboost_unit_test_framework-mt.dylib",
+					/usr/local/lib/libopencv_stitching.3.4.1.dylib,
+					/usr/local/lib/libopencv_superres.3.4.1.dylib,
+					/usr/local/lib/libopencv_videostab.3.4.1.dylib,
+					/usr/local/lib/libopencv_aruco.3.4.1.dylib,
+					/usr/local/lib/libopencv_bgsegm.3.4.1.dylib,
+					/usr/local/lib/libopencv_bioinspired.3.4.1.dylib,
+					/usr/local/lib/libopencv_ccalib.3.4.1.dylib,
+					/usr/local/lib/libopencv_dnn_objdetect.3.4.1.dylib,
+					/usr/local/lib/libopencv_dpm.3.4.1.dylib,
+					/usr/local/lib/libopencv_face.3.4.1.dylib,
+					/usr/local/lib/libopencv_fuzzy.3.4.1.dylib,
+					/usr/local/lib/libopencv_hfs.3.4.1.dylib,
+					/usr/local/lib/libopencv_img_hash.3.4.1.dylib,
+					/usr/local/lib/libopencv_line_descriptor.3.4.1.dylib,
+					/usr/local/lib/libopencv_optflow.3.4.1.dylib,
+					/usr/local/lib/libopencv_reg.3.4.1.dylib,
+					/usr/local/lib/libopencv_rgbd.3.4.1.dylib,
+					/usr/local/lib/libopencv_saliency.3.4.1.dylib,
+					/usr/local/lib/libopencv_stereo.3.4.1.dylib,
+					/usr/local/lib/libopencv_structured_light.3.4.1.dylib,
+					/usr/local/lib/libopencv_surface_matching.3.4.1.dylib,
+					/usr/local/lib/libopencv_tracking.3.4.1.dylib,
+					/usr/local/lib/libopencv_xfeatures2d.3.4.1.dylib,
+					/usr/local/lib/libopencv_ximgproc.3.4.1.dylib,
+					/usr/local/lib/libopencv_xobjdetect.3.4.1.dylib,
+					/usr/local/lib/libopencv_xphoto.3.4.1.dylib,
+					/usr/local/lib/libopencv_shape.3.4.1.dylib,
+					/usr/local/lib/libopencv_photo.3.4.1.dylib,
+					/usr/local/lib/libopencv_datasets.3.4.1.dylib,
+					/usr/local/lib/libopencv_plot.3.4.1.dylib,
+					/usr/local/lib/libopencv_text.3.4.1.dylib,
+					/usr/local/lib/libopencv_dnn.3.4.1.dylib,
+					/usr/local/lib/libopencv_ml.3.4.1.dylib,
+					/usr/local/lib/libopencv_video.3.4.1.dylib,
+					/usr/local/lib/libopencv_calib3d.3.4.1.dylib,
+					/usr/local/lib/libopencv_features2d.3.4.1.dylib,
+					/usr/local/lib/libopencv_highgui.3.4.1.dylib,
+					/usr/local/lib/libopencv_videoio.3.4.1.dylib,
+					/usr/local/lib/libopencv_phase_unwrapping.3.4.1.dylib,
+					/usr/local/lib/libopencv_flann.3.4.1.dylib,
+					/usr/local/lib/libopencv_imgcodecs.3.4.1.dylib,
+					/usr/local/lib/libopencv_objdetect.3.4.1.dylib,
+					/usr/local/lib/libopencv_imgproc.3.4.1.dylib,
+					/usr/local/lib/libopencv_core.3.4.1.dylib,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = collisionChecker;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build/test;
+				SYSTEM_HEADER_SEARCH_PATHS = "/usr/local/include /usr/local/include/opencv";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		1F388B1EF57548A185D79BDB /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ZERO_CHECK;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/davidcleres/DeepShape/libigl-example-project/build";
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build;
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
-			name = RelWithDebInfo;
+			name = MinSizeRel;
 		};
-		329AA58F6CD44B4C8DD223D4 /* Debug */ = {
+		3D1601AB7BD84D75941EBF59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		4872507BCF8749F4BB1C6F2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/davidcleres/DeepShape/Polycubing/src;
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+				);
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lassimp",
+					"-lfcl",
+					"/usr/local/lib/libboost_atomic-mt.dylib",
+					"/usr/local/lib/libboost_system-mt.dylib",
+					"/usr/local/lib/libboost_thread-mt.dylib",
+					"/usr/local/lib/libboost_date_time-mt.dylib",
+					"/usr/local/lib/libboost_unit_test_framework-mt.dylib",
+					/usr/local/lib/libopencv_stitching.3.4.1.dylib,
+					/usr/local/lib/libopencv_superres.3.4.1.dylib,
+					/usr/local/lib/libopencv_videostab.3.4.1.dylib,
+					/usr/local/lib/libopencv_aruco.3.4.1.dylib,
+					/usr/local/lib/libopencv_bgsegm.3.4.1.dylib,
+					/usr/local/lib/libopencv_bioinspired.3.4.1.dylib,
+					/usr/local/lib/libopencv_ccalib.3.4.1.dylib,
+					/usr/local/lib/libopencv_dnn_objdetect.3.4.1.dylib,
+					/usr/local/lib/libopencv_dpm.3.4.1.dylib,
+					/usr/local/lib/libopencv_face.3.4.1.dylib,
+					/usr/local/lib/libopencv_fuzzy.3.4.1.dylib,
+					/usr/local/lib/libopencv_hfs.3.4.1.dylib,
+					/usr/local/lib/libopencv_img_hash.3.4.1.dylib,
+					/usr/local/lib/libopencv_line_descriptor.3.4.1.dylib,
+					/usr/local/lib/libopencv_optflow.3.4.1.dylib,
+					/usr/local/lib/libopencv_reg.3.4.1.dylib,
+					/usr/local/lib/libopencv_rgbd.3.4.1.dylib,
+					/usr/local/lib/libopencv_saliency.3.4.1.dylib,
+					/usr/local/lib/libopencv_stereo.3.4.1.dylib,
+					/usr/local/lib/libopencv_structured_light.3.4.1.dylib,
+					/usr/local/lib/libopencv_surface_matching.3.4.1.dylib,
+					/usr/local/lib/libopencv_tracking.3.4.1.dylib,
+					/usr/local/lib/libopencv_xfeatures2d.3.4.1.dylib,
+					/usr/local/lib/libopencv_ximgproc.3.4.1.dylib,
+					/usr/local/lib/libopencv_xobjdetect.3.4.1.dylib,
+					/usr/local/lib/libopencv_xphoto.3.4.1.dylib,
+					/usr/local/lib/libopencv_shape.3.4.1.dylib,
+					/usr/local/lib/libopencv_photo.3.4.1.dylib,
+					/usr/local/lib/libopencv_datasets.3.4.1.dylib,
+					/usr/local/lib/libopencv_plot.3.4.1.dylib,
+					/usr/local/lib/libopencv_text.3.4.1.dylib,
+					/usr/local/lib/libopencv_dnn.3.4.1.dylib,
+					/usr/local/lib/libopencv_ml.3.4.1.dylib,
+					/usr/local/lib/libopencv_video.3.4.1.dylib,
+					/usr/local/lib/libopencv_calib3d.3.4.1.dylib,
+					/usr/local/lib/libopencv_features2d.3.4.1.dylib,
+					/usr/local/lib/libopencv_highgui.3.4.1.dylib,
+					/usr/local/lib/libopencv_videoio.3.4.1.dylib,
+					/usr/local/lib/libopencv_phase_unwrapping.3.4.1.dylib,
+					/usr/local/lib/libopencv_flann.3.4.1.dylib,
+					/usr/local/lib/libopencv_imgcodecs.3.4.1.dylib,
+					/usr/local/lib/libopencv_objdetect.3.4.1.dylib,
+					/usr/local/lib/libopencv_imgproc.3.4.1.dylib,
+					/usr/local/lib/libopencv_core.3.4.1.dylib,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = collisionChecker;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build/test;
+				SYSTEM_HEADER_SEARCH_PATHS = "/usr/local/include /usr/local/include/opencv";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		514183436E2E4A26B06BC011 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
-				SYMROOT = "/Users/davidcleres/DeepShape/libigl-example-project/build/build";
-			};
-			name = Debug;
-		};
-		3E395867A2B14184802F6A2D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/davidcleres/DeepShape/libigl-example-project/build";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = Release;
-		};
-		416C03FEF0C648DC9E010828 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/davidcleres/DeepShape/libigl-example-project/build";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = Release;
-		};
-		483DEAFF4AB14793A828B244 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = "";
-				EXECUTABLE_SUFFIX = "";
-				FRAMEWORK_SEARCH_PATHS = (/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks);
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glad/include","/Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/include");
-				INSTALL_PATH = "";
-				LIBRARY_SEARCH_PATHS = "";
-				OTHER_CPLUSPLUSFLAGS = "   '-std=gnu++11'  ";
-				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names       -framework OpenGL /Users/davidcleres/DeepShape/libigl-example-project/build/glad/Debug/libglad.a /Users/davidcleres/DeepShape/libigl-example-project/build/glfw/src/Debug/libglfw3.a -framework Cocoa -framework IOKit -framework CoreFoundation -framework CoreVideo";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = Polycubes_bin;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/davidcleres/DeepShape/libigl-example-project/build";
-				SYSTEM_HEADER_SEARCH_PATHS = ("/Users/davidcleres/DeepShape/libigl-example-project/libigl/shared/cmake/../../include","/Users/davidcleres/DeepShape/libigl-example-project/libigl/shared/cmake/../../external/eigen");
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = Debug;
-		};
-		4A3C8ABD043444DD997128F7 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/davidcleres/DeepShape/libigl-example-project/build";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build/build;
 			};
 			name = MinSizeRel;
 		};
-		5179AB490FCB45DC8325674A /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/include","/Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src","/Users/davidcleres/DeepShape/libigl-example-project/build/glfw/src");
-				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				OTHER_CFLAGS = "       -DNDEBUG -fPIC -Wall  ";
-				OTHER_LIBTOOLFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = glfw3;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/davidcleres/DeepShape/libigl-example-project/build/glfw/src";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		68D34907573740AA91CE70D9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/include","/Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src","/Users/davidcleres/DeepShape/libigl-example-project/build/glfw/src");
-				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				OTHER_CFLAGS = "   -fPIC -Wall  ";
-				OTHER_LIBTOOLFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = glfw3;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/davidcleres/DeepShape/libigl-example-project/build/glfw/src";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = Debug;
-		};
-		74547EAB40DC43D4A61497C7 /* RelWithDebInfo */ = {
+		62F9A8DAF5444CC9883D636B /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = "";
 				EXECUTABLE_SUFFIX = "";
-				FRAMEWORK_SEARCH_PATHS = (/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks);
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glad/include","/Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/include");
-				INSTALL_PATH = "";
-				LIBRARY_SEARCH_PATHS = "";
-				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=gnu++11'  ";
-				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names       -framework OpenGL /Users/davidcleres/DeepShape/libigl-example-project/build/glad/RelWithDebInfo/libglad.a /Users/davidcleres/DeepShape/libigl-example-project/build/glfw/src/RelWithDebInfo/libglfw3.a -framework Cocoa -framework IOKit -framework CoreFoundation -framework CoreVideo";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = Polycubes_bin;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/davidcleres/DeepShape/libigl-example-project/build";
-				SYSTEM_HEADER_SEARCH_PATHS = ("/Users/davidcleres/DeepShape/libigl-example-project/libigl/shared/cmake/../../include","/Users/davidcleres/DeepShape/libigl-example-project/libigl/shared/cmake/../../external/eigen");
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		7BC13F1E093848999255BF37 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/include","/Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src","/Users/davidcleres/DeepShape/libigl-example-project/build/glfw/src");
-				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				OTHER_CFLAGS = "    -DNDEBUG -fPIC -Wall  ";
-				OTHER_LIBTOOLFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = glfw3;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/davidcleres/DeepShape/libigl-example-project/build/glfw/src";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = Release;
-		};
-		9A2ED01E53AF4B70AD322B16 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = "";
-				EXECUTABLE_SUFFIX = "";
-				FRAMEWORK_SEARCH_PATHS = (/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks);
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = s;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glad/include","/Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/include");
+				HEADER_SEARCH_PATHS = /Users/davidcleres/DeepShape/Polycubing/src;
 				INSTALL_PATH = "";
-				LIBRARY_SEARCH_PATHS = "";
-				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++11'  ";
-				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names       -framework OpenGL /Users/davidcleres/DeepShape/libigl-example-project/build/glad/MinSizeRel/libglad.a /Users/davidcleres/DeepShape/libigl-example-project/build/glfw/src/MinSizeRel/libglfw3.a -framework Cocoa -framework IOKit -framework CoreFoundation -framework CoreVideo";
+				LD_RUNPATH_SEARCH_PATHS = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+				);
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lassimp",
+					"-lfcl",
+					"/usr/local/lib/libboost_atomic-mt.dylib",
+					"/usr/local/lib/libboost_system-mt.dylib",
+					"/usr/local/lib/libboost_thread-mt.dylib",
+					"/usr/local/lib/libboost_date_time-mt.dylib",
+					"/usr/local/lib/libboost_unit_test_framework-mt.dylib",
+					/usr/local/lib/libopencv_stitching.3.4.1.dylib,
+					/usr/local/lib/libopencv_superres.3.4.1.dylib,
+					/usr/local/lib/libopencv_videostab.3.4.1.dylib,
+					/usr/local/lib/libopencv_aruco.3.4.1.dylib,
+					/usr/local/lib/libopencv_bgsegm.3.4.1.dylib,
+					/usr/local/lib/libopencv_bioinspired.3.4.1.dylib,
+					/usr/local/lib/libopencv_ccalib.3.4.1.dylib,
+					/usr/local/lib/libopencv_dnn_objdetect.3.4.1.dylib,
+					/usr/local/lib/libopencv_dpm.3.4.1.dylib,
+					/usr/local/lib/libopencv_face.3.4.1.dylib,
+					/usr/local/lib/libopencv_fuzzy.3.4.1.dylib,
+					/usr/local/lib/libopencv_hfs.3.4.1.dylib,
+					/usr/local/lib/libopencv_img_hash.3.4.1.dylib,
+					/usr/local/lib/libopencv_line_descriptor.3.4.1.dylib,
+					/usr/local/lib/libopencv_optflow.3.4.1.dylib,
+					/usr/local/lib/libopencv_reg.3.4.1.dylib,
+					/usr/local/lib/libopencv_rgbd.3.4.1.dylib,
+					/usr/local/lib/libopencv_saliency.3.4.1.dylib,
+					/usr/local/lib/libopencv_stereo.3.4.1.dylib,
+					/usr/local/lib/libopencv_structured_light.3.4.1.dylib,
+					/usr/local/lib/libopencv_surface_matching.3.4.1.dylib,
+					/usr/local/lib/libopencv_tracking.3.4.1.dylib,
+					/usr/local/lib/libopencv_xfeatures2d.3.4.1.dylib,
+					/usr/local/lib/libopencv_ximgproc.3.4.1.dylib,
+					/usr/local/lib/libopencv_xobjdetect.3.4.1.dylib,
+					/usr/local/lib/libopencv_xphoto.3.4.1.dylib,
+					/usr/local/lib/libopencv_shape.3.4.1.dylib,
+					/usr/local/lib/libopencv_photo.3.4.1.dylib,
+					/usr/local/lib/libopencv_datasets.3.4.1.dylib,
+					/usr/local/lib/libopencv_plot.3.4.1.dylib,
+					/usr/local/lib/libopencv_text.3.4.1.dylib,
+					/usr/local/lib/libopencv_dnn.3.4.1.dylib,
+					/usr/local/lib/libopencv_ml.3.4.1.dylib,
+					/usr/local/lib/libopencv_video.3.4.1.dylib,
+					/usr/local/lib/libopencv_calib3d.3.4.1.dylib,
+					/usr/local/lib/libopencv_features2d.3.4.1.dylib,
+					/usr/local/lib/libopencv_highgui.3.4.1.dylib,
+					/usr/local/lib/libopencv_videoio.3.4.1.dylib,
+					/usr/local/lib/libopencv_phase_unwrapping.3.4.1.dylib,
+					/usr/local/lib/libopencv_flann.3.4.1.dylib,
+					/usr/local/lib/libopencv_imgcodecs.3.4.1.dylib,
+					/usr/local/lib/libopencv_objdetect.3.4.1.dylib,
+					/usr/local/lib/libopencv_imgproc.3.4.1.dylib,
+					/usr/local/lib/libopencv_core.3.4.1.dylib,
+				);
 				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = Polycubes_bin;
+				PRODUCT_NAME = collisionChecker;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/davidcleres/DeepShape/libigl-example-project/build";
-				SYSTEM_HEADER_SEARCH_PATHS = ("/Users/davidcleres/DeepShape/libigl-example-project/libigl/shared/cmake/../../include","/Users/davidcleres/DeepShape/libigl-example-project/libigl/shared/cmake/../../external/eigen");
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build/test;
+				SYSTEM_HEADER_SEARCH_PATHS = "/usr/local/include /usr/local/include/opencv";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = MinSizeRel;
 		};
-		9B13C5A7F72A404ABFB9C37E /* MinSizeRel */ = {
+		69E6991F96C54FFDA8EC8E53 /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/davidcleres/DeepShape/libigl-example-project/build";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build/build;
 			};
-			name = MinSizeRel;
+			name = RelWithDebInfo;
 		};
-		AD37492E42734A4AA4378F86 /* Release */ = {
+		6A0FD8AB1FC34D62A9B58041 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = "";
 				EXECUTABLE_SUFFIX = "";
-				FRAMEWORK_SEARCH_PATHS = (/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks);
+				FRAMEWORK_SEARCH_PATHS = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glad/include","/Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/include");
+				HEADER_SEARCH_PATHS = (
+					/Users/davidcleres/DeepShape/libigl/external/glad/include,
+					/Users/davidcleres/DeepShape/libigl/external/glfw/include,
+				);
 				INSTALL_PATH = "";
-				LIBRARY_SEARCH_PATHS = "";
-				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++11'  ";
-				OTHER_LDFLAGS = " -Wl,-search_paths_first -Wl,-headerpad_max_install_names       -framework OpenGL /Users/davidcleres/DeepShape/libigl-example-project/build/glad/Release/libglad.a /Users/davidcleres/DeepShape/libigl-example-project/build/glfw/src/Release/libglfw3.a -framework Cocoa -framework IOKit -framework CoreFoundation -framework CoreVideo";
+				LD_RUNPATH_SEARCH_PATHS = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
+					"'-std=gnu++11'",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lassimp",
+					"-lfcl",
+					"/usr/local/lib/libboost_atomic-mt.dylib",
+					"/usr/local/lib/libboost_system-mt.dylib",
+					"/usr/local/lib/libboost_thread-mt.dylib",
+					"/usr/local/lib/libboost_date_time-mt.dylib",
+					"/usr/local/lib/libboost_unit_test_framework-mt.dylib",
+					/usr/local/lib/libopencv_stitching.3.4.1.dylib,
+					/usr/local/lib/libopencv_superres.3.4.1.dylib,
+					/usr/local/lib/libopencv_videostab.3.4.1.dylib,
+					/usr/local/lib/libopencv_aruco.3.4.1.dylib,
+					/usr/local/lib/libopencv_bgsegm.3.4.1.dylib,
+					/usr/local/lib/libopencv_bioinspired.3.4.1.dylib,
+					/usr/local/lib/libopencv_ccalib.3.4.1.dylib,
+					/usr/local/lib/libopencv_dnn_objdetect.3.4.1.dylib,
+					/usr/local/lib/libopencv_dpm.3.4.1.dylib,
+					/usr/local/lib/libopencv_face.3.4.1.dylib,
+					/usr/local/lib/libopencv_fuzzy.3.4.1.dylib,
+					/usr/local/lib/libopencv_hfs.3.4.1.dylib,
+					/usr/local/lib/libopencv_img_hash.3.4.1.dylib,
+					/usr/local/lib/libopencv_line_descriptor.3.4.1.dylib,
+					/usr/local/lib/libopencv_optflow.3.4.1.dylib,
+					/usr/local/lib/libopencv_reg.3.4.1.dylib,
+					/usr/local/lib/libopencv_rgbd.3.4.1.dylib,
+					/usr/local/lib/libopencv_saliency.3.4.1.dylib,
+					/usr/local/lib/libopencv_stereo.3.4.1.dylib,
+					/usr/local/lib/libopencv_structured_light.3.4.1.dylib,
+					/usr/local/lib/libopencv_surface_matching.3.4.1.dylib,
+					/usr/local/lib/libopencv_tracking.3.4.1.dylib,
+					/usr/local/lib/libopencv_xfeatures2d.3.4.1.dylib,
+					/usr/local/lib/libopencv_ximgproc.3.4.1.dylib,
+					/usr/local/lib/libopencv_xobjdetect.3.4.1.dylib,
+					/usr/local/lib/libopencv_xphoto.3.4.1.dylib,
+					"-framework",
+					OpenGL,
+					/Users/davidcleres/DeepShape/Polycubing/build/glad/Release/libglad.a,
+					/Users/davidcleres/DeepShape/Polycubing/build/glfw/src/Release/libglfw3.a,
+					"-framework",
+					Cocoa,
+					"-framework",
+					IOKit,
+					"-framework",
+					CoreFoundation,
+					"-framework",
+					CoreVideo,
+					/usr/local/lib/libopencv_shape.3.4.1.dylib,
+					/usr/local/lib/libopencv_photo.3.4.1.dylib,
+					/usr/local/lib/libopencv_datasets.3.4.1.dylib,
+					/usr/local/lib/libopencv_plot.3.4.1.dylib,
+					/usr/local/lib/libopencv_text.3.4.1.dylib,
+					/usr/local/lib/libopencv_dnn.3.4.1.dylib,
+					/usr/local/lib/libopencv_ml.3.4.1.dylib,
+					/usr/local/lib/libopencv_video.3.4.1.dylib,
+					/usr/local/lib/libopencv_calib3d.3.4.1.dylib,
+					/usr/local/lib/libopencv_features2d.3.4.1.dylib,
+					/usr/local/lib/libopencv_highgui.3.4.1.dylib,
+					/usr/local/lib/libopencv_videoio.3.4.1.dylib,
+					/usr/local/lib/libopencv_phase_unwrapping.3.4.1.dylib,
+					/usr/local/lib/libopencv_flann.3.4.1.dylib,
+					/usr/local/lib/libopencv_imgcodecs.3.4.1.dylib,
+					/usr/local/lib/libopencv_objdetect.3.4.1.dylib,
+					/usr/local/lib/libopencv_imgproc.3.4.1.dylib,
+					/usr/local/lib/libopencv_core.3.4.1.dylib,
+				);
 				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = Polycubes_bin;
+				PRODUCT_NAME = voxelizer;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/davidcleres/DeepShape/libigl-example-project/build";
-				SYSTEM_HEADER_SEARCH_PATHS = ("/Users/davidcleres/DeepShape/libigl-example-project/libigl/shared/cmake/../../include","/Users/davidcleres/DeepShape/libigl-example-project/libigl/shared/cmake/../../external/eigen");
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build/bin;
+				SYSTEM_HEADER_SEARCH_PATHS = "/usr/local/include /Users/davidcleres/DeepShape/libigl/shared/cmake/../../include /Users/davidcleres/DeepShape/libigl/shared/cmake/../../external/eigen /usr/local/include/opencv";
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = Release;
 		};
-		B053A8FFFB174184B0E4D796 /* Debug */ = {
+		7A5B84DB83524941A68B8F9E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build/build;
+			};
+			name = Debug;
+		};
+		85208661CACE49E1B69FB278 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build/build;
+			};
+			name = Release;
+		};
+		8B8395F008F74EDB84CF2068 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					_GLFW_USE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/davidcleres/DeepShape/libigl/external/glfw/include,
+					/Users/davidcleres/DeepShape/libigl/external/glfw/src,
+					/Users/davidcleres/DeepShape/Polycubing/build/glfw/src,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = (
+					"-fPIC",
+					"-Wall",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build/glfw/src;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		92A763405BDE4F42BE39F605 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/davidcleres/DeepShape/libigl/external/glad/include,
+					/Users/davidcleres/DeepShape/libigl/external/glfw/include,
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
+					"'-std=gnu++11'",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lassimp",
+					"-lfcl",
+					"/usr/local/lib/libboost_atomic-mt.dylib",
+					"/usr/local/lib/libboost_system-mt.dylib",
+					"/usr/local/lib/libboost_thread-mt.dylib",
+					"/usr/local/lib/libboost_date_time-mt.dylib",
+					"/usr/local/lib/libboost_unit_test_framework-mt.dylib",
+					/usr/local/lib/libopencv_stitching.3.4.1.dylib,
+					/usr/local/lib/libopencv_superres.3.4.1.dylib,
+					/usr/local/lib/libopencv_videostab.3.4.1.dylib,
+					/usr/local/lib/libopencv_aruco.3.4.1.dylib,
+					/usr/local/lib/libopencv_bgsegm.3.4.1.dylib,
+					/usr/local/lib/libopencv_bioinspired.3.4.1.dylib,
+					/usr/local/lib/libopencv_ccalib.3.4.1.dylib,
+					/usr/local/lib/libopencv_dnn_objdetect.3.4.1.dylib,
+					/usr/local/lib/libopencv_dpm.3.4.1.dylib,
+					/usr/local/lib/libopencv_face.3.4.1.dylib,
+					/usr/local/lib/libopencv_fuzzy.3.4.1.dylib,
+					/usr/local/lib/libopencv_hfs.3.4.1.dylib,
+					/usr/local/lib/libopencv_img_hash.3.4.1.dylib,
+					/usr/local/lib/libopencv_line_descriptor.3.4.1.dylib,
+					/usr/local/lib/libopencv_optflow.3.4.1.dylib,
+					/usr/local/lib/libopencv_reg.3.4.1.dylib,
+					/usr/local/lib/libopencv_rgbd.3.4.1.dylib,
+					/usr/local/lib/libopencv_saliency.3.4.1.dylib,
+					/usr/local/lib/libopencv_stereo.3.4.1.dylib,
+					/usr/local/lib/libopencv_structured_light.3.4.1.dylib,
+					/usr/local/lib/libopencv_surface_matching.3.4.1.dylib,
+					/usr/local/lib/libopencv_tracking.3.4.1.dylib,
+					/usr/local/lib/libopencv_xfeatures2d.3.4.1.dylib,
+					/usr/local/lib/libopencv_ximgproc.3.4.1.dylib,
+					/usr/local/lib/libopencv_xobjdetect.3.4.1.dylib,
+					/usr/local/lib/libopencv_xphoto.3.4.1.dylib,
+					"-framework",
+					OpenGL,
+					/Users/davidcleres/DeepShape/Polycubing/build/glad/RelWithDebInfo/libglad.a,
+					/Users/davidcleres/DeepShape/Polycubing/build/glfw/src/RelWithDebInfo/libglfw3.a,
+					"-framework",
+					Cocoa,
+					"-framework",
+					IOKit,
+					"-framework",
+					CoreFoundation,
+					"-framework",
+					CoreVideo,
+					/usr/local/lib/libopencv_shape.3.4.1.dylib,
+					/usr/local/lib/libopencv_photo.3.4.1.dylib,
+					/usr/local/lib/libopencv_datasets.3.4.1.dylib,
+					/usr/local/lib/libopencv_plot.3.4.1.dylib,
+					/usr/local/lib/libopencv_text.3.4.1.dylib,
+					/usr/local/lib/libopencv_dnn.3.4.1.dylib,
+					/usr/local/lib/libopencv_ml.3.4.1.dylib,
+					/usr/local/lib/libopencv_video.3.4.1.dylib,
+					/usr/local/lib/libopencv_calib3d.3.4.1.dylib,
+					/usr/local/lib/libopencv_features2d.3.4.1.dylib,
+					/usr/local/lib/libopencv_highgui.3.4.1.dylib,
+					/usr/local/lib/libopencv_videoio.3.4.1.dylib,
+					/usr/local/lib/libopencv_phase_unwrapping.3.4.1.dylib,
+					/usr/local/lib/libopencv_flann.3.4.1.dylib,
+					/usr/local/lib/libopencv_imgcodecs.3.4.1.dylib,
+					/usr/local/lib/libopencv_objdetect.3.4.1.dylib,
+					/usr/local/lib/libopencv_imgproc.3.4.1.dylib,
+					/usr/local/lib/libopencv_core.3.4.1.dylib,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = voxelizer;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build/bin;
+				SYSTEM_HEADER_SEARCH_PATHS = "/usr/local/include /Users/davidcleres/DeepShape/libigl/shared/cmake/../../include /Users/davidcleres/DeepShape/libigl/shared/cmake/../../external/eigen /usr/local/include/opencv";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		96E2551127AC47E493D7220E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ALL_BUILD;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/davidcleres/DeepShape/libigl-example-project/build";
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build;
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
-			name = Debug;
+			name = Release;
 		};
-		B1EEEE1BF5634D6DA127E7B7 /* MinSizeRel */ = {
+		970737CEF2C345CF9C3911C6 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -932,9 +1389,9 @@ exit 0";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = s;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glad/include");
+				HEADER_SEARCH_PATHS = /Users/davidcleres/DeepShape/libigl/external/glad/include;
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
 				OTHER_CFLAGS = "    -DNDEBUG  ";
@@ -942,42 +1399,607 @@ exit 0";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = glad;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/davidcleres/DeepShape/libigl-example-project/build/glad";
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build/glad;
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = MinSizeRel;
 		};
-		B278F1409AA74B8AA2BEE77F /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
-				SYMROOT = "/Users/davidcleres/DeepShape/libigl-example-project/build/build";
-			};
-			name = MinSizeRel;
-		};
-		DE86D01A4E20484DBEA26160 /* Debug */ = {
+		99C4F483A0014761A8C3B6B3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		9E77BC7ACAD64C80B4F7BD14 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/davidcleres/DeepShape/Polycubing/src;
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+				);
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lassimp",
+					"-lfcl",
+					"/usr/local/lib/libboost_atomic-mt.dylib",
+					"/usr/local/lib/libboost_system-mt.dylib",
+					"/usr/local/lib/libboost_thread-mt.dylib",
+					"/usr/local/lib/libboost_date_time-mt.dylib",
+					"/usr/local/lib/libboost_unit_test_framework-mt.dylib",
+					/usr/local/lib/libopencv_stitching.3.4.1.dylib,
+					/usr/local/lib/libopencv_superres.3.4.1.dylib,
+					/usr/local/lib/libopencv_videostab.3.4.1.dylib,
+					/usr/local/lib/libopencv_aruco.3.4.1.dylib,
+					/usr/local/lib/libopencv_bgsegm.3.4.1.dylib,
+					/usr/local/lib/libopencv_bioinspired.3.4.1.dylib,
+					/usr/local/lib/libopencv_ccalib.3.4.1.dylib,
+					/usr/local/lib/libopencv_dnn_objdetect.3.4.1.dylib,
+					/usr/local/lib/libopencv_dpm.3.4.1.dylib,
+					/usr/local/lib/libopencv_face.3.4.1.dylib,
+					/usr/local/lib/libopencv_fuzzy.3.4.1.dylib,
+					/usr/local/lib/libopencv_hfs.3.4.1.dylib,
+					/usr/local/lib/libopencv_img_hash.3.4.1.dylib,
+					/usr/local/lib/libopencv_line_descriptor.3.4.1.dylib,
+					/usr/local/lib/libopencv_optflow.3.4.1.dylib,
+					/usr/local/lib/libopencv_reg.3.4.1.dylib,
+					/usr/local/lib/libopencv_rgbd.3.4.1.dylib,
+					/usr/local/lib/libopencv_saliency.3.4.1.dylib,
+					/usr/local/lib/libopencv_stereo.3.4.1.dylib,
+					/usr/local/lib/libopencv_structured_light.3.4.1.dylib,
+					/usr/local/lib/libopencv_surface_matching.3.4.1.dylib,
+					/usr/local/lib/libopencv_tracking.3.4.1.dylib,
+					/usr/local/lib/libopencv_xfeatures2d.3.4.1.dylib,
+					/usr/local/lib/libopencv_ximgproc.3.4.1.dylib,
+					/usr/local/lib/libopencv_xobjdetect.3.4.1.dylib,
+					/usr/local/lib/libopencv_xphoto.3.4.1.dylib,
+					/usr/local/lib/libopencv_shape.3.4.1.dylib,
+					/usr/local/lib/libopencv_photo.3.4.1.dylib,
+					/usr/local/lib/libopencv_datasets.3.4.1.dylib,
+					/usr/local/lib/libopencv_plot.3.4.1.dylib,
+					/usr/local/lib/libopencv_text.3.4.1.dylib,
+					/usr/local/lib/libopencv_dnn.3.4.1.dylib,
+					/usr/local/lib/libopencv_ml.3.4.1.dylib,
+					/usr/local/lib/libopencv_video.3.4.1.dylib,
+					/usr/local/lib/libopencv_calib3d.3.4.1.dylib,
+					/usr/local/lib/libopencv_features2d.3.4.1.dylib,
+					/usr/local/lib/libopencv_highgui.3.4.1.dylib,
+					/usr/local/lib/libopencv_videoio.3.4.1.dylib,
+					/usr/local/lib/libopencv_phase_unwrapping.3.4.1.dylib,
+					/usr/local/lib/libopencv_flann.3.4.1.dylib,
+					/usr/local/lib/libopencv_imgcodecs.3.4.1.dylib,
+					/usr/local/lib/libopencv_objdetect.3.4.1.dylib,
+					/usr/local/lib/libopencv_imgproc.3.4.1.dylib,
+					/usr/local/lib/libopencv_core.3.4.1.dylib,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = collisionChecker;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build/test;
+				SYSTEM_HEADER_SEARCH_PATHS = "/usr/local/include /usr/local/include/opencv";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		A01D8FDF4FB0496CB2CFAD85 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					_GLFW_USE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/davidcleres/DeepShape/libigl/external/glfw/include,
+					/Users/davidcleres/DeepShape/libigl/external/glfw/src,
+					/Users/davidcleres/DeepShape/Polycubing/build/glfw/src,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-Wall",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build/glfw/src;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		AD8D1B71FF824E2E945D07E6 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/davidcleres/DeepShape/libigl/external/glad/include,
+					/Users/davidcleres/DeepShape/libigl/external/glfw/include,
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
+					"'-std=gnu++11'",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lassimp",
+					"-lfcl",
+					"/usr/local/lib/libboost_atomic-mt.dylib",
+					"/usr/local/lib/libboost_system-mt.dylib",
+					"/usr/local/lib/libboost_thread-mt.dylib",
+					"/usr/local/lib/libboost_date_time-mt.dylib",
+					"/usr/local/lib/libboost_unit_test_framework-mt.dylib",
+					/usr/local/lib/libopencv_stitching.3.4.1.dylib,
+					/usr/local/lib/libopencv_superres.3.4.1.dylib,
+					/usr/local/lib/libopencv_videostab.3.4.1.dylib,
+					/usr/local/lib/libopencv_aruco.3.4.1.dylib,
+					/usr/local/lib/libopencv_bgsegm.3.4.1.dylib,
+					/usr/local/lib/libopencv_bioinspired.3.4.1.dylib,
+					/usr/local/lib/libopencv_ccalib.3.4.1.dylib,
+					/usr/local/lib/libopencv_dnn_objdetect.3.4.1.dylib,
+					/usr/local/lib/libopencv_dpm.3.4.1.dylib,
+					/usr/local/lib/libopencv_face.3.4.1.dylib,
+					/usr/local/lib/libopencv_fuzzy.3.4.1.dylib,
+					/usr/local/lib/libopencv_hfs.3.4.1.dylib,
+					/usr/local/lib/libopencv_img_hash.3.4.1.dylib,
+					/usr/local/lib/libopencv_line_descriptor.3.4.1.dylib,
+					/usr/local/lib/libopencv_optflow.3.4.1.dylib,
+					/usr/local/lib/libopencv_reg.3.4.1.dylib,
+					/usr/local/lib/libopencv_rgbd.3.4.1.dylib,
+					/usr/local/lib/libopencv_saliency.3.4.1.dylib,
+					/usr/local/lib/libopencv_stereo.3.4.1.dylib,
+					/usr/local/lib/libopencv_structured_light.3.4.1.dylib,
+					/usr/local/lib/libopencv_surface_matching.3.4.1.dylib,
+					/usr/local/lib/libopencv_tracking.3.4.1.dylib,
+					/usr/local/lib/libopencv_xfeatures2d.3.4.1.dylib,
+					/usr/local/lib/libopencv_ximgproc.3.4.1.dylib,
+					/usr/local/lib/libopencv_xobjdetect.3.4.1.dylib,
+					/usr/local/lib/libopencv_xphoto.3.4.1.dylib,
+					"-framework",
+					OpenGL,
+					/Users/davidcleres/DeepShape/Polycubing/build/glad/MinSizeRel/libglad.a,
+					/Users/davidcleres/DeepShape/Polycubing/build/glfw/src/MinSizeRel/libglfw3.a,
+					"-framework",
+					Cocoa,
+					"-framework",
+					IOKit,
+					"-framework",
+					CoreFoundation,
+					"-framework",
+					CoreVideo,
+					/usr/local/lib/libopencv_shape.3.4.1.dylib,
+					/usr/local/lib/libopencv_photo.3.4.1.dylib,
+					/usr/local/lib/libopencv_datasets.3.4.1.dylib,
+					/usr/local/lib/libopencv_plot.3.4.1.dylib,
+					/usr/local/lib/libopencv_text.3.4.1.dylib,
+					/usr/local/lib/libopencv_dnn.3.4.1.dylib,
+					/usr/local/lib/libopencv_ml.3.4.1.dylib,
+					/usr/local/lib/libopencv_video.3.4.1.dylib,
+					/usr/local/lib/libopencv_calib3d.3.4.1.dylib,
+					/usr/local/lib/libopencv_features2d.3.4.1.dylib,
+					/usr/local/lib/libopencv_highgui.3.4.1.dylib,
+					/usr/local/lib/libopencv_videoio.3.4.1.dylib,
+					/usr/local/lib/libopencv_phase_unwrapping.3.4.1.dylib,
+					/usr/local/lib/libopencv_flann.3.4.1.dylib,
+					/usr/local/lib/libopencv_imgcodecs.3.4.1.dylib,
+					/usr/local/lib/libopencv_objdetect.3.4.1.dylib,
+					/usr/local/lib/libopencv_imgproc.3.4.1.dylib,
+					/usr/local/lib/libopencv_core.3.4.1.dylib,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = voxelizer;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build/bin;
+				SYSTEM_HEADER_SEARCH_PATHS = "/usr/local/include /Users/davidcleres/DeepShape/libigl/shared/cmake/../../include /Users/davidcleres/DeepShape/libigl/shared/cmake/../../external/eigen /usr/local/include/opencv";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		C52BBB3405B646A6855ED286 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		CAD703ECB43C49F19BE8C7BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = /Users/davidcleres/DeepShape/libigl/external/glad/include;
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "    -DNDEBUG  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glad;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build/glad;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		D3B730B2BCF94EF1A100B22E /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		D83A83CCFFAC4696AEA46CD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		DA9DEB758F8742A1BC61C1AD /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ZERO_CHECK;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/davidcleres/DeepShape/libigl-example-project/build";
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build;
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		E52F2B39F2E54DDBB17BD9DB /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					_GLFW_USE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/davidcleres/DeepShape/libigl/external/glfw/include,
+					/Users/davidcleres/DeepShape/libigl/external/glfw/src,
+					/Users/davidcleres/DeepShape/Polycubing/build/glfw/src,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-Wall",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build/glfw/src;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		E6F868EEBCE54539A4EDD7B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Users/davidcleres/DeepShape/libigl/external/glad/include,
+					/Users/davidcleres/DeepShape/libigl/external/glfw/include,
+				);
+				INSTALL_PATH = "";
+				LD_RUNPATH_SEARCH_PATHS = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = (
+					"/usr/local/lib/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)",
+					/usr/local/lib,
+				);
+				OTHER_CPLUSPLUSFLAGS = "   '-std=gnu++11'  ";
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-lassimp",
+					"-lfcl",
+					"/usr/local/lib/libboost_atomic-mt.dylib",
+					"/usr/local/lib/libboost_system-mt.dylib",
+					"/usr/local/lib/libboost_thread-mt.dylib",
+					"/usr/local/lib/libboost_date_time-mt.dylib",
+					"/usr/local/lib/libboost_unit_test_framework-mt.dylib",
+					/usr/local/lib/libopencv_stitching.3.4.1.dylib,
+					/usr/local/lib/libopencv_superres.3.4.1.dylib,
+					/usr/local/lib/libopencv_videostab.3.4.1.dylib,
+					/usr/local/lib/libopencv_aruco.3.4.1.dylib,
+					/usr/local/lib/libopencv_bgsegm.3.4.1.dylib,
+					/usr/local/lib/libopencv_bioinspired.3.4.1.dylib,
+					/usr/local/lib/libopencv_ccalib.3.4.1.dylib,
+					/usr/local/lib/libopencv_dnn_objdetect.3.4.1.dylib,
+					/usr/local/lib/libopencv_dpm.3.4.1.dylib,
+					/usr/local/lib/libopencv_face.3.4.1.dylib,
+					/usr/local/lib/libopencv_fuzzy.3.4.1.dylib,
+					/usr/local/lib/libopencv_hfs.3.4.1.dylib,
+					/usr/local/lib/libopencv_img_hash.3.4.1.dylib,
+					/usr/local/lib/libopencv_line_descriptor.3.4.1.dylib,
+					/usr/local/lib/libopencv_optflow.3.4.1.dylib,
+					/usr/local/lib/libopencv_reg.3.4.1.dylib,
+					/usr/local/lib/libopencv_rgbd.3.4.1.dylib,
+					/usr/local/lib/libopencv_saliency.3.4.1.dylib,
+					/usr/local/lib/libopencv_stereo.3.4.1.dylib,
+					/usr/local/lib/libopencv_structured_light.3.4.1.dylib,
+					/usr/local/lib/libopencv_surface_matching.3.4.1.dylib,
+					/usr/local/lib/libopencv_tracking.3.4.1.dylib,
+					/usr/local/lib/libopencv_xfeatures2d.3.4.1.dylib,
+					/usr/local/lib/libopencv_ximgproc.3.4.1.dylib,
+					/usr/local/lib/libopencv_xobjdetect.3.4.1.dylib,
+					/usr/local/lib/libopencv_xphoto.3.4.1.dylib,
+					"-framework",
+					OpenGL,
+					/Users/davidcleres/DeepShape/Polycubing/build/glad/Debug/libglad.a,
+					/Users/davidcleres/DeepShape/Polycubing/build/glfw/src/Debug/libglfw3.a,
+					"-framework",
+					Cocoa,
+					"-framework",
+					IOKit,
+					"-framework",
+					CoreFoundation,
+					"-framework",
+					CoreVideo,
+					/usr/local/lib/libopencv_shape.3.4.1.dylib,
+					/usr/local/lib/libopencv_photo.3.4.1.dylib,
+					/usr/local/lib/libopencv_datasets.3.4.1.dylib,
+					/usr/local/lib/libopencv_plot.3.4.1.dylib,
+					/usr/local/lib/libopencv_text.3.4.1.dylib,
+					/usr/local/lib/libopencv_dnn.3.4.1.dylib,
+					/usr/local/lib/libopencv_ml.3.4.1.dylib,
+					/usr/local/lib/libopencv_video.3.4.1.dylib,
+					/usr/local/lib/libopencv_calib3d.3.4.1.dylib,
+					/usr/local/lib/libopencv_features2d.3.4.1.dylib,
+					/usr/local/lib/libopencv_highgui.3.4.1.dylib,
+					/usr/local/lib/libopencv_videoio.3.4.1.dylib,
+					/usr/local/lib/libopencv_phase_unwrapping.3.4.1.dylib,
+					/usr/local/lib/libopencv_flann.3.4.1.dylib,
+					/usr/local/lib/libopencv_imgcodecs.3.4.1.dylib,
+					/usr/local/lib/libopencv_objdetect.3.4.1.dylib,
+					/usr/local/lib/libopencv_imgproc.3.4.1.dylib,
+					/usr/local/lib/libopencv_core.3.4.1.dylib,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = voxelizer;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build/bin;
+				SYSTEM_HEADER_SEARCH_PATHS = "/usr/local/include /Users/davidcleres/DeepShape/libigl/shared/cmake/../../include /Users/davidcleres/DeepShape/libigl/shared/cmake/../../external/eigen /usr/local/include/opencv";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = Debug;
 		};
-		DE96DDEF5105437FB9ACD703 /* Debug */ = {
+		E999E1FF3DD44D698F7F75D0 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		EEEE396C22E4412B8A678463 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		FAF5B1E5B116473DB4C36AEF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -986,9 +2008,9 @@ exit 0";
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glad/include");
+				HEADER_SEARCH_PATHS = /Users/davidcleres/DeepShape/libigl/external/glad/include;
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
 				OTHER_CFLAGS = "    ";
@@ -996,141 +2018,109 @@ exit 0";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = glad;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/davidcleres/DeepShape/libigl-example-project/build/glad";
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build/glad;
 				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
 			};
 			name = Debug;
-		};
-		DFA8A8A395944DA191BDB0B2 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
-				SYMROOT = "/Users/davidcleres/DeepShape/libigl-example-project/build/build";
-			};
-			name = RelWithDebInfo;
-		};
-		E5E1D9C55A364F31B44CC5AA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glad/include");
-				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				OTHER_CFLAGS = "    -DNDEBUG  ";
-				OTHER_LIBTOOLFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = glad;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/davidcleres/DeepShape/libigl-example-project/build/glad";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = Release;
-		};
-		F485B70E4AAA48458B52F75E /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = s;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/include","/Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src","/Users/davidcleres/DeepShape/libigl-example-project/build/glfw/src");
-				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				OTHER_CFLAGS = "    -DNDEBUG -fPIC -Wall  ";
-				OTHER_LIBTOOLFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = glfw3;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/davidcleres/DeepShape/libigl-example-project/build/glfw/src";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = MinSizeRel;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		010A42618E46434A90E85349 /* Build configuration list for PBXNativeTarget "glad" */ = {
+		08821CD577FE4197B9A08854 /* Build configuration list for PBXProject "Polycubes" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DE96DDEF5105437FB9ACD703 /* Debug */,
-				E5E1D9C55A364F31B44CC5AA /* Release */,
-				B1EEEE1BF5634D6DA127E7B7 /* MinSizeRel */,
-				1358951290334608B7479375 /* RelWithDebInfo */,
+				7A5B84DB83524941A68B8F9E /* Debug */,
+				85208661CACE49E1B69FB278 /* Release */,
+				514183436E2E4A26B06BC011 /* MinSizeRel */,
+				69E6991F96C54FFDA8EC8E53 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		07279D71217741B19928653D /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+		0C4743071B144093B28A81C6 /* Build configuration list for PBXNativeTarget "collisionChecker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DE86D01A4E20484DBEA26160 /* Debug */,
-				3E395867A2B14184802F6A2D /* Release */,
-				4A3C8ABD043444DD997128F7 /* MinSizeRel */,
-				1C20CFB595594A8FA8D81C11 /* RelWithDebInfo */,
+				1D36E0C69B114F8D840A0DB5 /* Debug */,
+				4872507BCF8749F4BB1C6F2E /* Release */,
+				62F9A8DAF5444CC9883D636B /* MinSizeRel */,
+				9E77BC7ACAD64C80B4F7BD14 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		76AF14C19CDA462CA1E05FEE /* Build configuration list for PBXProject "Polycubes" */ = {
+		16E013AF662A4880A4CE0427 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				329AA58F6CD44B4C8DD223D4 /* Debug */,
-				01893E49636A40AF9BD5906D /* Release */,
-				B278F1409AA74B8AA2BEE77F /* MinSizeRel */,
-				DFA8A8A395944DA191BDB0B2 /* RelWithDebInfo */,
+				D83A83CCFFAC4696AEA46CD2 /* Debug */,
+				96E2551127AC47E493D7220E /* Release */,
+				E999E1FF3DD44D698F7F75D0 /* MinSizeRel */,
+				034D354461D34DC1BDFFAFBC /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		AFA19C44D75D41F7A4B49028 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+		1C2662F2B651443AAD6DA62C /* Build configuration list for PBXNativeTarget "glfw" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B053A8FFFB174184B0E4D796 /* Debug */,
-				416C03FEF0C648DC9E010828 /* Release */,
-				9B13C5A7F72A404ABFB9C37E /* MinSizeRel */,
-				0B98BFD37E7D4A52B47B7BCF /* RelWithDebInfo */,
+				8B8395F008F74EDB84CF2068 /* Debug */,
+				06CE8DB23E8C426A8C1D015A /* Release */,
+				A01D8FDF4FB0496CB2CFAD85 /* MinSizeRel */,
+				E52F2B39F2E54DDBB17BD9DB /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		EC141A1770EA49CB98DF8CEF /* Build configuration list for PBXNativeTarget "glfw" */ = {
+		1FBE28A2A3174A619ECEE9E2 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				68D34907573740AA91CE70D9 /* Debug */,
-				7BC13F1E093848999255BF37 /* Release */,
-				F485B70E4AAA48458B52F75E /* MinSizeRel */,
-				5179AB490FCB45DC8325674A /* RelWithDebInfo */,
+				EEEE396C22E4412B8A678463 /* Debug */,
+				3D1601AB7BD84D75941EBF59 /* Release */,
+				1F388B1EF57548A185D79BDB /* MinSizeRel */,
+				DA9DEB758F8742A1BC61C1AD /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		F0E126DB5D50418AB4FE70CB /* Build configuration list for PBXNativeTarget "Polycubes_bin" */ = {
+		717E3D28907A4945BFC9AB5B /* Build configuration list for PBXNativeTarget "voxelizer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				483DEAFF4AB14793A828B244 /* Debug */,
-				AD37492E42734A4AA4378F86 /* Release */,
-				9A2ED01E53AF4B70AD322B16 /* MinSizeRel */,
-				74547EAB40DC43D4A61497C7 /* RelWithDebInfo */,
+				E6F868EEBCE54539A4EDD7B9 /* Debug */,
+				6A0FD8AB1FC34D62A9B58041 /* Release */,
+				AD8D1B71FF824E2E945D07E6 /* MinSizeRel */,
+				92A763405BDE4F42BE39F605 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		91C68E36397644AC8BDFA2AE /* Build configuration list for PBXNativeTarget "glad" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAF5B1E5B116473DB4C36AEF /* Debug */,
+				CAD703ECB43C49F19BE8C7BA /* Release */,
+				970737CEF2C345CF9C3911C6 /* MinSizeRel */,
+				0AB06C5465734AAB9DE14C8E /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C581961F71E943F9BFF9C08B /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C52BBB3405B646A6855ED286 /* Debug */,
+				99C4F483A0014761A8C3B6B3 /* Release */,
+				D3B730B2BCF94EF1A100B22E /* MinSizeRel */,
+				0E112CAF63D94EE6A67178EA /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 996A262903FB4C339445F32A /* Project object */;
+	rootObject = 18D4D855F0924D4C9D3B484C /* Project object */;
 }

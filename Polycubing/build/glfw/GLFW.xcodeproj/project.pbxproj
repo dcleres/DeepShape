@@ -7,85 +7,96 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		0D251FBAE37143FD95DAEB9B /* ALL_BUILD */ = {
+		B5625670954F4B16A9E60B47 /* RUN_TESTS */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 7B241DADC1E1409592F2DE7B /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildConfigurationList = 761C4D009E064563841229FA /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */;
 			buildPhases = (
-				BFB652C8340644028442FB86 /* CMake Rules */,
+				61B96DCCCD31456A9DBC691A /* CMake PostBuild Rules */,
 			);
 			dependencies = (
-				69AB9B7FC5904C79913283B5 /* PBXTargetDependency */,
-				C4ADB3A85F4847FB9D636CDB /* PBXTargetDependency */,
 			);
-			name = ALL_BUILD;
-			productName = ALL_BUILD;
+			name = RUN_TESTS;
+			productName = RUN_TESTS;
 		};
-		A5299D7A49244EECAF74FB1E /* ZERO_CHECK */ = {
+		C1CC5F9FA2A5408F8987B8B9 /* ZERO_CHECK */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 3BA68C635B3742C7BAEDF000 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildConfigurationList = 130AE857D5994DE68FE3C263 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
 			buildPhases = (
-				9F38CD5F897C47D2A3A6EB0D /* CMake Rules */,
+				C963B2AD6F534832B6351F5F /* CMake Rules */,
 			);
 			dependencies = (
 			);
 			name = ZERO_CHECK;
 			productName = ZERO_CHECK;
 		};
+		ED9128F7CC6441D7AC34B46E /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 8C5A867C6AFB4518ABBD9F79 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				0BEAFAC7CC3A4A34A40A6C3C /* CMake Rules */,
+			);
+			dependencies = (
+				11178470AFA94DA3B67D4644 /* PBXTargetDependency */,
+				18F82F62580E4C8AB1DD5323 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		1336FBC2180C41D39C687A2B /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/mappings.h */ = {isa = PBXBuildFile; fileRef = 1F9884DCB3404638A094E404 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/mappings.h */; };
-		19A408A2014A49368860232E /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/osmesa_context.h */ = {isa = PBXBuildFile; fileRef = B89206392E4246AF90920C88 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/osmesa_context.h */; };
-		1AE083C389D94E658ABB25BF /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/egl_context.h */ = {isa = PBXBuildFile; fileRef = F334559E2AF84281ACD5B7FB /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/egl_context.h */; };
-		2398D7ED9E87457FB1187917 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/monitor.c */ = {isa = PBXBuildFile; fileRef = BD4131D89B2A49909D35F19A /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/monitor.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
-		2F205A3BCBF749B79AA5E13C /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_init.m */ = {isa = PBXBuildFile; fileRef = 3B91293F258646D6BB2DD460 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_init.m */; };
-		37B91B8A913B4F6191D23F73 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/init.c */ = {isa = PBXBuildFile; fileRef = CAC2FE86AAB244AE9698C5BC /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/init.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
-		3996BEF06BC84412A4AA41A7 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/include/GLFW/glfw3.h */ = {isa = PBXBuildFile; fileRef = 51A9386705B241B4969FAB54 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/include/GLFW/glfw3.h */; };
-		4E42699EA9304FEFBA0DDB53 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/egl_context.c */ = {isa = PBXBuildFile; fileRef = F940F7FBCC8B46B8940ADA7B /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/egl_context.c */; };
-		6399480B7D4D4AA38EB0EB3A /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_platform.h */ = {isa = PBXBuildFile; fileRef = AF7AD1ADD592463AB19C81E0 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_platform.h */; };
-		65E16BD417BA4345A7C6AE00 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_joystick.m */ = {isa = PBXBuildFile; fileRef = B5F2E9EB85B1433097766422 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_joystick.m */; };
-		750D459C6A8942098F2EF627 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/window.c */ = {isa = PBXBuildFile; fileRef = E7A5CE21954D4BDB8D042668 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/window.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
-		83621AFECA1E4935B55B1CE8 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/osmesa_context.c */ = {isa = PBXBuildFile; fileRef = 298E01A71B9544769E3EA5D7 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/osmesa_context.c */; };
-		8EABC2036D0F4C2488316ABD /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/nsgl_context.h */ = {isa = PBXBuildFile; fileRef = 3910E54095EA42548595BECD /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/nsgl_context.h */; };
-		9851AF2F61AC42019A746F5A /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_window.m */ = {isa = PBXBuildFile; fileRef = 23C5126416E54D7CAC095DB4 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_window.m */; };
-		A317A484E39F4831BC86F119 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/context.c */ = {isa = PBXBuildFile; fileRef = 6A3E5DF06F5546B4BDDCC4A4 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/context.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
-		A69B7012B5CB48F7873DD29E /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/internal.h */ = {isa = PBXBuildFile; fileRef = B7FA0916AE4240AABAD0AE2D /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/internal.h */; };
-		A6AEC2D6CD9C4045A488B4D8 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/include/GLFW/glfw3native.h */ = {isa = PBXBuildFile; fileRef = D48BA11A77664672B564CB27 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/include/GLFW/glfw3native.h */; };
-		B02A44D64D4A4E9299F14A6E /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_time.c */ = {isa = PBXBuildFile; fileRef = DB27CEB19EA744DB88D980CC /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_time.c */; };
-		BCCBDFD8F8014D0D8A084996 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/nsgl_context.m */ = {isa = PBXBuildFile; fileRef = E213238F12D24A9386011946 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/nsgl_context.m */; };
-		BF8E3BDE66F84F8BABE4E986 /* /Users/davidcleres/DeepShape/libigl-example-project/build/glfw/src/glfw_config.h */ = {isa = PBXBuildFile; fileRef = EC443509535D4B84A894153D /* /Users/davidcleres/DeepShape/libigl-example-project/build/glfw/src/glfw_config.h */; };
-		C3783697635E41568FBA265E /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_monitor.m */ = {isa = PBXBuildFile; fileRef = 7623855217B94692A14109FB /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_monitor.m */; };
-		DD3996138712468B90D89CD3 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/posix_thread.h */ = {isa = PBXBuildFile; fileRef = 00F987B9D8074655B116F351 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/posix_thread.h */; };
-		EBBF5B1D4D904B99A91E65AB /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/input.c */ = {isa = PBXBuildFile; fileRef = CA1AF18D4EE74F94B26F6A32 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/input.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
-		FAD22B49731E42BAA9500169 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = EBDF6370B4E8422B8BBF2A33 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/CMakeLists.txt */; };
-		FC4A19030EF549E5856570D1 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/vulkan.c */ = {isa = PBXBuildFile; fileRef = DB57019A37414036B95F29FC /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/vulkan.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
-		FCC4949E332642259F8AE3B7 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_joystick.h */ = {isa = PBXBuildFile; fileRef = FBCECC8186C5444EA75CC9B6 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_joystick.h */; };
-		FEB916773FB5487CB05C1446 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/posix_thread.c */ = {isa = PBXBuildFile; fileRef = 09FC0C7CC18A4085AF1E7EEC /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/posix_thread.c */; };
+		1FDA7353580E46179190103F /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/cocoa_window.m */ = {isa = PBXBuildFile; fileRef = 14EB8E43B1CC4E8DAB334709 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/cocoa_window.m */; };
+		21D657F449624913BDEDA019 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/cocoa_monitor.m */ = {isa = PBXBuildFile; fileRef = E710D461DDB146AD9FE2842A /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/cocoa_monitor.m */; };
+		26198C1AA1F841FC8E389512 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/osmesa_context.h */ = {isa = PBXBuildFile; fileRef = 5867C70459F94DB5803084CE /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/osmesa_context.h */; };
+		29A880440DC547DA9C6E0331 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/monitor.c */ = {isa = PBXBuildFile; fileRef = 75638AE4E3964C8280D25117 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/monitor.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
+		2ACDA9AF80114F658BCAFDC8 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/osmesa_context.c */ = {isa = PBXBuildFile; fileRef = 6B670CDD934C47219331AB61 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/osmesa_context.c */; };
+		353EB9917AE7477A9D19DAA0 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/window.c */ = {isa = PBXBuildFile; fileRef = DE33C6CE95F54A969AE4D894 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/window.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
+		38C3FD13171643AC9088FE53 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/nsgl_context.m */ = {isa = PBXBuildFile; fileRef = 5245858F39D84C2281BF7224 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/nsgl_context.m */; };
+		5D57209AE43C48C19B3D8E90 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/init.c */ = {isa = PBXBuildFile; fileRef = 3543D550DE8643DD99BF1A95 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/init.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
+		6164A3FD9E534DA0A908BA01 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = A693DB7ACB8841A2B463117A /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/CMakeLists.txt */; };
+		72F7F81DFB8B4E149F45673A /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/posix_thread.h */ = {isa = PBXBuildFile; fileRef = EBE92026F4DE494AB85D0639 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/posix_thread.h */; };
+		77E04882F6F24B4E9BA0D3B6 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/mappings.h */ = {isa = PBXBuildFile; fileRef = 4FDA9C6CAE37494CAA4CB4D6 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/mappings.h */; };
+		8F6D688906B641D1BA49F23E /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/cocoa_platform.h */ = {isa = PBXBuildFile; fileRef = C00873DBC5C94353AB1B7BCA /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/cocoa_platform.h */; };
+		94607C6565414A1CB63BDD37 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/posix_thread.c */ = {isa = PBXBuildFile; fileRef = 34E0ECF4C1564A81839D86D3 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/posix_thread.c */; };
+		9687C92195054B5BBBA107C0 /* /Users/davidcleres/DeepShape/Polycubing/build/glfw/src/glfw_config.h */ = {isa = PBXBuildFile; fileRef = 3F133CC25988416394AB3303 /* /Users/davidcleres/DeepShape/Polycubing/build/glfw/src/glfw_config.h */; };
+		9743867CDED1469DA98685AD /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/internal.h */ = {isa = PBXBuildFile; fileRef = 1708740E4A724758A7AF08BA /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/internal.h */; };
+		98BE747706BE4E52B32DD766 /* /Users/davidcleres/DeepShape/libigl/external/glfw/include/GLFW/glfw3.h */ = {isa = PBXBuildFile; fileRef = B19AC462710747FFAE668A5F /* /Users/davidcleres/DeepShape/libigl/external/glfw/include/GLFW/glfw3.h */; };
+		9B0B17A14DF54338BCDAD900 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/cocoa_joystick.m */ = {isa = PBXBuildFile; fileRef = C900AB0DBB0A4F58AFE27FE2 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/cocoa_joystick.m */; };
+		9BD7C6E7C87243A6960CF8CB /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/context.c */ = {isa = PBXBuildFile; fileRef = C8927C529342441ABAA0BE12 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/context.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
+		9E7B516338D7437486869989 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/vulkan.c */ = {isa = PBXBuildFile; fileRef = 9410F5F8252B4CE6B0FD1158 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/vulkan.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
+		B295FBCC08DD4FE3ADAECD6D /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/cocoa_time.c */ = {isa = PBXBuildFile; fileRef = A5456227A9C14C628393A5C5 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/cocoa_time.c */; };
+		B68A16D48CD342E69D81B01C /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/egl_context.c */ = {isa = PBXBuildFile; fileRef = 3B62185275E54B7199B48A64 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/egl_context.c */; };
+		BBD78CBA830C48D396C628C7 /* /Users/davidcleres/DeepShape/libigl/external/glfw/include/GLFW/glfw3native.h */ = {isa = PBXBuildFile; fileRef = 1FCD6F57870A44ABBAEEB9C4 /* /Users/davidcleres/DeepShape/libigl/external/glfw/include/GLFW/glfw3native.h */; };
+		BDE77147AE8A405C9C270093 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/input.c */ = {isa = PBXBuildFile; fileRef = 0446136206D747C1A619ADA2 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/input.c */; settings = {COMPILER_FLAGS = "-Wdeclaration-after-statement"; }; };
+		DAD38ED6F6F5498594AFDD05 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/cocoa_joystick.h */ = {isa = PBXBuildFile; fileRef = 481B093323994BD284D40FEE /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/cocoa_joystick.h */; };
+		E404B5F57DF34E40BB16A6CB /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/egl_context.h */ = {isa = PBXBuildFile; fileRef = FF81EFF7397F488EA841718A /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/egl_context.h */; };
+		F610CF5F0FEB4B648ACA71C6 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/cocoa_init.m */ = {isa = PBXBuildFile; fileRef = 3C0A38A2343D41D78F220524 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/cocoa_init.m */; };
+		FE5E37D3E20A475CB7DD7058 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/nsgl_context.h */ = {isa = PBXBuildFile; fileRef = 731253B7C03B478DA3403DA7 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/nsgl_context.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildStyle section */
-		29138C5B2BEF41FC82F2D288 /* RelWithDebInfo */ = {
+		78A89ADFC383467CB6665D41 /* RelWithDebInfo */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 			};
 			name = RelWithDebInfo;
 		};
-		4AAE21D59FD04B7298934C22 /* Debug */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = Debug;
-		};
-		4CC4D044B69E4B32BA43A4E6 /* MinSizeRel */ = {
+		78AA4CE9BD48414C9F754A0F /* MinSizeRel */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 			};
 			name = MinSizeRel;
 		};
-		56CB63C84560442DAD2A8196 /* Release */ = {
+		E8F32DB11E23438CA70898A8 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		F21E04ABAB1C48F887F027F7 /* Release */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
@@ -95,172 +106,154 @@
 /* End PBXBuildStyle section */
 
 /* Begin PBXContainerItemProxy section */
-		787AC34FDB11499A9614F4B2 /* PBXContainerItemProxy */ = {
+		4CD03F44C05C479DBC922315 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 34955F2A393242378768C503 /* Project object */;
+			containerPortal = 05235F3B8E7448CE802DA591 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 40CCB2A9C6DB4DBA9D548536;
+			remoteGlobalIDString = 361DACFCCC30496990D09446;
 			remoteInfo = glfw;
 		};
-		891C99AE252F4C5DB1F953C4 /* PBXContainerItemProxy */ = {
+		CAE090F9A1384565A7A9FCF5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 34955F2A393242378768C503 /* Project object */;
+			containerPortal = 05235F3B8E7448CE802DA591 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = A5299D7A49244EECAF74FB1E;
+			remoteGlobalIDString = C1CC5F9FA2A5408F8987B8B9;
 			remoteInfo = ZERO_CHECK;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00F987B9D8074655B116F351 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/posix_thread.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = posix_thread.h; path = src/posix_thread.h; sourceTree = SOURCE_ROOT; };
-		0863AA49C0994A4C99369102 /* glfw */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglfw3.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		09FC0C7CC18A4085AF1E7EEC /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/posix_thread.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = posix_thread.c; path = src/posix_thread.c; sourceTree = SOURCE_ROOT; };
-		1F9884DCB3404638A094E404 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/mappings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = mappings.h; path = src/mappings.h; sourceTree = SOURCE_ROOT; };
-		23C5126416E54D7CAC095DB4 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_window.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_window.m; path = src/cocoa_window.m; sourceTree = SOURCE_ROOT; };
-		298E01A71B9544769E3EA5D7 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/osmesa_context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = osmesa_context.c; path = src/osmesa_context.c; sourceTree = SOURCE_ROOT; };
-		3910E54095EA42548595BECD /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/nsgl_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = nsgl_context.h; path = src/nsgl_context.h; sourceTree = SOURCE_ROOT; };
-		3B91293F258646D6BB2DD460 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_init.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_init.m; path = src/cocoa_init.m; sourceTree = SOURCE_ROOT; };
-		51A9386705B241B4969FAB54 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/include/GLFW/glfw3.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3.h; path = include/GLFW/glfw3.h; sourceTree = SOURCE_ROOT; };
-		6A3E5DF06F5546B4BDDCC4A4 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = context.c; path = src/context.c; sourceTree = SOURCE_ROOT; };
-		6CF971E62706446793CBA320 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		7623855217B94692A14109FB /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_monitor.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_monitor.m; path = src/cocoa_monitor.m; sourceTree = SOURCE_ROOT; };
-		AF7AD1ADD592463AB19C81E0 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_platform.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_platform.h; path = src/cocoa_platform.h; sourceTree = SOURCE_ROOT; };
-		B5F2E9EB85B1433097766422 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_joystick.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_joystick.m; path = src/cocoa_joystick.m; sourceTree = SOURCE_ROOT; };
-		B7FA0916AE4240AABAD0AE2D /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = internal.h; path = src/internal.h; sourceTree = SOURCE_ROOT; };
-		B89206392E4246AF90920C88 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/osmesa_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = osmesa_context.h; path = src/osmesa_context.h; sourceTree = SOURCE_ROOT; };
-		BD4131D89B2A49909D35F19A /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/monitor.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = monitor.c; path = src/monitor.c; sourceTree = SOURCE_ROOT; };
-		CA1AF18D4EE74F94B26F6A32 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/input.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = input.c; path = src/input.c; sourceTree = SOURCE_ROOT; };
-		CAC2FE86AAB244AE9698C5BC /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/init.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = init.c; path = src/init.c; sourceTree = SOURCE_ROOT; };
-		D48BA11A77664672B564CB27 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/include/GLFW/glfw3native.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3native.h; path = include/GLFW/glfw3native.h; sourceTree = SOURCE_ROOT; };
-		DA12FECFA8954E008E01C092 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		DB27CEB19EA744DB88D980CC /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_time.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = cocoa_time.c; path = src/cocoa_time.c; sourceTree = SOURCE_ROOT; };
-		DB57019A37414036B95F29FC /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/vulkan.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = vulkan.c; path = src/vulkan.c; sourceTree = SOURCE_ROOT; };
-		E213238F12D24A9386011946 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/nsgl_context.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = nsgl_context.m; path = src/nsgl_context.m; sourceTree = SOURCE_ROOT; };
-		E7A5CE21954D4BDB8D042668 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/window.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = window.c; path = src/window.c; sourceTree = SOURCE_ROOT; };
-		EBDF6370B4E8422B8BBF2A33 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = src/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		EC443509535D4B84A894153D /* /Users/davidcleres/DeepShape/libigl-example-project/build/glfw/src/glfw_config.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw_config.h; path = ../../../build/glfw/src/glfw_config.h; sourceTree = SOURCE_ROOT; };
-		F334559E2AF84281ACD5B7FB /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/egl_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = egl_context.h; path = src/egl_context.h; sourceTree = SOURCE_ROOT; };
-		F940F7FBCC8B46B8940ADA7B /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/egl_context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = egl_context.c; path = src/egl_context.c; sourceTree = SOURCE_ROOT; };
-		FBCECC8186C5444EA75CC9B6 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_joystick.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_joystick.h; path = src/cocoa_joystick.h; sourceTree = SOURCE_ROOT; };
+		0446136206D747C1A619ADA2 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/input.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = input.c; path = src/input.c; sourceTree = SOURCE_ROOT; };
+		0E221C53C61A4BD5AB456D64 /* glfw */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglfw3.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		14EB8E43B1CC4E8DAB334709 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/cocoa_window.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_window.m; path = src/cocoa_window.m; sourceTree = SOURCE_ROOT; };
+		1708740E4A724758A7AF08BA /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = internal.h; path = src/internal.h; sourceTree = SOURCE_ROOT; };
+		1FCD6F57870A44ABBAEEB9C4 /* /Users/davidcleres/DeepShape/libigl/external/glfw/include/GLFW/glfw3native.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3native.h; path = include/GLFW/glfw3native.h; sourceTree = SOURCE_ROOT; };
+		34E0ECF4C1564A81839D86D3 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/posix_thread.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = posix_thread.c; path = src/posix_thread.c; sourceTree = SOURCE_ROOT; };
+		3543D550DE8643DD99BF1A95 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/init.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = init.c; path = src/init.c; sourceTree = SOURCE_ROOT; };
+		3B62185275E54B7199B48A64 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/egl_context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = egl_context.c; path = src/egl_context.c; sourceTree = SOURCE_ROOT; };
+		3C0A38A2343D41D78F220524 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/cocoa_init.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_init.m; path = src/cocoa_init.m; sourceTree = SOURCE_ROOT; };
+		3F133CC25988416394AB3303 /* /Users/davidcleres/DeepShape/Polycubing/build/glfw/src/glfw_config.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw_config.h; path = ../../../Polycubing/build/glfw/src/glfw_config.h; sourceTree = SOURCE_ROOT; };
+		481B093323994BD284D40FEE /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/cocoa_joystick.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_joystick.h; path = src/cocoa_joystick.h; sourceTree = SOURCE_ROOT; };
+		4FDA9C6CAE37494CAA4CB4D6 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/mappings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = mappings.h; path = src/mappings.h; sourceTree = SOURCE_ROOT; };
+		5245858F39D84C2281BF7224 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/nsgl_context.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = nsgl_context.m; path = src/nsgl_context.m; sourceTree = SOURCE_ROOT; };
+		57DEB096D24641AF9E1D50B2 /* /Users/davidcleres/DeepShape/libigl/external/glfw/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		5867C70459F94DB5803084CE /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/osmesa_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = osmesa_context.h; path = src/osmesa_context.h; sourceTree = SOURCE_ROOT; };
+		6B670CDD934C47219331AB61 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/osmesa_context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = osmesa_context.c; path = src/osmesa_context.c; sourceTree = SOURCE_ROOT; };
+		731253B7C03B478DA3403DA7 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/nsgl_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = nsgl_context.h; path = src/nsgl_context.h; sourceTree = SOURCE_ROOT; };
+		75638AE4E3964C8280D25117 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/monitor.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = monitor.c; path = src/monitor.c; sourceTree = SOURCE_ROOT; };
+		9410F5F8252B4CE6B0FD1158 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/vulkan.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = vulkan.c; path = src/vulkan.c; sourceTree = SOURCE_ROOT; };
+		A5456227A9C14C628393A5C5 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/cocoa_time.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = cocoa_time.c; path = src/cocoa_time.c; sourceTree = SOURCE_ROOT; };
+		A693DB7ACB8841A2B463117A /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = src/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		B19AC462710747FFAE668A5F /* /Users/davidcleres/DeepShape/libigl/external/glfw/include/GLFW/glfw3.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3.h; path = include/GLFW/glfw3.h; sourceTree = SOURCE_ROOT; };
+		C00873DBC5C94353AB1B7BCA /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/cocoa_platform.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_platform.h; path = src/cocoa_platform.h; sourceTree = SOURCE_ROOT; };
+		C8927C529342441ABAA0BE12 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = context.c; path = src/context.c; sourceTree = SOURCE_ROOT; };
+		C900AB0DBB0A4F58AFE27FE2 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/cocoa_joystick.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_joystick.m; path = src/cocoa_joystick.m; sourceTree = SOURCE_ROOT; };
+		DE33C6CE95F54A969AE4D894 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/window.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = window.c; path = src/window.c; sourceTree = SOURCE_ROOT; };
+		E710D461DDB146AD9FE2842A /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/cocoa_monitor.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_monitor.m; path = src/cocoa_monitor.m; sourceTree = SOURCE_ROOT; };
+		EBE92026F4DE494AB85D0639 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/posix_thread.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = posix_thread.h; path = src/posix_thread.h; sourceTree = SOURCE_ROOT; };
+		FF81EFF7397F488EA841718A /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/egl_context.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = egl_context.h; path = src/egl_context.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		4520D1CA4C7B492DB123052B /* CMake Rules */ = {
+		231137DD8E634B78B815352E /* Header Files */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			name = "CMake Rules";
-			sourceTree = "<group>";
-		};
-		46C85367D0F84EF488258135 /* Header Files */ = {
-			isa = PBXGroup;
-			children = (
-				EC443509535D4B84A894153D /* /Users/davidcleres/DeepShape/libigl-example-project/build/glfw/src/glfw_config.h */,
-				51A9386705B241B4969FAB54 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/include/GLFW/glfw3.h */,
-				D48BA11A77664672B564CB27 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/include/GLFW/glfw3native.h */,
-				FBCECC8186C5444EA75CC9B6 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_joystick.h */,
-				AF7AD1ADD592463AB19C81E0 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_platform.h */,
-				F334559E2AF84281ACD5B7FB /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/egl_context.h */,
-				B7FA0916AE4240AABAD0AE2D /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/internal.h */,
-				1F9884DCB3404638A094E404 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/mappings.h */,
-				3910E54095EA42548595BECD /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/nsgl_context.h */,
-				B89206392E4246AF90920C88 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/osmesa_context.h */,
-				00F987B9D8074655B116F351 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/posix_thread.h */,
+				3F133CC25988416394AB3303 /* /Users/davidcleres/DeepShape/Polycubing/build/glfw/src/glfw_config.h */,
+				B19AC462710747FFAE668A5F /* /Users/davidcleres/DeepShape/libigl/external/glfw/include/GLFW/glfw3.h */,
+				1FCD6F57870A44ABBAEEB9C4 /* /Users/davidcleres/DeepShape/libigl/external/glfw/include/GLFW/glfw3native.h */,
+				481B093323994BD284D40FEE /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/cocoa_joystick.h */,
+				C00873DBC5C94353AB1B7BCA /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/cocoa_platform.h */,
+				FF81EFF7397F488EA841718A /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/egl_context.h */,
+				1708740E4A724758A7AF08BA /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/internal.h */,
+				4FDA9C6CAE37494CAA4CB4D6 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/mappings.h */,
+				731253B7C03B478DA3403DA7 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/nsgl_context.h */,
+				5867C70459F94DB5803084CE /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/osmesa_context.h */,
+				EBE92026F4DE494AB85D0639 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/posix_thread.h */,
 			);
 			name = "Header Files";
 			sourceTree = "<group>";
 		};
-		5610720A638641178A20385D /* Source Files */ = {
+		2CAEB2958E474A2AA2F3C499 /* ALL_BUILD */ = {
 			isa = PBXGroup;
 			children = (
-				3B91293F258646D6BB2DD460 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_init.m */,
-				B5F2E9EB85B1433097766422 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_joystick.m */,
-				7623855217B94692A14109FB /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_monitor.m */,
-				DB27CEB19EA744DB88D980CC /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_time.c */,
-				23C5126416E54D7CAC095DB4 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_window.m */,
-				6A3E5DF06F5546B4BDDCC4A4 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/context.c */,
-				F940F7FBCC8B46B8940ADA7B /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/egl_context.c */,
-				CAC2FE86AAB244AE9698C5BC /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/init.c */,
-				CA1AF18D4EE74F94B26F6A32 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/input.c */,
-				BD4131D89B2A49909D35F19A /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/monitor.c */,
-				E213238F12D24A9386011946 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/nsgl_context.m */,
-				298E01A71B9544769E3EA5D7 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/osmesa_context.c */,
-				09FC0C7CC18A4085AF1E7EEC /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/posix_thread.c */,
-				DB57019A37414036B95F29FC /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/vulkan.c */,
-				E7A5CE21954D4BDB8D042668 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/window.c */,
+				EA7416D404CC4F06B14AB69D /* CMake Rules */,
+				57DEB096D24641AF9E1D50B2 /* /Users/davidcleres/DeepShape/libigl/external/glfw/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		391B1A27ECD34EC68650767E /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				3C0A38A2343D41D78F220524 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/cocoa_init.m */,
+				C900AB0DBB0A4F58AFE27FE2 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/cocoa_joystick.m */,
+				E710D461DDB146AD9FE2842A /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/cocoa_monitor.m */,
+				A5456227A9C14C628393A5C5 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/cocoa_time.c */,
+				14EB8E43B1CC4E8DAB334709 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/cocoa_window.m */,
+				C8927C529342441ABAA0BE12 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/context.c */,
+				3B62185275E54B7199B48A64 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/egl_context.c */,
+				3543D550DE8643DD99BF1A95 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/init.c */,
+				0446136206D747C1A619ADA2 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/input.c */,
+				75638AE4E3964C8280D25117 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/monitor.c */,
+				5245858F39D84C2281BF7224 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/nsgl_context.m */,
+				6B670CDD934C47219331AB61 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/osmesa_context.c */,
+				34E0ECF4C1564A81839D86D3 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/posix_thread.c */,
+				9410F5F8252B4CE6B0FD1158 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/vulkan.c */,
+				DE33C6CE95F54A969AE4D894 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/window.c */,
 			);
 			name = "Source Files";
 			sourceTree = "<group>";
 		};
-		8E1E88F5A2A0479EB49773C5 /* CMake Rules */ = {
+		64B062A4EE654B03AEF78216 /* glfw */ = {
+			isa = PBXGroup;
+			children = (
+				391B1A27ECD34EC68650767E /* Source Files */,
+				231137DD8E634B78B815352E /* Header Files */,
+				A693DB7ACB8841A2B463117A /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/CMakeLists.txt */,
+			);
+			name = glfw;
+			sourceTree = "<group>";
+		};
+		BCA33F59A28841538A5A22E5 /* GLFW3 */ = {
+			isa = PBXGroup;
+			children = (
+				64B062A4EE654B03AEF78216 /* glfw */,
+			);
+			name = GLFW3;
+			sourceTree = "<group>";
+		};
+		D3D79BA0103548C98484DE87 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0E221C53C61A4BD5AB456D64 /* glfw */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA7416D404CC4F06B14AB69D /* CMake Rules */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = "CMake Rules";
 			sourceTree = "<group>";
 		};
-		9B68461D0C564C76A5B9768E /* ALL_BUILD */ = {
+		F347044369F14A75BD71A22B = {
 			isa = PBXGroup;
 			children = (
-				8E1E88F5A2A0479EB49773C5 /* CMake Rules */,
-				6CF971E62706446793CBA320 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/CMakeLists.txt */,
+				2CAEB2958E474A2AA2F3C499 /* ALL_BUILD */,
+				BCA33F59A28841538A5A22E5 /* GLFW3 */,
+				D3D79BA0103548C98484DE87 /* Products */,
 			);
-			name = ALL_BUILD;
-			sourceTree = "<group>";
-		};
-		A5B33DABEDA74B30B4CE883E /* ZERO_CHECK */ = {
-			isa = PBXGroup;
-			children = (
-				4520D1CA4C7B492DB123052B /* CMake Rules */,
-				DA12FECFA8954E008E01C092 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/CMakeLists.txt */,
-			);
-			name = ZERO_CHECK;
-			sourceTree = "<group>";
-		};
-		C7CD4E0F9E384315A8E04651 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				0863AA49C0994A4C99369102 /* glfw */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		D2A4C2F425A94FA3BE2EB729 = {
-			isa = PBXGroup;
-			children = (
-				9B68461D0C564C76A5B9768E /* ALL_BUILD */,
-				A5B33DABEDA74B30B4CE883E /* ZERO_CHECK */,
-				DE194201274B483E9D0E10DF /* GLFW3 */,
-				C7CD4E0F9E384315A8E04651 /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		DE194201274B483E9D0E10DF /* GLFW3 */ = {
-			isa = PBXGroup;
-			children = (
-				E91C45384C724EFCADB1F8DE /* glfw */,
-			);
-			name = GLFW3;
-			sourceTree = "<group>";
-		};
-		E91C45384C724EFCADB1F8DE /* glfw */ = {
-			isa = PBXGroup;
-			children = (
-				5610720A638641178A20385D /* Source Files */,
-				46C85367D0F84EF488258135 /* Header Files */,
-				EBDF6370B4E8422B8BBF2A33 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/CMakeLists.txt */,
-			);
-			name = glfw;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		40CCB2A9C6DB4DBA9D548536 /* glfw */ = {
+		361DACFCCC30496990D09446 /* glfw */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D0FBD35F896C4874AFBCF55A /* Build configuration list for PBXNativeTarget "glfw" */;
+			buildConfigurationList = ABF50E283CF6469A964CD464 /* Build configuration list for PBXNativeTarget "glfw" */;
 			buildPhases = (
-				B12A83684F5241DDACD01761 /* Sources */,
+				CE0DD3083E274FD789E89331 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -268,42 +261,54 @@
 			);
 			name = glfw;
 			productName = glfw;
-			productReference = 0863AA49C0994A4C99369102 /* glfw */;
+			productReference = 0E221C53C61A4BD5AB456D64 /* glfw */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		34955F2A393242378768C503 /* Project object */ = {
+		05235F3B8E7448CE802DA591 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 0930;
 			};
-			buildConfigurationList = 65BD8149913B4DFE8F538E47 /* Build configuration list for PBXProject "GLFW" */;
+			buildConfigurationList = FE883D25756341589DFEB2B2 /* Build configuration list for PBXProject "GLFW" */;
 			buildSettings = {
 			};
 			buildStyles = (
-				4AAE21D59FD04B7298934C22 /* Debug */,
-				56CB63C84560442DAD2A8196 /* Release */,
-				4CC4D044B69E4B32BA43A4E6 /* MinSizeRel */,
-				29138C5B2BEF41FC82F2D288 /* RelWithDebInfo */,
+				E8F32DB11E23438CA70898A8 /* Debug */,
+				F21E04ABAB1C48F887F027F7 /* Release */,
+				78AA4CE9BD48414C9F754A0F /* MinSizeRel */,
+				78A89ADFC383467CB6665D41 /* RelWithDebInfo */,
 			);
 			compatibilityVersion = "Xcode 3.2";
 			hasScannedForEncodings = 0;
-			mainGroup = D2A4C2F425A94FA3BE2EB729;
-			projectDirPath = ../../libigl/external/glfw;
+			mainGroup = F347044369F14A75BD71A22B;
+			projectDirPath = /Users/davidcleres/DeepShape/libigl/external/glfw;
 			projectRoot = "";
 			targets = (
-				0D251FBAE37143FD95DAEB9B /* ALL_BUILD */,
-				A5299D7A49244EECAF74FB1E /* ZERO_CHECK */,
-				40CCB2A9C6DB4DBA9D548536 /* glfw */,
+				ED9128F7CC6441D7AC34B46E /* ALL_BUILD */,
+				B5625670954F4B16A9E60B47 /* RUN_TESTS */,
+				C1CC5F9FA2A5408F8987B8B9 /* ZERO_CHECK */,
+				361DACFCCC30496990D09446 /* glfw */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		571EC32022C64EA48F912DF5 = {
+		0BEAFAC7CC3A4A34A40A6C3C /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/davidcleres/DeepShape/Polycubing/build/glfw -f /Users/davidcleres/DeepShape/Polycubing/build/glfw/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		0E4D9DB54F4D44AAAEC72FEA = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -318,29 +323,18 @@
 exit 0";
 			showEnvVarsInLog = 0;
 		};
-		9F38CD5F897C47D2A3A6EB0D /* CMake Rules */ = {
+		61B96DCCCD31456A9DBC691A /* CMake PostBuild Rules */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			name = "CMake Rules";
+			name = "CMake PostBuild Rules";
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "make -C /Users/davidcleres/DeepShape/libigl-example-project/build/glfw -f /Users/davidcleres/DeepShape/libigl-example-project/build/glfw/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			shellScript = "make -C /Users/davidcleres/DeepShape/Polycubing/build/glfw -f /Users/davidcleres/DeepShape/Polycubing/build/glfw/CMakeScripts/RUN_TESTS_postBuildPhase.make$CONFIGURATION all";
 			showEnvVarsInLog = 0;
 		};
-		BFB652C8340644028442FB86 /* CMake Rules */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			name = "CMake Rules";
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "make -C /Users/davidcleres/DeepShape/libigl-example-project/build/glfw -f /Users/davidcleres/DeepShape/libigl-example-project/build/glfw/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
-			showEnvVarsInLog = 0;
-		};
-		D099ABD6081A4C7E8867AAEB = {
+		8E0CCE75A0B4482A9DD52223 = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -353,75 +347,76 @@ exit 0";
 			shellPath = /bin/sh;
 			shellScript = "# shell script goes here
 exit 0";
+			showEnvVarsInLog = 0;
+		};
+		B6E30F2DE73B4582BA58E124 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		C963B2AD6F534832B6351F5F /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/davidcleres/DeepShape/Polycubing/build/glfw -f /Users/davidcleres/DeepShape/Polycubing/build/glfw/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B12A83684F5241DDACD01761 /* Sources */ = {
+		CE0DD3083E274FD789E89331 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F205A3BCBF749B79AA5E13C /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_init.m */,
-				65E16BD417BA4345A7C6AE00 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_joystick.m */,
-				C3783697635E41568FBA265E /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_monitor.m */,
-				B02A44D64D4A4E9299F14A6E /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_time.c */,
-				9851AF2F61AC42019A746F5A /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/cocoa_window.m */,
-				A317A484E39F4831BC86F119 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/context.c */,
-				4E42699EA9304FEFBA0DDB53 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/egl_context.c */,
-				37B91B8A913B4F6191D23F73 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/init.c */,
-				EBBF5B1D4D904B99A91E65AB /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/input.c */,
-				2398D7ED9E87457FB1187917 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/monitor.c */,
-				BCCBDFD8F8014D0D8A084996 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/nsgl_context.m */,
-				83621AFECA1E4935B55B1CE8 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/osmesa_context.c */,
-				FEB916773FB5487CB05C1446 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/posix_thread.c */,
-				FC4A19030EF549E5856570D1 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/vulkan.c */,
-				750D459C6A8942098F2EF627 /* /Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src/window.c */,
+				F610CF5F0FEB4B648ACA71C6 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/cocoa_init.m */,
+				9B0B17A14DF54338BCDAD900 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/cocoa_joystick.m */,
+				21D657F449624913BDEDA019 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/cocoa_monitor.m */,
+				B295FBCC08DD4FE3ADAECD6D /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/cocoa_time.c */,
+				1FDA7353580E46179190103F /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/cocoa_window.m */,
+				9BD7C6E7C87243A6960CF8CB /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/context.c */,
+				B68A16D48CD342E69D81B01C /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/egl_context.c */,
+				5D57209AE43C48C19B3D8E90 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/init.c */,
+				BDE77147AE8A405C9C270093 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/input.c */,
+				29A880440DC547DA9C6E0331 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/monitor.c */,
+				38C3FD13171643AC9088FE53 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/nsgl_context.m */,
+				2ACDA9AF80114F658BCAFDC8 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/osmesa_context.c */,
+				94607C6565414A1CB63BDD37 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/posix_thread.c */,
+				9E7B516338D7437486869989 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/vulkan.c */,
+				353EB9917AE7477A9D19DAA0 /* /Users/davidcleres/DeepShape/libigl/external/glfw/src/window.c */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		69AB9B7FC5904C79913283B5 /* PBXTargetDependency */ = {
+		11178470AFA94DA3B67D4644 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 40CCB2A9C6DB4DBA9D548536 /* glfw */;
-			targetProxy = 787AC34FDB11499A9614F4B2 /* PBXContainerItemProxy */;
+			target = C1CC5F9FA2A5408F8987B8B9 /* ZERO_CHECK */;
+			targetProxy = CAE090F9A1384565A7A9FCF5 /* PBXContainerItemProxy */;
 		};
-		C4ADB3A85F4847FB9D636CDB /* PBXTargetDependency */ = {
+		18F82F62580E4C8AB1DD5323 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A5299D7A49244EECAF74FB1E /* ZERO_CHECK */;
-			targetProxy = 891C99AE252F4C5DB1F953C4 /* PBXContainerItemProxy */;
+			target = 361DACFCCC30496990D09446 /* glfw */;
+			targetProxy = 4CD03F44C05C479DBC922315 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		26D670D95BD849F695191BB1 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/include","/Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src","/Users/davidcleres/DeepShape/libigl-example-project/build/glfw/src");
-				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				OTHER_CFLAGS = "       -DNDEBUG -fPIC -Wall  ";
-				OTHER_LIBTOOLFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = glfw3;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/davidcleres/DeepShape/libigl-example-project/build/glfw/src";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		2D1D31937DF34A8FBB3656B7 /* Debug */ = {
+		00690C40E05A4DAA99BB6B13 /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -435,13 +430,33 @@ exit 0";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ZERO_CHECK;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/davidcleres/DeepShape/libigl-example-project/build/glfw";
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build/glfw;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		0F970DF142C14C7ABF72241C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build/glfw;
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
 			};
 			name = Debug;
 		};
-		3DA4139517A84CEF9929BBE5 /* Debug */ = {
+		21420A554435481EB430BC44 /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -455,13 +470,13 @@ exit 0";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ALL_BUILD;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/davidcleres/DeepShape/libigl-example-project/build/glfw";
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build/glfw;
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
 			};
-			name = Debug;
+			name = RelWithDebInfo;
 		};
-		5F78DC90E8054130A695A3B1 /* RelWithDebInfo */ = {
+		2D4FF480E7024B15A23C2E82 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -473,24 +488,35 @@ exit 0";
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
 				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
+				PRODUCT_NAME = ALL_BUILD;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/davidcleres/DeepShape/libigl-example-project/build/glfw";
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build/glfw;
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
 			};
-			name = RelWithDebInfo;
+			name = MinSizeRel;
 		};
-		7CB8E5B2855F45298C895EDA /* RelWithDebInfo */ = {
+		3635B27159B2480F95DA74FE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
-				SYMROOT = "/Users/davidcleres/DeepShape/libigl-example-project/build/glfw/build";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build/glfw;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
 			};
-			name = RelWithDebInfo;
+			name = Release;
 		};
-		7E01E46BC30549FBBFAA8C35 /* Release */ = {
+		4C57736144B84AD8B3B27693 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -501,7 +527,7 @@ exit 0";
 				GCC_OPTIMIZATION_LEVEL = 3;
 				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/include","/Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src","/Users/davidcleres/DeepShape/libigl-example-project/build/glfw/src");
+				HEADER_SEARCH_PATHS = (/Users/davidcleres/DeepShape/libigl/external/glfw/include,/Users/davidcleres/DeepShape/libigl/external/glfw/src,/Users/davidcleres/DeepShape/Polycubing/build/glfw/src);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
 				OTHER_CFLAGS = "    -DNDEBUG -fPIC -Wall  ";
@@ -509,33 +535,13 @@ exit 0";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = glfw3;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/davidcleres/DeepShape/libigl-example-project/build/glfw/src";
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build/glfw/src;
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
 			};
 			name = Release;
 		};
-		7E59CAA9D78849A89028E063 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				OTHER_LDFLAGS = " ";
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/davidcleres/DeepShape/libigl-example-project/build/glfw";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
-			};
-			name = Release;
-		};
-		898814E128ED485983087672 /* Release */ = {
+		4FE7553C660846C295FB8AEA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -549,13 +555,13 @@ exit 0";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ALL_BUILD;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/davidcleres/DeepShape/libigl-example-project/build/glfw";
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build/glfw;
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
 			};
-			name = Release;
+			name = Debug;
 		};
-		91557494703E41978C426857 /* Debug */ = {
+		6B7AE8C2EDFA414F855A322E /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -563,24 +569,33 @@ exit 0";
 				EXECUTABLE_SUFFIX = .a;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_OPTIMIZATION_LEVEL = 2;
 				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/include","/Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src","/Users/davidcleres/DeepShape/libigl-example-project/build/glfw/src");
+				HEADER_SEARCH_PATHS = (/Users/davidcleres/DeepShape/libigl/external/glfw/include,/Users/davidcleres/DeepShape/libigl/external/glfw/src,/Users/davidcleres/DeepShape/Polycubing/build/glfw/src);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
-				OTHER_CFLAGS = "   -fPIC -Wall  ";
+				OTHER_CFLAGS = "       -DNDEBUG -fPIC -Wall  ";
 				OTHER_LIBTOOLFLAGS = " ";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = glfw3;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/davidcleres/DeepShape/libigl-example-project/build/glfw/src";
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build/glfw/src;
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
 			};
-			name = Debug;
+			name = RelWithDebInfo;
 		};
-		B02B1E5842B5428F8EB040CF /* MinSizeRel */ = {
+		6F0B13E16AA340888F792762 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build/glfw/build;
+			};
+			name = MinSizeRel;
+		};
+		74E3FC6866FA4BFB9344F60B /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -591,7 +606,7 @@ exit 0";
 				GCC_OPTIMIZATION_LEVEL = s;
 				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = ("/Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/include","/Users/davidcleres/DeepShape/libigl-example-project/libigl/external/glfw/src","/Users/davidcleres/DeepShape/libigl-example-project/build/glfw/src");
+				HEADER_SEARCH_PATHS = (/Users/davidcleres/DeepShape/libigl/external/glfw/include,/Users/davidcleres/DeepShape/libigl/external/glfw/src,/Users/davidcleres/DeepShape/Polycubing/build/glfw/src);
 				INSTALL_PATH = "";
 				LIBRARY_STYLE = STATIC;
 				OTHER_CFLAGS = "    -DNDEBUG -fPIC -Wall  ";
@@ -599,31 +614,125 @@ exit 0";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = glfw3;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/davidcleres/DeepShape/libigl-example-project/build/glfw/src";
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build/glfw/src;
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
 			};
 			name = MinSizeRel;
 		};
-		B5B3EE9940D74C61AFB4B90D /* MinSizeRel */ = {
+		7EF3A89404F744639B6EAF7D /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
-				SYMROOT = "/Users/davidcleres/DeepShape/libigl-example-project/build/glfw/build";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build/glfw;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
 			};
-			name = MinSizeRel;
+			name = RelWithDebInfo;
 		};
-		BEC47E71E2BD42EBBE8443DE /* Release */ = {
+		826B8EA337E848AE83634A42 /* RelWithDebInfo */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
-				SYMROOT = "/Users/davidcleres/DeepShape/libigl-example-project/build/glfw/build";
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build/glfw/build;
+			};
+			name = RelWithDebInfo;
+		};
+		B5B0F9B977584DAE9C1F2293 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build/glfw/build;
+			};
+			name = Debug;
+		};
+		C1D9DC7CA95146D2A7E050CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_USE_CONFIG_H);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/davidcleres/DeepShape/libigl/external/glfw/include,/Users/davidcleres/DeepShape/libigl/external/glfw/src,/Users/davidcleres/DeepShape/Polycubing/build/glfw/src);
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				OTHER_CFLAGS = "   -fPIC -Wall  ";
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build/glfw/src;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		EBBA799F500148E78731D1CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build/glfw;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = Debug;
+		};
+		EE91B8AF09CA460EB9A4154A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build/glfw/build;
 			};
 			name = Release;
 		};
-		E5B639048B17436CA7315194 /* MinSizeRel */ = {
+		EF007D3549794C36BE99489F /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = RUN_TESTS;
+				SECTORDER_FLAGS = "";
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build/glfw;
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		F2740A078B4B43749C2FF5AD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -637,13 +746,13 @@ exit 0";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ZERO_CHECK;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/davidcleres/DeepShape/libigl-example-project/build/glfw";
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build/glfw;
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
 			};
-			name = MinSizeRel;
+			name = Release;
 		};
-		EA1C883BB31C4B44AF933CBB /* RelWithDebInfo */ = {
+		F7BFD66179A443B2BB02B250 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -655,24 +764,15 @@ exit 0";
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
 				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
+				PRODUCT_NAME = RUN_TESTS;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/davidcleres/DeepShape/libigl-example-project/build/glfw";
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build/glfw;
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
 			};
-			name = RelWithDebInfo;
+			name = Release;
 		};
-		EED4BAE56BC446A5805B77E9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
-				SYMROOT = "/Users/davidcleres/DeepShape/libigl-example-project/build/glfw/build";
-			};
-			name = Debug;
-		};
-		F1B166E547104319AF2E8AEB /* MinSizeRel */ = {
+		F8B703841B4C43E5A152E5F1 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
@@ -684,9 +784,9 @@ exit 0";
 				INSTALL_PATH = "";
 				OTHER_LDFLAGS = " ";
 				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
+				PRODUCT_NAME = ZERO_CHECK;
 				SECTORDER_FLAGS = "";
-				SYMROOT = "/Users/davidcleres/DeepShape/libigl-example-project/build/glfw";
+				SYMROOT = /Users/davidcleres/DeepShape/Polycubing/build/glfw;
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("-Wmost","-Wno-four-char-constants","-Wno-unknown-pragmas","$(inherited)");
 			};
@@ -695,51 +795,62 @@ exit 0";
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3BA68C635B3742C7BAEDF000 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+		130AE857D5994DE68FE3C263 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2D1D31937DF34A8FBB3656B7 /* Debug */,
-				7E59CAA9D78849A89028E063 /* Release */,
-				E5B639048B17436CA7315194 /* MinSizeRel */,
-				5F78DC90E8054130A695A3B1 /* RelWithDebInfo */,
+				0F970DF142C14C7ABF72241C /* Debug */,
+				F2740A078B4B43749C2FF5AD /* Release */,
+				F8B703841B4C43E5A152E5F1 /* MinSizeRel */,
+				00690C40E05A4DAA99BB6B13 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		65BD8149913B4DFE8F538E47 /* Build configuration list for PBXProject "GLFW" */ = {
+		761C4D009E064563841229FA /* Build configuration list for PBXAggregateTarget "RUN_TESTS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EED4BAE56BC446A5805B77E9 /* Debug */,
-				BEC47E71E2BD42EBBE8443DE /* Release */,
-				B5B3EE9940D74C61AFB4B90D /* MinSizeRel */,
-				7CB8E5B2855F45298C895EDA /* RelWithDebInfo */,
+				EBBA799F500148E78731D1CD /* Debug */,
+				F7BFD66179A443B2BB02B250 /* Release */,
+				EF007D3549794C36BE99489F /* MinSizeRel */,
+				7EF3A89404F744639B6EAF7D /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		7B241DADC1E1409592F2DE7B /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+		8C5A867C6AFB4518ABBD9F79 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3DA4139517A84CEF9929BBE5 /* Debug */,
-				898814E128ED485983087672 /* Release */,
-				F1B166E547104319AF2E8AEB /* MinSizeRel */,
-				EA1C883BB31C4B44AF933CBB /* RelWithDebInfo */,
+				4FE7553C660846C295FB8AEA /* Debug */,
+				3635B27159B2480F95DA74FE /* Release */,
+				2D4FF480E7024B15A23C2E82 /* MinSizeRel */,
+				21420A554435481EB430BC44 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		D0FBD35F896C4874AFBCF55A /* Build configuration list for PBXNativeTarget "glfw" */ = {
+		ABF50E283CF6469A964CD464 /* Build configuration list for PBXNativeTarget "glfw" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				91557494703E41978C426857 /* Debug */,
-				7E01E46BC30549FBBFAA8C35 /* Release */,
-				B02B1E5842B5428F8EB040CF /* MinSizeRel */,
-				26D670D95BD849F695191BB1 /* RelWithDebInfo */,
+				C1D9DC7CA95146D2A7E050CF /* Debug */,
+				4C57736144B84AD8B3B27693 /* Release */,
+				74E3FC6866FA4BFB9344F60B /* MinSizeRel */,
+				6B7AE8C2EDFA414F855A322E /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FE883D25756341589DFEB2B2 /* Build configuration list for PBXProject "GLFW" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5B0F9B977584DAE9C1F2293 /* Debug */,
+				EE91B8AF09CA460EB9A4154A /* Release */,
+				6F0B13E16AA340888F792762 /* MinSizeRel */,
+				826B8EA337E848AE83634A42 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 34955F2A393242378768C503 /* Project object */;
+	rootObject = 05235F3B8E7448CE802DA591 /* Project object */;
 }
