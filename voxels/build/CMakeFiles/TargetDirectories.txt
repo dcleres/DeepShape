@@ -1,0 +1,7 @@
+/Users/davidcleres/DeepShape/voxelizer/build/CMakeFiles/RUN_TESTS.dir
+/Users/davidcleres/DeepShape/voxelizer/build/CMakeFiles/ALL_BUILD.dir
+/Users/davidcleres/DeepShape/voxelizer/build/CMakeFiles/ZERO_CHECK.dir
+/Users/davidcleres/DeepShape/voxelizer/build/bin/CMakeFiles/RUN_TESTS.dir
+/Users/davidcleres/DeepShape/voxelizer/build/bin/CMakeFiles/voxelizer.dir
+/Users/davidcleres/DeepShape/voxelizer/build/test/CMakeFiles/RUN_TESTS.dir
+/Users/davidcleres/DeepShape/voxelizer/build/test/CMakeFiles/collisionChecker.dir

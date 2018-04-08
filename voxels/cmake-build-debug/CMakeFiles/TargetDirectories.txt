@@ -1,0 +1,11 @@
+/Users/davidcleres/DeepShape/voxelizer/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/davidcleres/DeepShape/voxelizer/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/davidcleres/DeepShape/voxelizer/cmake-build-debug/CMakeFiles/test.dir
+/Users/davidcleres/DeepShape/voxelizer/cmake-build-debug/bin/CMakeFiles/rebuild_cache.dir
+/Users/davidcleres/DeepShape/voxelizer/cmake-build-debug/bin/CMakeFiles/edit_cache.dir
+/Users/davidcleres/DeepShape/voxelizer/cmake-build-debug/bin/CMakeFiles/test.dir
+/Users/davidcleres/DeepShape/voxelizer/cmake-build-debug/bin/CMakeFiles/voxelizer.dir
+/Users/davidcleres/DeepShape/voxelizer/cmake-build-debug/test/CMakeFiles/rebuild_cache.dir
+/Users/davidcleres/DeepShape/voxelizer/cmake-build-debug/test/CMakeFiles/edit_cache.dir
+/Users/davidcleres/DeepShape/voxelizer/cmake-build-debug/test/CMakeFiles/test.dir
+/Users/davidcleres/DeepShape/voxelizer/cmake-build-debug/test/CMakeFiles/collisionChecker.dir
