@@ -101,6 +101,3 @@ if(CMAKE_VERSION VERSION_LESS "2.8.11")
     endif()
 
 add_subdirectory(src bin)
-
-enable_testing()
-add_subdirectory(test)
