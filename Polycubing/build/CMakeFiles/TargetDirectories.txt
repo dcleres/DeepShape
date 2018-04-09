@@ -1,0 +1,9 @@
+/Users/davidcleres/DeepShape/Polycubing/build/CMakeFiles/ALL_BUILD.dir
+/Users/davidcleres/DeepShape/Polycubing/build/CMakeFiles/ZERO_CHECK.dir
+/Users/davidcleres/DeepShape/Polycubing/build/glad/CMakeFiles/glad.dir
+/Users/davidcleres/DeepShape/Polycubing/build/glad/CMakeFiles/ALL_BUILD.dir
+/Users/davidcleres/DeepShape/Polycubing/build/glad/CMakeFiles/ZERO_CHECK.dir
+/Users/davidcleres/DeepShape/Polycubing/build/glfw/CMakeFiles/ALL_BUILD.dir
+/Users/davidcleres/DeepShape/Polycubing/build/glfw/CMakeFiles/ZERO_CHECK.dir
+/Users/davidcleres/DeepShape/Polycubing/build/glfw/src/CMakeFiles/glfw.dir
+/Users/davidcleres/DeepShape/Polycubing/build/bin/CMakeFiles/voxelizer.dir
