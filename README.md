@@ -80,7 +80,7 @@ This project requires libraries (dependencies) as follows:
 
 - *boost*
 - *libfcl* 		
-	for collision checking (https://github.com/flexible-collision-library/fcl, version: tags/0.3.3), ***libccd*** is required
+	for collision checking (https://github.com/flexible-collision-library/fcl, version: tags/0.3.3), ***libccd*** is required ***DO NOT INSTALL OctoMap since the current version is not compatible with the code anymore***
 - *assimp*  
     for loading STL file (https://github.com/assimp/assimp)
 - *cmake & make*
