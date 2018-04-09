@@ -36,21 +36,6 @@ From within the `build` directory just issue:
 
 A glfw app should launch displaying a 3D cube.
 
-## Dependencies
-
-The only dependencies are stl, eigen, [libigl](libigl.github.io/libigl/) and
-the dependencies of the `igl::opengl::glfw::Viewer`.
-
-We recommend you to install libigl using git via:
-
-    git clone https://github.com/libigl/libigl.git
-    cd libigl/
-    git checkout 6ebc585611d27d8e2038bbbf9cb4910c51713848
-    git submodule update --init --recursive
-    cd ..
-
-If you have installed libigl at `/path/to/libigl/` then a good place to clone
-this library is `/path/to/Polycubing/`.
 
 ## Overview
 
@@ -71,7 +56,7 @@ This project voxelizes the meshes in STL file ***without*** the condition of *wa
 	- [TODO] Combine the coarse and fine strategy, i.e., do coarse grid size first to filter more unnecessary voxels.
 - [TODO] Use gpu
 
-## Installation
+## Installation & Dependencies
 
 
 ----------
@@ -85,16 +70,20 @@ This project requires libraries (dependencies) as follows:
     for loading STL file (https://github.com/assimp/assimp)
 - *cmake & make*
 
+- stl, eigen, [libigl](libigl.github.io/libigl/) and
+the dependencies of the `igl::opengl::glfw::Viewer`.
 
-CMakeLists.txt is used to generate makefiles. To build this project, in command line, run
+We recommend you to install libigl using git via:
 
-``` cmake
-mkdir build
-cd build
-cmake ..
-```
+    git clone https://github.com/libigl/libigl.git
+    cd libigl/
+    git checkout 6ebc585611d27d8e2038bbbf9cb4910c51713848
+    git submodule update --init --recursive
+    cd ..
 
-Next, in linux, use `make` in 'build' directory to compile the code. 
+If you have installed libigl at `/path/to/libigl/` then a good place to clone
+this library is `/path/to/Polycubing/`.
+ 
 
 ## How to Use
 
