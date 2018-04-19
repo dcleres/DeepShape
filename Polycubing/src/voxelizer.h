@@ -2,7 +2,7 @@
  * Voxelizer.h
  *
  *  Created on: 22 Jun, 2014
- *      Author: chenqian
+ *      Author for the  pure Voxelization part: chenqian
  */
 
 #ifndef VOXELIZER_H_
@@ -25,12 +25,23 @@
 #include "opencv2/imgproc.hpp"
 #include "opencv2/objdetect.hpp"
 
+#include "opencv2/imgcodecs.hpp"
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
 
 using namespace std;
 
 const int BATCH_SIZE = 32;
 
 #define GETBIT(x,i) ((x>>(i%BATCH_SIZE))&1)
+
+struct Coord3D
+{
+    int x;
+    int y;
+    int z;
+};
 
 template<typename T>
 struct ArrayDeleter {
@@ -110,16 +121,21 @@ public:
     void buildBinaryTensor();
     Voxelizer(int size, const string& pFile, bool verbose);
 	void writeSliceTextFile(unsigned int const& sliceNumber);
+    void writeSliceTextFile(vector<vector<vector<bool> > > const& binaryTensor, unsigned int const& sliceNumber);
     void writeTextFile();
+    void writeTextFile(vector<vector<vector<bool> > > const& binaryTensor);
     void writeVotingToTextFile(vector<vector<vector<int> > > const& votingTensor);
     void writeSliceVotingTextFile(unsigned int const& sliceNumber, vector<vector<vector<int> > > const& tensor);
 
-    vector<vector<vector<int> > > voting();
-
-    void inline neighborCheck(float* in, uchar* out, int i, int x, int y, int x_lim);
-    int inline neighborCleanup(float* in, uchar* out, int i, int x, int y, int x_lim, int y_lim);
-    void imregionalmin(cv::Mat& img, cv::Mat& out_img);
-
+    vector<vector<vector<int> > > voting(int const& maskSize);
+   
+    void findCorners(vector<vector<vector<int> > > const& votingVector, unsigned int const& regionSize);
+    
+    vector<vector<vector<bool> > > findRegionalMaxima(int regionSize, vector<vector<vector<int> > > const& votingMatrix);
+    
+    /*vector<Coord3D> findBorders(vector<vector<vector<bool> > > regionalMax, vector<Coord3D> coordinatesToRemember);*/
+    
+    void openCV();
     virtual ~Voxelizer();
 };
 

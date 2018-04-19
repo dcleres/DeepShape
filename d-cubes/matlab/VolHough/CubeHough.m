@@ -283,7 +283,6 @@ for i = 1:size(vertices)
     % if we found 3 matching corners and cube is valid finally draw cube
     cube_img( c_i(1): c_i(1) + dx, c_i(2) : c_i(2) + dy , c_i(3) : c_i(3) + dz ) = 1;   
 end
-    
-
+   
 end
 

@@ -735,7 +735,7 @@ void Voxelizer::buildBinaryTensor()
 void Voxelizer::writeSliceTextFile(unsigned int const& sliceNumber)
 {
     ofstream output;
-    output.open (_pFile.substr(0, _pFile.length()-4)+"-VotingSlice.txt");
+    output.open (_pFile.substr(0, _pFile.length()-4)+"-Slice.txt");
 
     vector<vector<bool> > element = _binaryTensor[sliceNumber];
 
@@ -749,7 +749,28 @@ void Voxelizer::writeSliceTextFile(unsigned int const& sliceNumber)
     }
     
     output.close();
-    cout << "Model Slice saved to " << _pFile.substr(0, _pFile.length()-4) << "-VotingSlice.txt" << endl;
+    cout << "Model Slice saved to " << _pFile.substr(0, _pFile.length()-4) << "-Slice.txt" << endl;
+}
+
+//Visualize a single slice in Excel (for instance)
+void Voxelizer::writeSliceTextFile(vector<vector<vector<bool> > > const& binaryTensor, unsigned int const& sliceNumber)
+{
+    ofstream output;
+    output.open (_pFile.substr(0, _pFile.length()-4)+"-SliceCorners.txt");
+    
+    vector<vector<bool> > element = binaryTensor[sliceNumber];
+    
+    for (auto column : element)
+    {
+        for (auto line : column)
+        {
+            output << line << "\t";
+        }
+        output << endl;
+    }
+    
+    output.close();
+    cout << "Model Slice saved to " << _pFile.substr(0, _pFile.length()-4) << "-SliceCorners.txt" << endl;
 }
 
 void Voxelizer::writeTextFile()
@@ -771,6 +792,27 @@ void Voxelizer::writeTextFile()
     output.close();
     cout << "Model saved to " << _pFile.substr(0, _pFile.length()-4) << "-voxelized.txt" << endl;
 }
+
+void Voxelizer::writeTextFile(vector<vector<vector<bool> > > const& binaryTensor)
+{
+    ofstream output;
+    output.open (_pFile.substr(0, _pFile.length()-4) + "-Cornersvoxelized.txt");
+    
+    for(auto const& xslice : binaryTensor)
+    {
+        for (auto const& column : xslice)
+        {
+            for (auto const& line : column)
+            {
+                output << line << "\t";
+            }
+        }
+        output << endl; //one line per x axis slide of the grid
+    }
+    output.close();
+    cout << "Model saved to " << _pFile.substr(0, _pFile.length()-4) << "-Cornersvoxelized.txt" << endl;
+}
+
 
 void Voxelizer::writeVotingToTextFile(vector<vector<vector<int> > > const& votingTensor)
 {
@@ -798,7 +840,7 @@ void Voxelizer::writeVotingToTextFile(vector<vector<vector<int> > > const& votin
  * Is used for edge detection for the polycube. We use a 3x3 square structuring element to
  * find the corner on the cube.
  */
-vector<vector<vector<int> > > Voxelizer::voting()
+vector<vector<vector<int> > > Voxelizer::voting(int const& maskSize)
 {
     vector<vector<vector<int> > > accumulator(vector<vector<vector<int> > > (_size, vector<vector<int> >(_size, vector<int>(_size, 0))));
     for (int x(0); x < _size; x++)
@@ -828,11 +870,14 @@ vector<vector<vector<int> > > Voxelizer::voting()
                     }
                     if(sum != 27) //if one voxel of the structuring element is outside of the shape
                     {
-                        for(size_t m(0); m < _size; m++)
+                        for(int m(-maskSize); m < maskSize; m++)
                         {
-                            accumulator[m][y][z]++; //we increment the whole colum x for fixed y and z
-                            accumulator[x][m][z]++; //we increment the whole colum y for fixed x and z
-                            accumulator[x][y][m]++; //we increment the whole colum z for fixed y and x
+                            if (x+m<0||y+m<0||z+m<0||x+m>_size||y+m>_size||z+m>_size)
+                                continue;
+                            
+                            accumulator[x+m][y][z]++; //we increment the whole colum x for fixed y and z
+                            accumulator[x][y+m][z]++; //we increment the whole colum y for fixed x and z
+                            accumulator[x][y][z+m]++; //we increment the whole colum z for fixed y and x
                         }
                     }
                 }
@@ -863,110 +908,238 @@ void Voxelizer::writeSliceVotingTextFile(unsigned int const& sliceNumber, vector
     cout << "Model Slice saved to " << _pFile.substr(0, _pFile.length()-4) << "-outfileVoting.txt" << endl;
 }
 
-//  output is a binary image
-//  1: not a min region
-//  0: part of a min region
-//  2: not sure if min or not
-//  3: uninitialized
-void Voxelizer::imregionalmin(cv::Mat& img, cv::Mat& out_img)
+void Voxelizer::findCorners(vector<vector<vector<int> > > const& votingVector, unsigned int const& regionSize)
 {
-    // pad the border of img with 1 and copy to img_pad
-    cv::Mat img_pad;
-    cv::copyMakeBorder(img, img_pad, 1, 1, 1, 1, IPL_BORDER_CONSTANT, 1);
-
-    //  initialize binary output to 2, unknown if min
-    out_img = cv::Mat::ones(img.rows, img.cols, CV_8U)+2;
-
-    //  initialize pointers to matrices
-    float* in = (float *)(img_pad.data);
-    uchar* out = (uchar *)(out_img.data);
-
-    //  size of matrix
-    int in_size = img_pad.cols*img_pad.rows;
-    int out_size = img.cols*img.rows;
-
-    int x, y;
-    for (int i = 0; i < out_size; i++) {
-        //  find x, y indexes
-        y = i % img.cols;
-        x = i / img.cols;
-
-        neighborCheck(in, out, i, x, y, img_pad.cols);  //  all regions are either min or max
+    vector<vector<vector<bool> > > binaryTensorVoted(vector<vector<vector<bool> > > (_size, vector<vector<bool> >(_size, vector<bool>(_size, false))));
+    //first we need to find a point form where to start
+    size_t max(0);
+    size_t xMax(0);
+    size_t yMax(0);
+    size_t zMax(0);
+    
+    //Looking of the 50 highest voted corners. (normaly we need 20 corners to have the shape of the car)
+    for(size_t i(0);i < 50; i++)
+    {
+        for (size_t x(0); x < votingVector.size(); x++)
+        {
+            for (size_t y(0); y < votingVector[0].size(); y++)
+            {
+                 for (size_t z(0); z < votingVector[0][0].size(); z++)
+                 {
+                     if (votingVector[x][y][z] > max && _binaryTensor[x][y][z] && !binaryTensorVoted[x][y][z])
+                     {
+                         xMax=x;
+                         yMax=y;
+                         zMax=z;
+                         max=votingVector[x][y][z];
+                     }
+                 }
+            }
+        }
+        //Find the RegionalMaxima: user can choose the size of the maxima regions
+        //vector<vector<vector<bool> > > isRegionalMaxTensor(findRegionalMaxima(regionSize));
+        
+        //We now shoot out a x direction loop to find the biggest x around to find the opposite corner
+        for (size_t k(xMax); k < votingVector.size(); k++) //find
+        {
+            
+        }
     }
+    
+}
 
-    cv::Mat label;
-    cv::connectedComponents(out_img, label);
+// Note the smaller regionSize is the better it is
+ vector<vector<vector<bool> > > Voxelizer::findRegionalMaxima(int regionSize, vector<vector<vector<int> > > const& votingMatrix)
+{
+    vector<vector<vector<bool> > > localMaxima = vector<vector<vector<bool> > > (_size, vector<vector<bool> >(_size, vector<bool>(_size, false)));
+    
+    for (int x(1); x < _size - 1; x++)
+    {
+        for (int y(1); y < _size - 1; y++)
+        {
+            for (int z(1); z < _size - 1; z++)
+            {
+                int counter(0);
+                if (_binaryTensor[x][y][z]) //means we are inside the figure
+                {
+                    for(int i(-1); i <= 1; i++)
+                    {
+                         for(int j(-1); j <= 1; j++)
+                         {
+                              for(int k(-1); k <= 1; k++)
+                              {
+                                  if (i==0 && j==0 && k==0)
+                                      continue;
+                                  
+                                  if (_binaryTensor[x+i][y+j][z+k])
+                                  {
+                                      counter++;
+                                  }
+                              }
+                         }
+                    }
+                    cout << counter << endl;
+                    if(counter <= 20) // Is on the boarder/corner?
+                    {
+                        //Now we need to look at the voting matrix to find which is the point in neighborhood inside the figure
+                        int max(0);
+                        int xmax(0);
+                        int ymax(0);
+                        int zmax(0);
 
-    int* lab = (int *)(label.data);
-
-    in = (float *)(img.data);
-    in_size = img.cols*img.rows;
-
-    std::vector<int> bad_labels;
-
-    for (int i = 0; i < out_size; i++) {
-        //  find x, y indexes
-        y = i % img.cols;
-        x = i / img.cols;
-
-        if (lab[i] != 0) {
-            if (neighborCleanup(in, out, i, x, y, img.rows, img.cols) == 1) {
-                bad_labels.push_back(lab[i]);
+                        for(int i(-regionSize); i <= regionSize; i++)
+                        {
+                            for(int j(-regionSize); j <= regionSize; j++)
+                            {
+                                for(int k(-regionSize); k <= regionSize; k++)
+                                {
+                                    if (not(i==0 && j==0 && k==0))
+                                    {
+                                        if (!(x+i<0||y+j<0||z+k<0||x+i>=_size||y+j>=_size||z+k>=_size))
+                                        {
+                                            //cout << votingMatrix[x+i][y+j][k+z] << endl;
+                                            if(votingMatrix[x+i][y+j][k+z] > max)
+                                            {
+                                                max = votingMatrix[x+i][y+j][k+z];
+                                                xmax = x+i;
+                                                ymax = y+j;
+                                                zmax = z+k;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        //The local maxima is assigned to be a "corner" of the picure
+                        localMaxima[xmax][ymax][zmax] = true;
+                        cout << "found local max in " << xmax << " "<< ymax << " "<< zmax << endl;
+                        cout << "found local in " << x << " "<< y << " "<< z << endl;
+                    }
+                }
             }
         }
     }
+    return localMaxima;
+}
 
-    std::sort(bad_labels.begin(), bad_labels.end());
-    bad_labels.erase(std::unique(bad_labels.begin(), bad_labels.end()), bad_labels.end());
+void Voxelizer::openCV()
+{
+    cv::Mat src;
+    cv::Mat src_gray;
+    int thresh = 100;
+    int max_thresh = 255;
+    cv::RNG rng(12345);
+    void thresh_callback(int, void* );
+    
+    src = cv::imread("/Users/davidcleres/DeepShape/Polycubing/data/img.png", 1 );
+    cvtColor( src, src_gray, cv::COLOR_BGR2GRAY );
+    blur( src_gray, src_gray, cv::Size(3,3) );
+    const char* source_window = "Source";
+    namedWindow( source_window, cv::WINDOW_AUTOSIZE );
+    imshow( source_window, src );
+    
+    /*  //HULL
+    cv::Mat src_copy = src.clone();
+    cv::Mat threshold_output;
+    vector<vector<cv::Point> > contours;
+    vector<cv::Vec4i> hierarchy;
+    threshold( src_gray, threshold_output, thresh, 255, cv::THRESH_BINARY );
+    findContours( threshold_output, contours, hierarchy, cv::RETR_TREE, cv::CHAIN_APPROX_SIMPLE, cv::Point(0, 0) );
+    vector<vector<cv::Point> >hull( contours.size() );
+    for( size_t i = 0; i < contours.size(); i++ )
+    {   convexHull( cv::Mat(contours[i]), hull[i], false ); }
+    cv::Mat drawing = cv::Mat::zeros( threshold_output.size(), CV_8UC3 );
+    for( size_t i = 0; i< contours.size(); i++ )
+    {
+        cv::Scalar color = cv::Scalar( rng.uniform(0, 255), rng.uniform(0,255), rng.uniform(0,255) );
+        drawContours( drawing, contours, (int)i, color, 1, 8, vector<cv::Vec4i>(), 0, cv::Point() );
+        drawContours( drawing, hull, (int)i, color, 1, 8, vector<cv::Vec4i>(), 0, cv::Point() );
+    }
+    namedWindow( "Hull demo", cv::WINDOW_AUTOSIZE );
+    imshow( "Hull demo", drawing );*/
+    
+    /*cv::Mat threshold_output;
+    vector<vector<cv::Point> > contours;
+    vector<cv::Vec4i> hierarchy;
+    threshold( src_gray, threshold_output, thresh, 255, cv::THRESH_BINARY );
+    findContours( threshold_output, contours, hierarchy, cv::RETR_TREE, cv::CHAIN_APPROX_SIMPLE, cv::Point(0, 0) );
+    vector<vector<cv::Point> > contours_poly( contours.size() );
+    vector<cv::Rect> boundRect( contours.size() );
+    vector<cv::Point2f>center( contours.size() );
+    vector<float>radius( contours.size() );
+    for( size_t i = 0; i < contours.size(); i++ )
+    { approxPolyDP( cv::Mat(contours[i]), contours_poly[i], 3, true );
+        boundRect[i] = boundingRect( cv::Mat(contours_poly[i]) );
+        minEnclosingCircle( contours_poly[i], center[i], radius[i] );
+    }
+    cv::Mat drawing = cv::Mat::zeros( threshold_output.size(), CV_8UC3);
+    for( size_t i = 0; i< contours.size(); i++ )
+    {
+        cv::Scalar color = cv::Scalar( rng.uniform(0, 255), rng.uniform(0,255), rng.uniform(0,255) );
+        drawContours( drawing, contours_poly, (int)i, color, 1, 8, vector<cv::Vec4i>(), 0, cv::Point() );
+        rectangle( drawing, boundRect[i].tl(), boundRect[i].br(), color, 2, 8, 0 );
+        circle( drawing, center[i], (int)radius[i], color, 2, 8, 0 );
+    }
+    
+    namedWindow( "Contours", cv::WINDOW_AUTOSIZE );
+    imshow( "Contours", drawing );*/
+    
+    /// Global variables
+    char* corners_window = "Corners detected";
+    
+    cv::Mat dst, dst_norm, dst_norm_scaled;
+    dst = cv::Mat::zeros( src.size(), CV_32FC1 );
+    
+    /// Detector parameters
+    int blockSize = 2;
+    int apertureSize = 3;
+    double k = 0.04;
+    
+    /// Detecting corners
+    cornerHarris( src_gray, dst, blockSize, apertureSize, k, cv::BORDER_DEFAULT );
+    
+    /// Normalizing
+    normalize( dst, dst_norm, 0, 255, cv::NORM_MINMAX, CV_32FC1, cv::Mat() );
+    convertScaleAbs( dst_norm, dst_norm_scaled );
+    
+    /// Drawing a circle around corners
+    for( int j = 0; j < dst_norm.rows ; j++ )
+    { for( int i = 0; i < dst_norm.cols; i++ )
+    {
+        if( (int) dst_norm.at<float>(j,i) > thresh )
+        {
+            circle( dst_norm_scaled, cv::Point( i, j ), 5,  cv::Scalar(0), 2, 8, 0 );
+        }
+    }
+    }
+    /// Showing the result
+    cv::namedWindow( corners_window, CV_WINDOW_AUTOSIZE );
+    imshow( corners_window, dst_norm_scaled );
+}
 
-    for (int i = 0; i < out_size; ++i) {
-        if (lab[i] != 0) {
-            if (std::find(bad_labels.begin(), bad_labels.end(), lab[i]) != bad_labels.end()) {
-                out[i] = 0;
+/*//along each pair of axes find were the car is
+vector<Coord3D> Voxelizer::findBorders(vector<vector<vector<bool> > > regionalMax, vector<Coord3D> coordinatesToRemember)
+{
+    //Along the z axis
+    for(int i(0); i < _size; i++)
+    {
+        for (int j(0); j < _size; j++)
+        {
+            for (int k(0); k < _size; k++)
+            {
+                //Here i is the width of the car
+                if (regionalMax[i][j][k])
+                {
+                    Coord3D coord({i,j,k});
+                    coordinatesToRemember.push_back(coord);
+                    return coordinatesToRemember;
+                }
             }
         }
     }
-}
-
-int inline Voxelizer::neighborCleanup(float* in, uchar* out, int i, int x, int y, int x_lim, int y_lim)
-{
-    int index;
-    for (int xx = x - 1; xx < x + 2; ++xx) {
-        for (int yy = y - 1; yy < y + 2; ++yy) {
-            if (((xx == x) && (yy==y)) || xx < 0 || yy < 0 || xx >= x_lim || yy >= y_lim)
-                continue;
-            index = xx*y_lim + yy;
-            if ((in[i] == in[index]) && (out[index] == 0))
-                return 1;
-        }
-    }
-
-    return 0;
-}
-
-void inline Voxelizer::neighborCheck(float* in, uchar* out, int i, int x, int y, int x_lim)
-{
-    int indexes[8], cur_index;
-    indexes[0] = x*x_lim + y;
-    indexes[1] = x*x_lim + y+1;
-    indexes[2] = x*x_lim + y+2;
-    indexes[3] = (x+1)*x_lim + y+2;
-    indexes[4] = (x + 2)*x_lim + y+2;
-    indexes[5] = (x + 2)*x_lim + y + 1;
-    indexes[6] = (x + 2)*x_lim + y;
-    indexes[7] = (x + 1)*x_lim + y;
-    cur_index = (x + 1)*x_lim + y+1;
-
-    for (int t = 0; t < 8; t++) {
-        if (in[indexes[t]] < in[cur_index]) {
-            out[i] = 0;
-            break;
-        }
-    }
-
-    if (out[i] == 3)
-        out[i] = 1;
-}
+    
+    
+}*/
 
 Voxelizer::~Voxelizer() {
 	// TODO Auto-generated destructor stub

@@ -8,7 +8,7 @@ from six.moves import urllib
 
 #uploads the data-sets have been downscaled to a 100Hz sampling rate
 def importData(filename, grid_size):
-    train_input = load(root = './Data', filename = filename, grid_size = grid_size)
+    train_input = load(root = './Polycubing/data/', filename = filename, grid_size = grid_size)
     print(str(type(train_input)), train_input.size()) 
     #print(str(type(train_target)), train_target.size())
     '''test_input , test_target = load(root = './data_bci_100Hz', train = False)
