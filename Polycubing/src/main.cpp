@@ -78,7 +78,6 @@ const auto &key_down = [](igl::opengl::glfw::Viewer &viewer,unsigned char key,in
                 target_vertices(i,maxIndices(i)) = (normals_vertices(i,maxIndices(i)) > 0) ? 1.0 : -1.0;
             }
             // Smooth field out
-            double lambda_ = -0.1;
             for (int j = 0; j < 2; j++)
             {
                 for (int i = 0; i < 3; i++)
@@ -180,21 +179,35 @@ const auto &key_down = [](igl::opengl::glfw::Viewer &viewer,unsigned char key,in
             voxelizer.Write(outputFileWrite);               //With simple compression
             voxelizer.WriteForView(outputFileForView);     //Enables to write a file in the binvox format
             
-            voxelizer.writeTextFile();
-            voxelizer.writeSliceTextFile(50);
-            voxelizer.writeVotingToTextFile(voxelizer.voting(5));
-            voxelizer.writeSliceVotingTextFile(50, voxelizer.voting(5));
+            int voting(5);
+            int sliceNumber(50);
             
-            cout << "Hello" <<endl;
-            voxelizer.writeSliceTextFile(voxelizer.findRegionalMaxima(3, voxelizer.voting(5)), 5);
-            voxelizer.writeTextFile(voxelizer.findRegionalMaxima(3, voxelizer.voting(5)));
-            cout << "done" <<endl;
+            voxelizer.writeTextFile();
+            voxelizer.writeSliceTextFile(sliceNumber);
+            voxelizer.writeVotingToTextFile(voxelizer.voting(voting, voxelizer.getBinarytensor()));
+            voxelizer.writeSliceVotingTextFile(sliceNumber, voxelizer.voting(voting, voxelizer.getBinarytensor()));
+            voxelizer.writeSliceTextFile(voxelizer.findRegionalMaxima(3, voxelizer.voting(voting, voxelizer.getBinarytensor())), voting);
+            voxelizer.writeTextFile(voxelizer.findRegionalMaxima(3, voxelizer.voting(voting, voxelizer.getBinarytensor())));
             
             timer.Stop();
             cout << "writing file "; timer.PrintTimeInS();
             cout << "-------------------------------------------" << endl;
             
-            voxelizer.openCV();
+            //voxelizer.openCV();
+            
+            vector<vector<vector<int> > > counterMatrix = vector<vector<vector<int> > > (gridSize, vector<vector<int> >(gridSize, vector<int>(gridSize, 0)));
+            
+            voxelizer.writeTextFile(voxelizer.neighbourhoodCorrection(3, counterMatrix), "neighbors");
+            voxelizer.writeSliceTextFile(voxelizer.neighbourhoodCorrection(3, counterMatrix), sliceNumber, "neighbors");
+            
+            voxelizer.writeSliceVotingTextFile(sliceNumber, counterMatrix, "Counter");
+            voxelizer.writeSliceVotingTextFile(sliceNumber, voxelizer.voting(voting, voxelizer.neighbourhoodCorrection(3, counterMatrix)), "newVoting");
+            voxelizer.writeSliceTextFile(voxelizer.findBorders(voxelizer.voting(voting, voxelizer.neighbourhoodCorrection(3, counterMatrix))), sliceNumber, "means");
+            
+            voxelizer.writeSliceTextFileXProj(voxelizer.voting(voting, voxelizer.neighbourhoodCorrection(3, counterMatrix)), 39, "xproj");
+            
+            voxelizer.writeTextFileXProj(39);
+            voxelizer.writeTextFile(voxelizer.findBorders(voxelizer.voting(voting, voxelizer.neighbourhoodCorrection(3, counterMatrix))),  "final"); //HERE
         }
             
         default:

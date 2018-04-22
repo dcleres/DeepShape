@@ -753,10 +753,10 @@ void Voxelizer::writeSliceTextFile(unsigned int const& sliceNumber)
 }
 
 //Visualize a single slice in Excel (for instance)
-void Voxelizer::writeSliceTextFile(vector<vector<vector<bool> > > const& binaryTensor, unsigned int const& sliceNumber)
+void Voxelizer::writeSliceTextFile(vector<vector<vector<bool> > > const& binaryTensor, unsigned int const& sliceNumber, string const& filename)
 {
     ofstream output;
-    output.open (_pFile.substr(0, _pFile.length()-4)+"-SliceCorners.txt");
+    output.open (_pFile.substr(0, _pFile.length()-4)+"-Slice"+filename+".txt");
     
     vector<vector<bool> > element = binaryTensor[sliceNumber];
     
@@ -770,7 +770,27 @@ void Voxelizer::writeSliceTextFile(vector<vector<vector<bool> > > const& binaryT
     }
     
     output.close();
-    cout << "Model Slice saved to " << _pFile.substr(0, _pFile.length()-4) << "-SliceCorners.txt" << endl;
+    cout << "Model Slice saved to " << _pFile.substr(0, _pFile.length()-4) << "-Slice"+filename+".txt" << endl;
+}
+
+
+//Visualize a single slice in Excel (for instance)
+void Voxelizer::writeSliceTextFileXProj(vector<vector<vector<int> > > const& votingTensor, unsigned int const& sliceNumber, string const& filename)
+{
+    ofstream output;
+    output.open (_pFile.substr(0, _pFile.length()-4)+"-Slice"+filename+"-Projection.txt");
+
+    for (int i(0); i < votingTensor.size(); i++)
+    {
+        for (int j(0); j< votingTensor[i][sliceNumber].size(); j++)
+        {
+            output << votingTensor[i][sliceNumber][j] << "\t";
+        }
+        output << endl;
+    }
+    
+    output.close();
+    cout << "Model Slice saved to " << _pFile.substr(0, _pFile.length()-4) << "-Slice"+filename+".txt" << endl;
 }
 
 void Voxelizer::writeTextFile()
@@ -793,10 +813,28 @@ void Voxelizer::writeTextFile()
     cout << "Model saved to " << _pFile.substr(0, _pFile.length()-4) << "-voxelized.txt" << endl;
 }
 
-void Voxelizer::writeTextFile(vector<vector<vector<bool> > > const& binaryTensor)
+void Voxelizer::writeTextFileXProj(unsigned int const& sliceNumber)
 {
     ofstream output;
-    output.open (_pFile.substr(0, _pFile.length()-4) + "-Cornersvoxelized.txt");
+    output.open (_pFile.substr(0, _pFile.length()-4) + "-XProj.txt");
+    
+    for (int i(0); i < _binaryTensor.size(); i++)
+    {
+        for (int j(0); j< _binaryTensor[i][sliceNumber].size(); j++)
+        {
+            output << _binaryTensor[i][sliceNumber][j] << "\t";
+        }
+        output << endl;
+    }
+    
+    output.close();
+    cout << "Model saved to " << _pFile.substr(0, _pFile.length()-4) << "-XProj.txt" << endl;
+}
+
+void Voxelizer::writeTextFile(vector<vector<vector<bool> > > const& binaryTensor, string filename)
+{
+    ofstream output;
+    output.open (_pFile.substr(0, _pFile.length()-4) + "-" + filename + "voxelized.txt");
     
     for(auto const& xslice : binaryTensor)
     {
@@ -810,7 +848,8 @@ void Voxelizer::writeTextFile(vector<vector<vector<bool> > > const& binaryTensor
         output << endl; //one line per x axis slide of the grid
     }
     output.close();
-    cout << "Model saved to " << _pFile.substr(0, _pFile.length()-4) << "-Cornersvoxelized.txt" << endl;
+    cout << "Model saved to " << _pFile.substr(0, _pFile.length()-4) << "-" + filename
+    + "voxelized.txt" << endl;
 }
 
 
@@ -818,8 +857,6 @@ void Voxelizer::writeVotingToTextFile(vector<vector<vector<int> > > const& votin
 {
     ofstream output;
     output.open (_pFile.substr(0, _pFile.length()-4) + "-votingTensor.txt");
-    
-    cout << votingTensor.size() << endl; 
     
     for(auto const& xslice : votingTensor)
     {
@@ -840,7 +877,7 @@ void Voxelizer::writeVotingToTextFile(vector<vector<vector<int> > > const& votin
  * Is used for edge detection for the polycube. We use a 3x3 square structuring element to
  * find the corner on the cube.
  */
-vector<vector<vector<int> > > Voxelizer::voting(int const& maskSize)
+vector<vector<vector<int> > > Voxelizer::voting(int const& maskSize, vector<vector<vector<bool> > > const& binaryTensor)
 {
     vector<vector<vector<int> > > accumulator(vector<vector<vector<int> > > (_size, vector<vector<int> >(_size, vector<int>(_size, 0))));
     for (int x(0); x < _size; x++)
@@ -850,7 +887,7 @@ vector<vector<vector<int> > > Voxelizer::voting(int const& maskSize)
             for (int z(0); z < _size; z++)
             {
                 size_t sum(0);
-                if(_binaryTensor[x][y][z])
+                if(binaryTensor[x][y][z])
                 {
                     for (int i(-1); i <= 1; i++) //3D Cube structuring element of size 3x3x3
                     {
@@ -860,7 +897,7 @@ vector<vector<vector<int> > > Voxelizer::voting(int const& maskSize)
                             {
                                 if(!(x+i<0) && x+i < _size && !(y+j < 0) && (y+j < _size) && !(z+k<0) && z+k < _size) //Avoid segfault at the boudaries
                                 {
-                                    if(_binaryTensor[x+i][y+j][z+k])
+                                    if(binaryTensor[x+i][y+j][z+k])
                                     {
                                         sum++;
                                     }
@@ -888,10 +925,10 @@ vector<vector<vector<int> > > Voxelizer::voting(int const& maskSize)
 }
 
 //Visualize a single slice in Excel (for instance)
-void Voxelizer::writeSliceVotingTextFile(unsigned int const& sliceNumber, vector<vector<vector<int> > > const& tensor)
+void Voxelizer::writeSliceVotingTextFile(unsigned int const& sliceNumber, vector<vector<vector<int> > > const& tensor, string filename)
 {
     ofstream output;
-    output.open (_pFile.substr(0, _pFile.length()-4)+"-outfileVoting.txt");
+    output.open (_pFile.substr(0, _pFile.length()-4)+"-outfile"+filename+".txt");
     
     vector<vector<int> > element = tensor[sliceNumber];
     
@@ -905,47 +942,48 @@ void Voxelizer::writeSliceVotingTextFile(unsigned int const& sliceNumber, vector
     }
     
     output.close();
-    cout << "Model Slice saved to " << _pFile.substr(0, _pFile.length()-4) << "-outfileVoting.txt" << endl;
+    cout << "Model Slice saved to " << _pFile.substr(0, _pFile.length()-4) << "-outfile"+filename+".txt" << endl;
 }
 
-void Voxelizer::findCorners(vector<vector<vector<int> > > const& votingVector, unsigned int const& regionSize)
+// Note the smaller regionSize is the better it is
+vector<vector<vector<bool> > > Voxelizer::neighbourhoodCorrection(int regionSize, vector<vector<vector<int> > >& counterMatrix)
 {
-    vector<vector<vector<bool> > > binaryTensorVoted(vector<vector<vector<bool> > > (_size, vector<vector<bool> >(_size, vector<bool>(_size, false))));
-    //first we need to find a point form where to start
-    size_t max(0);
-    size_t xMax(0);
-    size_t yMax(0);
-    size_t zMax(0);
-    
-    //Looking of the 50 highest voted corners. (normaly we need 20 corners to have the shape of the car)
-    for(size_t i(0);i < 50; i++)
+    vector<vector<vector<bool> > > localCorrection = _binaryTensor;
+    for (int x(0); x < _size; x++)
     {
-        for (size_t x(0); x < votingVector.size(); x++)
+        for (int y(0); y < _size; y++)
         {
-            for (size_t y(0); y < votingVector[0].size(); y++)
+            for (int z(0); z < _size; z++)
             {
-                 for (size_t z(0); z < votingVector[0][0].size(); z++)
-                 {
-                     if (votingVector[x][y][z] > max && _binaryTensor[x][y][z] && !binaryTensorVoted[x][y][z])
-                     {
-                         xMax=x;
-                         yMax=y;
-                         zMax=z;
-                         max=votingVector[x][y][z];
-                     }
-                 }
+                int counter(0);
+                for(int i(-1); i <= 1; i++)
+                {
+                    for(int j(-1); j <= 1; j++)
+                    {
+                        for(int k(-1); k <= 1; k++)
+                        {
+                            if (i==0 && j==0 && k==0)
+                                continue;
+                            if (!(x+i<0 || y+j<0 || z+k<0 || x+i>=_size || y+j>=_size || z+k>=_size ))
+                            {
+                                if (_binaryTensor[x+i][y+j][z+k])
+                                {
+                                    counter++;
+                                }
+                            }
+                        }
+                    }
+                }
+   
+                if (counter > 9)
+                {
+                    counterMatrix[x][y][z] = counter;
+                    localCorrection[x][y][z] = true;
+                }
             }
         }
-        //Find the RegionalMaxima: user can choose the size of the maxima regions
-        //vector<vector<vector<bool> > > isRegionalMaxTensor(findRegionalMaxima(regionSize));
-        
-        //We now shoot out a x direction loop to find the biggest x around to find the opposite corner
-        for (size_t k(xMax); k < votingVector.size(); k++) //find
-        {
-            
-        }
     }
-    
+    return localCorrection;
 }
 
 // Note the smaller regionSize is the better it is
@@ -978,7 +1016,7 @@ void Voxelizer::findCorners(vector<vector<vector<int> > > const& votingVector, u
                               }
                          }
                     }
-                    cout << counter << endl;
+                    //cout << counter << endl;
                     if(counter <= 20) // Is on the boarder/corner?
                     {
                         //Now we need to look at the voting matrix to find which is the point in neighborhood inside the figure
@@ -1027,7 +1065,6 @@ void Voxelizer::openCV()
     cv::Mat src;
     cv::Mat src_gray;
     int thresh = 100;
-    int max_thresh = 255;
     cv::RNG rng(12345);
     void thresh_callback(int, void* );
     
@@ -1117,29 +1154,245 @@ void Voxelizer::openCV()
     imshow( corners_window, dst_norm_scaled );
 }
 
-/*//along each pair of axes find were the car is
-vector<Coord3D> Voxelizer::findBorders(vector<vector<vector<bool> > > regionalMax, vector<Coord3D> coordinatesToRemember)
+//Means along axes along each pair of axes find were the car is
+//vector<Coord3D> Voxelizer::findBorders(vector<vector<vector<int> > > voting)
+vector<vector<vector<bool> > > Voxelizer::findBorders(vector<vector<vector<int> > > voting)
 {
-    //Along the z axis
-    for(int i(0); i < _size; i++)
+    vector<double> meanX = vector<double>(_size, 0);
+    vector<double> meanY = vector<double>(_size, 0);
+    vector<double> meanZ = vector<double>(_size, 0);
+    
+    vector<double> Xs_init;
+    vector<double> Xs_final;
+    vector<double> Ys;
+    Ys.clear();
+    vector<double> Zs;
+    Zs.clear();
+    
+    int idxBest(0);
+    int maxSumMean(0);
+
+    for (int y(0); y < _size; y++)
     {
-        for (int j(0); j < _size; j++)
+        int sumX(0);
+        int sumMean(0);
+        
+        for (int x(0); x < _size; x++)
         {
-            for (int k(0); k < _size; k++)
+            for (int z(0); z < _size; z++)
             {
-                //Here i is the width of the car
-                if (regionalMax[i][j][k])
-                {
-                    Coord3D coord({i,j,k});
-                    coordinatesToRemember.push_back(coord);
-                    return coordinatesToRemember;
-                }
+                sumX += voting[x][y][z];
+            }
+            sumMean+=sumX/_size; //supposition is that if the sum of the averages is the best one then we are in a nice slice of the object --> This is SLICE specific
+            if(sumMean > maxSumMean)
+            {
+                maxSumMean = sumMean;
+                sumMean = 0;
+                idxBest = y;
             }
         }
     }
     
+    cout << "the best frame is " << idxBest << endl;
+
+    for (int z(25); z < 75; z++)
+     {
+         for (int x(0); x < _size; x++)
+         {
+             if(_binaryTensor[x][idxBest][z])
+             {
+                 Xs_init.push_back(x);
+                 int itr(x);
+                 while (_binaryTensor[itr][idxBest][z])
+                 {
+                     itr++;
+                 }
+                 Xs_final.push_back(itr-1);
+                 break;
+             }
+         }
+     }
     
-}*/
+    // using default comparison (operator <):
+    std::sort (Xs_init.begin(), Xs_init.end());
+    std::sort (Xs_final.begin(), Xs_final.end());
+    
+    int medianIdx(Xs_init.size()/2);
+    int x_init(Xs_init[medianIdx]);
+    int x_final(Xs_final[medianIdx]);
+    
+
+    cout << "x_init = " << Xs_init[medianIdx] << endl; //we take the median since it should represent the median ehavior of the object we study
+    cout << "x_final= " << Xs_final[medianIdx] << endl;
+    
+    //int middle (abs(Xs_final[medianIdx]-Xs_init[medianIdx])/2);
+    int middle = 50;
+    
+    for (int j(0); j < _size; j++)
+    {
+        double sumZ(0);
+        double sumY(0);
+        
+        for (int k(0); k < _size; k++)
+        {
+            //NOTE FIND A WAY TO FIND THE MIDDLE SLICE HERE 50!!!!!!!!!!!!!!!!!
+            sumY += voting[middle][j][k];
+            sumZ += voting[middle][k][j];
+        }
+        meanZ[j]=(sumZ/_size); //mean per columns
+        meanY[j]=(sumY/_size); //mean per lines
+    }
+    
+    for (int j(0); j < 6; j++)
+    {
+        double maxZ(0);
+        double maxY(0);
+        int maxIdxZ(0);
+        int maxIdxY(0);
+        
+        for (int o(0); o < _size; o++)
+        {
+            cout << maxY << endl;
+            if(meanY[o] > maxY)
+            {
+                maxY = meanY[o];
+                maxIdxY = o;
+            }
+            if(meanZ[o] > maxZ)
+            {
+                maxZ = meanZ[o];
+                maxIdxZ = o;
+            }
+        }
+        
+        cout << "push: " << meanZ[maxIdxZ] << endl;
+        Zs.push_back(maxIdxZ);
+        Ys.push_back(maxIdxY);
+        
+        meanZ[maxIdxZ] = 0; //Deletes the maxima values
+        meanY[maxIdxY] = 0;
+    }
+    
+    vector<vector<vector<bool> > >  output = vector<vector<vector<bool> > > (_size, vector<vector<bool> >(_size, vector<bool>(_size, false)));
+    
+    output[x_init][Ys[0]][Zs[0]] = true;
+    output[x_init][Ys[0]][Zs[1]] = true;
+    output[x_init][Ys[0]][Zs[2]] = true;
+    output[x_init][Ys[0]][Zs[3]] = true;
+    output[x_init][Ys[0]][Zs[4]] = true;
+    output[x_init][Ys[0]][Zs[5]] = true;
+    output[x_init][Ys[1]][Zs[0]] = true;
+    output[x_init][Ys[1]][Zs[1]] = true;
+    output[x_init][Ys[1]][Zs[2]] = true;
+    output[x_init][Ys[1]][Zs[3]] = true;
+    output[x_init][Ys[1]][Zs[4]] = true;
+    output[x_init][Ys[1]][Zs[5]] = true;
+    output[x_init][Ys[2]][Zs[0]] = true;
+    output[x_init][Ys[2]][Zs[1]] = true;
+    output[x_init][Ys[2]][Zs[2]] = true;
+    output[x_init][Ys[2]][Zs[3]] = true;
+    output[x_init][Ys[2]][Zs[4]] = true;
+    output[x_init][Ys[2]][Zs[5]] = true;
+    
+    output[x_final][Ys[0]][Zs[0]] = true;
+    output[x_final][Ys[0]][Zs[1]] = true;
+    output[x_final][Ys[0]][Zs[2]] = true;
+    output[x_final][Ys[0]][Zs[3]] = true;
+    output[x_final][Ys[0]][Zs[4]] = true;
+    output[x_final][Ys[0]][Zs[5]] = true;
+    output[x_final][Ys[1]][Zs[0]] = true;
+    output[x_final][Ys[1]][Zs[1]] = true;
+    output[x_final][Ys[1]][Zs[2]] = true;
+    output[x_final][Ys[1]][Zs[3]] = true;
+    output[x_final][Ys[1]][Zs[4]] = true;
+    output[x_final][Ys[1]][Zs[5]] = true;
+    output[x_final][Ys[2]][Zs[0]] = true;
+    output[x_final][Ys[2]][Zs[1]] = true;
+    output[x_final][Ys[2]][Zs[2]] = true;
+    output[x_final][Ys[2]][Zs[3]] = true;
+    output[x_final][Ys[2]][Zs[4]] = true;
+    output[x_final][Ys[2]][Zs[5]] = true;
+    
+    /*output[50][Ys[0]][Zs[0]] = true;
+    output[50][Ys[0]][Zs[1]] = true;
+    output[50][Ys[0]][Zs[2]] = true;
+    output[50][Ys[0]][Zs[3]] = true;
+    output[50][Ys[0]][Zs[4]] = true;
+    output[50][Ys[0]][Zs[5]] = true;
+    output[50][Ys[1]][Zs[0]] = true;
+    output[50][Ys[1]][Zs[1]] = true;
+    output[50][Ys[1]][Zs[2]] = true;
+    output[50][Ys[1]][Zs[3]] = true;
+    output[50][Ys[1]][Zs[4]] = true;
+    output[50][Ys[1]][Zs[5]] = true;
+    output[50][Ys[2]][Zs[0]] = true;
+    output[50][Ys[2]][Zs[1]] = true;
+    output[50][Ys[2]][Zs[2]] = true;
+    output[50][Ys[2]][Zs[3]] = true;
+    output[50][Ys[2]][Zs[4]] = true;
+    output[50][Ys[2]][Zs[5]] = true;*/
+    
+    return output;
+}
+
+vector<vector<vector<bool> > > Voxelizer::buildPerfectPolyCube(vector<vector<vector<bool> > > edges)
+{
+    vector<vector<vector<bool> > >  output = vector<vector<vector<bool> > > (_size, vector<vector<bool> >(_size, vector<bool>(_size, false)));
+    
+    for(int i(0); i < _size; i++)
+    {
+        for(int j(0); j < _size; j++)
+        {
+            for(int k(0); k < _size; k++)
+            {
+                if(edges[i][j][k])
+                {
+                    //we found one corner and now we shoot out a new vector to find the next corner
+                    int itrI(i);
+                    while (not(edges[itrI][j][k]))
+                    {
+                        itrI++;
+                    }
+                    
+                    //we found one corner and now we shoot out a new vector to find the next corner
+                    int itrJ(j);
+                    while (not(edges[i][itrJ][k]))
+                    {
+                        itrJ++;
+                    }
+                    
+                    //we found one corner and now we shoot out a new vector to find the next corner
+                    int itrK(k);
+                    while (not(edges[i][j][itrK]))
+                    {
+                        itrK++;
+                    }
+                    
+                    //see if the barycenter is in the figure
+                    int baryX((itrI-i)/2);
+                    int baryY((itrJ-j)/2);
+                    int baryZ((itrK-k)/2);
+                    
+                    if(_binaryTensor[baryX][baryY][baryZ])
+                    {
+                        //this means that we are in the original figure and that we can fill a cube with ones
+                        for(int x(i); x < itrI; x++)
+                        {
+                            for(int y(j); y < itrJ; y++)
+                            {
+                                for(int z(k); z < itrK; z++)
+                                {
+                                    output[x][y][z] = true;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    return output;
+}
 
 Voxelizer::~Voxelizer() {
 	// TODO Auto-generated destructor stub
@@ -1187,4 +1440,9 @@ v3_p Voxelizer::GetHalfUnit() {
 
 int Voxelizer::GetTotalSize() {
 	return _totalSize;
+}
+
+vector<vector<vector<bool> > > Voxelizer::getBinarytensor()
+{
+    return _binaryTensor;
 }

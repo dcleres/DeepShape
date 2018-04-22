@@ -113,6 +113,7 @@ public:
 	int GetFacesSize();
 	v3_p GetVertices();
 	v3_p GetFaces();
+    vector<vector<vector<bool> > > getBinarytensor();
 	void VoxelizeSurface(int numThread=1);
 	void VoxelizeSolid(int numThread=1);
 	void Write(const string& pFile);
@@ -121,19 +122,24 @@ public:
     void buildBinaryTensor();
     Voxelizer(int size, const string& pFile, bool verbose);
 	void writeSliceTextFile(unsigned int const& sliceNumber);
-    void writeSliceTextFile(vector<vector<vector<bool> > > const& binaryTensor, unsigned int const& sliceNumber);
+    void writeTextFileXProj(unsigned int const& sliceNumber);
+    void writeSliceTextFile(vector<vector<vector<bool> > > const& binaryTensor, unsigned int const& sliceNumber, string const& filename="Corners");
+    void writeSliceTextFileXProj(vector<vector<vector<int> > > const& binaryTensor, unsigned int const& sliceNumber, string const& filename);
     void writeTextFile();
-    void writeTextFile(vector<vector<vector<bool> > > const& binaryTensor);
+    void writeTextFile(vector<vector<vector<bool> > > const& binaryTensor, string filename = "Corners"); //HERE
     void writeVotingToTextFile(vector<vector<vector<int> > > const& votingTensor);
-    void writeSliceVotingTextFile(unsigned int const& sliceNumber, vector<vector<vector<int> > > const& tensor);
+    void writeSliceVotingTextFile(unsigned int const& sliceNumber, vector<vector<vector<int> > > const& tensor, string filename = "Voting");
 
-    vector<vector<vector<int> > > voting(int const& maskSize);
-   
-    void findCorners(vector<vector<vector<int> > > const& votingVector, unsigned int const& regionSize);
+    vector<vector<vector<int> > > voting(int const& maskSize, vector<vector<vector<bool> > > const& binaryTensor);
     
     vector<vector<vector<bool> > > findRegionalMaxima(int regionSize, vector<vector<vector<int> > > const& votingMatrix);
     
-    /*vector<Coord3D> findBorders(vector<vector<vector<bool> > > regionalMax, vector<Coord3D> coordinatesToRemember);*/
+    vector<vector<vector<bool> > > neighbourhoodCorrection(int regionSizev, vector<vector<vector<int> > >& counterMatrix);
+    
+    //vector<Coord3D> findBorders(vector<vector<vector<int> > > voting);
+    vector<vector<vector<bool> > > findBorders(vector<vector<vector<int> > > voting);
+    vector<vector<vector<bool> > > buildPerfectPolyCube(vector<vector<vector<bool> > > edges);
+    
     
     void openCV();
     virtual ~Voxelizer();
