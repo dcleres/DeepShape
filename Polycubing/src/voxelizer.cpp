@@ -1050,8 +1050,6 @@ vector<vector<vector<bool> > > Voxelizer::neighbourhoodCorrection(int regionSize
                         }
                         //The local maxima is assigned to be a "corner" of the picure
                         localMaxima[xmax][ymax][zmax] = true;
-                        cout << "found local max in " << xmax << " "<< ymax << " "<< zmax << endl;
-                        cout << "found local in " << x << " "<< y << " "<< z << endl;
                     }
                 }
             }
@@ -1252,7 +1250,6 @@ vector<vector<vector<bool> > > Voxelizer::findBorders(vector<vector<vector<int> 
         
         for (int o(0); o < _size; o++)
         {
-            cout << maxY << endl;
             if(meanY[o] > maxY)
             {
                 maxY = meanY[o];
@@ -1264,8 +1261,6 @@ vector<vector<vector<bool> > > Voxelizer::findBorders(vector<vector<vector<int> 
                 maxIdxZ = o;
             }
         }
-        
-        cout << "push: " << meanZ[maxIdxZ] << endl;
         Zs.push_back(maxIdxZ);
         Ys.push_back(maxIdxY);
         
@@ -1313,25 +1308,6 @@ vector<vector<vector<bool> > > Voxelizer::findBorders(vector<vector<vector<int> 
     output[x_final][Ys[2]][Zs[4]] = true;
     output[x_final][Ys[2]][Zs[5]] = true;
     
-    /*output[50][Ys[0]][Zs[0]] = true;
-    output[50][Ys[0]][Zs[1]] = true;
-    output[50][Ys[0]][Zs[2]] = true;
-    output[50][Ys[0]][Zs[3]] = true;
-    output[50][Ys[0]][Zs[4]] = true;
-    output[50][Ys[0]][Zs[5]] = true;
-    output[50][Ys[1]][Zs[0]] = true;
-    output[50][Ys[1]][Zs[1]] = true;
-    output[50][Ys[1]][Zs[2]] = true;
-    output[50][Ys[1]][Zs[3]] = true;
-    output[50][Ys[1]][Zs[4]] = true;
-    output[50][Ys[1]][Zs[5]] = true;
-    output[50][Ys[2]][Zs[0]] = true;
-    output[50][Ys[2]][Zs[1]] = true;
-    output[50][Ys[2]][Zs[2]] = true;
-    output[50][Ys[2]][Zs[3]] = true;
-    output[50][Ys[2]][Zs[4]] = true;
-    output[50][Ys[2]][Zs[5]] = true;*/
-    
     return output;
 }
 
@@ -1352,17 +1328,14 @@ vector<vector<vector<bool> > > Voxelizer::buildPerfectPolyCube(vector<vector<vec
                     while (itrI < _size && not(edges[itrI][j][k]))
                     {
                         itrI++;
-                        cout << itrI << endl;
                     }
-                    
-                    //we found one corner and now we shoot out a new vector to find the next corner
+
                     int itrJ(j+1);
                     while (itrJ < _size && not(edges[i][itrJ][k]))
                     {
                         itrJ++;
                     }
-                    
-                    //we found one corner and now we shoot out a new vector to find the next corner
+
                     int itrK(k+1);
                     while (itrK < _size && not(edges[i][j][itrK]))
                     {
@@ -1374,8 +1347,6 @@ vector<vector<vector<bool> > > Voxelizer::buildPerfectPolyCube(vector<vector<vec
                     int baryY((itrJ+j)/2);
                     int baryZ((itrK+k)/2);
                     
-                    cout << baryX << " " << baryY << " " << baryZ << " is true" << endl;
-                    
                     if(_binaryTensor[baryX][baryY][baryZ])
                     {
                         //this means that we are in the original figure and that we can fill a cube with ones
@@ -1385,7 +1356,6 @@ vector<vector<vector<bool> > > Voxelizer::buildPerfectPolyCube(vector<vector<vec
                             {
                                 for(int z(k); z < itrK; z++)
                                 {
-                                    cout << x << " " << y << " " << z << " is true" << endl;
                                     output[x][y][z] = true;
                                 }
                             }

@@ -209,7 +209,7 @@ const auto &key_down = [](igl::opengl::glfw::Viewer &viewer,unsigned char key,in
             voxelizer.writeTextFileXProj(39);
             voxelizer.writeTextFile(voxelizer.findBorders(voxelizer.voting(voting, voxelizer.neighbourhoodCorrection(3, counterMatrix))),  "final");
             
-            voxelizer.writeTextFile(voxelizer.buildPerfectPolyCube(voxelizer.findBorders(voxelizer.voting(voting, voxelizer.neighbourhoodCorrection(3, counterMatrix)))),  "finalCubes"); //HERE
+            voxelizer.writeTextFile(voxelizer.buildPerfectPolyCube(voxelizer.findBorders(voxelizer.voting(voting, voxelizer.neighbourhoodCorrection(3, counterMatrix)))),  "finalCubes");
         }
             
         default:
