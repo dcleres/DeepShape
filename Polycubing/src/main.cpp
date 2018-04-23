@@ -229,6 +229,7 @@ int main(int argc, char *argv[])
     }
     else
     {
+        //filename = "/Users/davidcleres/DeepShape/Polycubing/models/camaro.off";
         filename = "/Users/davidcleres/DeepShape/Polycubing/models/camaro.off";
     }
     

@@ -1223,8 +1223,8 @@ vector<vector<vector<bool> > > Voxelizer::findBorders(vector<vector<vector<int> 
     cout << "x_init = " << Xs_init[medianIdx] << endl; //we take the median since it should represent the median ehavior of the object we study
     cout << "x_final= " << Xs_final[medianIdx] << endl;
     
-    //int middle (abs(Xs_final[medianIdx]-Xs_init[medianIdx])/2);
-    int middle = 50;
+    int middle (abs(Xs_final[medianIdx]+Xs_init[medianIdx])/2);
+    //int middle = 50;
     
     for (int j(0); j < _size; j++)
     {
