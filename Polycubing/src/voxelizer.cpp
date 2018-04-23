@@ -1348,30 +1348,33 @@ vector<vector<vector<bool> > > Voxelizer::buildPerfectPolyCube(vector<vector<vec
                 if(edges[i][j][k])
                 {
                     //we found one corner and now we shoot out a new vector to find the next corner
-                    int itrI(i);
-                    while (not(edges[itrI][j][k]))
+                    int itrI(i+1);
+                    while (itrI < _size && not(edges[itrI][j][k]))
                     {
                         itrI++;
+                        cout << itrI << endl;
                     }
                     
                     //we found one corner and now we shoot out a new vector to find the next corner
-                    int itrJ(j);
-                    while (not(edges[i][itrJ][k]))
+                    int itrJ(j+1);
+                    while (itrJ < _size && not(edges[i][itrJ][k]))
                     {
                         itrJ++;
                     }
                     
                     //we found one corner and now we shoot out a new vector to find the next corner
-                    int itrK(k);
-                    while (not(edges[i][j][itrK]))
+                    int itrK(k+1);
+                    while (itrK < _size && not(edges[i][j][itrK]))
                     {
                         itrK++;
                     }
                     
                     //see if the barycenter is in the figure
-                    int baryX((itrI-i)/2);
-                    int baryY((itrJ-j)/2);
-                    int baryZ((itrK-k)/2);
+                    int baryX((itrI+i)/2);
+                    int baryY((itrJ+j)/2);
+                    int baryZ((itrK+k)/2);
+                    
+                    cout << baryX << " " << baryY << " " << baryZ << " is true" << endl;
                     
                     if(_binaryTensor[baryX][baryY][baryZ])
                     {
@@ -1382,6 +1385,7 @@ vector<vector<vector<bool> > > Voxelizer::buildPerfectPolyCube(vector<vector<vec
                             {
                                 for(int z(k); z < itrK; z++)
                                 {
+                                    cout << x << " " << y << " " << z << " is true" << endl;
                                     output[x][y][z] = true;
                                 }
                             }
