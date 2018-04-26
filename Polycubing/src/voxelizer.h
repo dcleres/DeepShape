@@ -141,7 +141,7 @@ public:
     vector<vector<vector<bool> > > buildPerfectPolyCube(vector<vector<vector<bool> > > edges);
     
     
-    void openCV();
+    void openCV(vector<vector<vector<int> > > const& votingMatrix);
     virtual ~Voxelizer();
 };
 

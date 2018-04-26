@@ -4,7 +4,7 @@ close all
 
 addpath('../VolHough/')  
 
-stl_name = '../../models/pseudo_volvo.stl'
+stl_name = '../../models/pseudo_bunny.stl'
 %Plot the original STL mesh:
 figure
 [stlcoords] = READ_stl(stl_name);

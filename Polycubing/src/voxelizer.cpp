@@ -1058,8 +1058,22 @@ vector<vector<vector<bool> > > Voxelizer::neighbourhoodCorrection(int regionSize
     return localMaxima;
 }
 
-void Voxelizer::openCV()
+void Voxelizer::openCV(vector<vector<vector<int> > > const& votingMatrix)
 {
+    cv::Mat Z = cv::Mat::zeros(100,100, CV_8UC1);
+    
+    for (int i(1); i < _size; i++)
+    {
+        for (int j(1); j < _size; j++)
+        {
+            Z.at<double>(i,j) = votingMatrix[43][i][j];
+        }
+    }
+    const char* source_window = "Source";
+    imshow( source_window, Z );
+
+    
+    /*
     cv::Mat src;
     cv::Mat src_gray;
     int thresh = 100;
@@ -1071,7 +1085,7 @@ void Voxelizer::openCV()
     blur( src_gray, src_gray, cv::Size(3,3) );
     const char* source_window = "Source";
     namedWindow( source_window, cv::WINDOW_AUTOSIZE );
-    imshow( source_window, src );
+    imshow( source_window, src );*/
     
     /*  //HULL
     cv::Mat src_copy = src.clone();
@@ -1119,6 +1133,7 @@ void Voxelizer::openCV()
     namedWindow( "Contours", cv::WINDOW_AUTOSIZE );
     imshow( "Contours", drawing );*/
     
+    /*
     /// Global variables
     char* corners_window = "Corners detected";
     
@@ -1149,7 +1164,7 @@ void Voxelizer::openCV()
     }
     /// Showing the result
     cv::namedWindow( corners_window, CV_WINDOW_AUTOSIZE );
-    imshow( corners_window, dst_norm_scaled );
+    imshow( corners_window, dst_norm_scaled );*/
 }
 
 //Means along axes along each pair of axes find were the car is

@@ -184,10 +184,7 @@ const auto &key_down = [](igl::opengl::glfw::Viewer &viewer,unsigned char key,in
             
             voxelizer.writeTextFile();
             voxelizer.writeSliceTextFile(sliceNumber);
-            cout << "Hello" << endl;
             voxelizer.writeVotingToTextFile(voxelizer.voting(voting, voxelizer.getBinarytensor()));
-            cout << "Hello" << endl;
-
             voxelizer.writeSliceVotingTextFile(sliceNumber, voxelizer.voting(voting, voxelizer.getBinarytensor()));
             voxelizer.writeSliceTextFile(voxelizer.findRegionalMaxima(3, voxelizer.voting(voting, voxelizer.getBinarytensor())), voting);
             voxelizer.writeTextFile(voxelizer.findRegionalMaxima(3, voxelizer.voting(voting, voxelizer.getBinarytensor())));
@@ -196,23 +193,24 @@ const auto &key_down = [](igl::opengl::glfw::Viewer &viewer,unsigned char key,in
             cout << "writing file "; timer.PrintTimeInS();
             cout << "-------------------------------------------" << endl;
             
-            //voxelizer.openCV();
-            
             vector<vector<vector<int> > > counterMatrix = vector<vector<vector<int> > > (gridSize, vector<vector<int> >(gridSize, vector<int>(gridSize, 0)));
+            vector<vector<vector<bool> > >correctedBinary = voxelizer.neighbourhoodCorrection(3, counterMatrix);
+            vector<vector<vector<int> > > votingVector = voxelizer.voting(voting, correctedBinary);
             
-            voxelizer.writeTextFile(voxelizer.neighbourhoodCorrection(3, counterMatrix), "neighbors");
-            voxelizer.writeSliceTextFile(voxelizer.neighbourhoodCorrection(3, counterMatrix), sliceNumber, "neighbors");
+            voxelizer.writeTextFile(correctedBinary, "neighbors");
+            voxelizer.writeSliceTextFile(correctedBinary, sliceNumber, "neighbors");
             
             voxelizer.writeSliceVotingTextFile(sliceNumber, counterMatrix, "Counter");
-            voxelizer.writeSliceVotingTextFile(sliceNumber, voxelizer.voting(voting, voxelizer.neighbourhoodCorrection(3, counterMatrix)), "newVoting");
-            voxelizer.writeSliceTextFile(voxelizer.findBorders(voxelizer.voting(voting, voxelizer.neighbourhoodCorrection(3, counterMatrix))), sliceNumber, "means");
+            voxelizer.writeSliceVotingTextFile(sliceNumber, voxelizer.voting(voting, correctedBinary), "newVoting");
+            voxelizer.writeSliceTextFile(voxelizer.findBorders(voxelizer.voting(voting, correctedBinary)), sliceNumber, "means");
             
-            voxelizer.writeSliceTextFileXProj(voxelizer.voting(voting, voxelizer.neighbourhoodCorrection(3, counterMatrix)), 32, "xproj");
+            //voxelizer.openCV(voxelizer.voting(voting, correctedBinary));
+            
+            voxelizer.writeSliceTextFileXProj(votingVector, 32, "xproj");
             
             voxelizer.writeTextFileXProj(32);
-            voxelizer.writeTextFile(voxelizer.findBorders(voxelizer.voting(voting, voxelizer.neighbourhoodCorrection(3, counterMatrix))),  "final");
-            
-            voxelizer.writeTextFile(voxelizer.buildPerfectPolyCube(voxelizer.findBorders(voxelizer.voting(voting, voxelizer.neighbourhoodCorrection(3, counterMatrix)))),  "finalCubes");
+            voxelizer.writeTextFile(voxelizer.findBorders(votingVector),  "final");
+            voxelizer.writeTextFile(voxelizer.buildPerfectPolyCube(voxelizer.findBorders(votingVector)),  "finalCubes");
         }
             
         default:
