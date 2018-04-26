@@ -1168,18 +1168,21 @@ vector<vector<vector<bool> > > Voxelizer::findBorders(vector<vector<vector<int> 
     Zs.clear();
     
     int idxBest(0);
-    int maxSumMean(0);
+    double maxSumMean(0);
 
     for (int y(0); y < _size; y++)
     {
-        int sumX(0);
-        int sumMean(0);
+        double sumX(0);
+        double sumMean(0);
         
         for (int x(0); x < _size; x++)
         {
             for (int z(0); z < _size; z++)
             {
-                sumX += voting[x][y][z];
+                if (_binaryTensor[x][y][z])
+                {
+                    sumX ++;
+                }
             }
             sumMean+=sumX/_size; //supposition is that if the sum of the averages is the best one then we are in a nice slice of the object --> This is SLICE specific
             if(sumMean > maxSumMean)
@@ -1193,7 +1196,7 @@ vector<vector<vector<bool> > > Voxelizer::findBorders(vector<vector<vector<int> 
     
     cout << "the best frame is " << idxBest << endl;
 
-    for (int z(25); z < 75; z++)
+    for (int z(0); z < _size; z++)
      {
          for (int x(0); x < _size; x++)
          {
@@ -1224,7 +1227,7 @@ vector<vector<vector<bool> > > Voxelizer::findBorders(vector<vector<vector<int> 
     cout << "x_final= " << Xs_final[medianIdx] << endl;
     
     int middle (abs(Xs_final[medianIdx]+Xs_init[medianIdx])/2);
-    //int middle = 50;
+    cout << "middle is : " << middle << endl;
     
     for (int j(0); j < _size; j++)
     {
@@ -1233,15 +1236,15 @@ vector<vector<vector<bool> > > Voxelizer::findBorders(vector<vector<vector<int> 
         
         for (int k(0); k < _size; k++)
         {
-            //NOTE FIND A WAY TO FIND THE MIDDLE SLICE HERE 50!!!!!!!!!!!!!!!!!
             sumY += voting[middle][j][k];
             sumZ += voting[middle][k][j];
         }
         meanZ[j]=(sumZ/_size); //mean per columns
+        cout << "meanZ " << j << " = " << meanZ[j] << endl;
         meanY[j]=(sumY/_size); //mean per lines
     }
     
-    for (int j(0); j < 6; j++)
+    for (int j(0); j < 8; j++)
     {
         double maxZ(0);
         double maxY(0);
@@ -1261,6 +1264,7 @@ vector<vector<vector<bool> > > Voxelizer::findBorders(vector<vector<vector<int> 
                 maxIdxZ = o;
             }
         }
+        cout << "Pushed " << maxIdxZ << endl; 
         Zs.push_back(maxIdxZ);
         Ys.push_back(maxIdxY);
         
@@ -1276,18 +1280,24 @@ vector<vector<vector<bool> > > Voxelizer::findBorders(vector<vector<vector<int> 
     output[x_init][Ys[0]][Zs[3]] = true;
     output[x_init][Ys[0]][Zs[4]] = true;
     output[x_init][Ys[0]][Zs[5]] = true;
+    output[x_init][Ys[0]][Zs[6]] = true;
+    output[x_init][Ys[0]][Zs[7]] = true;
     output[x_init][Ys[1]][Zs[0]] = true;
     output[x_init][Ys[1]][Zs[1]] = true;
     output[x_init][Ys[1]][Zs[2]] = true;
     output[x_init][Ys[1]][Zs[3]] = true;
     output[x_init][Ys[1]][Zs[4]] = true;
     output[x_init][Ys[1]][Zs[5]] = true;
+    output[x_init][Ys[1]][Zs[6]] = true;
+    output[x_init][Ys[1]][Zs[7]] = true;
     output[x_init][Ys[2]][Zs[0]] = true;
     output[x_init][Ys[2]][Zs[1]] = true;
     output[x_init][Ys[2]][Zs[2]] = true;
     output[x_init][Ys[2]][Zs[3]] = true;
     output[x_init][Ys[2]][Zs[4]] = true;
     output[x_init][Ys[2]][Zs[5]] = true;
+    output[x_init][Ys[2]][Zs[6]] = true;
+    output[x_init][Ys[2]][Zs[7]] = true;
     
     output[x_final][Ys[0]][Zs[0]] = true;
     output[x_final][Ys[0]][Zs[1]] = true;
@@ -1295,18 +1305,24 @@ vector<vector<vector<bool> > > Voxelizer::findBorders(vector<vector<vector<int> 
     output[x_final][Ys[0]][Zs[3]] = true;
     output[x_final][Ys[0]][Zs[4]] = true;
     output[x_final][Ys[0]][Zs[5]] = true;
+    output[x_final][Ys[0]][Zs[6]] = true;
+    output[x_final][Ys[0]][Zs[7]] = true;
     output[x_final][Ys[1]][Zs[0]] = true;
     output[x_final][Ys[1]][Zs[1]] = true;
     output[x_final][Ys[1]][Zs[2]] = true;
     output[x_final][Ys[1]][Zs[3]] = true;
     output[x_final][Ys[1]][Zs[4]] = true;
     output[x_final][Ys[1]][Zs[5]] = true;
+    output[x_final][Ys[1]][Zs[6]] = true;
+    output[x_final][Ys[1]][Zs[7]] = true;
     output[x_final][Ys[2]][Zs[0]] = true;
     output[x_final][Ys[2]][Zs[1]] = true;
     output[x_final][Ys[2]][Zs[2]] = true;
     output[x_final][Ys[2]][Zs[3]] = true;
     output[x_final][Ys[2]][Zs[4]] = true;
     output[x_final][Ys[2]][Zs[5]] = true;
+    output[x_final][Ys[2]][Zs[6]] = true;
+    output[x_final][Ys[2]][Zs[7]] = true;
     
     return output;
 }
@@ -1342,21 +1358,32 @@ vector<vector<vector<bool> > > Voxelizer::buildPerfectPolyCube(vector<vector<vec
                         itrK++;
                     }
                     
-                    //see if the barycenter is in the figure
-                    int baryX((itrI+i)/2);
-                    int baryY((itrJ+j)/2);
-                    int baryZ((itrK+k)/2);
-                    
-                    if(_binaryTensor[baryX][baryY][baryZ])
+                    //Takes an area aroud the barycenter
+                    for(int q(-1); q <= 1; q++)
                     {
-                        //this means that we are in the original figure and that we can fill a cube with ones
-                        for(int x(i); x < itrI; x++)
+                        for(int w(-1); w <= 1; w++)
                         {
-                            for(int y(j); y < itrJ; y++)
+                            for(int e(-1); e <= 1; e++)
                             {
-                                for(int z(k); z < itrK; z++)
+                                //see if the barycenter is in the figure
+                                int baryX((itrI+i+q)/2);
+                                int baryY((itrJ+j+w)/2);
+                                int baryZ((itrK+k+e)/2);
+                                
+                                if(_binaryTensor[baryX][baryY][baryZ])
                                 {
-                                    output[x][y][z] = true;
+                                    //this means that we are in the original figure and that we can fill a cube with ones
+                                    for(int x(i); x < itrI; x++)
+                                    {
+                                        for(int y(j); y < itrJ; y++)
+                                        {
+                                            for(int z(k); z < itrK; z++)
+                                            {
+                                                output[x][y][z] = true;
+                                            }
+                                        }
+                                    }
+                                    break;
                                 }
                             }
                         }

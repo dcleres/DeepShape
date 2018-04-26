@@ -180,11 +180,14 @@ const auto &key_down = [](igl::opengl::glfw::Viewer &viewer,unsigned char key,in
             voxelizer.WriteForView(outputFileForView);     //Enables to write a file in the binvox format
             
             int voting(5);
-            int sliceNumber(50);
+            int sliceNumber(43);
             
             voxelizer.writeTextFile();
             voxelizer.writeSliceTextFile(sliceNumber);
+            cout << "Hello" << endl;
             voxelizer.writeVotingToTextFile(voxelizer.voting(voting, voxelizer.getBinarytensor()));
+            cout << "Hello" << endl;
+
             voxelizer.writeSliceVotingTextFile(sliceNumber, voxelizer.voting(voting, voxelizer.getBinarytensor()));
             voxelizer.writeSliceTextFile(voxelizer.findRegionalMaxima(3, voxelizer.voting(voting, voxelizer.getBinarytensor())), voting);
             voxelizer.writeTextFile(voxelizer.findRegionalMaxima(3, voxelizer.voting(voting, voxelizer.getBinarytensor())));
@@ -204,9 +207,9 @@ const auto &key_down = [](igl::opengl::glfw::Viewer &viewer,unsigned char key,in
             voxelizer.writeSliceVotingTextFile(sliceNumber, voxelizer.voting(voting, voxelizer.neighbourhoodCorrection(3, counterMatrix)), "newVoting");
             voxelizer.writeSliceTextFile(voxelizer.findBorders(voxelizer.voting(voting, voxelizer.neighbourhoodCorrection(3, counterMatrix))), sliceNumber, "means");
             
-            voxelizer.writeSliceTextFileXProj(voxelizer.voting(voting, voxelizer.neighbourhoodCorrection(3, counterMatrix)), 39, "xproj");
+            voxelizer.writeSliceTextFileXProj(voxelizer.voting(voting, voxelizer.neighbourhoodCorrection(3, counterMatrix)), 32, "xproj");
             
-            voxelizer.writeTextFileXProj(39);
+            voxelizer.writeTextFileXProj(32);
             voxelizer.writeTextFile(voxelizer.findBorders(voxelizer.voting(voting, voxelizer.neighbourhoodCorrection(3, counterMatrix))),  "final");
             
             voxelizer.writeTextFile(voxelizer.buildPerfectPolyCube(voxelizer.findBorders(voxelizer.voting(voting, voxelizer.neighbourhoodCorrection(3, counterMatrix)))),  "finalCubes");
@@ -231,6 +234,7 @@ int main(int argc, char *argv[])
     {
         //filename = "/Users/davidcleres/DeepShape/Polycubing/models/camaro.off";
         filename = "/Users/davidcleres/DeepShape/Polycubing/models/camaro.off";
+        
     }
     
     // Load a mesh in OFF format
