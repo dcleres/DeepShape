@@ -204,7 +204,7 @@ const auto &key_down = [](igl::opengl::glfw::Viewer &viewer,unsigned char key,in
             voxelizer.writeSliceVotingTextFile(sliceNumber, voxelizer.voting(voting, correctedBinary), "newVoting");
             voxelizer.writeSliceTextFile(voxelizer.findBorders(voxelizer.voting(voting, correctedBinary)), sliceNumber, "means");
             
-            //voxelizer.openCV(voxelizer.voting(voting, correctedBinary));
+            //voxelizer.openCV(votingVector);
             
             voxelizer.writeSliceTextFileXProj(votingVector, 32, "xproj");
             
@@ -231,13 +231,12 @@ int main(int argc, char *argv[])
     else
     {
         //filename = "/Users/davidcleres/DeepShape/Polycubing/models/camaro.off";
-        filename = "/Users/davidcleres/DeepShape/Polycubing/models/camaro.off";
-        
+        filename = "/Users/davidcleres/DeepShape/Polycubing/models/car.obj";
     }
     
     // Load a mesh in OFF format
-    igl::readOFF(filename, V, F);
-    //igl::readOBJ("../models/bunny.obj", V, F);
+    //igl::readOFF(filename, V, F);
+    igl::readOBJ(filename, V, F);
     
     // compute adjacency list
     igl::adjacency_list(F,A);

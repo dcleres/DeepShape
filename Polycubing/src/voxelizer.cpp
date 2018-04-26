@@ -1060,19 +1060,26 @@ vector<vector<vector<bool> > > Voxelizer::neighbourhoodCorrection(int regionSize
 
 void Voxelizer::openCV(vector<vector<vector<int> > > const& votingMatrix)
 {
-    cv::Mat Z = cv::Mat::zeros(100,100, CV_8UC1);
+    cv::Mat src = cv::Mat::zeros(100,100, CV_64F);
+    cv::Mat src_gray;
     
-    for (int i(1); i < _size; i++)
+    for (int i(0); i < src.rows; i++)
     {
-        for (int j(1); j < _size; j++)
+        for (int j(0); j < src.cols; j++)
         {
-            Z.at<double>(i,j) = votingMatrix[43][i][j];
+            src.at<double>(i,j) = votingMatrix[43][i][j];
         }
     }
-    const char* source_window = "Source";
-    imshow( source_window, Z );
-
+    cv::imwrite("output.png", src);
     
+    src = cv::imread("output.png");
+    cvtColor( src, src_gray, cv::COLOR_BGR2GRAY );
+    blur( src_gray, src_gray, cv::Size(3,3) );
+    const char* source_window = "Source";
+    namedWindow( source_window, cv::WINDOW_AUTOSIZE );
+    imshow( source_window, src );
+    imshow( source_window, src_gray );
+
     /*
     cv::Mat src;
     cv::Mat src_gray;
@@ -1352,24 +1359,31 @@ vector<vector<vector<bool> > > Voxelizer::buildPerfectPolyCube(vector<vector<vec
         {
             for(int k(0); k < _size; k++)
             {
+                bool found(true);
                 if(edges[i][j][k])
                 {
                     //we found one corner and now we shoot out a new vector to find the next corner
                     int itrI(i+1);
                     while (itrI < _size && not(edges[itrI][j][k]))
                     {
+                        if (itrI == _size-1)
+                            found = false;
                         itrI++;
                     }
 
                     int itrJ(j+1);
                     while (itrJ < _size && not(edges[i][itrJ][k]))
                     {
+                        if (itrJ == _size-1)
+                            found = false;
                         itrJ++;
                     }
 
                     int itrK(k+1);
                     while (itrK < _size && not(edges[i][j][itrK]))
                     {
+                        if (itrK == _size-1)
+                            found = false;
                         itrK++;
                     }
                     
@@ -1385,7 +1399,8 @@ vector<vector<vector<bool> > > Voxelizer::buildPerfectPolyCube(vector<vector<vec
                                 int baryY((itrJ+j+w)/2);
                                 int baryZ((itrK+k+e)/2);
                                 
-                                if(_binaryTensor[baryX][baryY][baryZ])
+                                if(_binaryTensor[baryX][baryY][baryZ] || found) // UNCOMMENT ME IF YOU ARE USING THE SET OF 1500 CARS !!!!!!!!!!
+                                //if(_binaryTensor[baryX][baryY][baryZ])
                                 {
                                     //this means that we are in the original figure and that we can fill a cube with ones
                                     for(int x(i); x < itrI; x++)
