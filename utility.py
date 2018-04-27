@@ -17,6 +17,18 @@ def importData(filename, grid_size):
     
     return train_input #, train_target, test_input, test_target
 
+
+#uploads the data-sets have been downscaled to a 100Hz sampling rate
+def importDataAutomated(filename, grid_size):
+    train_input = load(root = './Polycubing-Automated/Generated-Cars/', filename = filename, grid_size = grid_size)
+    print(str(type(train_input)), train_input.size()) 
+    #print(str(type(train_target)), train_target.size())
+    '''test_input , test_target = load(root = './data_bci_100Hz', train = False)
+    print(str(type(test_input)), test_input.size()) 
+    print(str(type(test_target)), test_target.size())'''
+    
+    return train_input #, train_target, test_input, test_target
+
 def tensor_from_file(root, filename):
 
     file_path = os.path.join(root, filename)

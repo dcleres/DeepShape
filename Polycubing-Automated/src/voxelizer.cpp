@@ -1016,7 +1016,6 @@ vector<vector<vector<bool> > > Voxelizer::neighbourhoodCorrection(int regionSize
                               }
                          }
                     }
-                    //cout << counter << endl;
                     if(counter <= 20) // Is on the boarder/corner?
                     {
                         //Now we need to look at the voting matrix to find which is the point in neighborhood inside the figure
@@ -1035,7 +1034,6 @@ vector<vector<vector<bool> > > Voxelizer::neighbourhoodCorrection(int regionSize
                                     {
                                         if (!(x+i<0||y+j<0||z+k<0||x+i>=_size||y+j>=_size||z+k>=_size))
                                         {
-                                            //cout << votingMatrix[x+i][y+j][k+z] << endl;
                                             if(votingMatrix[x+i][y+j][k+z] > max)
                                             {
                                                 max = votingMatrix[x+i][y+j][k+z];
@@ -1079,99 +1077,6 @@ void Voxelizer::openCV(vector<vector<vector<int> > > const& votingMatrix)
     namedWindow( source_window, cv::WINDOW_AUTOSIZE );
     imshow( source_window, src );
     imshow( source_window, src_gray );
-
-    /*
-    cv::Mat src;
-    cv::Mat src_gray;
-    int thresh = 100;
-    cv::RNG rng(12345);
-    void thresh_callback(int, void* );
-    
-    src = cv::imread("/Users/davidcleres/DeepShape/Polycubing/data/img.png", 1 );
-    cvtColor( src, src_gray, cv::COLOR_BGR2GRAY );
-    blur( src_gray, src_gray, cv::Size(3,3) );
-    const char* source_window = "Source";
-    namedWindow( source_window, cv::WINDOW_AUTOSIZE );
-    imshow( source_window, src );*/
-    
-    /*  //HULL
-    cv::Mat src_copy = src.clone();
-    cv::Mat threshold_output;
-    vector<vector<cv::Point> > contours;
-    vector<cv::Vec4i> hierarchy;
-    threshold( src_gray, threshold_output, thresh, 255, cv::THRESH_BINARY );
-    findContours( threshold_output, contours, hierarchy, cv::RETR_TREE, cv::CHAIN_APPROX_SIMPLE, cv::Point(0, 0) );
-    vector<vector<cv::Point> >hull( contours.size() );
-    for( size_t i = 0; i < contours.size(); i++ )
-    {   convexHull( cv::Mat(contours[i]), hull[i], false ); }
-    cv::Mat drawing = cv::Mat::zeros( threshold_output.size(), CV_8UC3 );
-    for( size_t i = 0; i< contours.size(); i++ )
-    {
-        cv::Scalar color = cv::Scalar( rng.uniform(0, 255), rng.uniform(0,255), rng.uniform(0,255) );
-        drawContours( drawing, contours, (int)i, color, 1, 8, vector<cv::Vec4i>(), 0, cv::Point() );
-        drawContours( drawing, hull, (int)i, color, 1, 8, vector<cv::Vec4i>(), 0, cv::Point() );
-    }
-    namedWindow( "Hull demo", cv::WINDOW_AUTOSIZE );
-    imshow( "Hull demo", drawing );*/
-    
-    /*cv::Mat threshold_output;
-    vector<vector<cv::Point> > contours;
-    vector<cv::Vec4i> hierarchy;
-    threshold( src_gray, threshold_output, thresh, 255, cv::THRESH_BINARY );
-    findContours( threshold_output, contours, hierarchy, cv::RETR_TREE, cv::CHAIN_APPROX_SIMPLE, cv::Point(0, 0) );
-    vector<vector<cv::Point> > contours_poly( contours.size() );
-    vector<cv::Rect> boundRect( contours.size() );
-    vector<cv::Point2f>center( contours.size() );
-    vector<float>radius( contours.size() );
-    for( size_t i = 0; i < contours.size(); i++ )
-    { approxPolyDP( cv::Mat(contours[i]), contours_poly[i], 3, true );
-        boundRect[i] = boundingRect( cv::Mat(contours_poly[i]) );
-        minEnclosingCircle( contours_poly[i], center[i], radius[i] );
-    }
-    cv::Mat drawing = cv::Mat::zeros( threshold_output.size(), CV_8UC3);
-    for( size_t i = 0; i< contours.size(); i++ )
-    {
-        cv::Scalar color = cv::Scalar( rng.uniform(0, 255), rng.uniform(0,255), rng.uniform(0,255) );
-        drawContours( drawing, contours_poly, (int)i, color, 1, 8, vector<cv::Vec4i>(), 0, cv::Point() );
-        rectangle( drawing, boundRect[i].tl(), boundRect[i].br(), color, 2, 8, 0 );
-        circle( drawing, center[i], (int)radius[i], color, 2, 8, 0 );
-    }
-    
-    namedWindow( "Contours", cv::WINDOW_AUTOSIZE );
-    imshow( "Contours", drawing );*/
-    
-    /*
-    /// Global variables
-    char* corners_window = "Corners detected";
-    
-    cv::Mat dst, dst_norm, dst_norm_scaled;
-    dst = cv::Mat::zeros( src.size(), CV_32FC1 );
-    
-    /// Detector parameters
-    int blockSize = 2;
-    int apertureSize = 3;
-    double k = 0.04;
-    
-    /// Detecting corners
-    cornerHarris( src_gray, dst, blockSize, apertureSize, k, cv::BORDER_DEFAULT );
-    
-    /// Normalizing
-    normalize( dst, dst_norm, 0, 255, cv::NORM_MINMAX, CV_32FC1, cv::Mat() );
-    convertScaleAbs( dst_norm, dst_norm_scaled );
-    
-    /// Drawing a circle around corners
-    for( int j = 0; j < dst_norm.rows ; j++ )
-    { for( int i = 0; i < dst_norm.cols; i++ )
-    {
-        if( (int) dst_norm.at<float>(j,i) > thresh )
-        {
-            circle( dst_norm_scaled, cv::Point( i, j ), 5,  cv::Scalar(0), 2, 8, 0 );
-        }
-    }
-    }
-    /// Showing the result
-    cv::namedWindow( corners_window, CV_WINDOW_AUTOSIZE );
-    imshow( corners_window, dst_norm_scaled );*/
 }
 
 //Means along axes along each pair of axes find were the car is
@@ -1262,7 +1167,6 @@ vector<vector<vector<bool> > > Voxelizer::findBorders(vector<vector<vector<int> 
             sumZ += voting[middle][k][j];
         }
         meanZ[j]=(sumZ/_size); //mean per columns
-        cout << "meanZ " << j << " = " << meanZ[j] << endl;
         meanY[j]=(sumY/_size); //mean per lines
     }
     
@@ -1286,7 +1190,6 @@ vector<vector<vector<bool> > > Voxelizer::findBorders(vector<vector<vector<int> 
                 maxIdxZ = o;
             }
         }
-        cout << "Pushed " << maxIdxZ << endl; 
         Zs.push_back(maxIdxZ);
         Ys.push_back(maxIdxY);
         
@@ -1399,8 +1302,8 @@ vector<vector<vector<bool> > > Voxelizer::buildPerfectPolyCube(vector<vector<vec
                                 int baryY((itrJ+j+w)/2);
                                 int baryZ((itrK+k+e)/2);
                                 
-                                //if(_binaryTensor[baryX][baryY][baryZ] || found) // UNCOMMENT ME IF YOU ARE USING THE SET OF 1500 CARS !!!!!!!!!!
-                                if(_binaryTensor[baryX][baryY][baryZ])
+                                if(_binaryTensor[baryX][baryY][baryZ] || found) // UNCOMMENT ME IF YOU ARE USING THE SET OF 1500 CARS !!!!!!!!!!
+                                //if(_binaryTensor[baryX][baryY][baryZ])
                                 {
                                     //this means that we are in the original figure and that we can fill a cube with ones
                                     for(int x(i); x < itrI; x++)
