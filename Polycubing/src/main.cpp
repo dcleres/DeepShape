@@ -177,21 +177,14 @@ const auto &key_down = [](igl::opengl::glfw::Viewer &viewer,unsigned char key,in
             
             voxelizer.WriteSimple(outputFileWriteSimple);    //Enables to write a file in the vox format
             voxelizer.Write(outputFileWrite); //With simple compression
-            cout << "hello1" << endl;
             voxelizer.WriteForView(outputFileForView);     //Enables to write a file in the binvox format
-            cout << "hello2" << endl;
-
             
             int voting(5);
             int sliceNumber(43);
             
             voxelizer.writeTextFile();
             voxelizer.writeSliceTextFile(sliceNumber);
-            cout << "hello3" << endl;
-
             voxelizer.writeVotingToTextFile(voxelizer.voting(voting, voxelizer.getBinarytensor()));
-            cout << "hello4" << endl;
-
             voxelizer.writeSliceVotingTextFile(sliceNumber, voxelizer.voting(voting, voxelizer.getBinarytensor()));
             voxelizer.writeSliceTextFile(voxelizer.findRegionalMaxima(3, voxelizer.voting(voting, voxelizer.getBinarytensor())), voting);
             voxelizer.writeTextFile(voxelizer.findRegionalMaxima(3, voxelizer.voting(voting, voxelizer.getBinarytensor())));

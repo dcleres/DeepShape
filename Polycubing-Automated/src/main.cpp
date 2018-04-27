@@ -154,7 +154,7 @@ void voxelize()
     
     voxelizer.writeTextFile();
     voxelizer.writeSliceTextFile(sliceNumber);
-    voxelizer.writeVotingToTextFile(voxelizer.voting(voting, voxelizer.getBinarytensor()));    
+    voxelizer.writeVotingToTextFile(voxelizer.voting(voting, voxelizer.getBinarytensor()));
     voxelizer.writeSliceVotingTextFile(sliceNumber, voxelizer.voting(voting, voxelizer.getBinarytensor()));
     voxelizer.writeSliceTextFile(voxelizer.findRegionalMaxima(3, voxelizer.voting(voting, voxelizer.getBinarytensor())), voting);
     voxelizer.writeTextFile(voxelizer.findRegionalMaxima(3, voxelizer.voting(voting, voxelizer.getBinarytensor())));
@@ -232,6 +232,7 @@ int main(int argc, char *argv[])
     
     U = V;
     
+    //"normalizes" the shape (like pressing 20 times on widespace 
     for (int o(0); o < 21; o++)
     {
         space();
