@@ -1,11 +1,11 @@
 #define VOXEL_RES 0.5
 
+#include <string>
+#include <iostream>
 #include <igl/opengl/glfw/Viewer.h>
 #include <igl/readOFF.h>
 #include <igl/readOBJ.h>
-
 #include <igl/writeSTL.h>
-
 #include <igl/mat_max.h>
 #include <igl/per_vertex_normals.h>
 #include <igl/per_face_normals.h>
@@ -17,12 +17,15 @@
 #include <Eigen/Dense>
 #include <Eigen/IterativeLinearSolvers>
 
+#include <boost/filesystem.hpp>
+
 #define VOXELIZER_IMPLEMENTATION
 
 #include "voxelizer.h"
 
 using namespace Eigen;
 using namespace std;
+
 
 // input mesh
 Eigen::MatrixXd V,U;
@@ -118,15 +121,20 @@ void space()
     U.col(2) = z;
 }
 
-void voxelize()
+void voxelize(string const& filename)
 {
     Timer timer;
+    string filenameNoExtension (filename.substr(0, filename.size()-4));
+    cout << "filenameNoExtension = " << filenameNoExtension << endl;
     
     //Fixed grid size each time
     int gridSize = 100; //Cf Edoardo's ML file
     int numThread = 4; //atoi(argv[2]);
-    string inputFile = "/Users/davidcleres/DeepShape/Polycubing-Automated/Generated-Cars/pseudo.stl";
-    string outputFileForView = "/Users/davidcleres/DeepShape/Polycubing-Automated/Generated-Cars/pseudo.binvox";
+    string inputFile ("/Users/davidcleres/DeepShape/Polycubing-Automated/Generated-Cars/");
+    inputFile += filename;
+    cout << "openning " << inputFile << endl;
+    string outputFileForView  ("/Users/davidcleres/DeepShape/Polycubing-Automated/Generated-Cars/");
+    outputFileForView += filenameNoExtension+".binvox";
     
     timer.Restart();
     Voxelizer voxelizer(gridSize, inputFile, true);
@@ -148,98 +156,110 @@ void voxelize()
     voxelizer.buildBinaryTensor();
     voxelizer.WriteForView(outputFileForView);     //Enables to write a file in the binvox format
     
-    
     int voting(5);
-    int sliceNumber(43);
+    int sliceNumber(17);
     
-    voxelizer.writeTextFile();
-    voxelizer.writeSliceTextFile(sliceNumber);
+    voxelizer.writeTextFile(filenameNoExtension);
+    /*voxelizer.writeSliceTextFile(sliceNumber);
     voxelizer.writeVotingToTextFile(voxelizer.voting(voting, voxelizer.getBinarytensor()));
     voxelizer.writeSliceVotingTextFile(sliceNumber, voxelizer.voting(voting, voxelizer.getBinarytensor()));
     voxelizer.writeSliceTextFile(voxelizer.findRegionalMaxima(3, voxelizer.voting(voting, voxelizer.getBinarytensor())), voting);
-    voxelizer.writeTextFile(voxelizer.findRegionalMaxima(3, voxelizer.voting(voting, voxelizer.getBinarytensor())));
+    voxelizer.writeTextFile(voxelizer.findRegionalMaxima(3, voxelizer.voting(voting, voxelizer.getBinarytensor())));*/
     
     timer.Stop();
-    cout << "writing file "; timer.PrintTimeInS();
+    cout << "writing file ";
+    timer.PrintTimeInS();
     cout << "-------------------------------------------" << endl;
-    
     vector<vector<vector<int> > > counterMatrix = vector<vector<vector<int> > > (gridSize, vector<vector<int> >(gridSize, vector<int>(gridSize, 0)));
     vector<vector<vector<bool> > >correctedBinary = voxelizer.neighbourhoodCorrection(3, counterMatrix);
     vector<vector<vector<int> > > votingVector = voxelizer.voting(voting, correctedBinary);
-    
-    voxelizer.writeTextFile(correctedBinary, "neighbors");
+    /*voxelizer.writeTextFile(correctedBinary, "neighbors");
     voxelizer.writeSliceTextFile(correctedBinary, sliceNumber, "neighbors");
-    
     voxelizer.writeSliceVotingTextFile(sliceNumber, counterMatrix, "Counter");
     voxelizer.writeSliceVotingTextFile(sliceNumber, voxelizer.voting(voting, correctedBinary), "newVoting");
-    voxelizer.writeSliceTextFile(voxelizer.findBorders(voxelizer.voting(voting, correctedBinary)), sliceNumber, "means");
-    
-    voxelizer.writeSliceTextFileXProj(votingVector, 32, "xproj");
-    
-    voxelizer.writeTextFileXProj(32);
-    voxelizer.writeTextFile(voxelizer.findBorders(votingVector),  "final");
-    voxelizer.writeTextFile(voxelizer.buildPerfectPolyCube(voxelizer.findBorders(votingVector)),  "finalCubes");
+    voxelizer.writeSliceTextFile(voxelizer.findBorders(voxelizer.voting(voting, correctedBinary)), sliceNumber, "means");*/
+    voxelizer.writeSliceTextFileXProj(votingVector, 17, "xproj");
+    voxelizer.writeTextFileXProj(17);
+    voxelizer.writeTextFile(voxelizer.findBorders(votingVector), "-final"); //Corners of the Polycube
+    voxelizer.writeTextFile(voxelizer.buildPerfectPolyCube(voxelizer.findBorders(votingVector)), "-finalCubes"); //Polycube output file for pytorch
+}
+
+struct path_leaf_string
+{
+    std::string operator()(const boost::filesystem::directory_entry& entry) const
+    {
+        return entry.path().leaf().string();
+    }
+};
+
+void read_directory(const std::string& name, vector<string>& v)
+{
+    boost::filesystem::path p(name);
+    boost::filesystem::directory_iterator start(p);
+    boost::filesystem::directory_iterator end;
+    std::transform(start, end, std::back_inserter(v), path_leaf_string());
 }
 
 int main(int argc, char *argv[])
 {
-    std::string filename;
-    if (argc > 1)
-    {
-        filename = std::string(argv[1]);
-    }
-    else
-    {
-        //filename = "/Users/davidcleres/DeepShape/Polycubing/models/camaro.off";
-        filename = "/Users/davidcleres/DeepShape/Polycubing/models/car.obj";
-    }
+    //FIND ALL THE .OBJ FILES
+    string name("/Users/davidcleres/DeepShape/Polycubing-Automated/cars_library/");
+    vector<string> v;
+    read_directory(name, v);
+    cout << "files found : " << v.size() << endl;
     
-    // Load a mesh in OFF format
-    //igl::readOFF(filename, V, F);
-    igl::readOBJ(filename, V, F);
-    
-    // compute adjacency list
-    igl::adjacency_list(F,A);
-    
-    // assemble Laplacian Matrix
-    lap = Eigen::SparseMatrix<double>(V.rows(),V.rows());
-    lap.setIdentity();
-    for (int i = 0; i < V.rows(); i++)
+    for(auto const& element : v)
     {
-        int N = A[i].size();
-        for (int j : A[i] )
-        {
-            lap.insert(i,j) = -1.0/N;
-            
-        }
-    }
-    
-    // assemble modified Laplacian for linear system
-    LHS= Eigen::SparseMatrix<double>(V.rows(),V.rows());
-    LHS.setIdentity();
-    int pinned_i = 0;
-    for (int i = 0; i < V.rows(); i++)
-    {
-        if(i!=pinned_i)
+        string filename = (name);
+        filename += element;
+        // Load a mesh in OFF format
+        //igl::readOFF(filename, V, F);
+        cout << "name is " << filename << endl;
+        igl::readOBJ(filename, V, F);
+        
+        // compute adjacency list
+        igl::adjacency_list(F,A);
+        
+        // assemble Laplacian Matrix
+        lap = Eigen::SparseMatrix<double>(V.rows(),V.rows());
+        lap.setIdentity();
+        for (int i = 0; i < V.rows(); i++)
         {
             int N = A[i].size();
             for (int j : A[i] )
             {
-                LHS.insert(i,j) = -1.0/N;
+                lap.insert(i,j) = -1.0/N;
             }
         }
+        
+        // assemble modified Laplacian for linear system
+        LHS= Eigen::SparseMatrix<double>(V.rows(),V.rows());
+        LHS.setIdentity();
+        int pinned_i = 0;
+        for (int i = 0; i < V.rows(); i++)
+        {
+            if(i!=pinned_i)
+            {
+                int N = A[i].size();
+                for (int j : A[i] )
+                {
+                    LHS.insert(i,j) = -1.0/N;
+                }
+            }
+        }
+        
+        U = V;
+        
+        //"normalizes" the shape (like pressing 20 times on widespace
+        for (int o(0); o < 21; o++)
+        {
+            space();
+        }
+        
+        cout << "Saving to STL." << endl; //Saves the displayed model to the build folder
+        string outfile("/Users/davidcleres/DeepShape/Polycubing-Automated/Generated-Cars/");
+        outfile += (element.substr(0, element.size()-4) + ".stl");
+        igl::writeSTL(outfile, U,F);
+        voxelize(element.substr(0, element.size()-4) + ".stl");
     }
-    
-    U = V;
-    
-    //"normalizes" the shape (like pressing 20 times on widespace 
-    for (int o(0); o < 21; o++)
-    {
-        space();
-    }
-    
-    cout << "Saving to STL." << endl; //Saves the displayed model to the build folder
-    igl::writeSTL("/Users/davidcleres/DeepShape/Polycubing-Automated/Generated-Cars/pseudo.stl", U,F);
-    
-    voxelize();
 }

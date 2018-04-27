@@ -125,22 +125,16 @@ public:
     void writeTextFileXProj(unsigned int const& sliceNumber);
     void writeSliceTextFile(vector<vector<vector<bool> > > const& binaryTensor, unsigned int const& sliceNumber, string const& filename="Corners");
     void writeSliceTextFileXProj(vector<vector<vector<int> > > const& binaryTensor, unsigned int const& sliceNumber, string const& filename);
-    void writeTextFile();
-    void writeTextFile(vector<vector<vector<bool> > > const& binaryTensor, string filename = "Corners"); //HERE
+    void writeTextFile(string const& filename);
+    void writeTextFile(vector<vector<vector<bool> > > const& binaryTensor, string const& filename = "Corners"); //HERE
     void writeVotingToTextFile(vector<vector<vector<int> > > const& votingTensor);
     void writeSliceVotingTextFile(unsigned int const& sliceNumber, vector<vector<vector<int> > > const& tensor, string filename = "Voting");
-
     vector<vector<vector<int> > > voting(int const& maskSize, vector<vector<vector<bool> > > const& binaryTensor);
-    
     vector<vector<vector<bool> > > findRegionalMaxima(int regionSize, vector<vector<vector<int> > > const& votingMatrix);
-    
     vector<vector<vector<bool> > > neighbourhoodCorrection(int regionSizev, vector<vector<vector<int> > >& counterMatrix);
-    
     //vector<Coord3D> findBorders(vector<vector<vector<int> > > voting);
     vector<vector<vector<bool> > > findBorders(vector<vector<vector<int> > > voting);
     vector<vector<vector<bool> > > buildPerfectPolyCube(vector<vector<vector<bool> > > edges);
-    
-    
     void openCV(vector<vector<vector<int> > > const& votingMatrix);
     virtual ~Voxelizer();
 };

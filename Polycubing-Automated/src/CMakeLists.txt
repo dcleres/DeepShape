@@ -27,6 +27,7 @@ target_link_libraries(voxelizer igl::core igl::opengl_glfw
     ${Boost_ATOMIC_LIBRARY}
     ${Boost_SYSTEM_LIBRARY}
     ${Boost_THREAD_LIBRARY}
+    ${Boost_FILESYSTEM_LIBRARY}
     ${Boost_DATE_TIME_LIBRARY}
     ${Boost_UNIT_TEST_FRAMEWORK_LIBRARY}
     ${OpenCV_LIBS}

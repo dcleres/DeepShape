@@ -287,7 +287,6 @@ inline void Voxelizer::_BfsSolid(const unsigned int startInt) {
 				if(!GETBIT(tmp, voxelInt)) q.push(voxelInt);
 			}
 		}
-
 	}
 }
 
@@ -298,7 +297,6 @@ inline bool Voxelizer::_InRange(const Vec3f& vc, const v3_p& lb, const v3_p& ub)
 inline bool Voxelizer::_InRange(const int& x, const int& y, const int& z, const int& lx, const int& ly, const int& lz, const int& ux, const int& uy, const int& uz) {
 	return x>=lx && x<=ux && y>=ly && y<=uy && z>=lz && z<=uz;
 }
-
 
 inline v3_p Voxelizer::_ConvIntToVoxel(const unsigned int& coord) {
 	v3_p voxel(new Vec3f(coord/_size2, (coord/_size)%_size, coord%_size));
@@ -312,7 +310,6 @@ inline unsigned int Voxelizer::_ConvVoxelToInt(const v3_p& voxel) {
 inline unsigned int Voxelizer::_ConvVoxelToInt(const Vec3f& voxel) {
 	return voxel[0]*_size2 + voxel[1]*_size + voxel[2];
 }
-
 
 inline void Voxelizer::_RandomPermutation(const v3_p& data, int num) {
 	for (int i = 0, id; i < num; ++i) {
@@ -793,7 +790,7 @@ void Voxelizer::writeSliceTextFileXProj(vector<vector<vector<int> > > const& vot
     cout << "Model Slice saved to " << _pFile.substr(0, _pFile.length()-4) << "-Slice"+filename+".txt" << endl;
 }
 
-void Voxelizer::writeTextFile()
+void Voxelizer::writeTextFile(string const& filename)
 {
     ofstream output;
     output.open (_pFile.substr(0, _pFile.length()-4) + "-voxelized.txt");
@@ -831,10 +828,10 @@ void Voxelizer::writeTextFileXProj(unsigned int const& sliceNumber)
     cout << "Model saved to " << _pFile.substr(0, _pFile.length()-4) << "-XProj.txt" << endl;
 }
 
-void Voxelizer::writeTextFile(vector<vector<vector<bool> > > const& binaryTensor, string filename)
+void Voxelizer::writeTextFile(vector<vector<vector<bool> > > const& binaryTensor, string const& filename)
 {
     ofstream output;
-    output.open (_pFile.substr(0, _pFile.length()-4) + "-" + filename + "voxelized.txt");
+    output.open (_pFile.substr(0, _pFile.length()-4) + filename+".txt");
     
     for(auto const& xslice : binaryTensor)
     {
@@ -848,8 +845,7 @@ void Voxelizer::writeTextFile(vector<vector<vector<bool> > > const& binaryTensor
         output << endl; //one line per x axis slide of the grid
     }
     output.close();
-    cout << "Model saved to " << _pFile.substr(0, _pFile.length()-4) << "-" + filename
-    + "voxelized.txt" << endl;
+    cout << "Model saved to " << _pFile.substr(0, _pFile.length()-4) << filename+".txt" << endl;
 }
 
 
@@ -928,7 +924,7 @@ vector<vector<vector<int> > > Voxelizer::voting(int const& maskSize, vector<vect
 void Voxelizer::writeSliceVotingTextFile(unsigned int const& sliceNumber, vector<vector<vector<int> > > const& tensor, string filename)
 {
     ofstream output;
-    output.open (_pFile.substr(0, _pFile.length()-4)+"-outfile"+filename+".txt");
+    output.open (_pFile.substr(0, _pFile.length()-4)+ "-" + filename +"-outfile.txt");
     
     vector<vector<int> > element = tensor[sliceNumber];
     
@@ -942,7 +938,7 @@ void Voxelizer::writeSliceVotingTextFile(unsigned int const& sliceNumber, vector
     }
     
     output.close();
-    cout << "Model Slice saved to " << _pFile.substr(0, _pFile.length()-4) << "-outfile"+filename+".txt" << endl;
+    cout << "Model Slice saved to " << _pFile.substr(0, _pFile.length()-4) << + "-" + filename +"-outfile.txt" << endl;
 }
 
 // Note the smaller regionSize is the better it is
@@ -974,7 +970,6 @@ vector<vector<vector<bool> > > Voxelizer::neighbourhoodCorrection(int regionSize
                         }
                     }
                 }
-   
                 if (counter > 9)
                 {
                     counterMatrix[x][y][z] = counter;
@@ -1130,32 +1125,36 @@ vector<vector<vector<bool> > > Voxelizer::findBorders(vector<vector<vector<int> 
              if(_binaryTensor[x][idxBest][z])
              {
                  Xs_init.push_back(x);
-                 int itr(x);
-                 while (_binaryTensor[itr][idxBest][z])
-                 {
-                     itr++;
-                 }
-                 Xs_final.push_back(itr-1);
                  break;
              }
          }
      }
-    
     // using default comparison (operator <):
     std::sort (Xs_init.begin(), Xs_init.end());
+    
+    for (int z(0); z < _size; z++)
+    {
+        for (int x(_size-1); x >= 0; x--)
+        {
+            if(_binaryTensor[x][idxBest][z])
+            {
+                Xs_final.push_back(x);
+                break;
+            }
+        }
+    }
     std::sort (Xs_final.begin(), Xs_final.end());
-    
-    int medianIdx(Xs_init.size()/2);
-    int x_init(Xs_init[medianIdx]);
-    int x_final(Xs_final[medianIdx]);
-    
 
+    int medianIdx(Xs_init.size()/2); //Does not work for bad inputs with holes
+    int x_init (Xs_init[medianIdx]);
+    int x_final (Xs_final[medianIdx]);
+    
     cout << "x_init = " << Xs_init[medianIdx] << endl; //we take the median since it should represent the median ehavior of the object we study
     cout << "x_final= " << Xs_final[medianIdx] << endl;
-    
+
     int middle (abs(Xs_final[medianIdx]+Xs_init[medianIdx])/2);
     cout << "middle is : " << middle << endl;
-    
+
     for (int j(0); j < _size; j++)
     {
         double sumZ(0);
@@ -1170,7 +1169,7 @@ vector<vector<vector<bool> > > Voxelizer::findBorders(vector<vector<vector<int> 
         meanY[j]=(sumY/_size); //mean per lines
     }
     
-    for (int j(0); j < 8; j++)
+    for (int j(0); j < 10; j++)
     {
         double maxZ(0);
         double maxY(0);
@@ -1199,56 +1198,15 @@ vector<vector<vector<bool> > > Voxelizer::findBorders(vector<vector<vector<int> 
     
     vector<vector<vector<bool> > >  output = vector<vector<vector<bool> > > (_size, vector<vector<bool> >(_size, vector<bool>(_size, false)));
     
-    output[x_init][Ys[0]][Zs[0]] = true;
-    output[x_init][Ys[0]][Zs[1]] = true;
-    output[x_init][Ys[0]][Zs[2]] = true;
-    output[x_init][Ys[0]][Zs[3]] = true;
-    output[x_init][Ys[0]][Zs[4]] = true;
-    output[x_init][Ys[0]][Zs[5]] = true;
-    output[x_init][Ys[0]][Zs[6]] = true;
-    output[x_init][Ys[0]][Zs[7]] = true;
-    output[x_init][Ys[1]][Zs[0]] = true;
-    output[x_init][Ys[1]][Zs[1]] = true;
-    output[x_init][Ys[1]][Zs[2]] = true;
-    output[x_init][Ys[1]][Zs[3]] = true;
-    output[x_init][Ys[1]][Zs[4]] = true;
-    output[x_init][Ys[1]][Zs[5]] = true;
-    output[x_init][Ys[1]][Zs[6]] = true;
-    output[x_init][Ys[1]][Zs[7]] = true;
-    output[x_init][Ys[2]][Zs[0]] = true;
-    output[x_init][Ys[2]][Zs[1]] = true;
-    output[x_init][Ys[2]][Zs[2]] = true;
-    output[x_init][Ys[2]][Zs[3]] = true;
-    output[x_init][Ys[2]][Zs[4]] = true;
-    output[x_init][Ys[2]][Zs[5]] = true;
-    output[x_init][Ys[2]][Zs[6]] = true;
-    output[x_init][Ys[2]][Zs[7]] = true;
-    
-    output[x_final][Ys[0]][Zs[0]] = true;
-    output[x_final][Ys[0]][Zs[1]] = true;
-    output[x_final][Ys[0]][Zs[2]] = true;
-    output[x_final][Ys[0]][Zs[3]] = true;
-    output[x_final][Ys[0]][Zs[4]] = true;
-    output[x_final][Ys[0]][Zs[5]] = true;
-    output[x_final][Ys[0]][Zs[6]] = true;
-    output[x_final][Ys[0]][Zs[7]] = true;
-    output[x_final][Ys[1]][Zs[0]] = true;
-    output[x_final][Ys[1]][Zs[1]] = true;
-    output[x_final][Ys[1]][Zs[2]] = true;
-    output[x_final][Ys[1]][Zs[3]] = true;
-    output[x_final][Ys[1]][Zs[4]] = true;
-    output[x_final][Ys[1]][Zs[5]] = true;
-    output[x_final][Ys[1]][Zs[6]] = true;
-    output[x_final][Ys[1]][Zs[7]] = true;
-    output[x_final][Ys[2]][Zs[0]] = true;
-    output[x_final][Ys[2]][Zs[1]] = true;
-    output[x_final][Ys[2]][Zs[2]] = true;
-    output[x_final][Ys[2]][Zs[3]] = true;
-    output[x_final][Ys[2]][Zs[4]] = true;
-    output[x_final][Ys[2]][Zs[5]] = true;
-    output[x_final][Ys[2]][Zs[6]] = true;
-    output[x_final][Ys[2]][Zs[7]] = true;
-    
+    for (size_t c(0); c < 3; c++)
+    {
+        for (size_t d(0); d < 8; d++)
+        {
+            output[x_init][Ys[c]][Zs[d]] = true;
+            output[x_final][Ys[c]][Zs[d]] = true;
+        }
+    }
+            
     return output;
 }
 
