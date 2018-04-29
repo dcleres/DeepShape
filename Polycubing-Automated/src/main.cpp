@@ -16,8 +16,9 @@
 #include <Eigen/Geometry>
 #include <Eigen/Dense>
 #include <Eigen/IterativeLinearSolvers>
-
+#include <fstream>
 #include <boost/filesystem.hpp>
+#include <cstdio>
 
 #define VOXELIZER_IMPLEMENTATION
 
@@ -261,5 +262,8 @@ int main(int argc, char *argv[])
         outfile += (element.substr(0, element.size()-4) + ".stl");
         igl::writeSTL(outfile, U,F);
         voxelize(element.substr(0, element.size()-4) + ".stl");
+        
+        //removes the processed file
+        std::remove(filename.c_str());
     }
 }
