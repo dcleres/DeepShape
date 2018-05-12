@@ -185,6 +185,46 @@ void voxelize(string const& filename)
     voxelizer.writeTextFile(voxelizer.buildPerfectPolyCube(voxelizer.findBorders(votingVector)), "-finalCubes"); //Polycube output file for pytorch
 }
 
+void voxelizeIntialMesh(string const& filename)
+{
+    Timer timer;
+    string filenameNoExtension (filename.substr(0, filename.size()-4));
+    cout << "filenameNoExtension = " << filenameNoExtension << endl;
+    
+    //Fixed grid size each time
+    int gridSize = 100; //Cf Edoardo's ML file
+    int numThread = 4; //atoi(argv[2]);
+    string inputFile ("/Users/davidcleres/DeepShape/Polycubing-Automated/voxelizedMeshes/");
+    inputFile += filename;
+    cout << "openning " << inputFile << endl;
+    string outputFileForView  ("/Users/davidcleres/DeepShape/Polycubing-Automated/voxelizedMeshes/");
+    outputFileForView += filenameNoExtension+".binvox";
+    
+    timer.Restart();
+    Voxelizer voxelizer(gridSize, inputFile, true);
+    timer.Stop();
+    cout << "voxelizer initialization "; timer.PrintTimeInS();
+    cout << "-------------------------------------------" << endl;
+    timer.Restart();
+    voxelizer.VoxelizeSurface(numThread);
+    timer.Stop();
+    cout << "surface voxelization "; timer.PrintTimeInS();
+    cout << "-------------------------------------------" << endl;
+    timer.Restart();
+    voxelizer.VoxelizeSolid(numThread);
+    timer.Stop();
+    cout << "solid voxelization "; timer.PrintTimeInS();
+    cout << "-------------------------------------------" << endl;
+    timer.Restart();
+    
+    voxelizer.buildBinaryTensor();
+    voxelizer.WriteForView(outputFileForView);     //Enables to write a file in the binvox format
+    voxelizer.writeTextFile(filenameNoExtension); //Writes the binary tensor of the voxelized mesh so that it can be uploaded in the U-Net
+    
+    timer.Stop();
+    cout << "writing file ";
+}
+
 struct path_leaf_string
 {
     std::string operator()(const boost::filesystem::directory_entry& entry) const
@@ -251,19 +291,37 @@ int main(int argc, char *argv[])
         
         U = V;
         
-        //"normalizes" the shape (like pressing 20 times on widespace
-        for (int o(0); o < 21; o++)
+        bool saveVoxelizedMesh(true);
+        bool saveVoxelizedNormalizedMesh(false);
+        
+        if(saveVoxelizedMesh)
         {
-            space();
+            cout << "Saving Voxelized mesh to STL." << endl; //Saves the displayed model to the build folder
+            string outfile("/Users/davidcleres/DeepShape/Polycubing-Automated/voxelizedMeshes/");
+            outfile += (element.substr(0, element.size()-4) + ".stl");
+            igl::writeSTL(outfile, U,F);
+            voxelizeIntialMesh(element.substr(0, element.size()-4) + ".stl");
+            
+            //removes the processed file from the cars_library folder
+            std::remove(filename.c_str());
         }
         
-        cout << "Saving to STL." << endl; //Saves the displayed model to the build folder
-        string outfile("/Users/davidcleres/DeepShape/Polycubing-Automated/Generated-Cars/");
-        outfile += (element.substr(0, element.size()-4) + ".stl");
-        igl::writeSTL(outfile, U,F);
-        voxelize(element.substr(0, element.size()-4) + ".stl");
-        
-        //removes the processed file
-        std::remove(filename.c_str());
+        if(saveVoxelizedNormalizedMesh)
+        {
+            //"normalizes" the shape (like pressing 20 times on widespace
+            for (int o(0); o < 21; o++)
+            {
+                space();
+            }
+            
+            cout << "Saving to STL." << endl; //Saves the displayed model to the build folder
+            string outfile("/Users/davidcleres/DeepShape/Polycubing-Automated/Generated-Cars/");
+            outfile += (element.substr(0, element.size()-4) + ".stl");
+            igl::writeSTL(outfile, U,F);
+            voxelize(element.substr(0, element.size()-4) + ".stl");
+            
+            //removes the processed file
+            std::remove(filename.c_str());
+        }
     }
 }
