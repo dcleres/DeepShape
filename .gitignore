@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+
+voxelized_train_input.pth
+polycube_target.pth
