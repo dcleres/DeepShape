@@ -31,5 +31,5 @@
 *.out
 *.app
 
-#uploaded files
+# Uploaded files
 DeepLearningPolycubing/Loaded_Files/*
