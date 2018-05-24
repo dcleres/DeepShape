@@ -31,5 +31,5 @@
 *.out
 *.app
 
-voxelized_train_input.pth
-polycube_target.pth
+#uploaded files
+DeepLearningPolycubing/Loaded_Files/

@@ -129,7 +129,7 @@ void voxelize(string const& filename)
     cout << "filenameNoExtension = " << filenameNoExtension << endl;
     
     //Fixed grid size each time
-    int gridSize = 100; //Cf Edoardo's ML file
+    int gridSize = 32; //Cf Edoardo's ML file
     int numThread = 4; //atoi(argv[2]);
     string inputFile ("/Users/davidcleres/DeepShape/Polycubing-Automated/Generated-Cars/");
     inputFile += filename;
@@ -192,7 +192,7 @@ void voxelizeIntialMesh(string const& filename)
     cout << "filenameNoExtension = " << filenameNoExtension << endl;
     
     //Fixed grid size each time
-    int gridSize = 100; //Cf Edoardo's ML file
+    int gridSize = 32; //Cf Edoardo's ML file
     int numThread = 4; //atoi(argv[2]);
     string inputFile ("/Users/davidcleres/DeepShape/Polycubing-Automated/voxelizedMeshes/");
     inputFile += filename;
@@ -291,8 +291,8 @@ int main(int argc, char *argv[])
         
         U = V;
         
-        bool saveVoxelizedMesh(true);
-        bool saveVoxelizedNormalizedMesh(false);
+        bool saveVoxelizedMesh(true); //True if you want to voxelize the mesh
+        bool saveVoxelizedNormalizedMesh(true); //True if you want to have the polycube structure also
         
         if(saveVoxelizedMesh)
         {
@@ -303,7 +303,8 @@ int main(int argc, char *argv[])
             voxelizeIntialMesh(element.substr(0, element.size()-4) + ".stl");
             
             //removes the processed file from the cars_library folder
-            std::remove(filename.c_str());
+            if(!saveVoxelizedNormalizedMesh)
+                std::remove(filename.c_str());
         }
         
         if(saveVoxelizedNormalizedMesh)
