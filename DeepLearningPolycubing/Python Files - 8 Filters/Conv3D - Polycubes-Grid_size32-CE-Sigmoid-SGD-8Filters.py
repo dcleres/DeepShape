@@ -28,11 +28,21 @@ from os import listdir
 from os.path import isfile, join
 import numpy as np
 
-polycube_path = "/Users/davidcleres/DeepShape/Polycubing-Automated/Generated-Cars/"
-polycube_files = [f for f in listdir(polycube_path) if isfile(join(polycube_path, f))]
+onCluster = True
 
-voxelized_mesh_path = "/Users/davidcleres/DeepShape/Polycubing-Automated/voxelizedMeshes/"
-voxelized_mesh_files = [f for f in listdir(voxelized_mesh_path) if isfile(join(voxelized_mesh_path, f))]
+if onCluster:
+    polycube_path = "/home/cleres/anaconda3/DeepShape/Polycubing-Automated/Generated-Cars/"
+    polycube_files = [f for f in listdir(polycube_path) if isfile(join(polycube_path, f))]
+    
+    voxelized_mesh_path = "/home/cleres/anaconda3/DeepShape/Polycubing-Automated/voxelizedMeshes/"
+    voxelized_mesh_files = [f for f in listdir(voxelized_mesh_path) if isfile(join(voxelized_mesh_path, f))]
+
+else:
+    polycube_path = "/Users/davidcleres/DeepShape/Polycubing-Automated/Generated-Cars/"
+    polycube_files = [f for f in listdir(polycube_path) if isfile(join(polycube_path, f))]
+    
+    voxelized_mesh_path = "/Users/davidcleres/DeepShape/Polycubing-Automated/voxelizedMeshes/"
+    voxelized_mesh_files = [f for f in listdir(voxelized_mesh_path) if isfile(join(voxelized_mesh_path, f))]
 
 voxelizedFiles = []
 polycubedFiles = []
@@ -48,7 +58,6 @@ for f in polycube_files:
 #Definition of the global paramters
 grid_size=32
 batch_size=15
-
 
 # Save the tensor to a text file 
 voxelized_train_input, polycube_target=loadData(grid_size, polycube_path, voxelized_mesh_path, voxelizedFiles, polycubedFiles, loadFromScratch=True)
