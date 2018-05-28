@@ -301,7 +301,7 @@ class UnetGenerator_3d_softmax(nn.Module):
 
 class UnetGenerator_3d_log_softmax(nn.Module):
     def __init__(self,in_dim,out_dim,num_filter):
-        super(UnetGenerator_3d_softmax,self).__init__()
+        super(UnetGenerator_3d_log_softmax,self).__init__()
         self.in_dim = in_dim
         self.out_dim = out_dim
         self.num_filter = num_filter
