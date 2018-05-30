@@ -103,13 +103,21 @@ class conv2DNet_2(nn.Module):
         
         #4*1*54 for 125 HZ 
         #4*1*42 for 100 Hz signal 
-        self.fc_inputs = 16*20*20*20
+        self.fc_inputs = 32*26*26*26
         
         self.conv = torch.nn.Sequential()
-        self.conv.add_module("conv_1", torch.nn.Conv3d(1, 8, kernel_size=5, dilation=2))
+        self.conv.add_module("conv_1", torch.nn.Conv3d(1, 8, kernel_size=3))
         self.conv.add_module("BN_1", torch.nn.BatchNorm3d(8, False))
-        self.conv.add_module("conv_2", torch.nn.Conv3d(8, 16, kernel_size=5))
+        #self.conv.add_module("Pooling1", torch.nn.MaxPool3d(kernel_size=2))
+        self.conv.add_module("dropout_1", torch.nn.Dropout3d(0.2))
+        self.conv.add_module("conv_2", torch.nn.Conv3d(8, 16, kernel_size=3))
         self.conv.add_module("BN_2", torch.nn.BatchNorm3d(16, False))
+        #self.conv.add_module("Pooling2", torch.nn.MaxPool3d(kernel_size=2))
+        self.conv.add_module("dropout_2", torch.nn.Dropout3d(0.2))
+        self.conv.add_module("conv_3", torch.nn.Conv3d(16, 32, kernel_size=3))
+        self.conv.add_module("BN_3", torch.nn.BatchNorm3d(32, False))
+        #self.conv.add_module("Pooling3", torch.nn.MaxPool3d(kernel_size=2))
+        self.conv.add_module("dropout_3", torch.nn.Dropout3d(0.2))
 
         self.fc = torch.nn.Sequential()
         self.fc.add_module("fc1", torch.nn.Linear(self.fc_inputs, output_units))

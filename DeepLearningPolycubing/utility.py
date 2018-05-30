@@ -297,7 +297,7 @@ def loadData(grid_size, polycube_path, voxelized_mesh_path, voxelizedFiles, poly
         voxelized_train_input = voxelized_train_input.view(1, 1, grid_size, grid_size, grid_size) #add a dimension of the 3D convolution
         polycube_target = polycube_target.view(1, grid_size, grid_size, grid_size)
 
-        for i in range(1, 300):#len(voxelizedFiles)):
+        for i in range(1, 600):#len(voxelizedFiles)):
             voxelized_train_input = torch.cat((voxelized_train_input, importDataAutomated(filename = voxelized_mesh_path+str(voxelizedFiles[i]), grid_size=grid_size).view(1, 1, grid_size, grid_size, grid_size)), 0)
             polycube_target = torch.cat((polycube_target, importDataAutomated(filename = polycube_path+str(polycubedFiles[i]), grid_size=grid_size).view(1, grid_size, grid_size, grid_size)), 0)
 
