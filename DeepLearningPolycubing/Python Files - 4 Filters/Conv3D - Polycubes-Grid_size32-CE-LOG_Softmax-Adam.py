@@ -28,7 +28,7 @@ from os import listdir
 from os.path import isfile, join
 import numpy as np
 
-onCluster = True
+onCluster = False
 
 if onCluster:
     polycube_path = "/home/cleres/anaconda3/DeepShape/Polycubing-Automated/Generated-Cars/"
@@ -163,7 +163,7 @@ for i_ep in range(Nepochs):
     Nvalidation_nb = Nvalidation*grid_size**3
     print("Epoch Number : ", i_ep)
     print("\t Training accuracy: ", (100*(Ntrain_nb-nb_train_errs)/Ntrain_nb))
-    print("\t Validation accuracy ", (100*(Nvalidation_nb-nb_validation_errs)/Nvalidation_nb))
+    print("\t Validation accuracy: ", (100*(Nvalidation_nb-nb_validation_errs)/Nvalidation_nb))
 
     print("\t Epoch Loss ", ep_loss[i_ep])
 

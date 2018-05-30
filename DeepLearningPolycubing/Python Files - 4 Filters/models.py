@@ -335,7 +335,6 @@ class UnetGenerator_3d_log_softmax(nn.Module):
         pool_2 = self.pool_2(down_2)
         down_3 = self.down_3(pool_2)
         pool_3 = self.pool_3(down_3)
-        
         bridge = self.bridge(pool_3)
         
         trans_1  = self.trans_1(bridge)

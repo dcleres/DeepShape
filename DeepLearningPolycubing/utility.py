@@ -297,7 +297,7 @@ def loadData(grid_size, polycube_path, voxelized_mesh_path, voxelizedFiles, poly
         voxelized_train_input = voxelized_train_input.view(1, 1, grid_size, grid_size, grid_size) #add a dimension of the 3D convolution
         polycube_target = polycube_target.view(1, grid_size, grid_size, grid_size)
 
-        for i in range(1, 60):#len(voxelizedFiles)):
+        for i in range(1, 300):#len(voxelizedFiles)):
             voxelized_train_input = torch.cat((voxelized_train_input, importDataAutomated(filename = voxelized_mesh_path+str(voxelizedFiles[i]), grid_size=grid_size).view(1, 1, grid_size, grid_size, grid_size)), 0)
             polycube_target = torch.cat((polycube_target, importDataAutomated(filename = polycube_path+str(polycubedFiles[i]), grid_size=grid_size).view(1, grid_size, grid_size, grid_size)), 0)
 
@@ -322,6 +322,20 @@ def compute_nb_errors(model, data_input, data_target, batch_size, criterion):
             err_matrix = batch_output.round().view(batch_size,32,32,32)-data_target.narrow(0, b_start, bsize_eff) #should give 0 if same and ±1 if not the same
             nb_errors += int(torch.sum(torch.abs(err_matrix).view(-1)))
     return nb_errors
+
+def compute_nb_errors_delta(model, data_input, data_target, batch_size, criterion):
+    nb_errors = 0
+    Ndata = len(data_input[:, 0, 0, 0, 0])
+    for b_start in range(0, Ndata, batch_size):
+        bsize_eff = batch_size - max(0, b_start+batch_size-Ndata)  # boundary case
+        batch_output = model(data_input.narrow(0, b_start, bsize_eff))  # is Variable if data_input is Variable
+        if isinstance(criterion, nn.CrossEntropyLoss) or isinstance(criterion, nn.NLLLoss): #if CrossEntropy
+            nb_errors += int((batch_output.max(1)[1] != data_target.narrow(0, b_start, bsize_eff)).long().sum())
+        else:             
+            #print('batch_output', batch_output.shape)
+            #print('data_target.narrow(0, b_start, bsize_eff)', data_target.narrow(0, b_start, bsize_eff).shape)
+            nb_errors = batch_output.round().sub(data_target.narrow(0, b_start,bsize_eff).view(bsize_eff,9)).sign().abs().sum()
+    return int(nb_errors)
 
 def is_in_boudaries(x, y, z, grid_size): 
     return x < grid_size and y < grid_size and z < grid_size
