@@ -31,5 +31,14 @@
 *.out
 *.app
 
-# Uploaded files
-DeepLearningPolycubing/Loaded_Files/
+#Dataset and Generated files
+DeepLearningPolycubing/Loaded_Files
+DeepLearningPolycubing/voxelizedMeshes
+DeepLearningPolycubing/Generated-Cars
+
+DeepLearningPolycubing/CNN_Generator/Loaded_Files
+DeepLearningPolycubing/CNN_Generator/voxelizedMeshes
+DeepLearningPolycubing/CNN_Generator/Generated-Cars
+
+#Initial Files
+d-cubes

@@ -6,7 +6,7 @@ The success of various applications in vision and robotics demand a structured a
 Poly-cube mapping, inspired by the nature of human perception of 3D shapes as a collection of simple parts, can provide regular and simple representations for general solid models. Obtaining such simplified representations efficiently is however still an open challenge, as current state-of-the-art algorithms are still far away from real-time performance.
 The goal of this project is to explore how poly-cube model simplification can be utilized to perform deep learning on 3d meshes efficiently: in particular the student will implement a poly-cube mapping algorithm and create a data-set of simplified models with it. Once such data-set is created 3D CNNs can be exploited to obtain efficient solid model simplification.
 
-In this repository I implemented a C++ solution for Polycube Generation starting from an .stl file. The input file is first processed by alignment of the triangular meshes with the axis of the 3D domain. This is archived by clicking several times on the space bar of your computer. Once the perfect shape is generated the user can save generated model via hiting the "s" button of the Keyboard. Finally this "rectangulized" shape of the car (or what so ever) can be voxelized by clicking on the "v" button. The voxelization does not appear on screen but is saved immidiately in the output files and can be visualized by the viewvox plug-in.
+In this repository a C++ solution for Polycube Generation starting from an .stl file is implemented. The input file is first processed by alignment of the triangular meshes with the axis of the 3D domain. This is archived by clicking several times on the space bar of your computer. Once the perfect shape is generated the user can save generated model via hiting the "s" button of the Keyboard. Finally this "rectangulized" shape of the car (or what so ever) can be voxelized by clicking on the "v" button. The voxelization does not appear on screen but is saved immidiately in the output files and can be visualized by the viewvox plug-in.
 
 ## Compile - Using the Terminal 
 
@@ -148,11 +148,4 @@ for (x,y,z) in voxels:
 		- $value_{01}count_{[0,255]}$...  
 		Recall that the voxels are stored in binary string, such as '1110000'. To reduce the output file, please be noted only voxels in the minimal bounding box for mesh are output. It is further compressed as $value$ and $count$. For '1110000', it is compressed to (1)(2)(0)(3), (1)(2) means 3 consecutive 1, and (0)(3) means 4 consecutive 0. I use two bytes to record $value$ and $count$. Specifically, $value$ can be 0 or 1, and $count$ can be [0,255] which corresponds to [1,256]. To retrieve the coordination of a voxel in original space, let $(x,y,z)$ denote the voxel coordinate extracted from the output binary string, and the coordinate in voxelized space is $(x+x_{vox\_lb},y+y_{vox\_lb},z+z_{vox\_lb})$.
 -->
-
-
-
-## Directories
-
-
-----------
 

@@ -151,7 +151,7 @@ const auto &key_down = [](igl::opengl::glfw::Viewer &viewer,unsigned char key,in
             //Fixed grid size each time
             int gridSize = 100; //Cf Edoardo's ML file
             int numThread = 4; //atoi(argv[2]);
-            string inputFile = "/Users/davidcleres/DeepShape/Polycubing/data/pseudo_camaro.stl";
+            string inputFile = "/Users/davidcleres/DeepShape/Polycubing/data/pseudo.stl";
             string outputFileForView = "/Users/davidcleres/DeepShape/Polycubing/data/kawada-hironx.binvox";
             string outputFileWrite = "/Users/davidcleres/DeepShape/Polycubing/data/kawada-hironx-compressed.vox";
             string outputFileWriteSimple = "/Users/davidcleres/DeepShape/Polycubing/data/kawada-hironx-simple.vox";
@@ -204,8 +204,6 @@ const auto &key_down = [](igl::opengl::glfw::Viewer &viewer,unsigned char key,in
             voxelizer.writeSliceVotingTextFile(sliceNumber, voxelizer.voting(voting, correctedBinary), "newVoting");
             voxelizer.writeSliceTextFile(voxelizer.findBorders(voxelizer.voting(voting, correctedBinary)), sliceNumber, "means");
             
-            //voxelizer.openCV(votingVector);
-            
             voxelizer.writeSliceTextFileXProj(votingVector, 32, "xproj");
             
             voxelizer.writeTextFileXProj(32);
@@ -230,13 +228,13 @@ int main(int argc, char *argv[])
     }
     else
     {
-        //filename = "/Users/davidcleres/DeepShape/Polycubing/models/camaro.off";
-        filename = "/Users/davidcleres/DeepShape/Polycubing/models/car.obj";
+        filename = "/Users/davidcleres/DeepShape/Polycubing/models/camaro.off";
+        //filename = "/Users/davidcleres/DeepShape/Polycubing/models/camaro.obj";
     }
     
     // Load a mesh in OFF format
-    //igl::readOFF(filename, V, F);
-    igl::readOBJ(filename, V, F);
+    igl::readOFF(filename, V, F);
+    //igl::readOBJ(filename, V, F);
     
     // compute adjacency list
     igl::adjacency_list(F,A);
